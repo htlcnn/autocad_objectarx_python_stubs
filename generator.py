@@ -130,12 +130,17 @@ def parse_enum(enum):
     def_line = 'class {}():'.format(name)
     syntax.append(def_line)
 
-    cs_block = soup.select('.codeblock')[1]
+    vb_block = soup.select('.codeblock')[0]
 
-    if cs_block:
+    if vb_block:
+        block = []
+        for line in vb_block.text.splitlines()[1:-1]:
+            line = line.replace('&H', '0x').strip()
+            block.append(line)
+
         syntax.append(
             indent(
-                '\n'.join(line.strip(',') for line in cs_block.text.splitlines()[1:-1])
+                '\n'.join(block)
             )
         )
     else:
