@@ -130,7 +130,7 @@ def parse_enum(enum):
     def_line = 'class {}():'.format(name)
     syntax.append(def_line)
 
-    cs_block = soup.select('.codeblock')[-1]
+    cs_block = soup.select('.codeblock')[1]
 
     if cs_block:
         syntax.append(
