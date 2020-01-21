@@ -1,10 +1,12 @@
-  All = 0x1f
-  New = 1
-  None = 0
-  Open = 2
-  Redo = 0x10
-  Save = 4
-  Undo = 8
+class QuickAccessStandardCommands():
+    Inherits uint
+    All = 0x1f
+    New = 1
+    None = 0
+    Open = 2
+    Redo = 0x10
+    Save = 4
+    Undo = 8
 
 class QuickAccessToolBarSource(ToolBarSource, IPersistentObjectSource):
     """

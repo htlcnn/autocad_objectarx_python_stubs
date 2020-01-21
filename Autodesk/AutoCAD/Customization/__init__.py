@@ -303,13 +303,15 @@ class AliasCollection(CustomizationCollection):
     
     pass
 
-  AllOff = 0
-  AllOn = 2
-  ApplicationOnly = 1
-  DrawingStatusBarOnly = 3
+class ApplicationAndDrawingStatusBarsToggle():
+    AllOff = 0
+    AllOn = 2
+    ApplicationOnly = 1
+    DrawingStatusBarOnly = 3
 
-  BUTTONS
-  AUX
+class BUTTONPREFIX():
+    BUTTONS
+    AUX
 
 class ButtonGroup(CustomizationElement, ICustomizationContainer):
     """
@@ -3575,58 +3577,60 @@ class ButtonItemCollection(CustomizationCollection):
     
     pass
 
-  Full = 0
-  FullWithoutFocus = 2
-  Merged = 1
+class ContextualTabDisplayType():
+    Full = 0
+    FullWithoutFocus = 2
+    Merged = 1
 
-  _3DNavPointTriplet1 = &H138c
-  _3DNavPointTriplet2 = &H138d
-  _3DNavStepSizeSliderControl = &H138a
-  _3DNavStepsPerSecSliderControl = &H138b
-  _3DNavViewComboCtrl = &H1388
-  _3DNavZoomSliderControl = &H1389
-  ArrayEditNameControl = 6
-  CustomControl = 20
-  DimStyleControl = 11
-  FindTextControl = &H13
-  LayerControl = 1
-  LayerFilterComboControl = &H13a2
-  LayerLockTransparencySliderControl = &H13a1
-  LayerStateComboControl = &H13a0
-  LightColorCorrectCtrl = &H1393
-  LightSliderControl1 = &H138e
-  LightSliderControl2 = &H138f
-  LightSliderControl3 = &H1390
-  LightSliderControl4 = &H1391
-  LightSliderControl5 = &H1392
-  LineTypeControl = 2
-  LineWeightControl = 4
-  MldStyleControl = &H12
-  NamedViewControl = &H10
-  OPTColorControl = 3
-  PlotStyleControl = 9
-  RedoSkinnyButtonControl = 13
-  RefblknameControl = 5
-  RenderImageQualityControl = &H1396
-  RenderOutputFileControl = &H1397
-  RenderOutputSizeControl = &H1398
-  RenderProgressControl = &H1395
-  RenderStyleControl = &H1394
-  TblStyleControl = 15
-  TextHeightComboControl = &H13a3
-  TxtStyleControl = 14
-  UCSControl = 10
-  UndoSkinnyButtonControl = 12
-  ViewControl = 8
-  ViewportScaleControl = 7
-  VSEdgeColorControl = &H139a
-  VSEdgeOverhangSliderControl = &H139b
-  VSIntersectionEdgeColorControl = &H139f
-  VSJitterEdgeSliderControl = &H139c
-  VSObscuredEdgeColorControl = &H139e
-  VSSilhouetteEdgeWidthSliderControl = &H139d
-  VSStylesComboControl = &H1399
-  WorkspacesControl = &H11
+class ControlType():
+    _3DNavPointTriplet1 = 0x138c
+    _3DNavPointTriplet2 = 0x138d
+    _3DNavStepSizeSliderControl = 0x138a
+    _3DNavStepsPerSecSliderControl = 0x138b
+    _3DNavViewComboCtrl = 0x1388
+    _3DNavZoomSliderControl = 0x1389
+    ArrayEditNameControl = 6
+    CustomControl = 20
+    DimStyleControl = 11
+    FindTextControl = 0x13
+    LayerControl = 1
+    LayerFilterComboControl = 0x13a2
+    LayerLockTransparencySliderControl = 0x13a1
+    LayerStateComboControl = 0x13a0
+    LightColorCorrectCtrl = 0x1393
+    LightSliderControl1 = 0x138e
+    LightSliderControl2 = 0x138f
+    LightSliderControl3 = 0x1390
+    LightSliderControl4 = 0x1391
+    LightSliderControl5 = 0x1392
+    LineTypeControl = 2
+    LineWeightControl = 4
+    MldStyleControl = 0x12
+    NamedViewControl = 0x10
+    OPTColorControl = 3
+    PlotStyleControl = 9
+    RedoSkinnyButtonControl = 13
+    RefblknameControl = 5
+    RenderImageQualityControl = 0x1396
+    RenderOutputFileControl = 0x1397
+    RenderOutputSizeControl = 0x1398
+    RenderProgressControl = 0x1395
+    RenderStyleControl = 0x1394
+    TblStyleControl = 15
+    TextHeightComboControl = 0x13a3
+    TxtStyleControl = 14
+    UCSControl = 10
+    UndoSkinnyButtonControl = 12
+    ViewControl = 8
+    ViewportScaleControl = 7
+    VSEdgeColorControl = 0x139a
+    VSEdgeOverhangSliderControl = 0x139b
+    VSIntersectionEdgeColorControl = 0x139f
+    VSJitterEdgeSliderControl = 0x139c
+    VSObscuredEdgeColorControl = 0x139e
+    VSSilhouetteEdgeWidthSliderControl = 0x139d
+    VSStylesComboControl = 0x1399
+    WorkspacesControl = 0x11
 
 class CuiFileCollectionBase(StringCollection):
     """
@@ -7302,8 +7306,9 @@ class CustomizationSection(ElementBase):
     
     pass
 
-  AddToWorkspace = 1
-  DoNotAddToWorkspace = 0
+class DefaultDisplay():
+    AddToWorkspace = 1
+    DoNotAddToWorkspace = 0
 
 class DigitizerButtonGroupCollection(ButtonGroupCollection):
     """
@@ -7312,16 +7317,18 @@ class DigitizerButtonGroupCollection(ButtonGroupCollection):
 
     pass
 
-  bottom = 3
-  floating = 1
-  ignore = 6
-  left = 4
-  right = 5
-  top = 2
+class DockableWindowOrient():
+    bottom = 3
+    floating = 1
+    ignore = 6
+    left = 4
+    right = 5
+    top = 2
 
-  docked = 0
-  floating = 1
-  ignore = 2
+class DockedFloatingIgnoreToggle():
+    docked = 0
+    floating = 1
+    ignore = 2
 
 class DoubleClickAction(CustomizationElement):
     """
@@ -15712,10 +15719,11 @@ class FileSaveException(IOException):
 
     pass
 
-  ComboBox = 1
-  LargeButton = 2
-  StandardButton = 3
-  Window = 0
+class GalleryDisplayMode():
+    ComboBox = 1
+    LargeButton = 2
+    StandardButton = 3
+    Window = 0
 
 class ICustomizationContainer(public interface ICustomizationContainer):
     """
@@ -23907,20 +23915,21 @@ class MacroNameChangedEventArgs(public sealed class MacroNameChangedEventArgs):
     
     pass
 
-  Any = 0
-  Dimension = 8
-  Draw = 7
-  Edit = 2
-  File = 1
-  Format = 5
-  Help = 11
-  Insert = 4
-  Legacy = 13
-  Modify = 9
-  Overrides = 12
-  Tools = 6
-  View = 3
-  Window = 10
+class MacroType():
+    Any = 0
+    Dimension = 8
+    Draw = 7
+    Edit = 2
+    File = 1
+    Format = 5
+    Help = 11
+    Insert = 4
+    Legacy = 13
+    Modify = 9
+    Overrides = 12
+    Tools = 6
+    View = 3
+    Window = 10
 
 class MacroUIDChangedEventArgs(public sealed class MacroUIDChangedEventArgs):
     """
@@ -27590,24 +27599,25 @@ class MenuGroup(ElementBase):
     ToolPanels = None
     
     
-      Accelerators
-      DashboardPanelSets
-      DashboardToolPanels
-      DigitizerButtons
-      DoubleClickActions
-      ImageMenus
-      MacroGroups
-      MouseButtons
-      QuickPropertiesObjectTypes
-      RolloverTooltipObjectTypes
-      PopMenus
-      RibbonRoot
-      ScreenMenus
-      TabletMenus
-      TemporaryOverrides
-      Toolbars
-      QuickAccessToobars
-      LspFile
+    class ItemsCollection():
+        Accelerators
+        DashboardPanelSets
+        DashboardToolPanels
+        DigitizerButtons
+        DoubleClickActions
+        ImageMenus
+        MacroGroups
+        MouseButtons
+        QuickPropertiesObjectTypes
+        RolloverTooltipObjectTypes
+        PopMenus
+        RibbonRoot
+        ScreenMenus
+        TabletMenus
+        TemporaryOverrides
+        Toolbars
+        QuickAccessToobars
+        LspFile
     
     pass
 
@@ -29808,9 +29818,10 @@ class MenuMacroCollection(CollectionBase):
     
     pass
 
-  ignore = 2
-  Layout = 1
-  Model = 0
+class ModelLayoutIgnoreToggle():
+    ignore = 2
+    Layout = 1
+    Model = 0
 
 class ObjectProperty(ObjectPropertyBase):
     """
@@ -30277,12 +30288,14 @@ class ObjectTypeCollection(MenuGroupItemsCollection, INotifyCollectionChanged):
     
     pass
 
-  ignore = 3
-  off = 2
-  on = 1
+class OnOffIgnoreToggle():
+    ignore = 3
+    off = 2
+    on = 1
 
-  Horizontal = 0
-  Vertical = 1
+class Orientation():
+    Horizontal = 0
+    Vertical = 1
 
 class OverrideItem(ElementBase, IReference):
     """
@@ -30711,8 +30724,9 @@ class OverrideItem(ElementBase, IReference):
     
     pass
 
-  Down
-  Up
+class OverrideKeyState():
+    Down
+    Up
 
 class Panel(CustomizationElement, IImageContainer):
     """
@@ -31500,8 +31514,9 @@ class PanelCollection(CustomizationCollection):
     
     pass
 
-  Upper
-  Lower
+class PanelPosition():
+    Upper
+    Lower
 
 class PanelSet(CustomizationElement, ICustomizationContainer):
     """
@@ -38179,13 +38194,15 @@ class QuickAccessToolbarCollection(MenuGroupItemsCollection):
     
     pass
 
-  Above = 0
-  Below = 1
+class QuickAccessToolbarOrientation():
+    Above = 0
+    Below = 1
 
-  None
-  HidePanelBar
-  HidePanel
-  TruncatePanelBar
+class RibbonAutoHideMode():
+    None
+    HidePanelBar
+    HidePanel
+    TruncatePanelBar
 
 class RibbonButton(RibbonItem):
     """
@@ -38332,11 +38349,12 @@ class RibbonButton(RibbonItem):
     
     pass
 
-  LargeWithHorizontalText = 1
-  LargeWithoutText = 4
-  LargeWithText = 0
-  SmallWithoutText = 3
-  SmallWithText = 2
+class RibbonButtonStyle():
+    LargeWithHorizontalText = 1
+    LargeWithoutText = 4
+    LargeWithText = 0
+    SmallWithoutText = 3
+    SmallWithText = 2
 
 class RibbonCommandButton(RibbonItem, IImageContainer, IReference):
     """
@@ -39095,12 +39113,14 @@ class RibbonFoldPanel(AbstractRibbonSubPanel):
     
     pass
 
-  Large = 3
-  Medium = 2
-  Small = 1
+class RibbonFoldPanelItemSize():
+    Large = 3
+    Medium = 2
+    Small = 1
 
-  DoNotResize = 1
-  None = 0
+class RibbonFoldPanelResizeStyle():
+    DoNotResize = 1
+    None = 0
 
 class RibbonGalleryControl(RibbonControl, IImageContainer):
     """
@@ -39257,9 +39277,10 @@ class RibbonGalleryControl(RibbonControl, IImageContainer):
     
     pass
 
-  Large = 3
-  None = 0
-  Standard = 1
+class RibbonImageSize():
+    Large = 3
+    None = 0
+    Standard = 1
 
 class RibbonItem(CustomizationElement):
     """
@@ -39459,15 +39480,17 @@ class RibbonItemCollection(RibbonItemsCollectionBase):
     
     pass
 
-  Large = 3
-  Medium = 2
-  Standard = 1
+class RibbonItemSize():
+    Large = 3
+    Medium = 2
+    Standard = 1
 
-  LockAll = 7
-  LockDockedPanels = 1
-  LockFloatingPanels = 2
-  LockTabs = 4
-  None = 0
+class RibbonLockModes():
+    LockAll = 7
+    LockDockedPanels = 1
+    LockFloatingPanels = 2
+    LockTabs = 4
+    None = 0
 
 class RibbonPanelBreak(RibbonItem):
     """
@@ -39602,9 +39625,10 @@ class RibbonPanelBreak(RibbonItem):
 
     pass
 
-  CollapseLast = 2
-  Default = 0
-  NoCollapse = 1
+class RibbonPanelResizeStyle():
+    CollapseLast = 2
+    Default = 0
+    NoCollapse = 1
 
 class RibbonPanelSource(RibbonItem, ICustomizationContainer):
     """
@@ -40161,11 +40185,12 @@ class RibbonRowPanel(AbstractRibbonSubPanel):
     
     pass
 
-  DoNotResize = 4
-  NeverHideText = 1
-  NeverShrink = 3
-  NeverWrap = 2
-  None = 0
+class RibbonRowPanelResizeStyle():
+    DoNotResize = 4
+    NeverHideText = 1
+    NeverShrink = 3
+    NeverWrap = 2
+    None = 0
 
 class RibbonSeparator(RibbonItem):
     """
@@ -40329,8 +40354,9 @@ class RibbonSeparator(RibbonItem):
     
     pass
 
-  Line = 1
-  Spacer = 2
+class RibbonSeparatorStyle():
+    Line = 1
+    Spacer = 2
 
 class RibbonSplitButton(RibbonItem, IImageContainer, ICustomizationContainer):
     """
@@ -40528,15 +40554,17 @@ class RibbonSplitButton(RibbonItem, IImageContainer, ICustomizationContainer):
     
     pass
 
-  DropDownFollow = 1
-  DropDownNoFollow = 2
-  SplitFollow = 3
-  SplitFollowStaticText = 5
-  SplitNoFollow = 4
+class RibbonSplitButtonBehavior():
+    DropDownFollow = 1
+    DropDownNoFollow = 2
+    SplitFollow = 3
+    SplitFollowStaticText = 5
+    SplitNoFollow = 4
 
-  Descriptive = 3
-  Icon = 1
-  IconText = 2
+class RibbonSplitButtonListStyle():
+    Descriptive = 3
+    Icon = 1
+    IconText = 2
 
 class RibbonTabSelector(RibbonItem):
     """
@@ -46962,8 +46990,9 @@ class ScreenMenuItemCollection(CustomizationCollection):
     
     pass
 
-  NameChanged
-  KeyChanged
+class ShortcutKeyChangeAction():
+    NameChanged
+    KeyChanged
 
 class ShortcutKeyChangedEventArgs(public sealed class ShortcutKeyChangedEventArgs):
     """
@@ -62700,18 +62729,21 @@ class ToolbarNameChangedEventArgs(public sealed class ToolbarNameChangedEventArg
     
     pass
 
-  bottom = 3
-  floating = 1
-  left = 4
-  right = 5
-  top = 2
+class ToolbarOrient():
+    bottom = 3
+    floating = 1
+    left = 4
+    right = 5
+    top = 2
 
-  hide = 0
-  show = 1
+class ToolbarVisible():
+    hide = 0
+    show = 1
 
-  None
-  New
-  Modified
+class UpdateType():
+    None
+    New
+    Modified
 
 class Util(public class Util):
     """
@@ -62741,20 +62773,24 @@ class Util(public class Util):
     
     pass
 
-CurrentVersion = 12
-TwoThousandEight = 2
-TwoThousandEleven = 5
-TwoThousandFifteen = 9
-TwoThousandFourteen = 8
-TwoThousandNine = 3
-TwoThousandSeven = 1
-TwoThousandSeventeen = 11
-TwoThousandSix = 0
-TwoThousandSixteen = 10
-TwoThousandTen = 4
-TwoThousandThirteen = 7
-TwoThousandTwelve = 6
-Unknown = 13
+class Version():
+    CurrentVersion = 15
+    TwoThousandEight = 2
+    TwoThousandEighteen = 12
+    TwoThousandEleven = 5
+    TwoThousandFifteen = 9
+    TwoThousandFourteen = 8
+    TwoThousandNine = 3
+    TwoThousandNineteen = 13
+    TwoThousandSeven = 1
+    TwoThousandSeventeen = 11
+    TwoThousandSix = 0
+    TwoThousandSixteen = 10
+    TwoThousandTen = 4
+    TwoThousandThirteen = 7
+    TwoThousandTwelve = 6
+    TwoThousandTwenty = 14
+    Unknown = 0x10
 
 class VersionableElement(ElementBase):
     """
@@ -68132,6 +68168,7 @@ class WorkspaceToolbarCollection(CustomizationCollection):
     
     pass
 
-  ignore = 2
-  no = 0
-  yes = 1
+class YesNoIgnoreToggle():
+    ignore = 2
+    no = 0
+    yes = 1

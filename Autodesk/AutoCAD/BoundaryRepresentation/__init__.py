@@ -1246,10 +1246,11 @@ class Element2dNodeEnumerator(EnumeratorBase, IEnumerator<Node>):
     
     pass
 
-  Default
-  AllPolygons
-  AllQuadrilaterals
-  AllTriangles
+class Element2dShape():
+    Default
+    AllPolygons
+    AllQuadrilaterals
+    AllTriangles
 
 class EnumeratorBase(RXObject, IEnumerator):
     """
@@ -1281,27 +1282,28 @@ class EnumeratorBase(RXObject, IEnumerator):
     
     pass
 
-  AmbiguousOutput = 5
-  BrepChanged = 0xbc0
-  DegenerateTopology = 0xbcc
-  InvalidInput = 3
-  InvalidObject = 0x7b
-  MissingGeometry = 0x99
-  MissingSubentity = 0x89
-  NotApplicable = 2
-  NotImplementedYet = 1
-  NullObjectId = 0x10
-  NullObjectPointer = 0x7b
-  NullSubentityId = 0x18
-  ObjectIdMismatch = 0x23
-  Ok = 0
-  OutOfMemory = 6
-  TopologyMismatch = 0x23
-  UninitialisedObject = 0xbcd
-  UnsuitableGeometry = 5
-  UnsuitableTopology = 0xbc5
-  WrongObjectType = 0x22
-  WrongSubentityType = 230
+class ErrorStatus():
+    AmbiguousOutput = 5
+    BrepChanged = 0xbc0
+    DegenerateTopology = 0xbcc
+    InvalidInput = 3
+    InvalidObject = 0x7b
+    MissingGeometry = 0x99
+    MissingSubentity = 0x89
+    NotApplicable = 2
+    NotImplementedYet = 1
+    NullObjectId = 0x10
+    NullObjectPointer = 0x7b
+    NullSubentityId = 0x18
+    ObjectIdMismatch = 0x23
+    Ok = 0
+    OutOfMemory = 6
+    TopologyMismatch = 0x23
+    UninitialisedObject = 0xbcd
+    UnsuitableGeometry = 5
+    UnsuitableTopology = 0xbc5
+    WrongObjectType = 0x22
+    WrongSubentityType = 230
 
 class Exception(System.Exception, ISerializable):
     """
@@ -2341,10 +2343,11 @@ class LoopEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
     
     pass
 
-  LoopUnclassified
-  LoopExterior
-  LoopInterior
-  LoopWinding
+class LoopType():
+    LoopUnclassified
+    LoopExterior
+    LoopInterior
+    LoopWinding
 
 class LoopVertexCollection(IEnumerable<Vertex>):
     """
@@ -2659,9 +2662,10 @@ class Node(MeshEntity):
     
     pass
 
-  Inside
-  Outside
-  OnBoundary
+class PointContainment():
+    Inside
+    Outside
+    OnBoundary
 
 class Shell(BrepEntity):
     """
@@ -2848,12 +2852,14 @@ class ShellFaceEnumerator(EnumeratorBase, IEnumerator<Face>):
     
     pass
 
-  ShellUnclassified
-  ShellExterior
-  ShellInterior
+class ShellType():
+    ShellUnclassified
+    ShellExterior
+    ShellInterior
 
-  FullValidation
-  NoValidation
+class ValidationLevel():
+    FullValidation
+    NoValidation
 
 class Vertex(BrepEntity):
     """

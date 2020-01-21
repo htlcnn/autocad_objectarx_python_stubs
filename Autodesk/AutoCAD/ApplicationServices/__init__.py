@@ -1154,9 +1154,14 @@ class DocumentLock(IDisposable):
 
     pass
 
-    make changes
-        // Nested code creates another lock; removes kAutoWrite
-    make changes // Lock violation
+class DocumentLockMode():
+    AutoWrite = 1
+    ExclusiveWrite = 0x40
+    None = 0
+    NotLocked = 2
+    ProtectedAutoWrite = 20
+    Read = 0x20
+    Write = 4
 
 class DocumentLockModeChangeVetoedEventArgs(EventArgs):
     """
@@ -1225,34 +1230,39 @@ class DocumentPinStateChangedEventArgs(EventArgs):
     
     pass
 
-Native = 60
-R12Dxf = 1
-R13Dwg = 4
-R13Dxf = 5
-R14Dwg = 8
-R14Dxf = 9
-R2000Dwg = 12
-R2000Dxf = 13
-R2000Standard = 15
-R2000Template = 14
-R2000Xml = 0x10
-R2004Dwg = 0x18
-R2004Dxf = 0x19
-R2004Standard = 0x1b
-R2004Template = 0x1a
-R2007Dwg = 0x24
-R2007Dxf = 0x25
-R2007Standard = 0x27
-R2007Template = 0x26
-R2010Dwg = 0x30
-R2010Dxf = 0x31
-R2010Standard = 0x33
-R2010Template = 50
-R2013Dwg = 60
-R2013Dxf = 0x3d
-R2013Standard = 0x3f
-R2013Template = 0x3e
-Unknown = -1
+class DocumentSaveFormat():
+    Native = 0x40
+    R12Dxf = 1
+    R13Dwg = 4
+    R13Dxf = 5
+    R14Dwg = 8
+    R14Dxf = 9
+    R2000Dwg = 12
+    R2000Dxf = 13
+    R2000Standard = 15
+    R2000Template = 14
+    R2000Xml = 0x10
+    R2004Dwg = 0x18
+    R2004Dxf = 0x19
+    R2004Standard = 0x1b
+    R2004Template = 0x1a
+    R2007Dwg = 0x24
+    R2007Dxf = 0x25
+    R2007Standard = 0x27
+    R2007Template = 0x26
+    R2010Dwg = 0x30
+    R2010Dxf = 0x31
+    R2010Standard = 0x33
+    R2010Template = 50
+    R2013Dwg = 60
+    R2013Dxf = 0x3d
+    R2013Standard = 0x3f
+    R2013Template = 0x3e
+    R2018Dwg = 0x40
+    R2018Dxf = 0x41
+    R2018Standard = 0x43
+    R2018Template = 0x42
+    Unknown = -1
 
 class DocumentWindowActivatedEventArgs(EventArgs):
     """
@@ -1492,67 +1502,68 @@ class InplaceTextEditor(TextEditor):
     """
     
     """
-      UndoAnnoState = 0x3a
-      UndoAttachment = 0x25
-      UndoAutoDimBreak = 0x22
-      UndoAutoDimension = 0x21
-      UndoAutoDTextEscape = 0x1f
-      UndoAutoField = 0x1c
-      UndoAutoMifOrCif = 0x20
-      UndoAutoSpell = 0x23
-      UndoAutoStack = 0x1d
-      UndoAutoSymbol = 30
-      UndoBackspace = 0x11
-      UndoBoldOff = 3
-      UndoBoldOn = 2
-      UndoChangeCase = 0x26
-      UndoCharAttributes = 0x31
-      UndoColor = 12
-      UndoColumns = 0x39
-      UndoCombineParagraphs = 40
-      UndoCursorAttributes = 0x38
-      UndoCustomConvert = 0x35
-      UndoCut = 20
-      UndoDelete = 0x12
-      UndoDeleteAndMoveSelection = 0x36
-      UndoDimBreakInsert = 0x34
-      UndoDimensionInsert = 0x33
-      UndoDimensionSymbol = 60
-      UndoDimensionTemplate = 0x3d
-      UndoDimensionTweak = 0x3b
-      UndoFieldConvert = 0x19
-      UndoFieldInsert = 0x18
-      UndoFieldUpdate = 0x1a
-      UndoFont = 10
-      UndoHeight = 11
-      UndoImportText = 0x27
-      UndoItalicOff = 5
-      UndoItalicOn = 4
-      UndoLanguage = 0x10
-      UndoObliqueAngle = 13
-      UndoOverlineOff = 9
-      UndoOverlineOn = 8
-      UndoParagraphAttributes = 0x2e
-      UndoParagraphNumbering = 0x37
-      UndoPaste = 0x13
-      UndoRemoveAllFormatting = 0x2b
-      UndoRemoveCharFormatting = 0x29
-      UndoRemoveParaFormatting = 0x2a
-      UndoReplace = 0x2d
-      UndoReplaceAll = 0x2c
-      UndoSetDefinedHeight = 0x30
-      UndoSetDefinedWidth = 0x2f
-      UndoStack = 0x15
-      UndoStackProperties = 0x17
-      UndoStyle = 0x24
-      UndoSymbolInsert = 0x1b
-      UndoTrackingFactor = 15
-      UndoTyping = 1
-      UndoUnderlineOff = 7
-      UndoUnderlineOn = 6
-      UndoUnstack = 0x16
-      UndoWidthScale = 14
-      UndoWipeout = 50
+    class TextUndoType():
+        UndoAnnoState = 0x3a
+        UndoAttachment = 0x25
+        UndoAutoDimBreak = 0x22
+        UndoAutoDimension = 0x21
+        UndoAutoDTextEscape = 0x1f
+        UndoAutoField = 0x1c
+        UndoAutoMifOrCif = 0x20
+        UndoAutoSpell = 0x23
+        UndoAutoStack = 0x1d
+        UndoAutoSymbol = 30
+        UndoBackspace = 0x11
+        UndoBoldOff = 3
+        UndoBoldOn = 2
+        UndoChangeCase = 0x26
+        UndoCharAttributes = 0x31
+        UndoColor = 12
+        UndoColumns = 0x39
+        UndoCombineParagraphs = 40
+        UndoCursorAttributes = 0x38
+        UndoCustomConvert = 0x35
+        UndoCut = 20
+        UndoDelete = 0x12
+        UndoDeleteAndMoveSelection = 0x36
+        UndoDimBreakInsert = 0x34
+        UndoDimensionInsert = 0x33
+        UndoDimensionSymbol = 60
+        UndoDimensionTemplate = 0x3d
+        UndoDimensionTweak = 0x3b
+        UndoFieldConvert = 0x19
+        UndoFieldInsert = 0x18
+        UndoFieldUpdate = 0x1a
+        UndoFont = 10
+        UndoHeight = 11
+        UndoImportText = 0x27
+        UndoItalicOff = 5
+        UndoItalicOn = 4
+        UndoLanguage = 0x10
+        UndoObliqueAngle = 13
+        UndoOverlineOff = 9
+        UndoOverlineOn = 8
+        UndoParagraphAttributes = 0x2e
+        UndoParagraphNumbering = 0x37
+        UndoPaste = 0x13
+        UndoRemoveAllFormatting = 0x2b
+        UndoRemoveCharFormatting = 0x29
+        UndoRemoveParaFormatting = 0x2a
+        UndoReplace = 0x2d
+        UndoReplaceAll = 0x2c
+        UndoSetDefinedHeight = 0x30
+        UndoSetDefinedWidth = 0x2f
+        UndoStack = 0x15
+        UndoStackProperties = 0x17
+        UndoStyle = 0x24
+        UndoSymbolInsert = 0x1b
+        UndoTrackingFactor = 15
+        UndoTyping = 1
+        UndoUnderlineOff = 7
+        UndoUnderlineOn = 6
+        UndoUnstack = 0x16
+        UndoWidthScale = 14
+        UndoWipeout = 50
     
     
     def AddUndoMarker(self):
@@ -1959,14 +1970,16 @@ class InplaceTextEditorSettings(DisposableWrapper):
     
     )
     """
-      CursorAtEnd = 4
-      ForceOpaqueBackground = 1
-      SelectAll = 2
+    class EditFlags():
+        CursorAtEnd = 4
+        ForceOpaqueBackground = 1
+        SelectAll = 2
     
     
-      Default
-      TableCell
-      MultiAttribute
+    class EntityType():
+        Default
+        TableCell
+        MultiAttribute
     
     
     DefinedHeight = None

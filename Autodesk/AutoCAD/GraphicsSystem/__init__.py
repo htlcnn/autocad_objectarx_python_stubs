@@ -360,28 +360,30 @@ class Configuration(DisposableWrapper):
     
     pass
 
-  OneLight
-  TwoLights
+class DefaultLightingType():
+    OneLight
+    TwoLights
 
-  ViewportDraw
-  LineAntialias
-  Lighting
-  TransparencyQuality
-  ShadowsFull
-  Transparency
-  DiscardBackfaces
-  ShadowsGround
-  EdgeStyles
-  FacetEdges
-  FastSilhouette
-  Textures
-  Materials
-  LightingQuality
-  Backgrounds
-  IntersectEdges
-  Faceted
-  Wireframe
-  DegradationChannels
+class DegradationChannel():
+    ViewportDraw
+    LineAntialias
+    Lighting
+    TransparencyQuality
+    ShadowsFull
+    Transparency
+    DiscardBackfaces
+    ShadowsGround
+    EdgeStyles
+    FacetEdges
+    FastSilhouette
+    Textures
+    Materials
+    LightingQuality
+    Backgrounds
+    IntersectEdges
+    Faceted
+    Wireframe
+    DegradationChannels
 
 class Device(DisposableWrapper):
     """
@@ -1394,13 +1396,14 @@ class DriverInfo(public struct DriverInfo {
     
     pass
 
-  kEL_Current
-  kEL_RegistryHardware
-  kEL_RegistrySoftware
-  kEL_File
-  kEL_HardwareBasic
-  kEL_HardwareMedium
-  kEL_HardwareAdvanced
+class EffectListType():
+    kEL_Current
+    kEL_RegistryHardware
+    kEL_RegistrySoftware
+    kEL_File
+    kEL_HardwareBasic
+    kEL_HardwareMedium
+    kEL_HardwareAdvanced
 
 class EffectStatus(public class EffectStatus):
     """
@@ -1425,9 +1428,10 @@ class EffectStatus(public class EffectStatus):
     
     pass
 
-  Success
-  OutOfRange
-  InvalidInput
+class ErrorStatus():
+    Success
+    OutOfRange
+    InvalidInput
 
 class GraphicsKernel(DisposableWrapper):
     """
@@ -1542,20 +1546,23 @@ class GraphicsKernel(DisposableWrapper):
     
     pass
 
-  Left
-  Right
+class Handedness():
+    Left
+    Right
 
-  HighlightDashed
+class HighlightStyle():
+    HighlightDashed
 
-  InvalidateNone
-  InvalidateIsolines
-  InvalidateViewportCache
-  InvalidateAll
-  InvalidateAllStatic
-  InvalidateFacets
-  InvalidateFills
-  InvalidateLinetypes
-  InvalidateMaterials
+class InvalidationHint():
+    InvalidateNone
+    InvalidateIsolines
+    InvalidateViewportCache
+    InvalidateAll
+    InvalidateAllStatic
+    InvalidateFacets
+    InvalidateFills
+    InvalidateLinetypes
+    InvalidateMaterials
 
 class KernelDescriptor(DisposableWrapper):
     """
@@ -1610,52 +1617,54 @@ class KernelDescriptor(DisposableWrapper):
     
     pass
 
-  DashDot = 3
-  Dashed = 1
-  DefaultLinePattern = 2
-  Dotted = 2
-  DoubleLongDash = 9
-  DoubleMediumDash = 8
-  DoubleShortDash = 7
-  LongDash = 6
-  LongDashDot = 14
-  LongDashDotDot = 13
-  LongDashShortDash = 12
-  MediumDash = 5
-  MediumDashDotShortDashDot = 15
-  MediumDashShortDashShortDash = 11
-  MediumLongDash = 10
-  ShortDash = 4
-  Solid = 0
-  SparseDot = 0x10
+class LinePattern():
+    DashDot = 3
+    Dashed = 1
+    DefaultLinePattern = 2
+    Dotted = 2
+    DoubleLongDash = 9
+    DoubleMediumDash = 8
+    DoubleShortDash = 7
+    LongDash = 6
+    LongDashDot = 14
+    LongDashDotDot = 13
+    LongDashShortDash = 12
+    MediumDash = 5
+    MediumDashDotShortDashDot = 15
+    MediumDashShortDashShortDash = 11
+    MediumLongDash = 10
+    ShortDash = 4
+    Solid = 0
+    SparseDot = 0x10
 
-  kLnWt000 = 0
-  kLnWt005 = 5
-  kLnWt009 = 9
-  kLnWt013 = 13
-  kLnWt015 = 15
-  kLnWt018 = 0x12
-  kLnWt020 = 20
-  kLnWt025 = 0x19
-  kLnWt030 = 30
-  kLnWt035 = 0x23
-  kLnWt040 = 40
-  kLnWt050 = 50
-  kLnWt053 = 0x35
-  kLnWt060 = 60
-  kLnWt070 = 70
-  kLnWt080 = 80
-  kLnWt090 = 90
-  kLnWt100 = 100
-  kLnWt106 = 0x6a
-  kLnWt120 = 120
-  kLnWt140 = 140
-  kLnWt158 = 0x9e
-  kLnWt200 = 200
-  kLnWt211 = 0xd3
-  kLnWtByBlock = -2
-  kLnWtByLayer = -1
-  kLnWtByLwDefault = -3
+class LineWeight():
+    kLnWt000 = 0
+    kLnWt005 = 5
+    kLnWt009 = 9
+    kLnWt013 = 13
+    kLnWt015 = 15
+    kLnWt018 = 0x12
+    kLnWt020 = 20
+    kLnWt025 = 0x19
+    kLnWt030 = 30
+    kLnWt035 = 0x23
+    kLnWt040 = 40
+    kLnWt050 = 50
+    kLnWt053 = 0x35
+    kLnWt060 = 60
+    kLnWt070 = 70
+    kLnWt080 = 80
+    kLnWt090 = 90
+    kLnWt100 = 100
+    kLnWt106 = 0x6a
+    kLnWt120 = 120
+    kLnWt140 = 140
+    kLnWt158 = 0x9e
+    kLnWt200 = 200
+    kLnWt211 = 0xd3
+    kLnWtByBlock = -2
+    kLnWtByLayer = -1
+    kLnWtByLwDefault = -3
 
 class Manager(DisposableWrapper):
     """
@@ -2295,27 +2304,31 @@ class Node(DisposableWrapper):
     
     pass
 
-  Parallel
-  Perspective
+class Projection():
+    Parallel
+    Perspective
 
-  LowQuality
-  MediumQuality
-  HighQuality
+class Quality():
+    LowQuality
+    MediumQuality
+    HighQuality
 
-  Main
-  Sprite
-  Direct
-  Highlight
-  HighlightSelection
-  DirectTopmost
-  Contrast
-  Count
+class RenderType():
+    Main
+    Sprite
+    Direct
+    Highlight
+    HighlightSelection
+    DirectTopmost
+    Contrast
+    Count
 
-  Default
-  Software
-  SoftwareNewViewsOnly
-  FullRender
-  SelectionRender
+class RendererType():
+    Default
+    Software
+    SoftwareNewViewsOnly
+    FullRender
+    SelectionRender
 
 class StereoParameters(public struct StereoParameters {
 }):
@@ -3153,7 +3166,8 @@ class ViewUpdateEventArgs(EventArgs):
     
     pass
 
-  CameraChanged = 1
+class ViewUpdateFlags():
+    CameraChanged = 1
 
 class ViewportBorderProperties(public struct ViewportBorderProperties {
 }):

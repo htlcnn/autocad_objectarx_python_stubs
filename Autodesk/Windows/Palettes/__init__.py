@@ -786,9 +786,10 @@ class PaletteSet(TabItem, IDisposable, INotifyPropertyChanged, INotifyPropertyCh
     
     pass
 
-  None
-  ImageSelector
-  ComboBoxSelector
+class PaletteSetSelectorType():
+    None
+    ImageSelector
+    ComboBoxSelector
 
 class PaletteSettings(INotifyPropertyChanged, INotifyPropertyChanging):
     """

@@ -1,6 +1,7 @@
-  Read = 1
-  ReadOnlyFile = 4
-  ReadWrite = 2
+class AccessRight():
+    Read = 1
+    ReadOnlyFile = 4
+    ReadWrite = 2
 
 class Catalog(Category):
     """
@@ -603,13 +604,14 @@ class CatalogItemCollection(ICollection, IEnumerable):
     
     pass
 
-  ItemCatalog = 0x10
-  ItemCategory = 8
-  ItemPackage = 2
-  ItemPalette = 4
-  ItemStockTool = 0x20
-  ItemTool = 1
-  ItemUnknown = 0
+class CatalogItemType():
+    ItemCatalog = 0x10
+    ItemCategory = 8
+    ItemPackage = 2
+    ItemPalette = 4
+    ItemStockTool = 0x20
+    ItemTool = 1
+    ItemUnknown = 0
 
 class CatalogSet(DisposableWrapper):
     """
@@ -657,9 +659,10 @@ class CatalogSet(DisposableWrapper):
     
     pass
 
-  Catalog = 1
-  ShapeCatalog = 4
-  StockToolCatalog = 2
+class CatalogTypeFlags():
+    Catalog = 1
+    ShapeCatalog = 4
+    StockToolCatalog = 2
 
 class Category(CatalogItem):
     """
@@ -691,13 +694,14 @@ class Category(CatalogItem):
 
     pass
 
-  ContextMenuEditorImage = 1
-  ContextMenuPaletteBackground = 2
-  ContextMenuPaletteSetCaption = 4
-  ContextMenuPaletteSetOptionButton = 5
-  ContextMenuPaletteSetTab = 3
-  ContextMenuPaletteTool = 0
-  ContextNone = -1
+class ContextMenuMode():
+    ContextMenuEditorImage = 1
+    ContextMenuPaletteBackground = 2
+    ContextMenuPaletteSetCaption = 4
+    ContextMenuPaletteSetOptionButton = 5
+    ContextMenuPaletteSetTab = 3
+    ContextMenuPaletteTool = 0
+    ContextNone = -1
 
 class CustomToolBase(IDisposable, IAcadTool, IAcadStockTool, Autodesk.AutoCAD.Windows.ToolPalette.IDropTarget, IAcPiPropertyUnspecified, IAcPiPropertyDisplay, Autodesk.AutoCAD.Windows.ToolPalette.IOPMPropertyExtension, IAcadToolContextMenu, Autodesk.AutoCAD.Windows.ToolPalette.IPerPropertyBrowsing, IOPMPropertyDialog, IAcadToolFlyoutShape):
     """
@@ -1449,21 +1453,24 @@ class CustomToolBase(IDisposable, IAcadTool, IAcadStockTool, Autodesk.AutoCAD.Wi
     
     pass
 
-  All = 0x1f
-  Children = 0x10
-  Image = 4
-  Item = 1
-  LinkedItem = 2
-  ShowProgress = 0x40
-  StockTool = 8
+class DownloadFlags():
+    All = 0x1f
+    Children = 0x10
+    Image = 4
+    Item = 1
+    LinkedItem = 2
+    ShowProgress = 0x40
+    StockTool = 8
 
-  Halo = 4
-  Normal = 1
-  Selected = 2
-  Shadow = 8
+class DrawImageOption():
+    Halo = 4
+    Normal = 1
+    Selected = 2
+    Shadow = 8
 
-  LeftButtonClicked
-  DroppedInDrawing
+class ExecutionContext():
+    LeftButtonClicked
+    DroppedInDrawing
 
 class FlyoutEntryAttribute(Attribute):
     """
@@ -3019,29 +3026,33 @@ class ImageList(DisposableWrapper):
     
     pass
 
-  None
-  RenderBitmapOpaque
-  UserOverride
+class ImageOptionFlags():
+    None
+    RenderBitmapOpaque
+    UserOverride
 
-  Bitmap = 1
-  EnhancedMetaFile = 4
-  Gif = 7
-  Icon = 3
-  Jpeg = 5
-  MetaFile = 2
-  Png = 6
-  Tiff = 8
-  Uninitialized = -1
+class ImageType():
+    Bitmap = 1
+    EnhancedMetaFile = 4
+    Gif = 7
+    Icon = 3
+    Jpeg = 5
+    MetaFile = 2
+    Png = 6
+    Tiff = 8
+    Uninitialized = -1
 
-  MenuRemoveImage = 0x10
-  MenuSetImage = 8
-  MenuUpdateImage = 4
-  None = 0
-  SupportsAutoImage = 1
-  SupportsUserImage = 2
+class ItemOptionFlags():
+    MenuRemoveImage = 0x10
+    MenuSetImage = 8
+    MenuUpdateImage = 4
+    None = 0
+    SupportsAutoImage = 1
+    SupportsUserImage = 2
 
-  LoadImages = 2
-  LoadLinks = 1
+class LoadFlags():
+    LoadImages = 2
+    LoadLinks = 1
 
 class POINTL(public struct POINTL {
 }):
@@ -4291,26 +4302,29 @@ class PerPropertyBrowsingEntryAttribute(Attribute):
     
     pass
 
-  RefreshAll = 0x1f
-  RefreshChildren = 0x10
-  RefreshImage = 4
-  RefreshItem = 1
-  RefreshLinkedItem = 2
-  RefreshShowProgress = 0x40
-  RefreshStockTool = 8
+class RefreshFlags():
+    RefreshAll = 0x1f
+    RefreshChildren = 0x10
+    RefreshImage = 4
+    RefreshItem = 1
+    RefreshLinkedItem = 2
+    RefreshShowProgress = 0x40
+    RefreshStockTool = 8
 
-  ContextMenuShow
-  ContextMenuHide
-  ExecutionCanceled
-  ExecutionCancelRejected
-  ContextMenuUpdatePalette
+class ReturnStatus():
+    ContextMenuShow
+    ContextMenuHide
+    ExecutionCanceled
+    ExecutionCancelRejected
+    ContextMenuUpdatePalette
 
-  SaveAnsi = &H20
-  SaveAs = 8
-  SaveImages = 4
-  SaveLinksAsEmbedded = 2
-  SaveLinksAsLinks = 1
-  SaveOverlayImages = &H10
+class SaveFlags():
+    SaveAnsi = 0x20
+    SaveAs = 8
+    SaveImages = 4
+    SaveLinksAsEmbedded = 2
+    SaveLinksAsLinks = 1
+    SaveOverlayImages = 0x10
 
 class Scheme(DisposableWrapper):
     """
@@ -5495,10 +5509,11 @@ class ToolAttribute(Attribute):
     
     pass
 
-  EditCustom = 1
-  EditDefault = 0
-  EditMultiple = 4
-  EditNone = 2
+class ToolEditFlags():
+    EditCustom = 1
+    EditDefault = 0
+    EditMultiple = 4
+    EditNone = 2
 
 class ToolPaletteManager(DisposableWrapper):
     """
@@ -5620,7 +5635,8 @@ class ToolPaletteManager(DisposableWrapper):
     
     pass
 
-  Flyout = 2
-  Normal = 1
-  Separator = 4
-  Text = 1
+class ToolType():
+    Flyout = 2
+    Normal = 1
+    Separator = 4
+    Text = 1

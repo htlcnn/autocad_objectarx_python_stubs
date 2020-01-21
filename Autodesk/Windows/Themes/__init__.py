@@ -1107,10 +1107,11 @@ class HSBColor(public class HSBColor):
     
     "
     """
-      None
-      Add
-      Subtract
-      Multiply
+    class OperationType():
+        None
+        Add
+        Subtract
+        Multiply
     
     
     def FromColor(self):

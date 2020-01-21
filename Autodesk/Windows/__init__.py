@@ -453,13 +453,14 @@ class DisplayDeviceInfo(public sealed class DisplayDeviceInfo):
     
     pass
 
-  All = 15
-  Date = 2
-  None = 0
-  Ordered = 1
-  Platform = 0x10
-  Size = 4
-  Type = 8
+class DocumentGroupByItems():
+    All = 15
+    Date = 2
+    None = 0
+    Ordered = 1
+    Platform = 0x10
+    Size = 4
+    Type = 8
 
 class DocumentItem(RibbonCommandItem):
     """
@@ -482,12 +483,13 @@ class DocumentItemCollection(ObservableCollection<DocumentItem>):
 
     pass
 
-  All = 15
-  CurrentlyOpenBy = 8
-  DateModified = 1
-  LastSavedBy = 4
-  None = 0
-  VersionInfo = 2
+class DocumentItemToolTipAttributes():
+    All = 15
+    CurrentlyOpenBy = 8
+    DateModified = 1
+    LastSavedBy = 4
+    None = 0
+    VersionInfo = 2
 
 class DoubleFuzzyComparer(DoubleFuzzyComparer<double>):
     """
@@ -860,10 +862,11 @@ class DpiValueComparer(DoubleFuzzyComparer<DpiValue>):
     
     pass
 
-  Window
-  ComboBox
-  LargeButton
-  StandardButton
+class GalleryDisplayMode():
+    Window
+    ComboBox
+    LargeButton
+    StandardButton
 
 class MenuContent(public class MenuContent):
     """
@@ -891,10 +894,11 @@ class ProgressBarSource(RibbonCommandItem):
 
     pass
 
-  None
-  Normal
-  Error
-  Paused
+class ProgressBarState():
+    None
+    Normal
+    Error
+    Paused
 
 class PropertyValuePair(INotifyPropertyChanged):
     """
@@ -1117,8 +1121,9 @@ class RibbonHwnd(RibbonItem):
 
     pass
 
-  Standard
-  Large
+class RibbonImageSize():
+    Standard
+    Large
 
 class RibbonItem(ICloneable, IRibbonContentUid, IRibbonAutomation, IRibbonHighlightable, INotifyPropertyChanged, IWeakEventListener):
     """
@@ -1283,14 +1288,16 @@ class RibbonItemEventArgs(EventArgs):
     
     pass
 
-  ChangeSize = 1
-  Collapse = 0x10
-  HideText = 2
-  NoResize = 0
-  ResizeWidth = 4
+class RibbonItemResizeStyles():
+    ChangeSize = 1
+    Collapse = 0x10
+    HideText = 2
+    NoResize = 0
+    ResizeWidth = 4
 
-  Standard
-  Large
+class RibbonItemSize():
+    Standard
+    Large
 
 class RibbonItemToolTipEventArgs(EventArgs):
     """
@@ -1595,9 +1602,10 @@ class RibbonSeparator(RibbonItem):
     
     pass
 
-  Line = 0
-  None = 0
-  Spacer = 1
+class RibbonSeparatorStyle():
+    Line = 0
+    None = 0
+    Spacer = 1
 
 class RibbonSpinner(RibbonItem, IResizableWidget):
     """
@@ -1650,9 +1658,10 @@ class RibbonSplitButton(RibbonListButton):
     
     pass
 
-  Icon
-  List
-  Descriptive
+class RibbonSplitButtonListStyle():
+    Icon
+    List
+    Descriptive
 
 class RibbonTab(ICloneable, IRibbonContentUid, INotifyPropertyChanged, IRibbonHighlightable):
     """
@@ -1780,9 +1789,10 @@ class RibbonTextBox(RibbonItem, IResizableWidget, IRibbonTextProperties):
     
     pass
 
-  Left
-  InsideLeft
-  InsideRight
+class RibbonTextBoxImageLocation():
+    Left
+    InsideLeft
+    InsideRight
 
 class RibbonToggleButton(RibbonButton):
     """
@@ -2025,39 +2035,43 @@ class TaskDialogCallbackArgs(public class TaskDialogCallbackArgs):
     
     pass
 
-  Cancel = 8
-  Close = 0x20
-  No = 4
-  None = 0
-  Ok = 1
-  Retry = 0x10
-  Yes = 2
+class TaskDialogCommonButtons():
+    Cancel = 8
+    Close = 0x20
+    No = 4
+    None = 0
+    Ok = 1
+    Retry = 0x10
+    Yes = 2
 
-  Error = 0xfffe
-  Information = 0xfffd
-  None = 0
-  Shield = 0xfffc
-  Warning = 0xffff
+class TaskDialogIcon():
+    Error = 0xfffe
+    Information = 0xfffd
+    None = 0
+    Shield = 0xfffc
+    Warning = 0xffff
 
-  Created
-  Navigated
-  ButtonClicked
-  HyperlinkClicked
-  Timer
-  Destroyed
-  RadioButtonClicked
-  DialogConstructed
-  VerificationClicked
-  Help
-  ExpandoButtonClicked
-  ExtraCheckBoxClicked
+class TaskDialogNotification():
+    Created
+    Navigated
+    ButtonClicked
+    HyperlinkClicked
+    Timer
+    Destroyed
+    RadioButtonClicked
+    DialogConstructed
+    VerificationClicked
+    Help
+    ExpandoButtonClicked
+    ExtraCheckBoxClicked
 
-  None
-  Ok
-  Cancel
-  Abort
-  Retry
-  Ignore
-  Yes
-  No
-  Close
+class TaskDialogResult():
+    None
+    Ok
+    Cancel
+    Abort
+    Retry
+    Ignore
+    Yes
+    No
+    Close

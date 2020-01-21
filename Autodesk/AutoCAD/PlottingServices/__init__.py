@@ -1,11 +1,12 @@
-  DwfFilePlotted = -3
-  NoPlotYet = -1
-  PlotHadErrors = 3
-  PlotHadSystemError = 4
-  PlotStart = 0
-  PlotSuccessful = 2
-  PlottingMessage = -2
-  ViewPlotLog = 1
+class AppPlotStatus():
+    DwfFilePlotted = -3
+    NoPlotYet = -1
+    PlotHadErrors = 3
+    PlotHadSystemError = 4
+    PlotStart = 0
+    PlotSuccessful = 2
+    PlottingMessage = -2
+    ViewPlotLog = 1
 
 class BeginDocumentEventArgs(EventArgs):
     """
@@ -496,26 +497,28 @@ class BeginPlotEventArgs(EventArgs):
     
     pass
 
-  DeviceLoadFailed = 0x2000
-  Exception = 0x100
-  MustCreatePC3 = 1
-  PC3DirReadOnly = 4
-  PC3FileReadOnly = 0x40
-  PmpDirMissing = 0x10
-  PmpDirReadOnly = 8
-  PmpFileReadOnly = 0x800
-  Possible = 0
-  RotationRequired = 2
-  SizeTooBig = 0x80
-  UnknownErrPC3File = 0x200
-  UnknownErrPmpDir = 0x20
-  UnknownErrPmpFile = 0x400
-  WidthAndHeightMustBePositive = 0x1000
+class CustomSizeResults():
+    DeviceLoadFailed = 0x2000
+    Exception = 0x100
+    MustCreatePC3 = 1
+    PC3DirReadOnly = 4
+    PC3FileReadOnly = 0x40
+    PmpDirMissing = 0x10
+    PmpDirReadOnly = 8
+    PmpFileReadOnly = 0x800
+    Possible = 0
+    RotationRequired = 2
+    SizeTooBig = 0x80
+    UnknownErrPC3File = 0x200
+    UnknownErrPmpDir = 0x20
+    UnknownErrPmpFile = 0x400
+    WidthAndHeightMustBePositive = 0x1000
 
-  OneOffConfig = 2
-  PC3File = 1
-  SystemPrinter = 0
-  Uninitialized = -1
+class DeviceType():
+    OneOffConfig = 2
+    PC3File = 1
+    SystemPrinter = 0
+    Uninitialized = -1
 
 class DsdData(RXObject):
     """
@@ -1307,10 +1310,11 @@ class HostAppServices(public sealed class HostAppServices):
     
     pass
 
-  MatchDisabled = 1
-  MatchEnabled = 2
-  MatchEnabledCustom = 3
-  MatchEnabledTemporaryCustom = 4
+class MatchingPolicy():
+    MatchDisabled = 1
+    MatchEnabled = 2
+    MatchEnabledCustom = 3
+    MatchEnabledTemporaryCustom = 4
 
 class MediaBounds(public struct MediaBounds {
 }):
@@ -1762,35 +1766,37 @@ class MediaBounds(public struct MediaBounds {
     
     pass
 
-  CanonicalMediaName = 8
-  CurrentStyleSheet = &H80000
-  DrawViewportsFirst = &H400000
-  NoChanges = 0
-  PlotCentered = &H400
-  PlotConfigurationName = 1
-  PlotHidden = &H800
-  PlotOrigin = &H10
-  PlotPaperMargins = 2
-  PlotPaperSize = 4
-  PlotPaperUnits = &H20
-  PlotPlotStyles = &H80
-  PlotRotation = &H200
-  PlotTransparency = &H800000
-  PlotType = &H8000
-  PlotViewName = &H20000
-  PlotViewportBorders = &H40
-  PlotWindowArea = &H10000
-  PrintLineWeights = &H200000
-  Scale = &H40000
-  ScaleLineWeights = &H100000
-  ShadePlot = &H1000
-  ShadePlotCustomDpi = &H4000
-  ShadePlotResLevel = &H2000
-  ShowPlotStyles = &H100
+class MergeStatus():
+    CanonicalMediaName = 8
+    CurrentStyleSheet = 0x80000
+    DrawViewportsFirst = 0x400000
+    NoChanges = 0
+    PlotCentered = 0x400
+    PlotConfigurationName = 1
+    PlotHidden = 0x800
+    PlotOrigin = 0x10
+    PlotPaperMargins = 2
+    PlotPaperSize = 4
+    PlotPaperUnits = 0x20
+    PlotPlotStyles = 0x80
+    PlotRotation = 0x200
+    PlotTransparency = 0x800000
+    PlotType = 0x8000
+    PlotViewName = 0x20000
+    PlotViewportBorders = 0x40
+    PlotWindowArea = 0x10000
+    PrintLineWeights = 0x200000
+    Scale = 0x40000
+    ScaleLineWeights = 0x100000
+    ShadePlot = 0x1000
+    ShadePlotCustomDpi = 0x4000
+    ShadePlotResLevel = 0x2000
+    ShowPlotStyles = 0x100
 
-  Continue
-  CanceledByCaller
-  CanceledByCancelAllButton
+class PlotCancelStatus():
+    Continue
+    CanceledByCaller
+    CanceledByCancelAllButton
 
 class PlotConfig(RXObject):
     """
@@ -2376,17 +2382,18 @@ class PlotLogger(DisposableWrapper):
     
     pass
 
-  DialogTitle
-  SheetName
-  SheetNameToolTip
-  Status
-  SheetProgressCaption
-  SheetSetProgressCaption
-  MessageCanceling
-  MessageCancelingCurrent
-  CancelSheetButtonMessage
-  CancelJobButtonMessage
-  MessageCount
+class PlotMessageIndex():
+    DialogTitle
+    SheetName
+    SheetNameToolTip
+    Status
+    SheetProgressCaption
+    SheetSetProgressCaption
+    MessageCanceling
+    MessageCancelingCurrent
+    CancelSheetButtonMessage
+    CancelJobButtonMessage
+    MessageCount
 
 class PlotPageInfo(RXObject):
     """
@@ -3040,9 +3047,10 @@ class PlotReactorManager(public sealed class PlotReactorManager):
 
     pass
 
-  NoPlotToFile
-  PlotToFileAllowed
-  MustPlotToFile
+class PlotToFileCapability():
+    NoPlotToFile
+    PlotToFileAllowed
+    MustPlotToFile
 
 class PreviewEndPlotInfo(DisposableWrapper):
     """
@@ -3091,46 +3099,53 @@ class PreviewEndPlotInfo(DisposableWrapper):
     
     pass
 
-  Normal
-  Plot
-  Cancel
-  Next
-  Previous
+class PreviewEndPlotStatus():
+    Normal
+    Plot
+    Cancel
+    Next
+    Previous
 
-  NextSheet = 2
-  Plot = 1
-  PreviousSheet = 4
+class PreviewEngineFlags():
+    NextSheet = 2
+    Plot = 1
+    PreviousSheet = 4
 
-  NotPlotting
-  ForegroundPlotting
-  BackgroundPlotting
+class ProcessPlotState():
+    NotPlotting
+    ForegroundPlotting
+    BackgroundPlotting
 
-  All
-  RefreshDevicesList
-  RefreshStyleList
-  RefreshSystemDevicesList
-  RefreshPC3DevicesList
+class RefreshCode():
+    All
+    RefreshDevicesList
+    RefreshStyleList
+    RefreshSystemDevicesList
+    RefreshPC3DevicesList
 
-  Continue
-  CanceledByCancelButton
-  CanceledByCancelAllButton
-  CanceledByCaller
+class SheetCancelStatus():
+    Continue
+    CanceledByCancelButton
+    CanceledByCancelAllButton
+    CanceledByCaller
 
-  SingleDwf
-  MultiDwf
-  OriginalDevice
-  SingleDwfx
-  MultiDwfx
-  SinglePdf
-  MultiPdf
+class SheetType():
+    SingleDwf
+    MultiDwf
+    OriginalDevice
+    SingleDwfx
+    MultiDwfx
+    SinglePdf
+    MultiPdf
 
-  NoneDevice
-  DefaultWindowsSysPrinter
-  Dwf6ePlot
-  DwfEplotOptForPlotting
-  DwfEplotOptForViewing
-  PublishToWebDwf
-  PublishToWebJpg
-  PublishToWebPng
-  DWFxePlot
-  PublishToWebDWFx
+class StdConfiguration():
+    NoneDevice
+    DefaultWindowsSysPrinter
+    Dwf6ePlot
+    DwfEplotOptForPlotting
+    DwfEplotOptForViewing
+    PublishToWebDwf
+    PublishToWebJpg
+    PublishToWebPng
+    DWFxePlot
+    PublishToWebDWFx

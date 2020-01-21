@@ -107,9 +107,10 @@ class LayerFilter(RXObject):
     
     )
     """
-      OK
-      Cancel
-      UseDefault
+    class DialogResult():
+        OK
+        Cancel
+        UseDefault
     
     
     def CompareTo(self):

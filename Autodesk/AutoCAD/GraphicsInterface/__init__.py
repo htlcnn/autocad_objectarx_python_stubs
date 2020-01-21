@@ -1,24 +1,28 @@
-  ArcSimple
-  ArcSector
-  ArcChord
+class ArcType():
+    ArcSimple
+    ArcSector
+    ArcChord
 
-  None
-  InverseLinear
-  InverseSquare
+class AttenuationType():
+    None
+    InverseLinear
+    InverseSquare
 
-  InheritAutoTransform = 0
-  Model = 4
-  None = 1
-  TransformObject = 2
+class AutoTransform():
+    InheritAutoTransform = 0
+    Model = 4
+    None = 1
+    TransformObject = 2
 
-  None = 0
-  UseAll = 0x3f
-  UseBump = 0x10
-  UseDiffuse = 1
-  UseOpacity = 8
-  UseReflection = 4
-  UseRefraction = 0x20
-  UseSpecular = 2
+class ChannelFlags():
+    None = 0
+    UseAll = 0x3f
+    UseBump = 0x10
+    UseDiffuse = 1
+    UseOpacity = 8
+    UseReflection = 4
+    UseRefraction = 0x20
+    UseSpecular = 2
 
 class ClipBoundary(DisposableWrapper):
     """
@@ -1481,14 +1485,16 @@ class ContextualColors(RXObject):
     
     pass
 
-  OneDistantLight
-  TwoDistantLights
+class DefaultLightingType():
+    OneDistantLight
+    TwoDistantLights
 
-  MaxDevForCircle
-  MaxDevForCurve
-  MaxDevForBoundary
-  MaxDevForIsoline
-  MaxDevForFacet
+class DeviationType():
+    MaxDevForCircle
+    MaxDevForCurve
+    MaxDevForBoundary
+    MaxDevForIsoline
+    MaxDevForFacet
 
 class DistantLightTraits(StandardLightTraits):
     """
@@ -1549,11 +1555,12 @@ class DistantLightTraits(StandardLightTraits):
     
     pass
 
-  DrawBackfaces = 1
-  DrawFillTextBoundaryEnd = 0x200
-  DrawFillTextBoundaryStart = 0x100
-  DrawNoLineWeight = 0x20
-  None = 0
+class DrawFlags():
+    DrawBackfaces = 1
+    DrawFillTextBoundaryEnd = 0x200
+    DrawFillTextBoundaryStart = 0x100
+    DrawNoLineWeight = 0x20
+    None = 0
 
 class Drawable(RXObject):
     """
@@ -1615,22 +1622,23 @@ class Drawable(RXObject):
     
     pass
 
-  BlockDependentViewportDraw = &H1000
-  HasAttributes = &H20
-  IsAnEntity = 1
-  IsCompoundObject = 4
-  IsDimension = &H85
-  IsExternalReference = &H2000
-  IsInvisible = &H10
-  None = 0
-  NotPlottable = &H4000
-  RegenDraw = &H100
-  RegenTypeDependentGeometry = &H40
-  ShadedDisplaySingleLOD = &H400
-  StandardDisplaySingleLOD = &H200
-  UsesNesting = 2
-  ViewDependentViewportDraw = &H800
-  ViewIndependentViewportDraw = 8
+class DrawableAttributes():
+    BlockDependentViewportDraw = 0x1000
+    HasAttributes = 0x20
+    IsAnEntity = 1
+    IsCompoundObject = 4
+    IsDimension = 0x85
+    IsExternalReference = 0x2000
+    IsInvisible = 0x10
+    None = 0
+    NotPlottable = 0x4000
+    RegenDraw = 0x100
+    RegenTypeDependentGeometry = 0x40
+    ShadedDisplaySingleLOD = 0x400
+    StandardDisplaySingleLOD = 0x200
+    UsesNesting = 2
+    ViewDependentViewportDraw = 0x800
+    ViewIndependentViewportDraw = 8
 
 class DrawableOverrule(Overrule):
     """
@@ -1750,7 +1758,8 @@ class DrawableTraits(SubEntityTraits):
     
     )
     """
-      VertexRolloverHighlightSize
+    class HighlightProperty():
+        VertexRolloverHighlightSize
     
     
     def AddLight(self):
@@ -1813,18 +1822,20 @@ class DrawableTraits(SubEntityTraits):
     
     pass
 
-public enum DrawableType {
-Geometry
-DistantLight
-PointLight
-SpotLight
-AmbientLight
-SolidBackground
-GradientBackground
-ImageBackground
-GroundPlaneBackground
-Viewport
-WebLight
+class DrawableType():
+    Geometry
+    DistantLight
+    PointLight
+    SpotLight
+    AmbientLight
+    SolidBackground
+    GradientBackground
+    ImageBackground
+    GroundPlaneBackground
+    Viewport
+    WebLight
+    SkyBackground
+    ImageBasedLightingBackground
 
 class EdgeData(public class EdgeData):
     """
@@ -1939,15 +1950,17 @@ class EdgeData(public class EdgeData):
     
     pass
 
-  Linear
-  Rectangle
-  Disk
-  Cylinder
-  Sphere
+class ExtendedLightShape():
+    Linear
+    Rectangle
+    Disk
+    Cylinder
+    Sphere
 
-  DaylightOff
-  DaylightOn
-  DaylightAuto
+class ExteriorDaylightMode():
+    DaylightOff
+    DaylightOn
+    DaylightAuto
 
 class FaceData(public sealed class FaceData):
     """
@@ -2134,13 +2147,15 @@ class Fill(RXObject):
 
     pass
 
-  FillAlways = 1
-  FillNever = 2
+class FillType():
+    FillAlways = 1
+    FillNever = 2
 
-  FinalGatherNone
-  FinalGatherCast
-  FinalGatherReceive
-  FinalGatherCastAndReceive
+class FinalGatherMode():
+    FinalGatherNone
+    FinalGatherCast
+    FinalGatherReceive
+    FinalGatherCastAndReceive
 
 class FontDescriptor(public struct FontDescriptor {
 }):
@@ -4299,10 +4314,11 @@ class Geometry(RXObject):
     
     pass
 
-  GlobalIlluminationNone
-  GlobalIlluminationCast
-  GlobalIlluminationReceive
-  GlobalIlluminationCastAndReceive
+class GlobalIlluminationMode():
+    GlobalIlluminationNone
+    GlobalIlluminationCast
+    GlobalIlluminationReceive
+    GlobalIlluminationCastAndReceive
 
 class Glyph(Drawable):
     """
@@ -4412,15 +4428,16 @@ class GradientFill(Fill):
     
     pass
 
-  Linear
-  Cylinder
-  InvCylinder
-  Spherical
-  Hemispherical
-  Curved
-  InvSpherical
-  InvHemispherical
-  InvCurved
+class GradientType():
+    Linear
+    Cylinder
+    InvCylinder
+    Spherical
+    Hemispherical
+    Curved
+    InvSpherical
+    InvHemispherical
+    InvCurved
 
 class GroundPlaneBackgroundTraits(NonEntityTraits):
     """
@@ -4558,12 +4575,13 @@ class HatchPatternDefinition(DisposableWrapper):
     
     pass
 
-  None
-  Custom
-  DashedAndThicken
-  Dim
-  ThickDim
-  Glow
+class HighlightStyle():
+    None
+    Custom
+    DashedAndThicken
+    Dim
+    ThickDim
+    Glow
 
 class IBLBackgroundTraits(NonEntityTraits):
     """
@@ -4585,8 +4603,9 @@ class IBLBackgroundTraits(NonEntityTraits):
     
     pass
 
-  BlinnShader
-  MetalShader
+class IlluminationModel():
+    BlinnShader
+    MetalShader
 
 class ImageBGRA32(DisposableWrapper):
     """
@@ -5077,19 +5096,21 @@ class ImageFileTexture(ImageTexture, ICloneable):
     
     pass
 
-  Bitonal
-  Palette
-  Gray
-  RGBA
-  BGRA
-  ARGB
-  ABGR
-  BGR
-  RGB
+class ImageOrg():
+    Bitonal
+    Palette
+    Gray
+    RGBA
+    BGRA
+    ARGB
+    ABGR
+    BGR
+    RGB
 
-  FromDwg
-  FromOleObject
-  FromRender
+class ImageSource():
+    FromDwg
+    FromOleObject
+    FromRender
 
 class ImageTexture(MaterialTexture):
     """
@@ -5241,48 +5262,52 @@ class LightTraits(NonEntityTraits):
     
     pass
 
-  Solid
-  Dashed
-  Dotted
-  DashDot
-  ShortDash
-  MediumDash
-  LongDash
-  ShortDashX2
-  MediumDashX2
-  LongDashX2
-  MediumLongDash
-  MediumDashShortDashShortDash
-  LongDashShortDash
-  LongDashDotDot
-  LongDashDot
-  MediumDashDotShortDashDot
-  SparseDot
-  ISODash
-  ISODashSpace
-  ISOLongDashDot
-  ISOLongDashDoubleDot
-  ISOLongDashTripleDot
-  ISODot
-  ISOLongDashShortDash
-  ISOLongDashDoubleShortDash
-  ISODashDot
-  ISODoubleDashDot
-  ISODashDoubleDot
-  ISODoubleDashDoubleDot
-  ISODashTripleDot
-  ISODoubleDashTripleDot
-  LineTypeNone
-  Solid6PixelsBlank6Pixels
+class Linetype():
+    Solid
+    Dashed
+    Dotted
+    DashDot
+    ShortDash
+    MediumDash
+    LongDash
+    ShortDashX2
+    MediumDashX2
+    LongDashX2
+    MediumLongDash
+    MediumDashShortDashShortDash
+    LongDashShortDash
+    LongDashDotDot
+    LongDashDot
+    MediumDashDotShortDashDot
+    SparseDot
+    ISODash
+    ISODashSpace
+    ISOLongDashDot
+    ISOLongDashDoubleDot
+    ISOLongDashTripleDot
+    ISODot
+    ISOLongDashShortDash
+    ISOLongDashDoubleShortDash
+    ISODashDot
+    ISODoubleDashDot
+    ISODashDoubleDot
+    ISODoubleDashDoubleDot
+    ISODashTripleDot
+    ISODoubleDashTripleDot
+    LineTypeNone
+    Solid6PixelsBlank6Pixels
 
-  SelfIllumination
-  Luminance
+class LuminanceMode():
+    SelfIllumination
+    Luminance
 
-  AllChannels
-  MapChannels
+class MapChannel():
+    AllChannels
+    MapChannels
 
-  Default
-  None
+class MapFilter():
+    Default
+    None
 
 class Mapper(RXObject):
     """
@@ -7257,11 +7282,13 @@ class MaterialTraits(NonEntityTraits):
     
     pass
 
-  Inherit
-  Override
+class Method():
+    Inherit
+    Override
 
-  Realistic
-  Advanced
+class Mode():
+    Realistic
+    Advanced
 
 class NonEntityTraits(DrawableTraits):
     """
@@ -7371,15 +7398,18 @@ class NonEntityTraits(DrawableTraits):
     
     pass
 
-  TangentSpaceNormalMap
+class NormalMapMethod():
+    TangentSpaceNormalMap
 
-  World
-  Screen
-  ZAxis
+class OrientationBehavior():
+    World
+    Screen
+    ZAxis
 
-  Clockwise = 1
-  CounterClockwise = -1
-  NoOrientation = 0
+class OrientationType():
+    Clockwise = 1
+    CounterClockwise = -1
+    NoOrientation = 0
 
 class PhotographicExposureParameters(ToneOperatorParameters):
     """
@@ -8686,11 +8716,12 @@ class PolylineCollection(DisposableWrapper):
     
     pass
 
-  World
-  Viewport
-  Screen
-  ScreenLocalOrigin
-  WorldWithScreenOffset
+class PositionBehavior():
+    World
+    Viewport
+    Screen
+    ScreenLocalOrigin
+    WorldWithScreenOffset
 
 class ProceduralTexture(MaterialTexture):
     """
@@ -8736,28 +8767,33 @@ class ProceduralTexture(MaterialTexture):
 
     pass
 
-  Wood
-  Marble
-  Generic
+class ProceduralTextureType():
+    Wood
+    Marble
+    Generic
 
-  InheritProjection
-  Planar
-  Box
-  Cylinder
-  Sphere
+class Projection():
+    InheritProjection
+    Planar
+    Box
+    Cylinder
+    Sphere
 
-  Box
-  Triangle
-  Gaussian
-  Lanczos
-  Mitchell
+class RapidRTFilterType():
+    Box
+    Triangle
+    Gaussian
+    Lanczos
+    Mitchell
 
-  Simplified
-  Basic
-  Advanced
+class RapidRTLightingMode():
+    Simplified
+    Basic
+    Advanced
 
-  ERenderLevel
-  ERenderTime
+class RapidRTQuitCondition():
+    ERenderLevel
+    ERenderTime
 
 class RapidRTRenderSettingsTraits(NonEntityTraits):
     """
@@ -8785,13 +8821,14 @@ class RapidRTRenderSettingsTraits(NonEntityTraits):
     
     pass
 
-  ForExplode = 5
-  HideOrShadeCommand = 3
-  Invalid = 0
-  RenderCommand = 4
-  SaveWorldDrawForProxy = 6
-  ShadedDisplay = 4
-  StandardDisplay = 2
+class RegenType():
+    ForExplode = 5
+    HideOrShadeCommand = 3
+    Invalid = 0
+    RenderCommand = 4
+    SaveWorldDrawForProxy = 6
+    ShadedDisplay = 4
+    StandardDisplay = 2
 
 class RenderEnvironmentTraits(NonEntityTraits):
     """
@@ -8845,19 +8882,22 @@ class RenderSettingsTraits(NonEntityTraits):
     
     pass
 
-  World
-  Viewport
-  Screen
-  ViewportLocalOrigin
-  ScreenLocalOrigin
+class ScaleBehavior():
+    World
+    Viewport
+    Screen
+    ViewportLocalOrigin
+    ScreenLocalOrigin
 
-  None
-  SelectionIgnore
+class SelectionFlags():
+    None
+    SelectionIgnore
 
-  ShadowsCastAndReceive
-  ShadowsDoesNotCast
-  ShadowsDoesNotReceive
-  ShadowsIgnore
+class ShadowFlags():
+    ShadowsCastAndReceive
+    ShadowsDoesNotCast
+    ShadowsDoesNotReceive
+    ShadowsIgnore
 
 class ShadowParameters(RXObject):
     """
@@ -8947,9 +8987,10 @@ class ShadowParameters(RXObject):
     
     pass
 
-  RayTraced
-  Maps
-  Sampled
+class ShadowType():
+    RayTraced
+    Maps
+    Sampled
 
 class SkyBackgroundTraits(NonEntityTraits):
     """
@@ -9067,9 +9108,10 @@ class SolidBackgroundTraits(NonEntityTraits):
     
     pass
 
-  Scene
-  File
-  Procedural
+class Source():
+    Scene
+    File
+    Procedural
 
 class SpotLightTraits(StandardLightTraits):
     """
@@ -9958,11 +10000,12 @@ class TextStyle(RXObject):
     
     pass
 
-  InheritTiling
-  Tile
-  Crop
-  Clamp
-  Mirror
+class Tiling():
+    InheritTiling
+    Tile
+    Crop
+    Clamp
+    Mirror
 
 class ToneOperatorParameters(RXObject):
     """
@@ -10069,13 +10112,14 @@ class ToneOperatorParameters(RXObject):
     
     pass
 
-  Main
-  Sprite
-  DirectShortTerm
-  Highlight
-  DirectTopmost
-  Contrast
-  Count
+class TransientDrawingMode():
+    Main
+    Sprite
+    DirectShortTerm
+    Highlight
+    DirectTopmost
+    Contrast
+    Count
 
 class TransientManager(DisposableWrapper):
     """
@@ -10201,84 +10245,97 @@ class TransientManager(DisposableWrapper):
     
     pass
 
-  TransparencyOff
-  Transparency1Bit
-  Transparency8Bit
+class TransparencyMode():
+    TransparencyOff
+    Transparency1Bit
+    Transparency8Bit
 
-  None
-  GroundPlane
-  Full
-  FullAndGround
+class VSDisplayShadowType():
+    None
+    GroundPlane
+    Full
+    FullAndGround
 
-  BackgroundsFlag = 1
-  LightingFlag = 2
-  MaterialsFlag = 4
-  None = 0
-  TexturesFlag = 8
+class VSDisplayStyles():
+    BackgroundsFlag = 1
+    LightingFlag = 2
+    MaterialsFlag = 4
+    None = 0
+    TexturesFlag = 8
 
-  JitterHigh = 3
-  JitterLow = 1
-  JitterMedium = 2
+class VSEdgeJitterAmount():
+    JitterHigh = 3
+    JitterLow = 1
+    JitterMedium = 2
 
-  Dashed = 2
-  Dotted = 3
-  DoubleLongDash = 9
-  DoubleMediumDash = 8
-  DoubleShortDash = 7
-  LongDash = 6
-  MediumDash = 5
-  MediumLongDash = 10
-  ShortDash = 4
-  Solid = 1
-  SparseDot = 11
+class VSEdgeLinePattern():
+    Dashed = 2
+    Dotted = 3
+    DoubleLongDash = 9
+    DoubleMediumDash = 8
+    DoubleShortDash = 7
+    LongDash = 6
+    MediumDash = 5
+    MediumLongDash = 10
+    ShortDash = 4
+    Solid = 1
+    SparseDot = 11
 
-  NoEdges
-  Isolines
-  FacetEdges
+class VSEdgeModel():
+    NoEdges
+    Isolines
+    FacetEdges
 
-  AlwaysOnTopFlag = 0x40
-  EdgeColorFlag = 8
-  EdgeHaloGapFlag = 0x10
-  EdgeJitterFlag = 2
-  EdgeOpacityFlag = 0x80
-  EdgeOverhangFlag = 1
-  EdgeWidthFlag = 4
-  None = 0
+class VSEdgeModifiers():
+    AlwaysOnTopFlag = 0x40
+    EdgeColorFlag = 8
+    EdgeHaloGapFlag = 0x10
+    EdgeJitterFlag = 2
+    EdgeOpacityFlag = 0x80
+    EdgeOverhangFlag = 1
+    EdgeWidthFlag = 4
+    None = 0
 
-  IntersectionFlag = 8
-  None = 0
-  ObscuredFlag = 4
-  SilhouetteFlag = 2
-  VisibleFlag = 1
+class VSEdgeStyles():
+    IntersectionFlag = 8
+    None = 0
+    ObscuredFlag = 4
+    SilhouetteFlag = 2
+    VisibleFlag = 1
 
-  None
-  ObjectColor
-  BackgroundColor
-  Mono
-  Tint
-  Desaturate
+class VSFaceColorMode():
+    None
+    ObjectColor
+    BackgroundColor
+    Mono
+    Tint
+    Desaturate
 
-  Invisible
-  Constant
-  Phong
-  Gooch
+class VSFaceLightingModel():
+    Invisible
+    Constant
+    Phong
+    Gooch
 
-  NoLighting
-  PerFaceLighting
-  PerVertexLighting
-  PerPixelLighting
+class VSFaceLightingQuality():
+    NoLighting
+    PerFaceLighting
+    PerVertexLighting
+    PerPixelLighting
 
-  None
-  FaceOpacityFlag
-  SpecularFlag
+class VSFaceModifiers():
+    None
+    FaceOpacityFlag
+    SpecularFlag
 
-  Undefined
-  Boolean
-  Int
-  Double
-  Color
-  String
-  Table
+class VariantType():
+    Undefined
+    Boolean
+    Int
+    Double
+    Color
+    String
+    Table
 
 class VertexData(public sealed class VertexData):
     """
@@ -11104,72 +11161,74 @@ class VisualStyle(RXObject):
     
     pass
 
-  Disable = 2
-  Enable = 3
-  Inherit = 0
-  InvalidOperation = -1
-  Set = 1
+class VisualStyleOperation():
+    Disable = 2
+    Enable = 3
+    Inherit = 0
+    InvalidOperation = -1
+    Set = 1
 
-  BloomEffect = 0x23
-  BloomIntensity = 50
-  BloomRadius = 0x2b
-  BloomThreshold = 0x2a
-  BlurAmount = 0x25
-  BlurEffect = 0x21
-  Color = 0x33
-  DepthOfField = 0x37
-  DisplayBrightness = 0x1a
-  DisplayShadowType = 0x1b
-  DisplayStyle = 0x19
-  EdgeColor = 15
-  EdgeCreaseAngle = 13
-  EdgeHaloGap = 0x16
-  EdgeHidePrecision = 0x18
-  EdgeIntersectionColor = 9
-  EdgeIntersectionLinePattern = 12
-  EdgeIsolines = 0x17
-  EdgeJitterAmount = 0x13
-  EdgeModel = 7
-  EdgeModifier = 14
-  EdgeObscuredColor = 10
-  EdgeObscuredLinePattern = 11
-  EdgeOpacity = 0x10
-  EdgeOverhang = 0x12
-  EdgeSilhouetteColor = 20
-  EdgeSilhouetteWidth = 0x15
-  EdgeStyle = 8
-  EdgeTexturePath = 0x36
-  EdgeWidth = 0x11
-  EdgeWiggleAmount = 0x35
-  FaceAdjustment = 0x2d
-  FaceColorMode = 2
-  FaceLightingModel = 0
-  FaceLightingQuality = 1
-  FaceModifier = 3
-  FaceMonoColor = 6
-  FaceOpacity = 4
-  FaceSpecular = 5
-  FocusDistance = 0x38
-  FocusWidth = 0x39
-  InvalidProperty = -1
-  LightingEnabled = 30
-  MonoEffect = 0x20
-  PastelEffect = 0x24
-  PencilAngle = 0x26
-  PencilColor = 0x29
-  PencilEffect = 0x22
-  PencilPattern = 40
-  PencilScale = 0x27
-  PostBrightness = 0x2f
-  PostContrast = 0x2e
-  PosterizeEffect = 0x1f
-  PostPower = 0x30
-  PropertyCount = 0x3a
-  TintColor = 0x2c
-  TintEffect = 0x31
-  Transparency = 0x34
-  UseDrawOrder = 0x1c
-  ViewportTransparency = 0x1d
+class VisualStyleProperty():
+    BloomEffect = 0x23
+    BloomIntensity = 50
+    BloomRadius = 0x2b
+    BloomThreshold = 0x2a
+    BlurAmount = 0x25
+    BlurEffect = 0x21
+    Color = 0x33
+    DepthOfField = 0x37
+    DisplayBrightness = 0x1a
+    DisplayShadowType = 0x1b
+    DisplayStyle = 0x19
+    EdgeColor = 15
+    EdgeCreaseAngle = 13
+    EdgeHaloGap = 0x16
+    EdgeHidePrecision = 0x18
+    EdgeIntersectionColor = 9
+    EdgeIntersectionLinePattern = 12
+    EdgeIsolines = 0x17
+    EdgeJitterAmount = 0x13
+    EdgeModel = 7
+    EdgeModifier = 14
+    EdgeObscuredColor = 10
+    EdgeObscuredLinePattern = 11
+    EdgeOpacity = 0x10
+    EdgeOverhang = 0x12
+    EdgeSilhouetteColor = 20
+    EdgeSilhouetteWidth = 0x15
+    EdgeStyle = 8
+    EdgeTexturePath = 0x36
+    EdgeWidth = 0x11
+    EdgeWiggleAmount = 0x35
+    FaceAdjustment = 0x2d
+    FaceColorMode = 2
+    FaceLightingModel = 0
+    FaceLightingQuality = 1
+    FaceModifier = 3
+    FaceMonoColor = 6
+    FaceOpacity = 4
+    FaceSpecular = 5
+    FocusDistance = 0x38
+    FocusWidth = 0x39
+    InvalidProperty = -1
+    LightingEnabled = 30
+    MonoEffect = 0x20
+    PastelEffect = 0x24
+    PencilAngle = 0x26
+    PencilColor = 0x29
+    PencilEffect = 0x22
+    PencilPattern = 40
+    PencilScale = 0x27
+    PostBrightness = 0x2f
+    PostContrast = 0x2e
+    PosterizeEffect = 0x1f
+    PostPower = 0x30
+    PropertyCount = 0x3a
+    TintColor = 0x2c
+    TintEffect = 0x31
+    Transparency = 0x34
+    UseDrawOrder = 0x1c
+    ViewportTransparency = 0x1d
 
 class VisualStyleTraits(DrawableTraits):
     """
@@ -11179,39 +11238,41 @@ class VisualStyleTraits(DrawableTraits):
     
     pass
 
-  Basic = 7
-  Brighten = 12
-  ColorChange = &H10
-  Conceptual = 9
-  Custom = 10
-  Dim = 11
-  DisplayOnly = &H13
-  EdgeColorOff = &H16
-  EdgeOnly = &H12
-  EmptyStyle = &H1f
-  FaceOnly = &H11
-  FacePattern = 15
-  Flat = 0
-  FlatWithEdges = 1
-  Gouraud = 2
-  GouraudWithEdges = 3
-  Hidden = 6
-  JitterOff = 20
-  LinePattern = 14
-  OverhangOff = &H15
-  Realistic = 8
-  Shaded = &H1b
-  ShadedWithEdges = &H1a
-  ShadesOfGray = &H17
-  Sketchy = &H18
-  Thicken = 13
-  Wireframe2D = 4
-  Wireframe3D = 5
-  XRay = &H19
+class VisualStyleType():
+    Basic = 7
+    Brighten = 12
+    ColorChange = 0x10
+    Conceptual = 9
+    Custom = 10
+    Dim = 11
+    DisplayOnly = 0x13
+    EdgeColorOff = 0x16
+    EdgeOnly = 0x12
+    EmptyStyle = 0x1f
+    FaceOnly = 0x11
+    FacePattern = 15
+    Flat = 0
+    FlatWithEdges = 1
+    Gouraud = 2
+    GouraudWithEdges = 3
+    Hidden = 6
+    JitterOff = 20
+    LinePattern = 14
+    OverhangOff = 0x15
+    Realistic = 8
+    Shaded = 0x1b
+    ShadedWithEdges = 0x1a
+    ShadesOfGray = 0x17
+    Sketchy = 0x18
+    Thicken = 13
+    Wireframe2D = 4
+    Wireframe3D = 5
+    XRay = 0x19
 
-  TypeA = 3
-  TypeB = 2
-  TypeC = 1
+class WebFileType():
+    TypeA = 3
+    TypeB = 2
+    TypeC = 1
 
 class WebLightTraits(PointLightTraits):
     """
@@ -11267,10 +11328,11 @@ class WebLightTraits(PointLightTraits):
     
     pass
 
-  NoSymmetry
-  SingleSymmetry
-  DoubleSymmetry
-  AxialSymmetry
+class WebSymmetry():
+    NoSymmetry
+    SingleSymmetry
+    DoubleSymmetry
+    AxialSymmetry
 
 class WoodTexture(ProceduralTexture, ICloneable):
     """

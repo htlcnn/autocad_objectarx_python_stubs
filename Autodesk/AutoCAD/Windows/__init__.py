@@ -127,9 +127,10 @@ class ColorDialog(public sealed class ColorDialog):
     """
     
     """
-      ACITab = 1
-      ColorBookTab = 4
-      TrueColorTab = 2
+    class ColorTabs():
+        ACITab = 1
+        ColorBookTab = 4
+        TrueColorTab = 2
     
     
     def SetDialogTabs(self):
@@ -340,41 +341,43 @@ class ContextMenuExtension(Menu, IDisposable):
     
     pass
 
-  ModeMacro
-  CursorCoordinates
-  Snap
-  Grid
-  Ortho
-  Polar
-  ObjectTrack
-  LineWeight
-  PaperModel
-  Paper
-  Model
-  ObjectSnap
-  Float
-  Table
-  Spacer
-  ViewportMaximizePrevious
-  ViewportMaximize
-  ViewportMaximizeNext
-  DynamicInput
-  DynamicUcs
-  LayoutModelIcons
-  ModelIcon
-  LayoutIcon
-  LayoutMoreIcon
-  All
+class DefaultPane():
+    ModeMacro
+    CursorCoordinates
+    Snap
+    Grid
+    Ortho
+    Polar
+    ObjectTrack
+    LineWeight
+    PaperModel
+    Paper
+    Model
+    ObjectSnap
+    Float
+    Table
+    Spacer
+    ViewportMaximizePrevious
+    ViewportMaximize
+    ViewportMaximizeNext
+    DynamicInput
+    DynamicUcs
+    LayoutModelIcons
+    ModelIcon
+    LayoutIcon
+    LayoutMoreIcon
+    All
 
-  Bottom = 4
-  BottomLeft = 6
-  BottomRight = 12
-  Left = 2
-  None = 0
-  Right = 8
-  Top = 1
-  TopLeft = 3
-  TopRight = 9
+class Direction():
+    Bottom = 4
+    BottomLeft = 6
+    BottomRight = 12
+    Left = 2
+    None = 0
+    Right = 8
+    Top = 1
+    TopLeft = 3
+    TopRight = 9
 
 class DocWindowReactor(internal struct DocWindowReactor {
   private long <alignment member>;
@@ -385,11 +388,12 @@ class DocWindowReactor(internal struct DocWindowReactor {
 
     pass
 
-  Bottom = 0x8000
-  Left = 0x1000
-  None = 0
-  Right = 0x4000
-  Top = 0x2000
+class DockSides():
+    Bottom = 0x8000
+    Left = 0x1000
+    None = 0
+    Right = 0x4000
+    Top = 0x2000
 
 class DocumentWindow(Window):
     """
@@ -550,10 +554,11 @@ class DropTarget(public abstract class DropTarget):
     
     pass
 
-  None
-  Information
-  Critical
-  Warning
+class IconType():
+    None
+    Information
+    Critical
+    Warning
 
 class InfoCenter(public class InfoCenter):
     """
@@ -1793,16 +1798,17 @@ class OpenFileDialog(public sealed class OpenFileDialog):
     
     s
     """
-      AllowAnyExtension = 4
-      AllowFoldersOnly = 0x800
-      AllowMultiple = 0x1000
-      DefaultIsFolder = 0x10
-      DoNotTransferRemoteFiles = 0x40
-      ForceDefaultFolder = 0x100
-      NoFtpSites = 0x200
-      NoShellExtensions = 0x400
-      NoUrls = 0x80
-      SearchPath = 8
+    class OpenFileDialogFlags():
+        AllowAnyExtension = 4
+        AllowFoldersOnly = 0x800
+        AllowMultiple = 0x1000
+        DefaultIsFolder = 0x10
+        DoNotTransferRemoteFiles = 0x40
+        ForceDefaultFolder = 0x100
+        NoFtpSites = 0x200
+        NoShellExtensions = 0x400
+        NoUrls = 0x80
+        SearchPath = 8
     
     
     def GetFilenames(self):
@@ -4276,22 +4282,24 @@ class PaletteSetStateEventArgs(EventArgs):
     
     pass
 
-  NameEditable = &H10
-  Notify = &H400
-  NoTitleBar = &H8000
-  PauseAutoRollupForChildModalDialog = &H10000
-  ShowAutoHideButton = 2
-  ShowCloseButton = 8
-  ShowPropertiesMenu = 4
-  ShowTabForSingle = &H40
-  SingleColDock = &H1000
-  SingleRowDock = &H200
-  SingleRowNoVertResize = &H800
-  Snappable = &H20
-  UsePaletteNameAsTitleForSingle = &H80
+class PaletteSetStyles():
+    NameEditable = 0x10
+    Notify = 0x400
+    NoTitleBar = 0x8000
+    PauseAutoRollupForChildModalDialog = 0x10000
+    ShowAutoHideButton = 2
+    ShowCloseButton = 8
+    ShowPropertiesMenu = 4
+    ShowTabForSingle = 0x40
+    SingleColDock = 0x1000
+    SingleRowDock = 0x200
+    SingleRowNoVertResize = 0x800
+    Snappable = 0x20
+    UsePaletteNameAsTitleForSingle = 0x80
 
-  Left
-  Right
+class PaletteSetTitleBarLocation():
+    Left
+    Right
 
 class Pane(StatusBarItem):
     """
@@ -4431,12 +4439,13 @@ class PaneCollection(IList):
     
     pass
 
-  Command = 0x10
-  NoBorders = 1
-  Normal = 8
-  PopOut = 2
-  PopUp = 0x20
-  Stretch = 4
+class PaneStyles():
+    Command = 0x10
+    NoBorders = 1
+    Normal = 8
+    PopOut = 2
+    PopUp = 0x20
+    Stretch = 4
 
 class PlotStyleDialog(public sealed class PlotStyleDialog):
     """
@@ -4953,14 +4962,15 @@ class SaveFileDialog(public sealed class SaveFileDialog):
     
     s
     """
-      AllowAnyExtension = 4
-      DefaultIsFolder = 0x10
-      DoNotTransferRemoteFiles = 0x40
-      DoNotWarnIfFileExist = 0x20
-      ForceDefaultFolder = 0x100
-      NoFtpSites = 0x200
-      NoShellExtensions = 0x400
-      NoUrls = 0x80
+    class SaveFileDialogFlags():
+        AllowAnyExtension = 4
+        DefaultIsFolder = 0x10
+        DoNotTransferRemoteFiles = 0x40
+        DoNotWarnIfFileExist = 0x20
+        ForceDefaultFolder = 0x100
+        NoFtpSites = 0x200
+        NoShellExtensions = 0x400
+        NoUrls = 0x80
     
     
     def ShowDialog(self):
@@ -5031,9 +5041,10 @@ class SizeChangingEventArgs(LocationChangingEventArgs):
     
     pass
 
-  Hide = 0
-  Show = 1
-  ThemeChange = 4
+class StateEventIndex():
+    Hide = 0
+    Show = 1
+    ThemeChange = 4
 
 class StatusBar(public sealed class StatusBar):
     """
@@ -5305,13 +5316,14 @@ class TrayItemBubbleWindow(DisposableWrapper):
     
     pass
 
-  FailedToCreate
-  NoIcons
-  NoNotifications
-  ClosedByUser
-  TimedOut
-  HyperlinkClicked
-  DocumentDeactivated
+class TrayItemBubbleWindowCloseReason():
+    FailedToCreate
+    NoIcons
+    NoNotifications
+    ClosedByUser
+    TimedOut
+    HyperlinkClicked
+    DocumentDeactivated
 
 class TrayItemBubbleWindowClosedEventArgs(EventArgs):
     """

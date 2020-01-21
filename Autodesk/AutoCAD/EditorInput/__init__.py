@@ -25,17 +25,18 @@ class AcMgdLivePreviewReactor(internal struct AcMgdLivePreviewReactor {
 
     pass
 
-  All = 4
-  CrossingCPolygon = 0x20
-  Fence = 0x40
-  Group = 0x400
-  Last = 0x80
-  LastAllPrevious = 1
-  Multiple = 0x10
-  PickImplied = 2
-  Previous = 0x100
-  WindowCrossingBoxWPolygonCPolygon = 8
-  WindowWPolygon = 0x200
+class AddedKeywords():
+    All = 4
+    CrossingCPolygon = 0x20
+    Fence = 0x40
+    Group = 0x400
+    Last = 0x80
+    LastAllPrevious = 1
+    Multiple = 0x10
+    PickImplied = 2
+    Previous = 0x100
+    WindowCrossingBoxWPolygonCPolygon = 8
+    WindowWPolygon = 0x200
 
 class ConstraintUtilities(public class ConstraintUtilities):
     """
@@ -1925,23 +1926,25 @@ class CursorBadgeUtilities(public class CursorBadgeUtilities):
     
     pass
 
-  Crosshair = 0
-  CrosshairNoRotate = 6
-  EntitySelect = 8
-  EntitySelectNoPerspective = 10
-  Invisible = 7
-  NoSpecialCursor = -1
-  NotRotated = 3
-  Parallelogram = 9
-  PickfirstOrGrips = 11
-  RectangularCursor = 1
-  RotatedCrosshair = 5
-  RubberBand = 2
-  TargetBox = 4
+class CursorType():
+    Crosshair = 0
+    CrosshairNoRotate = 6
+    EntitySelect = 8
+    EntitySelectNoPerspective = 10
+    Invisible = 7
+    NoSpecialCursor = -1
+    NotRotated = 3
+    Parallelogram = 9
+    PickfirstOrGrips = 11
+    RectangularCursor = 1
+    RotatedCrosshair = 5
+    RubberBand = 2
+    TargetBox = 4
 
-  Normal
-  None
-  Selection
+class DragCursor():
+    Normal
+    None
+    Selection
 
 class DrawJig(Jig):
     """
@@ -8368,8 +8371,9 @@ class LivePreviewContextProxy(IDisposable):
     
     pass
 
-  EndPreview
-  UpdatePreview
+class LivePreviewContextType():
+    EndPreview
+    UpdatePreview
 
 class LivePreviewDelegate(LivePreviewActionBase):
     """
@@ -9015,24 +9019,25 @@ class LivePreviewPropertySetting(LivePreviewActionBase):
     
     pass
 
-  AllowTangent = 0x20000
-  ApparentIntersection = 0x800
-  Center = 4
-  DisablePerpendicular = 0x40000
-  End = 1
-  Immediate = 0x10000
-  Insertion = 0x40
-  Intersection = 0x20
-  Middle = 2
-  Near = 0x200
-  Node = 8
-  NoneOverride = 0x200000
-  Perpendicular = 0x80
-  Quadrant = 0x10
-  Quick = 0x400
-  RelativeCartesian = 0x80000
-  RelativePolar = 0x100000
-  Tangent = 0x100
+class ObjectSnapMasks():
+    AllowTangent = 0x20000
+    ApparentIntersection = 0x800
+    Center = 4
+    DisablePerpendicular = 0x40000
+    End = 1
+    Immediate = 0x10000
+    Insertion = 0x40
+    Intersection = 0x20
+    Middle = 2
+    Near = 0x200
+    Node = 8
+    NoneOverride = 0x200000
+    Perpendicular = 0x80
+    Quadrant = 0x10
+    Quick = 0x400
+    RelativeCartesian = 0x80000
+    RelativePolar = 0x100000
+    Tangent = 0x100
 
 class PickPointDescriptor(public struct PickPointDescriptor {
 }):
@@ -9482,9 +9487,10 @@ class PickPointDescriptor(public struct PickPointDescriptor {
     
     pass
 
-  InfiniteLine
-  Ray
-  LineSegment
+class PickPointKind():
+    InfiniteLine
+    Ray
+    LineSegment
 
 class PickPointSelectedObject(SelectedObject):
     """
@@ -11861,29 +11867,30 @@ class PointFilterResult(IDisposable):
     
     pass
 
-  Aligned = 0x400
-  AppFiltered = 0x800
-  CartSnapped = 0x10
-  CoordinatePending = 0x70000
-  CyclingPoint = 0x40
-  DidNotPick = 0
-  ForcedPick = 0x1000
-  FromKeyboard = 0x80000
-  Gripped = 8
-  LastPoint = 4
-  NotDigitizer = 2
-  NotInteractive = 0x100000
-  ObjectSnapped = 0x80
-  Ortho = 0x20
-  PickAborted = 0x8000
-  PickMask = 0xe000
-  PolarAngle = 0x100
-  Tablet = 1
-  UsedObjectSnapBox = 0x4000
-  UsedPickBox = 0x2000
-  XPending = 0x10000
-  YPending = 0x20000
-  ZPending = 0x40000
+class PointHistoryBits():
+    Aligned = 0x400
+    AppFiltered = 0x800
+    CartSnapped = 0x10
+    CoordinatePending = 0x70000
+    CyclingPoint = 0x40
+    DidNotPick = 0
+    ForcedPick = 0x1000
+    FromKeyboard = 0x80000
+    Gripped = 8
+    LastPoint = 4
+    NotDigitizer = 2
+    NotInteractive = 0x100000
+    ObjectSnapped = 0x80
+    Ortho = 0x20
+    PickAborted = 0x8000
+    PickMask = 0xe000
+    PolarAngle = 0x100
+    Tablet = 1
+    UsedObjectSnapBox = 0x4000
+    UsedPickBox = 0x2000
+    XPending = 0x10000
+    YPending = 0x20000
+    ZPending = 0x40000
 
 class PointMonitorEventArgs(EventArgs, IDisposable):
     """
@@ -17834,13 +17841,14 @@ class PromptSelectionResultEventArgs(EventArgs):
     
     pass
 
-  Cancel = -5002
-  Error = -5001
-  Keyword = -5005
-  Modeless = 0x13a3
-  None = 0x1388
-  OK = 0x13ec
-  Other = 0x13a4
+class PromptStatus():
+    Cancel = -5002
+    Error = -5001
+    Keyword = -5005
+    Modeless = 0x13a3
+    None = 0x1388
+    OK = 0x13ec
+    Other = 0x13a4
 
 class PromptStringOptions(PromptEditorOptions):
     """
@@ -17977,9 +17985,10 @@ class RolloverEventArgs(EventArgs):
     
     pass
 
-  OK
-  NoChange
-  Cancel
+class SamplerStatus():
+    OK
+    NoChange
+    Cancel
 
 class SelectedObject(public class SelectedObject):
     """
@@ -21251,41 +21260,44 @@ class SelectionFilter(public sealed class SelectionFilter):
     
     pass
 
-  Duplicates = 2
-  FailedPickAuto = 0x200
-  NestedEntities = 4
-  Normal = 0
-  PickfirstSet = 0x20
-  PickPoints = 1
-  PreviousSet = 0x40
-  SinglePick = 0x10
-  SubEntities = 8
-  SubSelection = 0x80
-  Undo = 0x100
+class SelectionFlags():
+    Duplicates = 2
+    FailedPickAuto = 0x200
+    NestedEntities = 4
+    Normal = 0
+    PickfirstSet = 0x20
+    PickPoints = 1
+    PreviousSet = 0x40
+    SinglePick = 0x10
+    SubEntities = 8
+    SubSelection = 0x80
+    Undo = 0x100
 
-  Crossing = 3
-  Fence = 4
-  NonGraphical = 0
-  PickPoint = 1
-  SubEntity = 5
-  Unavailable = -1
-  Window = 2
+class SelectionMethod():
+    Crossing = 3
+    Fence = 4
+    NonGraphical = 0
+    PickPoint = 1
+    SubEntity = 5
+    Unavailable = -1
+    Window = 2
 
-  All = 6
-  Box = 3
-  Crossing = 2
-  CrossingPolygon = 8
-  Entity = 5
-  Every = 11
-  Extents = 12
-  FencePolyline = 7
-  Group = 13
-  Last = 4
-  Multiple = 15
-  Pick = 10
-  Previous = 14
-  Window = 1
-  WindowPolygon = 9
+class SelectionMode():
+    All = 6
+    Box = 3
+    Crossing = 2
+    CrossingPolygon = 8
+    Entity = 5
+    Every = 11
+    Extents = 12
+    FencePolyline = 7
+    Group = 13
+    Last = 4
+    Multiple = 15
+    Pick = 10
+    Previous = 14
+    Window = 1
+    WindowPolygon = 9
 
 class SelectionRemovedEventArgs(EventArgs, IDisposable):
     """
@@ -21444,31 +21456,33 @@ class SelectionTextInputEventArgs(EventArgs):
     
     pass
 
-  AddRemove = 0x800
-  All = 4
-  BoxAuto = 8
-  CrossingCPolygon = 0x20
-  Fence = 0x40
-  Group = 0x400
-  Last = 0x80
-  LastAllGroupPrevious = 1
-  Multiple = 0x10
-  PickImplied = 2
-  Previous = 0x100
-  WindowWPolygon = 0x200
+class SubtractedKeywords():
+    AddRemove = 0x800
+    All = 4
+    BoxAuto = 8
+    CrossingCPolygon = 0x20
+    Fence = 0x40
+    Group = 0x400
+    Last = 0x80
+    LastAllGroupPrevious = 1
+    Multiple = 0x10
+    PickImplied = 2
+    Previous = 0x100
+    WindowWPolygon = 0x200
 
-  Accept3dCoordinates = 0x80
-  AcceptMouseUpAsPoint = 0x100
-  AcceptOtherInputString = 0x800
-  AnyBlankTerminatesInput = 0x200
-  DoNotEchoCancelForCtrlC = 4
-  DoNotUpdateLastPoint = 8
-  GovernedByOrthoMode = 1
-  GovernedByUCSDetect = 0x1000
-  InitialBlankTerminatesInput = 0x400
-  NoDwgLimitsChecking = 0x10
-  NoNegativeResponseAccepted = 0x40
-  NoZDirectionOrtho = 0x2000
-  NoZeroResponseAccepted = 0x20
-  NullResponseAccepted = 2
-  UseBasePointElevation = 0x8000
+class UserInputControls():
+    Accept3dCoordinates = 0x80
+    AcceptMouseUpAsPoint = 0x100
+    AcceptOtherInputString = 0x800
+    AnyBlankTerminatesInput = 0x200
+    DoNotEchoCancelForCtrlC = 4
+    DoNotUpdateLastPoint = 8
+    GovernedByOrthoMode = 1
+    GovernedByUCSDetect = 0x1000
+    InitialBlankTerminatesInput = 0x400
+    NoDwgLimitsChecking = 0x10
+    NoNegativeResponseAccepted = 0x40
+    NoZDirectionOrtho = 0x2000
+    NoZeroResponseAccepted = 0x20
+    NullResponseAccepted = 2
+    UseBasePointElevation = 0x8000

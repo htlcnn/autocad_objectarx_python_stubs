@@ -270,13 +270,14 @@ class AlignedDimension(Dimension):
     
     pass
 
-  Degrees015 = 1
-  Degrees030 = 2
-  Degrees045 = 3
-  Degrees060 = 4
-  Degrees090 = 6
-  DegreesAny = 0
-  DegreesHorz = 12
+class AngleConstraint():
+    Degrees015 = 1
+    Degrees030 = 2
+    Degrees045 = 3
+    Degrees060 = 4
+    Degrees090 = 6
+    DegreesAny = 0
+    DegreesHorz = 12
 
 class AngularConstraint(ExplicitConstraint):
     """
@@ -625,10 +626,11 @@ class AngularConstraint(ExplicitConstraint):
     
     .
     """
-      ParallelAntiClockwise
-      AntiParallelClockwise
-      ParallelClockwise
-      AntiParallelAntiClockwise
+    class AngularSectorType():
+        ParallelAntiClockwise
+        AntiParallelClockwise
+        ParallelClockwise
+        AntiParallelAntiClockwise
     
     
     def AngleMultiplier(self):
@@ -712,21 +714,24 @@ class AnnotationScale(ObjectContext):
     
     pass
 
-  MText
-  FeatureControlFrame
-  BlockRef
-  NoAnnotation
+class AnnotationType():
+    MText
+    FeatureControlFrame
+    BlockRef
+    NoAnnotation
 
-  True
-  False
-  NotApplicable
+class AnnotativeStates():
+    True
+    False
+    NotApplicable
 
-  LoadDisabled = 0x10
-  OnAutoCADStartup = 2
-  OnCommandInvocation = 4
-  OnLoadRequest = 8
-  OnProxyDetection = 1
-  TransparentlyLoadable = 0x20
+class ApplicationLoadReasons():
+    LoadDisabled = 0x10
+    OnAutoCADStartup = 2
+    OnCommandInvocation = 4
+    OnLoadRequest = 8
+    OnProxyDetection = 1
+    TransparentlyLoadable = 0x20
 
 class Arc(Curve):
     """
@@ -3277,13 +3282,14 @@ class Assoc2dConstraintGroup(AssocAction):
     
     .
     """
-      WellDefined
-      UnderConstrained
-      OverConstrained
-      Inconsistent
-      NotEvaluated
-      NotAvailable
-      RejectedByClient
+    class SolutionStatusType():
+        WellDefined
+        UnderConstrained
+        OverConstrained
+        Inconsistent
+        NotEvaluated
+        NotAvailable
+        RejectedByClient
     
     
     def Add3PointAngularConstraint(self):
@@ -5007,8 +5013,9 @@ class AssocArrayPathParameters(AssocArrayCommonParameters):
     
     )
     """
-      Divide
-      Measure
+    class MethodType():
+        Divide
+        Measure
     
     
     def GetEndOffset(self):
@@ -5318,8 +5325,9 @@ class AssocArrayPolarParameters(AssocArrayCommonParameters):
     
     )
     """
-      Clockwise
-      CounterClockwise
+    class ArcDirection():
+        Clockwise
+        CounterClockwise
     
     
     def GetAngleBetweenItems(self):
@@ -6090,16 +6098,17 @@ class AssocCompoundActionParam(AssocActionParam):
     
     pass
 
-  NoneAssocConstraintType
-  DistanceAssocConstraintType
-  HorizontalDistanceAssocConstraintType
-  VerticalDistanceAssocConstraintType
-  Angle0AssocConstraintType
-  Angle1AssocConstraintType
-  Angle2AssocConstraintType
-  Angle3AssocConstraintType
-  RadiusAssocConstraintType
-  DiameterAssocConstraintType
+class AssocConstraintType():
+    NoneAssocConstraintType
+    DistanceAssocConstraintType
+    HorizontalDistanceAssocConstraintType
+    VerticalDistanceAssocConstraintType
+    Angle0AssocConstraintType
+    Angle1AssocConstraintType
+    Angle2AssocConstraintType
+    Angle3AssocConstraintType
+    RadiusAssocConstraintType
+    DiameterAssocConstraintType
 
 class AssocDependency(DBObject):
     """
@@ -6959,10 +6968,11 @@ class AssocDimDependencyBodyBase(AssocDependencyBody):
     
     pass
 
-  NotDraggingAssocDraggingState
-  FirstSampleAssocDraggingState
-  IntermediateSampleAssocDraggingState
-  LastSampleAssocDraggingState
+class AssocDraggingState():
+    NotDraggingAssocDraggingState
+    FirstSampleAssocDraggingState
+    IntermediateSampleAssocDraggingState
+    LastSampleAssocDraggingState
 
 class AssocEdgeActionParam(AssocActionParam):
     """
@@ -7397,12 +7407,14 @@ class AssocEvaluationCallback(IDisposable):
     
     pass
 
-  ModifyObjectsAssocEvaluationMode
-  ModifyActionAssocEvaluationMode
+class AssocEvaluationMode():
+    ModifyObjectsAssocEvaluationMode
+    ModifyActionAssocEvaluationMode
 
-  CanBeEvaluatedAssocEvaluationPriority = 0x3e8
-  CannotBeEvaluatedAssocEvaluationPriority = -1000
-  CannotDermineAssocEvaluationPriority = 0
+class AssocEvaluationPriority():
+    CanBeEvaluatedAssocEvaluationPriority = 0x3e8
+    CannotBeEvaluatedAssocEvaluationPriority = -1000
+    CannotDermineAssocEvaluationPriority = 0
 
 class AssocExtendSurfaceActionBody(AssocPathBasedSurfaceActionBody):
     """
@@ -8004,10 +8016,11 @@ class AssocLoftedSurfaceActionBody(AssocPathBasedSurfaceActionBody):
     
     )
     """
-      EndCrossSection = 2
-      EndGuide = 8
-      StartCrossSection = 1
-      StartGuide = 4
+    class ProfileType():
+        EndCrossSection = 2
+        EndGuide = 8
+        StartCrossSection = 1
+        StartGuide = 4
     
     
     def CreateInstance(self):
@@ -10850,13 +10863,14 @@ class AssocSingleEdgePersSubentId(AssocPersSubentityId):
     
     pass
 
-  IsUpToDateAssocStatus
-  ChangedDirectlyAssocStatus
-  ChangedTransitivelyAssocStatus
-  ChangedNoDifferenceAssocStatus
-  FailedToEvaluateAssocStatus
-  ErasedAssocStatus
-  SuppressedAssocStatus
+class AssocStatus():
+    IsUpToDateAssocStatus
+    ChangedDirectlyAssocStatus
+    ChangedTransitivelyAssocStatus
+    ChangedNoDifferenceAssocStatus
+    FailedToEvaluateAssocStatus
+    ErasedAssocStatus
+    SuppressedAssocStatus
 
 class AssocSurfaceActionBody(AssocParamBasedActionBody):
     """
@@ -11077,10 +11091,11 @@ class AssocSweptSurfaceActionBody(AssocPathBasedSurfaceActionBody):
     
     pass
 
-  NotSpecified
-  Stretch
-  Rotate
-  Move
+class AssocTransformationType():
+    NotSpecified
+    Stretch
+    Rotate
+    Move
 
 class AssocTrimSurfaceActionBody(AssocPathBasedSurfaceActionBody):
     """
@@ -11620,30 +11635,31 @@ class AssocVertexActionParam(AssocActionParam):
     
     pass
 
-  BaseAlign = 13
-  BaseCenter = 11
-  BaseFit = 0x11
-  BaseLeft = 10
-  BaseMid = 0x15
-  BaseRight = 12
-  BottomAlign = 14
-  BottomCenter = 8
-  BottomFit = 0x12
-  BottomLeft = 7
-  BottomMid = 0x16
-  BottomRight = 9
-  MiddleAlign = 15
-  MiddleCenter = 5
-  MiddleFit = 0x13
-  MiddleLeft = 4
-  MiddleMid = 0x17
-  MiddleRight = 6
-  TopAlign = 0x10
-  TopCenter = 2
-  TopFit = 20
-  TopLeft = 1
-  TopMid = 0x18
-  TopRight = 3
+class AttachmentPoint():
+    BaseAlign = 13
+    BaseCenter = 11
+    BaseFit = 0x11
+    BaseLeft = 10
+    BaseMid = 0x15
+    BaseRight = 12
+    BottomAlign = 14
+    BottomCenter = 8
+    BottomFit = 0x12
+    BottomLeft = 7
+    BottomMid = 0x16
+    BottomRight = 9
+    MiddleAlign = 15
+    MiddleCenter = 5
+    MiddleFit = 0x13
+    MiddleLeft = 4
+    MiddleMid = 0x17
+    MiddleRight = 6
+    TopAlign = 0x10
+    TopCenter = 2
+    TopFit = 20
+    TopLeft = 1
+    TopMid = 0x18
+    TopRight = 3
 
 class AttributeCollection(ICollection, IEnumerable, ISubObject):
     """
@@ -11978,8 +11994,9 @@ class AuditInfo(DisposableWrapper):
     
     pass
 
-  Pass1 = 1
-  Pass2 = 2
+class AuditPass():
+    Pass1 = 1
+    Pass2 = 2
 
 class AutoConstrainEvaluationCallback(IDisposable):
     """
@@ -12336,9 +12353,10 @@ class BlendOptions(DisposableWrapper, ICloneable):
     
     )
     """
-      DriveModeFirst
-      DriveModeSecond
-      DriveModeBoth
+    class DriveModeType():
+        DriveModeFirst
+        DriveModeSecond
+        DriveModeBoth
     
     
     CoplanarDirection = None
@@ -12421,8 +12439,9 @@ class BlockBegin(Entity):
 
     pass
 
-  ConnectExtents
-  ConnectBase
+class BlockConnectionType():
+    ConnectExtents
+    ConnectBase
 
 class BlockEnd(Entity):
     """
@@ -13589,8 +13608,9 @@ class BlockReference(Entity):
     
     pass
 
-  Any
-  Uniform
+class BlockScaling():
+    Any
+    Uniform
 
 class BlockTable(SymbolTable, IEnumerable):
     """
@@ -13841,9 +13861,10 @@ class Body(Entity):
     
     pass
 
-  BoolUnite
-  BoolIntersect
-  BoolSubtract
+class BooleanOperationType():
+    BoolUnite
+    BoolIntersect
+    BoolSubtract
 
 class BulgeVertex(public sealed class BulgeVertex):
     """
@@ -14233,62 +14254,70 @@ class Cell(CellRange):
     
     pass
 
-  BottomCenter = 8
-  BottomLeft = 7
-  BottomRight = 9
-  MiddleCenter = 5
-  MiddleLeft = 4
-  MiddleRight = 6
-  TopCenter = 2
-  TopLeft = 1
-  TopRight = 3
+class CellAlignment():
+    BottomCenter = 8
+    BottomLeft = 7
+    BottomRight = 9
+    MiddleCenter = 5
+    MiddleLeft = 4
+    MiddleRight = 6
+    TopCenter = 2
+    TopLeft = 1
+    TopRight = 3
 
-  None
-  Label
-  Data
+class CellClass():
+    None
+    Label
+    Data
 
-  Flow = 1
-  StackedHorizontal = 2
-  StackedVertical = 4
+class CellContentLayout():
+    Flow = 1
+    StackedHorizontal = 2
+    StackedVertical = 4
 
-  Block = 4
-  Field = 2
-  Unknown = 0
-  Value = 1
+class CellContentTypes():
+    Block = 4
+    Field = 2
+    Unknown = 0
+    Value = 1
 
-  BottomMask = 4
-  LeftMask = 8
-  RightMask = 2
-  TopMask = 1
+class CellEdgeMasks():
+    BottomMask = 4
+    LeftMask = 8
+    RightMask = 2
+    TopMask = 1
 
-  Bottom = 4
-  Left = 2
-  Right = 8
-  Top = 1
+class CellMargins():
+    Bottom = 4
+    Left = 2
+    Right = 8
+    Top = 1
 
-  None
-  InheritCellFormat
+class CellOption():
+    None
+    InheritCellFormat
 
-  Alignment = 0x10
-  AutoScale = 0x100
-  BackgroundColor = 0x200
-  ContentColor = 0x20
-  ContentLayout = 0x4000
-  DataFormat = 2
-  DataType = 1
-  FlowDirBtoT = 0x10000
-  Invalid = 0
-  MarginBottom = 0x2000
-  MarginHorzSpacing = 0x20000
-  MarginLeft = 0x400
-  MarginRight = 0x1000
-  MarginTop = 0x800
-  MarginVertSpacing = 0x40000
-  MergeAll = 0x8000
-  Rotation = 4
-  Scale = 8
-  TextHeight = 0x80
-  TextStyle = 0x40
+class CellProperties():
+    Alignment = 0x10
+    AutoScale = 0x100
+    BackgroundColor = 0x200
+    ContentColor = 0x20
+    ContentLayout = 0x4000
+    DataFormat = 2
+    DataType = 1
+    FlowDirBtoT = 0x10000
+    Invalid = 0
+    MarginBottom = 0x2000
+    MarginHorzSpacing = 0x20000
+    MarginLeft = 0x400
+    MarginRight = 0x1000
+    MarginTop = 0x800
+    MarginVertSpacing = 0x40000
+    MergeAll = 0x8000
+    Rotation = 4
+    Scale = 8
+    TextHeight = 0x80
+    TextStyle = 0x40
 
 class CellRange(ISubObject, IEnumerable<CellReference>):
     """
@@ -14352,27 +14381,29 @@ class CellRange(ISubObject, IEnumerable<CellReference>):
     
     pass
 
-  ContentLocked = 1
-  ContentModifiedAfterUpdate = 8
-  ContentReadOnly = 2
-  FormatLocked = 0x10
-  FormatModifiedAfterUpdate = 0x40
-  FormatReadOnly = 0x20
-  Linked = 4
-  None = 0
+class CellStates():
+    ContentLocked = 1
+    ContentModifiedAfterUpdate = 8
+    ContentReadOnly = 2
+    FormatLocked = 0x10
+    FormatModifiedAfterUpdate = 0x40
+    FormatReadOnly = 0x20
+    Linked = 4
+    None = 0
 
-  Unknown
-  Integer
-  Double
-  CharPtr
-  Point
-  ObjectId
-  HardOwnerId
-  SoftOwnerId
-  HardPtrId
-  SoftPtrId
-  Bool
-  Vector
+class CellType():
+    Unknown
+    Integer
+    Double
+    CharPtr
+    Point
+    ObjectId
+    HardOwnerId
+    SoftOwnerId
+    HardPtrId
+    SoftPtrId
+    Bool
+    Vector
 
 class CenterPointConstraint(ConcentricConstraint):
     """
@@ -14751,9 +14782,10 @@ class Circle(Curve):
     
     pass
 
-  Invalid
-  Rectangle
-  Poly
+class ClipBoundaryType():
+    Invalid
+    Rectangle
+    Poly
 
 class ColinearConstraint(GeometricalConstraint):
     """
@@ -14801,12 +14833,14 @@ class ColinearConstraint(GeometricalConstraint):
 
     pass
 
-  None
-  Solid
+class CollisionType():
+    None
+    Solid
 
-  NoColumns
-  StaticColumns
-  DynamicColumns
+class ColumnType():
+    NoColumns
+    StaticColumns
+    DynamicColumns
 
 class CompositeConstraint(GeometricalConstraint):
     """
@@ -17043,12 +17077,13 @@ class CompoundObjectId(RXObject):
     
     .
     """
-      CouldNotResolveNonTerminal = 2
-      CouldNotResolveTerminal = 3
-      CouldNotResolveTooEarly = 4
-      IncompatibleIdType = 0x3e8
-      Valid = 0
-      WasLoadedNowUnloaded = 1
+    class StatusType():
+        CouldNotResolveNonTerminal = 2
+        CouldNotResolveTerminal = 3
+        CouldNotResolveTooEarly = 4
+        IncompatibleIdType = 0x3e8
+        Valid = 0
+        WasLoadedNowUnloaded = 1
     
     
     def DwgInFields(self):
@@ -17243,9 +17278,10 @@ class ConcentricConstraint(GeometricalConstraint):
 
     pass
 
-  TurnHeight
-  Turns
-  Height
+class ConstrainType():
+    TurnHeight
+    Turns
+    Height
 
 class Constrained2PointsConstructionLine(ConstrainedConstructionLine):
     """
@@ -24445,10 +24481,11 @@ class ConstraintGroupNode(RXObject):
     
     pass
 
-  NoneContent
-  BlockContent
-  MTextContent
-  ToleranceContent
+class ContentType():
+    NoneContent
+    BlockContent
+    MTextContent
+    ToleranceContent
 
 class Curve(Entity):
     """
@@ -29351,12 +29388,13 @@ class DataLink(DBObject):
     
     pass
 
-  Etransmit = 1
-  FileWatcher = 3
-  OrignalPath = 0x100
-  Other = 4
-  Unknown = 0
-  XrefManager = 2
+class DataLinkGetSourceContext():
+    Etransmit = 1
+    FileWatcher = 3
+    OrignalPath = 0x100
+    Other = 4
+    Unknown = 0
+    XrefManager = 2
 
 class DataLinkManager(RXObject):
     """
@@ -29425,9 +29463,10 @@ class DataLinkManager(RXObject):
     
     pass
 
-  None
-  Anonymous
-  PersistCache
+class DataLinkOption():
+    None
+    Anonymous
+    PersistCache
 
 class DataTable(DBObject):
     """
@@ -29659,17 +29698,18 @@ class DataTable(DBObject):
     
     pass
 
-  Buffer = 0x80
-  Date = 8
-  Double = 2
-  General = 0x200
-  Long = 1
-  ObjectId = 0x40
-  Point = 0x10
-  Point3d = 0x20
-  Resbuf = 0x100
-  String = 4
-  Unknown = 0
+class DataType():
+    Buffer = 0x80
+    Date = 8
+    Double = 2
+    General = 0x200
+    Long = 1
+    ObjectId = 0x40
+    Point = 0x10
+    Point3d = 0x20
+    Resbuf = 0x100
+    String = 4
+    Unknown = 0
 
 class Database(void Wblock(
     Database outputDataBase,
@@ -33181,20 +33221,22 @@ class DecomposeForSaveReplacementRecord(public struct DecomposeForSaveReplacemen
     
     pass
 
-  Block = 2
-  Copy = 0
-  Explode = 1
-  Insert = 6
-  InsertCopy = 10
-  Objects = 8
-  SymbolTableMerge = 4
-  Wblock = 7
-  WblockObjects = 11
-  XrefBind = 3
-  XrefInsert = 9
+class DeepCloneType():
+    Block = 2
+    Copy = 0
+    Explode = 1
+    Insert = 6
+    InsertCopy = 10
+    Objects = 8
+    SymbolTableMerge = 4
+    Wblock = 7
+    WblockObjects = 11
+    XrefBind = 3
+    XrefInsert = 9
 
-  OneDistantLight
-  TwoDistantLights
+class DefaultLightingType():
+    OneDistantLight
+    TwoDistantLights
 
 class DetailSymbol(Entity):
     """
@@ -33280,22 +33322,26 @@ class DetailSymbol(Entity):
     
     pass
 
-  CircularBoundary
-  RectangularBoundary
-  CustomBoundary
+class DetailSymbolBoundaryType():
+    CircularBoundary
+    RectangularBoundary
+    CustomBoundary
 
-  IdentifierPosition = 2
-  ModelEdge = 1
+class DetailSymbolOverriddenProperty():
+    IdentifierPosition = 2
+    ModelEdge = 1
 
-  OutsideBoundary
-  OutsideBoundaryWithLeader
-  OnBoundary
-  OnBoundaryWithLeader
+class DetailViewIdentifierPlacement():
+    OutsideBoundary
+    OutsideBoundaryWithLeader
+    OnBoundary
+    OnBoundaryWithLeader
 
-  Smooth
-  SmoothWithBorder
-  SmoothWithConnectionLine
-  Jagged
+class DetailViewModelEdge():
+    Smooth
+    SmoothWithBorder
+    SmoothWithConnectionLine
+    Jagged
 
 class DetailViewStyle(DBObject):
     """
@@ -33718,8 +33764,9 @@ class DictionaryWithDefaultDictionary(DBDictionary):
     
     pass
 
-  FirstArrow
-  SecondArrow
+class DimArrowFlag():
+    FirstArrow
+    SecondArrow
 
 class DimStyleTable(SymbolTable, IEnumerable):
     """
@@ -34434,9 +34481,10 @@ class Dimension(Entity):
     
     pass
 
-  Mark
-  Line
-  None
+class DimensionCenterMarkType():
+    Mark
+    Line
+    None
 
 class DimensionStyleOverrule(Overrule):
     """
@@ -35615,10 +35663,11 @@ class DistanceConstraint(ExplicitConstraint):
     
     .
     """
-      NotDirected
-      FixedDirection
-      PerpendicularToLine
-      ParallelToLine
+    class DistanceDirectionType():
+        NotDirected
+        FixedDirection
+        PerpendicularToLine
+        ParallelToLine
     
     
     ConstrainedLineId = None
@@ -35631,15 +35680,18 @@ class DistanceConstraint(ExplicitConstraint):
     
     pass
 
-  DragStart
-  DragEnd
-  DragAbort
+class DragStatus():
+    DragStart
+    DragEnd
+    DragAbort
 
-  DrawLeaderHeadFirst
-  DrawLeaderTailFirst
+class DrawLeaderOrderType():
+    DrawLeaderHeadFirst
+    DrawLeaderTailFirst
 
-  DrawContentFirst
-  DrawLeaderFirst
+class DrawMLeaderOrderType():
+    DrawContentFirst
+    DrawLeaderFirst
 
 class DrawOrderTable(DBObject):
     """
@@ -35761,12 +35813,13 @@ class DrawOrderTable(DBObject):
     
     pass
 
-  NotApplicable
-  Ignore
-  Replace
-  RefMangleName
-  MangleName
-  UnmangleName
+class DuplicateRecordCloning():
+    NotApplicable
+    Ignore
+    Replace
+    RefMangleName
+    MangleName
+    UnmangleName
 
 class DwfDefinition(UnderlayDefinition):
     """
@@ -36306,193 +36359,197 @@ class DwgFiler(RXObject):
     
     pass
 
-AC1001 = 8
-AC1002 = 9
-AC1003 = 10
-AC1004 = 11
-AC1005 = 12
-AC1006 = 13
-AC1007 = 14
-AC1008 = 15
-AC1009 = 0x10
-AC1010 = 0x11
-AC1011 = 0x12
-AC1012 = 0x13
-AC1013 = 20
-AC1014 = 0x15
-AC1015 = 0x17
-AC1021 = 0x1b
-AC1024 = 0x1d
-AC1027 = 0x1f
-AC1500 = 0x16
-AC1800 = 0x19
-AC1800a = 0x18
-AC1To2 = 1
-AC1To40 = 2
-AC1To50 = 3
-AC2100a = 0x1a
-AC2400a = 0x1c
-AC2700a = 30
-AC2To10 = 5
-AC2To20 = 4
-AC2To21 = 6
-AC2To22 = 7
-Current = 0x1f
-Max = 0x7fff
-MC0To0 = 0
-Newest = 0x1f
-Unknown = 0x7ffe
+class DwgVersion():
+    AC1001 = 8
+    AC1002 = 9
+    AC1003 = 10
+    AC1004 = 11
+    AC1005 = 12
+    AC1006 = 13
+    AC1007 = 14
+    AC1008 = 15
+    AC1009 = 0x10
+    AC1010 = 0x11
+    AC1011 = 0x12
+    AC1012 = 0x13
+    AC1013 = 20
+    AC1014 = 0x15
+    AC1015 = 0x17
+    AC1021 = 0x1b
+    AC1024 = 0x1d
+    AC1027 = 0x1f
+    AC1032 = 0x21
+    AC1500 = 0x16
+    AC1800 = 0x19
+    AC1800a = 0x18
+    AC1To2 = 1
+    AC1To40 = 2
+    AC1To50 = 3
+    AC2100a = 0x1a
+    AC2400a = 0x1c
+    AC2700a = 30
+    AC2To10 = 5
+    AC2To20 = 4
+    AC2To21 = 6
+    AC2To22 = 7
+    AC3200a = 0x20
+    Current = 0x21
+    Max = 0xff
+    MC0To0 = 0
+    Newest = 0x21
+    Unknown = 0xfe
 
-  Alpha = 440
-  Angle = 50
-  ArbitraryHandle = 320
-  AttributePrompt = 3
-  AttributeTag = 2
-  BinaryChunk = 310
-  BlockName = 2
-  Bool = 290
-  CircleSides = 0x48
-  CLShapeName = 4
-  CLShapeText = 9
-  Color = 0x3e
-  ColorName = 430
-  ColorRgb = 420
-  Comment = 0x3e7
-  ControlString = 0x66
-  DashLength = 0x31
-  Description = 3
-  DimBlk1 = 6
-  DimBlk2 = 7
-  DimensionAlternativePrefixSuffix = 4
-  DimensionBlock = 5
-  DimPostString = 3
-  DimStyleName = 3
-  DimVarHandle = 0x69
-  Elevation = 0x26
-  EmbeddedObjectStart = 0x65
-  End = -1
-  ExtendedDataAsciiString = 0x3e8
-  ExtendedDataBinaryChunk = 0x3ec
-  ExtendedDataControlString = 0x3ea
-  ExtendedDataDist = 0x411
-  ExtendedDataHandle = 0x3ed
-  ExtendedDataInteger16 = 0x42e
-  ExtendedDataInteger32 = 0x42f
-  ExtendedDataLayerName = 0x3eb
-  ExtendedDataReal = 0x410
-  ExtendedDataRegAppName = 0x3e9
-  ExtendedDataScale = 0x412
-  ExtendedDataWorldXCoordinate = 0x3f3
-  ExtendedDataWorldXDir = 0x3f5
-  ExtendedDataWorldXDisp = 0x3f4
-  ExtendedDataWorldYCoordinate = 0x3fd
-  ExtendedDataWorldYDir = 0x3ff
-  ExtendedDataWorldYDisp = 0x3fe
-  ExtendedDataWorldZCoordinate = 0x407
-  ExtendedDataWorldZDir = 0x409
-  ExtendedDataWorldZDisp = 0x408
-  ExtendedDataXCoordinate = 0x3f2
-  ExtendedDataYCoordinate = 0x3fc
-  ExtendedDataZCoordinate = 0x406
-  ExtendedInt16 = 400
-  FirstEntityId = -2
-  GradientAngle = 460
-  GradientColCount = 0x1c5
-  GradientColVal = 0x1cf
-  GradientName = 470
-  GradientObjType = 450
-  GradientPatType = 0x1c3
-  GradientShift = 0x1cd
-  GradientTintType = 0x1c4
-  GradientTintVal = 0x1ce
-  Handle = 5
-  HardOwnershipId = 360
-  HardPointerId = 340
-  HasSubentities = 0x42
-  HeaderId = -2
-  Int16 = 70
-  Int32 = 90
-  Int64 = 160
-  Int8 = 280
-  Invalid = -9999
-  LayerLinetype = 0x3d
-  LayerName = 8
-  LayoutName = 410
-  LinetypeAlign = 0x48
-  LinetypeElement = 0x31
-  LinetypeName = 6
-  LinetypePdc = 0x49
-  LinetypeProse = 3
-  LinetypeScale = 0x30
-  LineWeight = 370
-  MlineOffset = 0x31
-  MlineStyleName = 2
-  NormalX = 210
-  NormalY = 220
-  NormalZ = 230
-  Operator = -4
-  PixelScale = 0x2f
-  PlotStyleNameId = 390
-  PlotStyleNameType = 380
-  PReactors = -5
-  Real = 40
-  RegAppFlags = 0x47
-  RenderMode = 0x119
-  ShapeName = 2
-  ShapeScale = 0x2e
-  ShapeXOffset = 0x2c
-  ShapeYOffset = 0x2d
-  SoftOwnershipId = 350
-  SoftPointerId = 330
-  Start = 0
-  Subclass = 100
-  SymbolTableName = 2
-  SymbolTableRecordComments = 4
-  SymbolTableRecordName = 2
-  Text = 1
-  TextBigFontFile = 4
-  TextFontFile = 3
-  TextStyleName = 7
-  Thickness = 0x27
-  TxtSize = 40
-  TxtStyleFlags = 0x47
-  TxtStylePSize = 0x2a
-  TxtStyleXScale = 0x29
-  UcsOrg = 110
-  UcsOrientationX = 0x6f
-  UcsOrientationY = 0x70
-  ViewBackClip = 0x2c
-  ViewBrightness = 0x8d
-  ViewContrast = 0x8e
-  ViewFrontClip = 0x2b
-  ViewHeight = 0x2d
-  ViewLensLength = 0x2a
-  ViewMode = 0x47
-  ViewportActive = 0x44
-  ViewportAspect = 0x29
-  ViewportGrid = 0x4c
-  ViewportHeight = 40
-  ViewportIcon = 0x4a
-  ViewportNumber = 0x45
-  ViewportSnap = 0x4b
-  ViewportSnapAngle = 50
-  ViewportSnapPair = 0x4e
-  ViewportSnapStyle = 0x4d
-  ViewportTwist = 0x33
-  ViewportVisibility = 0x43
-  ViewportZoom = 0x49
-  ViewWidth = 0x29
-  Visibility = 60
-  XCoordinate = 10
-  XDataStart = -3
-  XDictionary = -6
-  XInt16 = 170
-  XReal = 140
-  XRefPath = 1
-  XTextString = 300
-  XXInt16 = 270
-  YCoordinate = 20
-  ZCoordinate = 30
+class DxfCode():
+    Alpha = 440
+    Angle = 50
+    ArbitraryHandle = 320
+    AttributePrompt = 3
+    AttributeTag = 2
+    BinaryChunk = 310
+    BlockName = 2
+    Bool = 290
+    CircleSides = 0x48
+    CLShapeName = 4
+    CLShapeText = 9
+    Color = 0x3e
+    ColorName = 430
+    ColorRgb = 420
+    Comment = 0x3e7
+    ControlString = 0x66
+    DashLength = 0x31
+    Description = 3
+    DimBlk1 = 6
+    DimBlk2 = 7
+    DimensionAlternativePrefixSuffix = 4
+    DimensionBlock = 5
+    DimPostString = 3
+    DimStyleName = 3
+    DimVarHandle = 0x69
+    Elevation = 0x26
+    EmbeddedObjectStart = 0x65
+    End = -1
+    ExtendedDataAsciiString = 0x3e8
+    ExtendedDataBinaryChunk = 0x3ec
+    ExtendedDataControlString = 0x3ea
+    ExtendedDataDist = 0x411
+    ExtendedDataHandle = 0x3ed
+    ExtendedDataInteger16 = 0x42e
+    ExtendedDataInteger32 = 0x42f
+    ExtendedDataLayerName = 0x3eb
+    ExtendedDataReal = 0x410
+    ExtendedDataRegAppName = 0x3e9
+    ExtendedDataScale = 0x412
+    ExtendedDataWorldXCoordinate = 0x3f3
+    ExtendedDataWorldXDir = 0x3f5
+    ExtendedDataWorldXDisp = 0x3f4
+    ExtendedDataWorldYCoordinate = 0x3fd
+    ExtendedDataWorldYDir = 0x3ff
+    ExtendedDataWorldYDisp = 0x3fe
+    ExtendedDataWorldZCoordinate = 0x407
+    ExtendedDataWorldZDir = 0x409
+    ExtendedDataWorldZDisp = 0x408
+    ExtendedDataXCoordinate = 0x3f2
+    ExtendedDataYCoordinate = 0x3fc
+    ExtendedDataZCoordinate = 0x406
+    ExtendedInt16 = 400
+    FirstEntityId = -2
+    GradientAngle = 460
+    GradientColCount = 0x1c5
+    GradientColVal = 0x1cf
+    GradientName = 470
+    GradientObjType = 450
+    GradientPatType = 0x1c3
+    GradientShift = 0x1cd
+    GradientTintType = 0x1c4
+    GradientTintVal = 0x1ce
+    Handle = 5
+    HardOwnershipId = 360
+    HardPointerId = 340
+    HasSubentities = 0x42
+    HeaderId = -2
+    Int16 = 70
+    Int32 = 90
+    Int64 = 160
+    Int8 = 280
+    Invalid = -9999
+    LayerLinetype = 0x3d
+    LayerName = 8
+    LayoutName = 410
+    LinetypeAlign = 0x48
+    LinetypeElement = 0x31
+    LinetypeName = 6
+    LinetypePdc = 0x49
+    LinetypeProse = 3
+    LinetypeScale = 0x30
+    LineWeight = 370
+    MlineOffset = 0x31
+    MlineStyleName = 2
+    NormalX = 210
+    NormalY = 220
+    NormalZ = 230
+    Operator = -4
+    PixelScale = 0x2f
+    PlotStyleNameId = 390
+    PlotStyleNameType = 380
+    PReactors = -5
+    Real = 40
+    RegAppFlags = 0x47
+    RenderMode = 0x119
+    ShapeName = 2
+    ShapeScale = 0x2e
+    ShapeXOffset = 0x2c
+    ShapeYOffset = 0x2d
+    SoftOwnershipId = 350
+    SoftPointerId = 330
+    Start = 0
+    Subclass = 100
+    SymbolTableName = 2
+    SymbolTableRecordComments = 4
+    SymbolTableRecordName = 2
+    Text = 1
+    TextBigFontFile = 4
+    TextFontFile = 3
+    TextStyleName = 7
+    Thickness = 0x27
+    TxtSize = 40
+    TxtStyleFlags = 0x47
+    TxtStylePSize = 0x2a
+    TxtStyleXScale = 0x29
+    UcsOrg = 110
+    UcsOrientationX = 0x6f
+    UcsOrientationY = 0x70
+    ViewBackClip = 0x2c
+    ViewBrightness = 0x8d
+    ViewContrast = 0x8e
+    ViewFrontClip = 0x2b
+    ViewHeight = 0x2d
+    ViewLensLength = 0x2a
+    ViewMode = 0x47
+    ViewportActive = 0x44
+    ViewportAspect = 0x29
+    ViewportGrid = 0x4c
+    ViewportHeight = 40
+    ViewportIcon = 0x4a
+    ViewportNumber = 0x45
+    ViewportSnap = 0x4b
+    ViewportSnapAngle = 50
+    ViewportSnapPair = 0x4e
+    ViewportSnapStyle = 0x4d
+    ViewportTwist = 0x33
+    ViewportVisibility = 0x43
+    ViewportZoom = 0x49
+    ViewWidth = 0x29
+    Visibility = 60
+    XCoordinate = 10
+    XDataStart = -3
+    XDictionary = -6
+    XInt16 = 170
+    XReal = 140
+    XRefPath = 1
+    XTextString = 300
+    XXInt16 = 270
+    YCoordinate = 20
+    ZCoordinate = 30
 
 class DxfFiler(RXObject):
     """
@@ -36997,10 +37054,11 @@ class DynamicBlockReferencePropertyCollectionEnumerator(IEnumerator):
     
     pass
 
-  NoUnits
-  Angular
-  Distance
-  Area
+class DynamicBlockReferencePropertyUnitsType():
+    NoUnits
+    Angular
+    Distance
+    Area
 
 class DynamicDimensionChangedEventArgs(EventArgs):
     """
@@ -39281,10 +39339,11 @@ class Ellipse(Curve):
     
     pass
 
-  None
-  Round
-  Angle
-  Square
+class EndCap():
+    None
+    Round
+    Angle
+    Square
 
 class Entity(DBObject):
     """
@@ -48889,15 +48948,16 @@ class Field(DBObject):
     
     pass
 
-  AddMarkers = 0x10
-  EscapeBackslash = 0x20
-  EvaluatedChildren = 4
-  EvaluatedText = 2
-  FieldCode = 1
-  ObjectReference = 8
-  PreserveFields = 0x80
-  StripOptions = 0x40
-  TextField = 0x100
+class FieldCodeFlags():
+    AddMarkers = 0x10
+    EscapeBackslash = 0x20
+    EvaluatedChildren = 4
+    EvaluatedText = 2
+    FieldCode = 1
+    ObjectReference = 8
+    PreserveFields = 0x80
+    StripOptions = 0x40
+    TextField = 0x100
 
 class FieldCodeWithChildren(IDisposable):
     """
@@ -48933,22 +48993,24 @@ class FieldCodeWithChildren(IDisposable):
     
     pass
 
-  Demand = 0x20
-  Etransmit = 8
-  Open = 1
-  Plot = 4
-  Preview = 0x40
-  Regen = 0x10
-  Save = 2
+class FieldEvaluationContext():
+    Demand = 0x20
+    Etransmit = 8
+    Open = 1
+    Plot = 4
+    Preview = 0x40
+    Regen = 0x10
+    Save = 2
 
-  Automatic = 0x3f
-  Disable = 0
-  OnDemand = 0x20
-  OnEtransmit = 8
-  OnOpen = 1
-  OnPlot = 4
-  OnRegen = 0x10
-  OnSave = 2
+class FieldEvaluationOptions():
+    Automatic = 0x3f
+    Disable = 0
+    OnDemand = 0x20
+    OnEtransmit = 8
+    OnOpen = 1
+    OnPlot = 4
+    OnRegen = 0x10
+    OnSave = 2
 
 class FieldEvaluationResult(public struct FieldEvaluationResult {
 }):
@@ -48962,13 +49024,14 @@ class FieldEvaluationResult(public struct FieldEvaluationResult {
     
     pass
 
-  EvaluatorNotFound = 4
-  InvalidCode = 0x10
-  InvalidContext = 0x20
-  NotYetEvaluated = 1
-  OtherError = 0x40
-  Success = 2
-  SyntaxError = 8
+class FieldEvaluationStatus():
+    EvaluatorNotFound = 4
+    InvalidCode = 0x10
+    InvalidContext = 0x20
+    NotYetEvaluated = 1
+    OtherError = 0x40
+    Success = 2
+    SyntaxError = 8
 
 class FieldEvaluationStatusResult(public struct FieldEvaluationStatusResult {
 }):
@@ -49185,46 +49248,52 @@ class FieldEvaluationStatusResult(public struct FieldEvaluationStatusResult {
     
     pass
 
-  SkipFilingResult = 1
+class FieldFilingOptions():
+    SkipFilingResult = 1
 
-  Compiled = 2
-  Evaluated = 8
-  HasCache = 0x10
-  HasFormattedString = 0x20
-  Initialized = 1
-  Modified = 4
+class FieldState():
+    Compiled = 2
+    Evaluated = 8
+    HasCache = 0x10
+    HasFormattedString = 0x20
+    Initialized = 1
+    Modified = 4
 
-  OpenForReadAndAllShare = 3
-  OpenForReadAndReadShare = 1
-  OpenForReadAndWriteNoShare = 2
-  OpenTryForReadShare = 4
+class FileOpenMode():
+    OpenForReadAndAllShare = 3
+    OpenForReadAndReadShare = 1
+    OpenForReadAndWriteNoShare = 2
+    OpenTryForReadShare = 4
 
-  FileFiler
-  CopyFiler
-  UndoFiler
-  BagFiler
-  IdTranslateFiler
-  PageFiler
-  DeepCloneFiler
-  IdFiler
-  PurgeFiler
-  WblockCloneFiler
+class FilerType():
+    FileFiler
+    CopyFiler
+    UndoFiler
+    BagFiler
+    IdTranslateFiler
+    PageFiler
+    DeepCloneFiler
+    IdFiler
+    PurgeFiler
+    WblockCloneFiler
 
-  TrimNone
-  TrimStart
-  TrimSecond
-  TrimBoth
+class FilletTrimMode():
+    TrimNone
+    TrimStart
+    TrimSecond
+    TrimBoth
 
-  Default
-  FontFile
-  CompiledShapeFile
-  TrueTypeFontFile
-  EmbeddedImageFile
-  XRefDrawing
-  PatternFile
-  ArxApplication
-  FontMapFile
-  UnderlayFile
+class FindFileHint():
+    Default
+    FontFile
+    CompiledShapeFile
+    TrueTypeFontFile
+    EmbeddedImageFile
+    XRefDrawing
+    PatternFile
+    ArxApplication
+    FontMapFile
+    UnderlayFile
 
 class FitData(Public Structure FitData
 End Structure):
@@ -49330,12 +49399,13 @@ class FixedConstraint(GeometricalConstraint):
 
     pass
 
-  NotSet
-  LeftToRight
-  RightToLeft
-  TopToBottom
-  BottomToTop
-  ByStyle
+class FlowDirection():
+    NotSet
+    LeftToRight
+    RightToLeft
+    TopToBottom
+    BottomToTop
+    ByStyle
 
 class Font(public struct Font {
 }):
@@ -49903,11 +49973,12 @@ class FormattedTableData(LinkedTableData):
     
     pass
 
-  ImageFrameAbove = 1
-  ImageFrameBelow = 2
-  ImageFrameInvalid = -1
-  ImageFrameOff = 0
-  ImageFrameOnNoPlot = 3
+class FrameSetting():
+    ImageFrameAbove = 1
+    ImageFrameBelow = 2
+    ImageFrameInvalid = -1
+    ImageFrameOff = 0
+    ImageFrameOnNoPlot = 3
 
 class FullDwgVersion(public struct FullDwgVersion {
 }):
@@ -50576,146 +50647,149 @@ class G2SmoothConstraint(CompositeConstraint):
 
     pass
 
-  Alber = 4
-  Azede = 0x3b
-  Azmea = 11
-  Azmed = 7
-  Bipolar = 0x1f
-  Bonne = 0x18
-  Cassini = 0x16
-  Eckert4 = 0x19
-  Eckert6 = 0x1a
-  Edcnc = 12
-  Edcyl = 20
-  EdcylE = 0x43
-  GaussK = 0x2e
-  Gnomonic = 0x13
-  Goode = 0x1c
-  Hom1uv = 0x501
-  Hom1xy = 0x502
-  Hom2uv = 0x503
-  Hom2xy = 0x504
-  Krovak = 0x2f
-  Krvk95 = 0x33
-  LL = 1
-  Lm1sp = 0x24
-  Lm2sp = 0x25
-  Lmblg = 0x26
-  Lmbrtaf = 0x41
-  Lmtan = 8
-  Miller = 13
-  Mndotl = 0x29
-  Mndott = 0x2a
-  Modpc = 10
-  Mollweid = 0x1b
-  Mrcat = 6
-  MrcatK = 0x31
-  Mstero = 15
-  Neacyl = 0x1d
-  Nerth = 0x37
-  Nrthsrt = 0x40
-  Nzealand = 0x10
-  OblqM = 5
-  Obqcyl = 0x38
-  Ortho = 0x12
-  Ostn02 = 60
-  Ostn97 = 0x3a
-  Ostro = 0x22
-  PlateCarree = 0x44
-  Plycn = 9
-  Pstro = 0x21
-  Pstrosl = 0x35
-  PvMercator = 0x45
-  Robinson = 0x17
-  Rskew = 0x505
-  Rskewc = 0x506
-  Rskewo = 0x507
-  Sinus = 0x11
-  Sotrm = 0x2b
-  Sstro = 0x23
-  Swiss = 0x20
-  Sys34 = 0x39
-  Sys34_01 = 0x42
-  Sys34_99 = 0x3d
-  Teacyl = 30
-  Tm = 3
-  Trmeraf = 0x36
-  Trmrkrg = 0x3e
-  Trmrs = 0x2d
-  Unknown = 0
-  Utm = 0x2c
-  Vdgrntn = 0x15
-  Wccsl = 0x27
-  Wccst = 40
-  Winkl = 0x3f
+class GeoCSProjectionCode():
+    Alber = 4
+    Azede = 0x3b
+    Azmea = 11
+    Azmed = 7
+    Bipolar = 0x1f
+    Bonne = 0x18
+    Cassini = 0x16
+    Eckert4 = 0x19
+    Eckert6 = 0x1a
+    Edcnc = 12
+    Edcyl = 20
+    EdcylE = 0x43
+    GaussK = 0x2e
+    Gnomonic = 0x13
+    Goode = 0x1c
+    Hom1uv = 0x501
+    Hom1xy = 0x502
+    Hom2uv = 0x503
+    Hom2xy = 0x504
+    Krovak = 0x2f
+    Krvk95 = 0x33
+    LL = 1
+    Lm1sp = 0x24
+    Lm2sp = 0x25
+    Lmblg = 0x26
+    Lmbrtaf = 0x41
+    Lmtan = 8
+    Miller = 13
+    Mndotl = 0x29
+    Mndott = 0x2a
+    Modpc = 10
+    Mollweid = 0x1b
+    Mrcat = 6
+    MrcatK = 0x31
+    Mstero = 15
+    Neacyl = 0x1d
+    Nerth = 0x37
+    Nrthsrt = 0x40
+    Nzealand = 0x10
+    OblqM = 5
+    Obqcyl = 0x38
+    Ortho = 0x12
+    Ostn02 = 60
+    Ostn97 = 0x3a
+    Ostro = 0x22
+    PlateCarree = 0x44
+    Plycn = 9
+    Pstro = 0x21
+    Pstrosl = 0x35
+    PvMercator = 0x45
+    Robinson = 0x17
+    Rskew = 0x505
+    Rskewc = 0x506
+    Rskewo = 0x507
+    Sinus = 0x11
+    Sotrm = 0x2b
+    Sstro = 0x23
+    Swiss = 0x20
+    Sys34 = 0x39
+    Sys34_01 = 0x42
+    Sys34_99 = 0x3d
+    Teacyl = 30
+    Tm = 3
+    Trmeraf = 0x36
+    Trmrkrg = 0x3e
+    Trmrs = 0x2d
+    Unknown = 0
+    Utm = 0x2c
+    Vdgrntn = 0x15
+    Wccsl = 0x27
+    Wccst = 40
+    Winkl = 0x3f
 
-  Unknown
-  Arbitrary
-  Geographic
-  Projected
+class GeoCSType():
+    Unknown
+    Arbitrary
+    Geographic
+    Projected
 
-  BenoitChain = 0x1a
-  BenoitLink = 30
-  Brealey = 0x26
-  CaGrid = 0x17
-  CapeRood = 0x25
-  Centimeter = 7
-  Centisec = 0x3f2
-  ClarkeChain = 0x18
-  ClarkeFoot = 5
-  ClarkeLink = 0x1c
-  Decameter = 0x30
-  Decimeter = 0x12
-  Decisec = 0x3f1
-  Degree = 0x3e9
-  Dekameter = 20
-  Foot = 2
-  Furlong = 0x23
-  GermanMeter = 0x16
-  GoldCoastFoot = 40
-  Grad = 0x3ea
-  Grade = 0x3eb
-  GunterChain = 0x19
-  GunterLink = 0x1d
-  Hectometer = 0x15
-  IFoot = 4
-  IInch = 6
-  IMile = 13
-  Inch = 3
-  IndianFoot = 0x2b
-  IndianFt37 = 0x2c
-  IndianFt62 = 0x2d
-  IndianFt75 = 0x2e
-  IndianYard = 0x2a
-  IndianYd37 = 0x2f
-  InternationalChain = 0x31
-  InternationalLink = 50
-  IYard = 12
-  Kilometer = 8
-  Knot = 14
-  Lat66 = 0x10
-  Lat83 = 0x11
-  MapInfo = 0x3ec
-  Meter = 1
-  MicroInch = 0x29
-  Mil = 0x3ed
-  Mile = 11
-  Millimeter = 0x13
-  Millisec = 0x3f3
-  Minute = 0x3ee
-  NautM = 15
-  Perch = 0x21
-  Pole = 0x22
-  Radian = 0x3ef
-  Rod = 0x20
-  Rood = 0x24
-  SearsChain = 0x1b
-  SearsFoot = 0x27
-  SearsLink = 0x1f
-  SearsYard = 10
-  Second = 0x3f0
-  Unknown = 0
-  Yard = 9
+class GeoCSUnit():
+    BenoitChain = 0x1a
+    BenoitLink = 30
+    Brealey = 0x26
+    CaGrid = 0x17
+    CapeRood = 0x25
+    Centimeter = 7
+    Centisec = 0x3f2
+    ClarkeChain = 0x18
+    ClarkeFoot = 5
+    ClarkeLink = 0x1c
+    Decameter = 0x30
+    Decimeter = 0x12
+    Decisec = 0x3f1
+    Degree = 0x3e9
+    Dekameter = 20
+    Foot = 2
+    Furlong = 0x23
+    GermanMeter = 0x16
+    GoldCoastFoot = 40
+    Grad = 0x3ea
+    Grade = 0x3eb
+    GunterChain = 0x19
+    GunterLink = 0x1d
+    Hectometer = 0x15
+    IFoot = 4
+    IInch = 6
+    IMile = 13
+    Inch = 3
+    IndianFoot = 0x2b
+    IndianFt37 = 0x2c
+    IndianFt62 = 0x2d
+    IndianFt75 = 0x2e
+    IndianYard = 0x2a
+    IndianYd37 = 0x2f
+    InternationalChain = 0x31
+    InternationalLink = 50
+    IYard = 12
+    Kilometer = 8
+    Knot = 14
+    Lat66 = 0x10
+    Lat83 = 0x11
+    MapInfo = 0x3ec
+    Meter = 1
+    MicroInch = 0x29
+    Mil = 0x3ed
+    Mile = 11
+    Millimeter = 0x13
+    Millisec = 0x3f3
+    Minute = 0x3ee
+    NautM = 15
+    Perch = 0x21
+    Pole = 0x22
+    Radian = 0x3ef
+    Rod = 0x20
+    Rood = 0x24
+    SearsChain = 0x1b
+    SearsFoot = 0x27
+    SearsLink = 0x1f
+    SearsYard = 10
+    Second = 0x3f0
+    Unknown = 0
+    Yard = 9
 
 class GeoCoordinateCategory(DisposableWrapper):
     """
@@ -51350,20 +51424,21 @@ class GeometricalConstraint(ConstraintGroupNode):
     """
     
     """
-      Horizontal
-      Vertical
-      Parallel
-      Perpendicular
-      Normal
-      Collinear
-      Coincident
-      Concentric
-      Tangent
-      EqualRadius
-      EqualLength
-      Symmetric
-      Smooth
-      Fix
+    class ConstraintType():
+        Horizontal
+        Vertical
+        Parallel
+        Perpendicular
+        Normal
+        Collinear
+        Coincident
+        Concentric
+        Tangent
+        EqualRadius
+        EqualLength
+        Symmetric
+        Smooth
+        Fix
     
     
     def Deactivate(self):
@@ -51884,8 +51959,9 @@ class GradientColor(public struct GradientColor {
     
     pass
 
-  PreDefinedGradient
-  UserDefinedGradient
+class GradientPatternType():
+    PreDefinedGradient
+    UserDefinedGradient
 
 class Graph(DisposableWrapper):
     """
@@ -52438,33 +52514,37 @@ class GraphNodeCollection(DisposableWrapper, IList):
     
     pass
 
-  NoMetafile
-  BoundingBox
-  FullGraphics
+class GraphicsMetafileType():
+    NoMetafile
+    BoundingBox
+    FullGraphics
 
-  Double = 2
-  Single = 1
+class GridLineStyle():
+    Double = 2
+    Single = 1
 
-  AllGridLines = 0x3f
-  HorizontalBottom = 4
-  HorizontalGridLines = 7
-  HorizontalInside = 2
-  HorizontalTop = 1
-  InnerGridLines = 0x12
-  InvalidGridLine = 0
-  OuterGridLines = 0x2d
-  VerticalGridLines = 0x38
-  VerticalInside = 0x10
-  VerticalLeft = 8
-  VerticalRight = 0x20
+class GridLineType():
+    AllGridLines = 0x3f
+    HorizontalBottom = 4
+    HorizontalGridLines = 7
+    HorizontalInside = 2
+    HorizontalTop = 1
+    InnerGridLines = 0x12
+    InvalidGridLine = 0
+    OuterGridLines = 0x2d
+    VerticalGridLines = 0x38
+    VerticalInside = 0x10
+    VerticalLeft = 8
+    VerticalRight = 0x20
 
-  Color = 8
-  DoubleLineSpacing = 0x20
-  Invalid = 0
-  LineStyle = 1
-  Linetype = 4
-  LineWeight = 2
-  Visibility = 0x10
+class GridProperties():
+    Color = 8
+    DoubleLineSpacing = 0x20
+    Invalid = 0
+    LineStyle = 1
+    Linetype = 4
+    LineWeight = 2
+    Visibility = 0x10
 
 class GridPropertyParameter(public struct GridPropertyParameter {
   public GridProperties PropertyMask;
@@ -52485,33 +52565,37 @@ class GripData(DisposableWrapper):
     """
     
     """
-      MultiHotGrip = 2
-      SharedGrip = 1
+    class Context():
+        MultiHotGrip = 2
+        SharedGrip = 1
     
     
-      WarmGrip
-      HoverGrip
-      HotGrip
-      DragImageGrip
+    class DrawType():
+        WarmGrip
+        HoverGrip
+        HotGrip
+        DragImageGrip
     
     
-      Ok
-      Failure
-      NoRedrawGrip
-      GripHotToWarm
-      GetNewGripPoints
+    class ReturnValue():
+        Ok
+        Failure
+        NoRedrawGrip
+        GripHotToWarm
+        GetNewGripPoints
     
     
-      GripStart
-      GripEnd
-      GripAbort
-      Stretch
-      Move
-      Rotate
-      Scale
-      Mirror
-      DimFocusChanged
-      PopUpMenu
+    class Status():
+        GripStart
+        GripEnd
+        GripAbort
+        Stretch
+        Move
+        Rotate
+        Scale
+        Mirror
+        DimFocusChanged
+        PopUpMenu
     
     
     def DeleteUnmanagedObject(self):
@@ -52651,22 +52735,25 @@ class GripMode(DisposableWrapper):
     
     )
     """
-      DragOn
-      Immediate
-      Command
+    class ActionType():
+        DragOn
+        Immediate
+        Command
     
     
-      CursorNone
-      CursorCrosshairPlus
-      CursorCrosshairMinus
-      CursorCrosshairCurve
-      CursorCrosshairLine
-      CursorCrosshairAngle
+    class CursorType():
+        CursorNone
+        CursorCrosshairPlus
+        CursorCrosshairMinus
+        CursorCrosshairCurve
+        CursorCrosshairLine
+        CursorCrosshairAngle
     
     
-      CustomStart = 100
-      Move = 1
-      None = 0
+    class ModeIdentifier():
+        CustomStart = 100
+        Move = 1
+        None = 0
     
     
     Action = None
@@ -52896,9 +52983,10 @@ class GripOverrule(Overrule):
     
     pass
 
-  GripsDone
-  GripsToBeDeleted
-  DimDataToBeDeleted
+class GripStatus():
+    GripsDone
+    GripsToBeDeleted
+    DimDataToBeDeleted
 
 class GroundPlaneBackground(Background):
     """
@@ -53749,14 +53837,15 @@ class Group(DBObject):
     
     pass
 
-  ArrowMark = 1
-  BlockMark = 0x3a9c
-  DoglegMark = 0x2711
-  LeaderLineMark = 0x1389
-  MTextMark = 0x3a99
-  MTextUnderLineMark = 0x3a9a
-  None = 0
-  ToleranceMark = 0x3a9b
+class GsMarkType():
+    ArrowMark = 1
+    BlockMark = 0x3a9c
+    DoglegMark = 0x2711
+    LeaderLineMark = 0x1389
+    MTextMark = 0x3a99
+    MTextUnderLineMark = 0x3a9a
+    None = 0
+    ToleranceMark = 0x3a9b
 
 class Handle(public struct Handle {
 }):
@@ -54214,10 +54303,11 @@ class Hatch(Entity):
     
     pass
 
-  CircularArc = 2
-  EllipticalArc = 3
-  Line = 1
-  Spline = 4
+class HatchEdgeType():
+    CircularArc = 2
+    EllipticalArc = 3
+    Line = 1
+    Spline = 4
 
 class HatchLoop(public sealed class HatchLoop):
     """
@@ -54352,27 +54442,31 @@ class HatchLoop(public sealed class HatchLoop):
     
     pass
 
-  Default = 0
-  Derived = 4
-  Duplicate = 0x100
-  External = 1
-  NotClosed = 0x20
-  Outermost = 0x10
-  Polyline = 2
-  SelfIntersecting = 0x40
-  Textbox = 8
-  TextIsland = 0x80
+class HatchLoopTypes():
+    Default = 0
+    Derived = 4
+    Duplicate = 0x100
+    External = 1
+    NotClosed = 0x20
+    Outermost = 0x10
+    Polyline = 2
+    SelfIntersecting = 0x40
+    Textbox = 8
+    TextIsland = 0x80
 
-  HatchObject
-  GradientObject
+class HatchObjectType():
+    HatchObject
+    GradientObject
 
-  UserDefined
-  PreDefined
-  CustomDefined
+class HatchPatternType():
+    UserDefined
+    PreDefined
+    CustomDefined
 
-  Normal
-  Outer
-  Ignore
+class HatchStyle():
+    Normal
+    Outer
+    Ignore
 
 class Helix(Spline):
     """
@@ -56175,24 +56269,28 @@ class ImageBackground(Background):
     
     pass
 
-  Clip = 4
-  Show = 1
-  ShowUnaligned = 2
-  Transparent = 8
+class ImageDisplayOptions():
+    Clip = 4
+    Show = 1
+    ShowUnaligned = 2
+    Transparent = 8
 
-  Draft = 0
-  High = 1
-  Invalid = -1
+class ImageQuality():
+    Draft = 0
+    High = 1
+    Invalid = -1
 
-  StartImplicit
-  EndImplicit
-  MidImplicit
-  CenterImplicit
-  DefineImplicit
+class ImplicitPointType():
+    StartImplicit
+    EndImplicit
+    MidImplicit
+    CenterImplicit
+    DefineImplicit
 
-  NoIndex
-  IndexByLayer
-  IndexSpatially
+class IndexCreation():
+    NoIndex
+    IndexByLayer
+    IndexSpatially
 
 class InterferenceProtocolExtension(RXObject):
     """
@@ -56215,10 +56313,11 @@ class InterferenceProtocolExtension(RXObject):
     
     pass
 
-  OnBothOperands
-  ExtendThis
-  ExtendArgument
-  ExtendBoth
+class Intersect():
+    OnBothOperands
+    ExtendThis
+    ExtendArgument
+    ExtendBoth
 
 class ItemLocator(public struct ItemLocator {
 }):
@@ -56737,33 +56836,37 @@ class ItemLocator(public struct ItemLocator {
     
     pass
 
-  StyleNone
-  StyleRound
-  StyleAngle
-  StyleFlat
+class JoinStyle():
+    StyleNone
+    StyleRound
+    StyleAngle
+    StyleFlat
 
-  D65White
-  Fluorescent
-  CoolWhite
-  WhiteFluorescent
-  DaylightFluorescent
-  Incandescent
-  Xenon
-  Halogen
-  Quartz
-  MetalHalide
-  Mercury
-  PhosphorMercury
-  HighPressureSodium
-  LowPressureSodium
-  Custom
+class LampColorPreset():
+    D65White
+    Fluorescent
+    CoolWhite
+    WhiteFluorescent
+    DaylightFluorescent
+    Incandescent
+    Xenon
+    Halogen
+    Quartz
+    MetalHalide
+    Mercury
+    PhosphorMercury
+    HighPressureSodium
+    LowPressureSodium
+    Custom
 
-  Kelvin
-  Preset
+class LampColorType():
+    Kelvin
+    Preset
 
-  NoNewLayerEvaluation
-  EvalNewXrefLayers
-  EvalAllNewLayers
+class LayerEvaluation():
+    NoNewLayerEvaluation
+    EvalNewXrefLayers
+    EvalAllNewLayers
 
 class LayerStateManager(RXObject):
     """
@@ -57132,19 +57235,20 @@ class LayerStateManager(RXObject):
     
     pass
 
-  Color = &H20
-  CurrentViewport = &H200
-  Frozen = 2
-  LastRestored = &H10000
-  LineType = &H40
-  LineWeight = &H80
-  Locked = 4
-  NewViewport = &H10
-  None = 0
-  On = 1
-  Plot = 8
-  PlotStyle = &H100
-  Transparency = &H400
+class LayerStateMasks():
+    Color = 0x20
+    CurrentViewport = 0x200
+    Frozen = 2
+    LastRestored = 0x10000
+    LineType = 0x40
+    LineWeight = 0x80
+    Locked = 4
+    NewViewport = 0x10
+    None = 0
+    On = 1
+    Plot = 8
+    PlotStyle = 0x100
+    Transparency = 0x400
 
 class LayerTable(SymbolTable):
     """
@@ -57750,15 +57854,17 @@ class Leader(Curve):
     
     pass
 
-  UnknownLeader
-  LeftLeader
-  RightLeader
-  TopLeader
-  BottomLeader
+class LeaderDirectionType():
+    UnknownLeader
+    LeftLeader
+    RightLeader
+    TopLeader
+    BottomLeader
 
-  InVisibleLeader
-  StraightLeader
-  SplineLeader
+class LeaderType():
+    InVisibleLeader
+    StraightLeader
+    SplineLeader
 
 class Light(Entity):
     """
@@ -57889,9 +57995,10 @@ class Light(Entity):
     
     pass
 
-  LightingUnitsGeneric
-  LightingUnitsAmerican
-  LightingUnitsInternational
+class LightingUnits():
+    LightingUnitsGeneric
+    LightingUnitsAmerican
+    LightingUnitsInternational
 
 class Line(Curve):
     """
@@ -58310,36 +58417,38 @@ class LineAngularDimension2(Dimension):
     
     pass
 
-  AtLeast = 1
-  Exactly = 2
+class LineSpacingStyle():
+    AtLeast = 1
+    Exactly = 2
 
-  ByBlock = -2
-  ByLayer = -1
-  ByLineWeightDefault = -3
-  LineWeight000 = 0
-  LineWeight005 = 5
-  LineWeight009 = 9
-  LineWeight013 = 13
-  LineWeight015 = 15
-  LineWeight018 = 0x12
-  LineWeight020 = 20
-  LineWeight025 = 0x19
-  LineWeight030 = 30
-  LineWeight035 = 0x23
-  LineWeight040 = 40
-  LineWeight050 = 50
-  LineWeight053 = 0x35
-  LineWeight060 = 60
-  LineWeight070 = 70
-  LineWeight080 = 80
-  LineWeight090 = 90
-  LineWeight100 = 100
-  LineWeight106 = 0x6a
-  LineWeight120 = 120
-  LineWeight140 = 140
-  LineWeight158 = 0x9e
-  LineWeight200 = 200
-  LineWeight211 = 0xd3
+class LineWeight():
+    ByBlock = -2
+    ByLayer = -1
+    ByLineWeightDefault = -3
+    LineWeight000 = 0
+    LineWeight005 = 5
+    LineWeight009 = 9
+    LineWeight013 = 13
+    LineWeight015 = 15
+    LineWeight018 = 0x12
+    LineWeight020 = 20
+    LineWeight025 = 0x19
+    LineWeight030 = 30
+    LineWeight035 = 0x23
+    LineWeight040 = 40
+    LineWeight050 = 50
+    LineWeight053 = 0x35
+    LineWeight060 = 60
+    LineWeight070 = 70
+    LineWeight080 = 80
+    LineWeight090 = 90
+    LineWeight100 = 100
+    LineWeight106 = 0x6a
+    LineWeight120 = 120
+    LineWeight140 = 140
+    LineWeight158 = 0x9e
+    LineWeight200 = 200
+    LineWeight211 = 0xd3
 
 class LineWeightConverter(TypeConverter):
     """
@@ -59941,12 +60050,13 @@ class LoftOptionsCheckCurvesOut(public class LoftOptionsCheckCurvesOut):
     
     pass
 
-  NoNormal
-  FirstNormal
-  LastNormal
-  EndsNormal
-  AllNormal
-  UseDraftAngles
+class LoftOptionsNormalOption():
+    NoNormal
+    FirstNormal
+    LastNormal
+    EndsNormal
+    AllNormal
+    UseDraftAngles
 
 class LoftProfile(Profile3d):
     """
@@ -60249,9 +60359,10 @@ class LoftedSurface(Surface):
     
     )
     """
-      LoftSurface
-      BlendSurface
-      NetworkSurface
+    class LoftSurfaceType():
+        LoftSurface
+        BlendSurface
+        NetworkSurface
     
     
     def CreateLoftedSurface(self):
@@ -60455,9 +60566,10 @@ class LongTransaction(DBObject):
     
     pass
 
-  SameDb
-  XRefDb
-  UnrelatedDb
+class LongTransactionType():
+    SameDb
+    XRefDb
+    UnrelatedDb
 
 class MInsertBlock(BlockReference):
     """
@@ -62207,179 +62319,181 @@ class MTextFragment(DisposableWrapper):
     
     pass
 
-  Terminate
-  Continue
+class MTextFragmentCallbackStatus():
+    Terminate
+    Continue
 
-Release0 = 0
-Release1 = 1
-Release10 = 10
-Release100 = 100
-Release101 = 0x65
-Release102 = 0x66
-Release103 = 0x67
-Release104 = 0x68
-Release105 = 0x69
-Release106 = 0x6a
-Release107 = 0x6b
-Release108 = 0x6c
-Release109 = 0x6d
-Release11 = 11
-Release110 = 110
-Release111 = 0x6f
-Release112 = 0x70
-Release113 = 0x71
-Release114 = 0x72
-Release115 = 0x73
-Release116 = 0x74
-Release117 = 0x75
-Release118 = 0x76
-Release119 = 0x77
-Release12 = 12
-Release120 = 120
-Release121 = 0x79
-Release122 = 0x7a
-Release123 = 0x7b
-Release124 = 0x7c
-Release125 = 0x7d
-Release126 = 0x7e
-Release127 = 0x7f
-Release128 = 0x80
-Release129 = 0x81
-Release13 = 13
-Release130 = 130
-Release131 = 0x83
-Release132 = 0x84
-Release133 = 0x85
-Release134 = 0x86
-Release135 = 0x87
-Release136 = 0x88
-Release137 = 0x89
-Release138 = 0x8a
-Release139 = 0x8b
-Release14 = 14
-Release140 = 140
-Release141 = 0x8d
-Release142 = 0x8e
-Release143 = 0x8f
-Release144 = 0x90
-Release145 = 0x91
-Release146 = 0x92
-Release147 = 0x93
-Release148 = 0x94
-Release149 = 0x95
-Release15 = 15
-Release150 = 150
-Release151 = 0x97
-Release152 = 0x98
-Release153 = 0x99
-Release154 = 0x9a
-Release155 = 0x9b
-Release156 = 0x9c
-Release157 = 0x9d
-Release158 = 0x9e
-Release159 = 0x9f
-Release16 = 0x10
-Release160 = 160
-Release17 = 0x11
-Release18 = 0x12
-Release19 = 0x13
-Release2 = 2
-Release20 = 20
-Release2010Max = 0xff
-Release2010Newest = 0xe1
-Release21 = 0x15
-Release22 = 0x16
-Release23 = 0x17
-Release24 = 0x18
-Release25 = 0x19
-Release26 = 0x1a
-Release27 = 0x1b
-Release28 = 0x1c
-Release29 = 0x1d
-Release3 = 3
-Release30 = 30
-Release31 = 0x1f
-Release32 = 0x20
-Release33 = 0x21
-Release34 = 0x22
-Release35 = 0x23
-Release36 = 0x24
-Release37 = 0x25
-Release38 = 0x26
-Release39 = 0x27
-Release4 = 4
-Release40 = 40
-Release41 = 0x29
-Release42 = 0x2a
-Release43 = 0x2b
-Release44 = 0x2c
-Release45 = 0x2d
-Release46 = 0x2e
-Release47 = 0x2f
-Release48 = 0x30
-Release49 = 0x31
-Release5 = 5
-Release50 = 50
-Release51 = 0x33
-Release52 = 0x34
-Release53 = 0x35
-Release54 = 0x36
-Release55 = 0x37
-Release56 = 0x38
-Release57 = 0x39
-Release58 = 0x3a
-Release59 = 0x3b
-Release6 = 6
-Release60 = 60
-Release61 = 0x3d
-Release62 = 0x3e
-Release63 = 0x3f
-Release64 = 0x40
-Release65 = 0x41
-Release66 = 0x42
-Release67 = 0x43
-Release68 = 0x44
-Release69 = 0x45
-Release7 = 7
-Release70 = 70
-Release71 = 0x47
-Release72 = 0x48
-Release73 = 0x49
-Release74 = 0x4a
-Release75 = 0x4b
-Release76 = 0x4c
-Release77 = 0x4d
-Release78 = 0x4e
-Release79 = 0x4f
-Release8 = 8
-Release80 = 80
-Release81 = 0x51
-Release82 = 0x52
-Release83 = 0x53
-Release84 = 0x54
-Release85 = 0x55
-Release86 = 0x56
-Release87 = 0x57
-Release88 = 0x58
-Release89 = 0x59
-Release9 = 9
-Release90 = 90
-Release91 = 0x5b
-Release92 = 0x5c
-Release93 = 0x5d
-Release94 = 0x5e
-Release95 = 0x5f
-Release96 = 0x60
-Release97 = 0x61
-Release98 = 0x62
-Release99 = 0x63
-ReleaseCheckExtended = 0x7d
-ReleaseCurrent = 0x7d
-ReleaseExtendedCurrent = 1
-ReleaseExtendedNewest = 1
-ReleaseMax = 0x7f
-ReleaseNewest = 0x7d
-ReleaseUnknown = 0x7e
+class MaintenanceReleaseVersion():
+    Release0 = 0
+    Release1 = 1
+    Release10 = 10
+    Release100 = 100
+    Release101 = 0x65
+    Release102 = 0x66
+    Release103 = 0x67
+    Release104 = 0x68
+    Release105 = 0x69
+    Release106 = 0x6a
+    Release107 = 0x6b
+    Release108 = 0x6c
+    Release109 = 0x6d
+    Release11 = 11
+    Release110 = 110
+    Release111 = 0x6f
+    Release112 = 0x70
+    Release113 = 0x71
+    Release114 = 0x72
+    Release115 = 0x73
+    Release116 = 0x74
+    Release117 = 0x75
+    Release118 = 0x76
+    Release119 = 0x77
+    Release12 = 12
+    Release120 = 120
+    Release121 = 0x79
+    Release122 = 0x7a
+    Release123 = 0x7b
+    Release124 = 0x7c
+    Release125 = 0x7d
+    Release126 = 0x7e
+    Release127 = 0x7f
+    Release128 = 0x80
+    Release129 = 0x81
+    Release13 = 13
+    Release130 = 130
+    Release131 = 0x83
+    Release132 = 0x84
+    Release133 = 0x85
+    Release134 = 0x86
+    Release135 = 0x87
+    Release136 = 0x88
+    Release137 = 0x89
+    Release138 = 0x8a
+    Release139 = 0x8b
+    Release14 = 14
+    Release140 = 140
+    Release141 = 0x8d
+    Release142 = 0x8e
+    Release143 = 0x8f
+    Release144 = 0x90
+    Release145 = 0x91
+    Release146 = 0x92
+    Release147 = 0x93
+    Release148 = 0x94
+    Release149 = 0x95
+    Release15 = 15
+    Release150 = 150
+    Release151 = 0x97
+    Release152 = 0x98
+    Release153 = 0x99
+    Release154 = 0x9a
+    Release155 = 0x9b
+    Release156 = 0x9c
+    Release157 = 0x9d
+    Release158 = 0x9e
+    Release159 = 0x9f
+    Release16 = 0x10
+    Release160 = 160
+    Release17 = 0x11
+    Release18 = 0x12
+    Release19 = 0x13
+    Release2 = 2
+    Release20 = 20
+    Release2010Max = 0xff
+    Release2010Newest = 0xe2
+    Release21 = 0x15
+    Release22 = 0x16
+    Release23 = 0x17
+    Release24 = 0x18
+    Release25 = 0x19
+    Release26 = 0x1a
+    Release27 = 0x1b
+    Release28 = 0x1c
+    Release29 = 0x1d
+    Release3 = 3
+    Release30 = 30
+    Release31 = 0x1f
+    Release32 = 0x20
+    Release33 = 0x21
+    Release34 = 0x22
+    Release35 = 0x23
+    Release36 = 0x24
+    Release37 = 0x25
+    Release38 = 0x26
+    Release39 = 0x27
+    Release4 = 4
+    Release40 = 40
+    Release41 = 0x29
+    Release42 = 0x2a
+    Release43 = 0x2b
+    Release44 = 0x2c
+    Release45 = 0x2d
+    Release46 = 0x2e
+    Release47 = 0x2f
+    Release48 = 0x30
+    Release49 = 0x31
+    Release5 = 5
+    Release50 = 50
+    Release51 = 0x33
+    Release52 = 0x34
+    Release53 = 0x35
+    Release54 = 0x36
+    Release55 = 0x37
+    Release56 = 0x38
+    Release57 = 0x39
+    Release58 = 0x3a
+    Release59 = 0x3b
+    Release6 = 6
+    Release60 = 60
+    Release61 = 0x3d
+    Release62 = 0x3e
+    Release63 = 0x3f
+    Release64 = 0x40
+    Release65 = 0x41
+    Release66 = 0x42
+    Release67 = 0x43
+    Release68 = 0x44
+    Release69 = 0x45
+    Release7 = 7
+    Release70 = 70
+    Release71 = 0x47
+    Release72 = 0x48
+    Release73 = 0x49
+    Release74 = 0x4a
+    Release75 = 0x4b
+    Release76 = 0x4c
+    Release77 = 0x4d
+    Release78 = 0x4e
+    Release79 = 0x4f
+    Release8 = 8
+    Release80 = 80
+    Release81 = 0x51
+    Release82 = 0x52
+    Release83 = 0x53
+    Release84 = 0x54
+    Release85 = 0x55
+    Release86 = 0x56
+    Release87 = 0x57
+    Release88 = 0x58
+    Release89 = 0x59
+    Release9 = 9
+    Release90 = 90
+    Release91 = 0x5b
+    Release92 = 0x5c
+    Release93 = 0x5d
+    Release94 = 0x5e
+    Release95 = 0x5f
+    Release96 = 0x60
+    Release97 = 0x61
+    Release98 = 0x62
+    Release99 = 0x63
+    ReleaseCheckExtended = 0x7d
+    ReleaseCurrent = 0x99
+    ReleaseExtendedCurrent = 0xcb
+    ReleaseExtendedNewest = 1
+    ReleaseMax = 0x7fffffff
+    ReleaseNewest = 0x99
+    ReleaseUnknown = 0x7ffffffe
 
 class MatchProperties(RXObject):
     """
@@ -62504,14 +62618,16 @@ class Material(DBObject):
     
     pass
 
-  English
-  Metric
+class MeasurementValue():
+    English
+    Metric
 
-  ConvertDuplicatesToOverrrides = 4
-  CopyDuplicates = 1
-  IgnoreNewStyles = 8
-  None = 0
-  OverwriteDuplicates = 2
+class MergeCellStyleOption():
+    ConvertDuplicatesToOverrrides = 4
+    CopyDuplicates = 1
+    IgnoreNewStyles = 8
+    None = 0
+    OverwriteDuplicates = 2
 
 class MeshDataCollection(public struct MeshDataCollection {
 }):
@@ -63108,9 +63224,10 @@ class Mline(Entity):
     
     pass
 
-  Top
-  Zero
-  Bottom
+class MlineJustification():
+    Top
+    Zero
+    Bottom
 
 class MlineStyle(DBObject):
     """
@@ -63524,20 +63641,24 @@ class MlineStyleElementCollectionEnumerator(IEnumerator):
     
     pass
 
-  AlignmentLeft
-  AlignmentCenter
-  AlignmentRight
+class ModelDocViewLabelAlignmentType():
+    AlignmentLeft
+    AlignmentCenter
+    AlignmentRight
 
-  AboveView
-  BelowView
+class ModelDocViewLabelAttachmentPoint():
+    AboveView
+    BelowView
 
-  Full
-  RegionsOnly
-  ObjectsOnly
+class ModelerFlavor():
+    Full
+    RegionsOnly
+    ObjectsOnly
 
-  MoveAllPoints
-  MoveAllExceptArrowHeaderPoints
-  MoveContentAndDoglegPoints
+class MoveType():
+    MoveAllPoints
+    MoveAllExceptArrowHeaderPoints
+    MoveContentAndDoglegPoints
 
 class MultiModesGripPE(RXObject):
     """
@@ -63578,8 +63699,9 @@ class MultiModesGripPE(RXObject):
     
     )
     """
-      Primary
-      Secondary
+    class GripType():
+        Primary
+        Secondary
     
     
     def CurrentMode(self):
@@ -63667,13 +63789,14 @@ class MultiModesGripPE(RXObject):
     
     pass
 
-  NoNewLayerNotification = 0
-  NotifyOnInsert = 0x20
-  NotifyOnLayerStateRestore = 8
-  NotifyOnOpen = 2
-  NotifyOnPlot = 1
-  NotifyOnSave = 0x10
-  NotifyOnXrefAttachAndReload = 4
+class NewLayerNotification():
+    NoNewLayerNotification = 0
+    NotifyOnInsert = 0x20
+    NotifyOnLayerStateRestore = 8
+    NotifyOnOpen = 2
+    NotifyOnPlot = 1
+    NotifyOnSave = 0x10
+    NotifyOnXrefAttachAndReload = 4
 
 class NormalConstraint(GeometricalConstraint):
     """
@@ -65301,15 +65424,16 @@ class ObjectSnapInfo(public sealed class ObjectSnapInfo):
     
     pass
 
-  ModeCenter = 3
-  ModeEnd = 1
-  ModeIns = 7
-  ModeMid = 2
-  ModeNear = 10
-  ModeNode = 4
-  ModePerpendicular = 8
-  ModeQuad = 5
-  ModeTangent = 9
+class ObjectSnapModes():
+    ModeCenter = 3
+    ModeEnd = 1
+    ModeIns = 7
+    ModeMid = 2
+    ModeNear = 10
+    ModeNode = 4
+    ModePerpendicular = 8
+    ModeQuad = 5
+    ModeTangent = 9
 
 class ObjectTypeAttribute(Attribute):
     """
@@ -65438,9 +65562,10 @@ class Ole2Frame(Entity):
     
     )
     """
-      Embedded = 2
-      Link = 1
-      Static = 3
+    class ItemType():
+        Embedded = 2
+        Link = 1
+        Static = 3
     
     
     AutoOutputQuality = None
@@ -65568,9 +65693,10 @@ class OpenCloseTransaction(Transaction):
     
     pass
 
-  ForRead
-  ForWrite
-  ForNotify
+class OpenMode():
+    ForRead
+    ForWrite
+    ForNotify
 
 class OpenModeAttribute(Attribute):
     """
@@ -65762,13 +65888,14 @@ class OpenModeAttribute(Attribute):
     
     pass
 
-  NonOrthoView
-  TopView
-  BottomView
-  FrontView
-  BackView
-  LeftView
-  RightView
+class OrthographicView():
+    NonOrthoView
+    TopView
+    BottomView
+    FrontView
+    BackView
+    LeftView
+    RightView
 
 class OsnapOverrule(Overrule):
     """
@@ -65841,9 +65968,10 @@ class PCAdsName(public struct PCAdsName {
 
     pass
 
-  True
-  False
-  NotApplicable
+class PaperOrientationStates():
+    True
+    False
+    NotApplicable
 
 class ParallelConstraint(GeometricalConstraint):
     """
@@ -65891,18 +66019,21 @@ class ParallelConstraint(GeometricalConstraint):
 
     pass
 
-  ParseOptionNone
-  SetDefaultFormat
-  PreserveMtextFormat
+class ParseOption():
+    ParseOptionNone
+    SetDefaultFormat
+    PreserveMtextFormat
 
-  Default
-  UpperCase
-  IsExternalReference
+class PasswordOptions():
+    Default
+    UpperCase
+    IsExternalReference
 
-  AbsolutePath = 3
-  NoPath = 1
-  PathAndFile = 4
-  RelativePath = 2
+class PathOption():
+    AbsolutePath = 3
+    NoPath = 1
+    PathAndFile = 4
+    RelativePath = 2
 
 class PathRef(GeomRef):
     """
@@ -66707,9 +66838,10 @@ class PerpendicularConstraint(GeometricalConstraint):
 
     pass
 
-  PeakIntensity
-  Flux
-  Illuminance
+class PhysicalIntensityMethod():
+    PeakIntensity
+    Flux
+    Illuminance
 
 class PlaceHolder(DBObject):
     """
@@ -66743,9 +66875,10 @@ class PlaceHolder(DBObject):
 
     pass
 
-  NonPlanar
-  Planar
-  Linear
+class Planarity():
+    NonPlanar
+    Planar
+    Linear
 
 class PlaneSurface(Surface):
     """
@@ -66789,14 +66922,16 @@ class PlaneSurface(Surface):
     
     pass
 
-  Inches
-  Millimeters
-  Pixels
+class PlotPaperUnit():
+    Inches
+    Millimeters
+    Pixels
 
-  Degrees000
-  Degrees090
-  Degrees180
-  Degrees270
+class PlotRotation():
+    Degrees000
+    Degrees090
+    Degrees180
+    Degrees270
 
 class PlotSettings(DBObject):
     """
@@ -67145,12 +67280,13 @@ class PlotSettings(DBObject):
     
     pass
 
-  AsDisplayed
-  Wireframe
-  Hidden
-  Rendered
-  VisualStyle
-  RenderPreset
+class PlotSettingsShadePlotType():
+    AsDisplayed
+    Wireframe
+    Hidden
+    Rendered
+    VisualStyle
+    RenderPreset
 
 class PlotSettingsValidator(DisposableWrapper):
     """
@@ -67845,10 +67981,11 @@ class PlotStyleDescriptor(public struct PlotStyleDescriptor {
     
     pass
 
-  PlotStyleNameByLayer
-  PlotStyleNameByBlock
-  PlotStyleNameIsDictionaryDefault
-  PlotStyleNameById
+class PlotStyleNameType():
+    PlotStyleNameByLayer
+    PlotStyleNameByBlock
+    PlotStyleNameIsDictionaryDefault
+    PlotStyleNameById
 
 class PlotStyleTableChangedEventArgs(EventArgs):
     """
@@ -67861,12 +67998,13 @@ class PlotStyleTableChangedEventArgs(EventArgs):
     
     pass
 
-  Display
-  Extents
-  Limits
-  View
-  Window
-  Layout
+class PlotType():
+    Display
+    Extents
+    Limits
+    View
+    Window
+    Layout
 
 class Point3AngularDimension(Dimension):
     """
@@ -68364,10 +68502,11 @@ class PointCloudCrop(IDisposable):
     
     pass
 
-  Invalid
-  Rectangular
-  Polygonal
-  Circular
+class PointCloudCropType():
+    Invalid
+    Rectangular
+    Polygonal
+    Circular
 
 class PointCloudDefEx(DBObject):
     """
@@ -68482,9 +68621,10 @@ class PointCloudDefEx(DBObject):
     
     pass
 
-  UseMinMaxColors
-  UseRGBScanColors
-  HidePoints
+class PointCloudDispOptionOutOfRange():
+    UseMinMaxColors
+    UseRGBScanColors
+    HidePoints
 
 class PointCloudEx(Entity):
     """
@@ -68861,30 +69001,34 @@ class PointCloudItem(Notifier):
     
     pass
 
-  LegacyPointCloud
-  PointCloudProject
-  IndividualScan
-  Scan
-  Region
-  ScanRootGroup
-  RegionRootGroup
-  UnassignedPoint
+class PointCloudItemType():
+    LegacyPointCloud
+    PointCloudProject
+    IndividualScan
+    Scan
+    Region
+    ScanRootGroup
+    RegionRootGroup
+    UnassignedPoint
 
-  Classification = 3
-  Color = 1
-  Intensity = 2
-  Normal = 4
+class PointCloudProperty():
+    Classification = 3
+    Color = 1
+    Intensity = 2
+    Normal = 4
 
-  All = 1
-  None = -1
-  Some = 0
+class PointCloudPropertyState():
+    All = 1
+    None = -1
+    Some = 0
 
-  ClassificationRamp = 6
-  HeightRamp = 4
-  IntensityRamp = 5
-  NormalRamp = 3
-  SingleColor = 2
-  TrueColor = 1
+class PointCloudStylizationType():
+    ClassificationRamp = 6
+    HeightRamp = 4
+    IntensityRamp = 5
+    NormalRamp = 3
+    SingleColor = 2
+    TrueColor = 1
 
 class PointCoincidenceConstraint(GeometricalConstraint):
     """
@@ -68998,14 +69142,16 @@ class PointCurveConstraint(GeometricalConstraint):
 
     pass
 
-  SimplePoly
-  FitCurvePoly
-  QuadSplinePoly
-  CubicSplinePoly
+class Poly2dType():
+    SimplePoly
+    FitCurvePoly
+    QuadSplinePoly
+    CubicSplinePoly
 
-  SimplePoly
-  QuadSplinePoly
-  CubicSplinePoly
+class Poly3dType():
+    SimplePoly
+    QuadSplinePoly
+    CubicSplinePoly
 
 class PolyFaceMesh(Entity, IEnumerable):
     """
@@ -69314,10 +69460,11 @@ class PolyFaceMeshVertex(Vertex):
     
     pass
 
-  BezierSurfaceMesh = 8
-  CubicSurfaceMesh = 6
-  QuadSurfaceMesh = 5
-  SimpleMesh = 0
+class PolyMeshType():
+    BezierSurfaceMesh = 8
+    CubicSurfaceMesh = 6
+    QuadSurfaceMesh = 5
+    SimpleMesh = 0
 
 class PolygonMesh(Entity, IEnumerable):
     """
@@ -71666,10 +71813,11 @@ class RadiusDiameterConstraint(ExplicitConstraint):
     
     .
     """
-      CircleRadius
-      CircleDiameter
-      MinorRadius
-      MajorRadius
+    class RadDiaConstrType():
+        CircleRadius
+        CircleDiameter
+        MinorRadius
+        MajorRadius
     
     
     ConstrType = None
@@ -71755,9 +71903,10 @@ class RapidRTRenderSettings(RenderSettings):
     
     pass
 
-  Level
-  Time
-  Infinite
+class RapidRTRenderTarget():
+    Level
+    Time
+    Infinite
 
 class RasterImage(Image):
     """
@@ -73641,13 +73790,15 @@ class RenderGlobal(DBObject):
         pass
     
     
-      Window
-      Viewport
+    class Destination():
+        Window
+        Viewport
     
     
-      View
-      Crop
-      Selected
+    class Procedure():
+        View
+        Crop
+        Selected
     
     
     Dimensions = None
@@ -74746,9 +74897,10 @@ class RevolvedSurface(Autodesk.AutoCAD.DatabaseServices.Surface):
     
     pass
 
-  NotRigidSet
-  ScalableRigidSet
-  NonScalableRigidSet
+class RigidSetTypeInfo():
+    NotRigidSet
+    ScalableRigidSet
+    NonScalableRigidSet
 
 class RotatedDimension(Dimension):
     """
@@ -74809,26 +74961,30 @@ class RotatedDimension(Dimension):
     
     pass
 
-  Degrees000 = 0
-  Degrees090 = 1
-  Degrees180 = 2
-  Degrees270 = 3
-  DegreesUnknown = -1
+class RotationAngle():
+    Degrees000 = 0
+    Degrees090 = 1
+    Degrees180 = 2
+    Degrees270 = 3
+    DegreesUnknown = -1
 
-  DataRow = 1
-  HeaderRow = 4
-  TitleRow = 2
-  UnknownRow = 0
+class RowType():
+    DataRow = 1
+    HeaderRow = 4
+    TitleRow = 2
+    UnknownRow = 0
 
-NoSave
-Save12
-Save13
-Save14
-Save2000
-Save2004
-Save2007
-Save2010
-Save2013
+class SaveType():
+    NoSave
+    Save12
+    Save13
+    Save14
+    Save2000
+    Save2004
+    Save2007
+    Save2010
+    Save2013
+    Save2018
 
 class Section(Entity):
     """
@@ -76184,20 +76340,23 @@ class Section(Entity):
     
     pass
 
-  DestinationFile = 0x40
-  DestinationNewBlock = 0x10
-  DestinationReplaceBlock = 0x20
-  SourceAllObjects = 1
-  SourceSelectedObjects = 2
+class SectionGeneration():
+    DestinationFile = 0x40
+    DestinationNewBlock = 0x10
+    DestinationReplaceBlock = 0x20
+    SourceAllObjects = 1
+    SourceSelectedObjects = 2
 
-  BackgroundGeometry = 4
-  CurveTangencyLines = 0x10
-  ForegroundGeometry = 8
-  IntersectionBoundary = 1
-  IntersectionFill = 2
+class SectionGeometry():
+    BackgroundGeometry = 4
+    CurveTangencyLines = 0x10
+    ForegroundGeometry = 8
+    IntersectionBoundary = 1
+    IntersectionFill = 2
 
-  HeightAboveSectionLine = 1
-  HeightBelowSectionLine = 2
+class SectionHeight():
+    HeightAboveSectionLine = 1
+    HeightBelowSectionLine = 2
 
 class SectionHitTestInfo(public struct SectionHitTestInfo {
 }):
@@ -76956,19 +77115,21 @@ class SectionSettings(DBObject):
     
     pass
 
-  Boundary = 2
-  Plane = 1
-  Volume = 4
+class SectionState():
+    Boundary = 2
+    Plane = 1
+    Volume = 4
 
-  BackLine = 8
-  BackLineBottom = 0x20
-  BackLineTop = 0x10
-  SectionLine = 1
-  SectionLineBottom = 4
-  SectionLineTop = 2
-  SectionSubItemNone = 0
-  VerticalLineBottom = 0x80
-  VerticalLineTop = 0x40
+class SectionSubItem():
+    BackLine = 8
+    BackLineBottom = 0x20
+    BackLineTop = 0x10
+    SectionLine = 1
+    SectionLineBottom = 4
+    SectionLineTop = 2
+    SectionSubItemNone = 0
+    VerticalLineBottom = 0x80
+    VerticalLineTop = 0x40
 
 class SectionSymbol(Entity):
     """
@@ -77126,18 +77287,21 @@ class SectionSymbol(Entity):
     
     pass
 
-  LiveSection = 1
-  Section2d = 2
-  Section3d = 4
+class SectionType():
+    LiveSection = 1
+    Section2d = 2
+    Section3d = 4
 
-  TowardsCuttingPlane
-  AwayFromCuttingPlane
+class SectionViewArrowDirection():
+    TowardsCuttingPlane
+    AwayFromCuttingPlane
 
-  EndCuttingPlane
-  AboveDirectionArrowLine
-  AboveDirectionArrowSymbol
-  StartDirectionArrow
-  EndDirectionArrow
+class SectionViewIdentifierPosition():
+    EndCuttingPlane
+    AboveDirectionArrowLine
+    AboveDirectionArrowSymbol
+    StartDirectionArrow
+    EndDirectionArrow
 
 class SectionViewStyle(DBObject):
     """
@@ -77387,12 +77551,14 @@ class SectionViewStyle(DBObject):
     
     pass
 
-  AddTimeStamp = 0x20
-  EncryptData = 1
-  EncryptProperties = 2
-  SignData = 0x10
+class SecurityActions():
+    AddTimeStamp = 0x20
+    EncryptData = 1
+    EncryptProperties = 2
+    SignData = 0x10
 
-  RC4 = 0x6801
+class SecurityAlgorithm():
+    RC4 = 0x6801
 
 class SecurityParameters(public sealed class SecurityParameters):
     """
@@ -77499,14 +77665,16 @@ class SecurityParameters(public sealed class SecurityParameters):
     
     pass
 
-  Line
-  Arc
-  Coincident
-  Point
-  Empty
+class SegmentType():
+    Line
+    Arc
+    Coincident
+    Point
+    Empty
 
-  Crossing = 2
-  Window = 1
+class SelectType():
+    Crossing = 2
+    Window = 1
 
 class SequenceEnd(Entity):
     """
@@ -77540,19 +77708,21 @@ class SequenceEnd(Entity):
 
     pass
 
-  Draft
-  Preview
-  Normal
-  Presentation
-  Maximum
-  Custom
+class ShadePlotResLevel():
+    Draft
+    Preview
+    Normal
+    Presentation
+    Maximum
+    Custom
 
-  AsDisplayed
-  Wireframe
-  Hidden
-  Rendered
-  VisualStyle
-  RenderPreset
+class ShadePlotType():
+    AsDisplayed
+    Wireframe
+    Hidden
+    Rendered
+    VisualStyle
+    RenderPreset
 
 class Shape(Entity):
     """
@@ -79926,10 +80096,11 @@ class SolidBackground(Background):
     
     pass
 
-  SourceNotDefined
-  InventorSource
-  FusionSource
-  ModelSpaceSource
+class SourceType():
+    SourceNotDefined
+    InventorSource
+    FusionSource
+    ModelSpaceSource
 
 class Spline(Curve):
     """
@@ -86331,78 +86502,81 @@ class Spline(Curve):
     
     pass
 
-  FitPoints
-  ControlPoints
+class SplineType():
+    FitPoints
+    ControlPoints
 
-  CustomScale = 1
-  Scale100To1 = 0x12
-  Scale10To1 = 0x11
-  Scale1ftAnd1ft = 0x22
-  Scale1inAnd1ft = 30
-  Scale1To1 = 2
-  Scale1To10 = 7
-  Scale1To100 = 13
-  Scale1To128inAnd1ft = 0x13
-  Scale1To16 = 8
-  Scale1To16inchAnd1ft = 0x16
-  Scale1To2 = 3
-  Scale1To20 = 9
-  Scale1To2inchAnd1ft = 0x1c
-  Scale1To30 = 10
-  Scale1To32inchAnd1ft = 0x15
-  Scale1To4 = 4
-  Scale1To40 = 11
-  Scale1To4inchAnd1ft = 0x1a
-  Scale1To5 = 5
-  Scale1To50 = 12
-  Scale1To64inchAnd1ft = 20
-  Scale1To8 = 6
-  Scale1To8inchAnd1ft = 0x18
-  Scale2To1 = 14
-  Scale3inAnd1ft = 0x20
-  Scale3To16inchAnd1ft = 0x19
-  Scale3To32inchAnd1ft = 0x17
-  Scale3To4inchAnd1ft = 0x1d
-  Scale3To8inchAnd1ft = 0x1b
-  Scale4To1 = 15
-  Scale6inAnd1ft = 0x21
-  Scale8To1 = 0x10
-  ScaleToFit = 0
+class StandardScaleType():
+    CustomScale = 1
+    Scale100To1 = 0x12
+    Scale10To1 = 0x11
+    Scale1ftAnd1ft = 0x22
+    Scale1inAnd1ft = 30
+    Scale1To1 = 2
+    Scale1To10 = 7
+    Scale1To100 = 13
+    Scale1To128inAnd1ft = 0x13
+    Scale1To16 = 8
+    Scale1To16inchAnd1ft = 0x16
+    Scale1To2 = 3
+    Scale1To20 = 9
+    Scale1To2inchAnd1ft = 0x1c
+    Scale1To30 = 10
+    Scale1To32inchAnd1ft = 0x15
+    Scale1To4 = 4
+    Scale1To40 = 11
+    Scale1To4inchAnd1ft = 0x1a
+    Scale1To5 = 5
+    Scale1To50 = 12
+    Scale1To64inchAnd1ft = 20
+    Scale1To8 = 6
+    Scale1To8inchAnd1ft = 0x18
+    Scale2To1 = 14
+    Scale3inAnd1ft = 0x20
+    Scale3To16inchAnd1ft = 0x19
+    Scale3To32inchAnd1ft = 0x17
+    Scale3To4inchAnd1ft = 0x1d
+    Scale3To8inchAnd1ft = 0x1b
+    Scale4To1 = 15
+    Scale6inAnd1ft = 0x21
+    Scale8To1 = 0x10
+    ScaleToFit = 0
 
-  ScaleToFit
-  StdScale1To128InchIs1ft
-  StdScale1To64InchIs1ft
-  StdScale1To32InchIs1ft
-  StdScale1To16InchIs1ft
-  StdScale3To32InchIs1ft
-  StdScale1To8InchIs1ft
-  StdScale3To16InchIs1ft
-  StdScale1To4InchIs1ft
-  StdScale3To8InchIs1ft
-  StdScale1To2InchIs1ft
-  StdScale3To4InchIs1ft
-  StdScale1InchIs1ft
-  StdScale3InchIs1ft
-  StdScale6InchIs1ft
-  StdScale1ftIs1ft
-  StdScale1To1
-  StdScale1To2
-  StdScale1To4
-  StdScale1To5
-  StdScale1To8
-  StdScale1To10
-  StdScale1To16
-  StdScale1To20
-  StdScale1To30
-  StdScale1To40
-  StdScale1To50
-  StdScale1To100
-  StdScale2To1
-  StdScale4To1
-  StdScale8To1
-  StdScale10To1
-  StdScale100To1
-  StdScale1000To1
+class StdScaleType():
+    ScaleToFit
+    StdScale1To128InchIs1ft
+    StdScale1To64InchIs1ft
+    StdScale1To32InchIs1ft
+    StdScale1To16InchIs1ft
+    StdScale3To32InchIs1ft
+    StdScale1To8InchIs1ft
+    StdScale3To16InchIs1ft
+    StdScale1To4InchIs1ft
+    StdScale3To8InchIs1ft
+    StdScale1To2InchIs1ft
+    StdScale3To4InchIs1ft
+    StdScale1InchIs1ft
+    StdScale3InchIs1ft
+    StdScale6InchIs1ft
+    StdScale1ftIs1ft
+    StdScale1To1
+    StdScale1To2
+    StdScale1To4
+    StdScale1To5
+    StdScale1To8
+    StdScale1To10
+    StdScale1To16
+    StdScale1To20
+    StdScale1To30
+    StdScale1To40
+    StdScale1To50
+    StdScale1To100
+    StdScale2To1
+    StdScale4To1
+    StdScale8To1
+    StdScale10To1
+    StdScale100To1
+    StdScale1000To1
 
 class SubDMesh(Entity):
     """
@@ -87400,12 +87574,13 @@ class SubentityOverrule(Overrule):
     
     pass
 
-  Null
-  Face
-  Edge
-  Vertex
-  MlineCache
-  Class
+class SubentityType():
+    Null
+    Face
+    Edge
+    Vertex
+    MlineCache
+    Class
 
 class Sun(DBObject):
     """
@@ -87455,8 +87630,9 @@ class Surface(Entity):
     """
     
     """
-      Isolines
-      IsoParms
+    class WireframeType():
+        Isolines
+        IsoParms
     
     
     def ChamferEdges(self):
@@ -87765,8 +87941,9 @@ class SurfaceTrimInfo(DisposableWrapper):
     
     )
     """
-      InsideTool
-      OutsideTool
+    class TrimRelation():
+        InsideTool
+        OutsideTool
     
     
     def SetTrimInfo(self):
@@ -87792,10 +87969,11 @@ class SurfaceTrimInfo(DisposableWrapper):
     
     pass
 
-  NoAlignment
-  AlignSweepEntityToPath
-  TranslateSweepEntityToPath
-  TranslatePathToSweepEntity
+class SweepOptionsAlignOption():
+    NoAlignment
+    AlignSweepEntityToPath
+    TranslateSweepEntityToPath
+    TranslatePathToSweepEntity
 
 class SweptSurface(Surface):
     """
@@ -91293,21 +91471,24 @@ class Table(BlockReference, IEnumerable):
     
     pass
 
-  DownOrUp = 2
-  Left = 4
-  Right = 1
+class TableBreakFlowDirection():
+    DownOrUp = 2
+    Left = 4
+    Right = 1
 
-  AllowManualHeights = 0x10
-  AllowManualPositions = 8
-  EnableBreaking = 1
-  None = 0
-  RepeatBottomLabels = 4
-  RepeatTopLabels = 2
+class TableBreakOptions():
+    AllowManualHeights = 0x10
+    AllowManualPositions = 8
+    EnableBreaking = 1
+    None = 0
+    RepeatBottomLabels = 4
+    RepeatTopLabels = 2
 
-  UnknownCell
-  TextCell
-  BlockCell
-  MultipleContentCell
+class TableCellType():
+    UnknownCell
+    TextCell
+    BlockCell
+    MultipleContentCell
 
 class TableContent(FormattedTableData):
     """
@@ -91419,33 +91600,34 @@ class TableContent(FormattedTableData):
     
     pass
 
-  ConvertFormatToOverrides = 0x800
-  ExpandOrContractTable = 1
-  FillTarget = 0x20000
-  None = 0
-  OnlyContentModifiedAfterUpdate = 0x400000
-  OnlyFormatModifiedAfterUpdate = 0x800000
-  OverwriteContentModifiedAfterUpdate = 0x100000
-  OverwriteFormatModifiedAfterUpdate = 0x200000
-  OverwriteReadOnlyContent = 0x40000
-  OverwriteReadOnlyFormat = 0x80000
-  SkipBlock = 0x20
-  SkipCellState = 0x1000
-  SkipCellStyle = 0x400
-  SkipContent = 2
-  SkipContentFormat = 0x2000
-  SkipDataCell = 0x100
-  SkipDataLink = 0x40
-  SkipDissimilarContentFormat = 0x4000
-  SkipField = 8
-  SkipFormat = 0x200
-  SkipFormula = 0x10
-  SkipGeometry = 0x8000
-  SkipLabelCell = 0x80
-  SkipMerges = 0x10000
-  SkipValue = 4
-  TableCopyColumnWidth = 0x2000000
-  TableCopyRowHeight = 0x1000000
+class TableCopyOptions():
+    ConvertFormatToOverrides = 0x800
+    ExpandOrContractTable = 1
+    FillTarget = 0x20000
+    None = 0
+    OnlyContentModifiedAfterUpdate = 0x400000
+    OnlyFormatModifiedAfterUpdate = 0x800000
+    OverwriteContentModifiedAfterUpdate = 0x100000
+    OverwriteFormatModifiedAfterUpdate = 0x200000
+    OverwriteReadOnlyContent = 0x40000
+    OverwriteReadOnlyFormat = 0x80000
+    SkipBlock = 0x20
+    SkipCellState = 0x1000
+    SkipCellStyle = 0x400
+    SkipContent = 2
+    SkipContentFormat = 0x2000
+    SkipDataCell = 0x100
+    SkipDataLink = 0x40
+    SkipDissimilarContentFormat = 0x4000
+    SkipField = 8
+    SkipFormat = 0x200
+    SkipFormula = 0x10
+    SkipGeometry = 0x8000
+    SkipLabelCell = 0x80
+    SkipMerges = 0x10000
+    SkipValue = 4
+    TableCopyColumnWidth = 0x2000000
+    TableCopyRowHeight = 0x1000000
 
 class TableEnumerator(DisposableWrapper, IEnumerator):
     """
@@ -91471,22 +91653,24 @@ class TableEnumerator(DisposableWrapper, IEnumerator):
     
     pass
 
-  IterateColumns = 4
-  IterateRows = 2
-  IterateSelection = 1
-  None = 0
-  SkipMerged = 0x40
-  SkipReadOnlyContent = 0x10
-  SkipReadOnlyFormat = 0x20
+class Table():
+    IterateColumns = 4
+    IterateRows = 2
+    IterateSelection = 1
+    None = 0
+    SkipMerged = 0x40
+    SkipReadOnlyContent = 0x10
+    SkipReadOnlyFormat = 0x20
 
-  CopyContent = 8
-  CopyFormat = 0x10
-  GenerateSeries = 4
-  None = 0
-  OverwriteReadOnlyContent = 0x20
-  OverwriteReadOnlyFormat = 0x40
-  Reverse = 2
-  Row = 1
+class TableFillOptions():
+    CopyContent = 8
+    CopyFormat = 0x10
+    GenerateSeries = 4
+    None = 0
+    OverwriteReadOnlyContent = 0x20
+    OverwriteReadOnlyFormat = 0x40
+    Reverse = 2
+    Row = 1
 
 class TableHitTestInfo(public struct TableHitTestInfo {
 }):
@@ -91515,8 +91699,9 @@ class TableHitTestInfo(public struct TableHitTestInfo {
     
     pass
 
-  None
-  Cell
+class TableHitTestType():
+    None
+    Cell
 
 class TableStyle(DBObject):
     """
@@ -92010,110 +92195,112 @@ class TableStyle(DBObject):
     
     pass
 
-  HorizontalInsideLineFirst = 1
-  HorizontalInsideLineSecond = 2
-  HorizontalInsideLineThird = 4
-  TableStyleModified = 8
+class TableStyleFlags():
+    HorizontalInsideLineFirst = 1
+    HorizontalInsideLineSecond = 2
+    HorizontalInsideLineThird = 4
+    TableStyleModified = 8
 
-  CellAlignment = 130
-  CellBackgroundColor = 0x84
-  CellBackgroundFillNone = 0x83
-  CellBottomGridColor = 0x8a
-  CellBottomGridLineWeight = 0x8e
-  CellBottomVisibility = 0x92
-  CellContentColor = 0x85
-  CellDataType = 0x94
-  CellLeftGridColor = 0x8b
-  CellLeftGridLineWeight = 0x8f
-  CellLeftVisibility = 0x93
-  CellRightGridColor = 0x89
-  CellRightGridLineWeight = 0x8d
-  CellRightVisibility = 0x91
-  CellTextHeight = 0x87
-  CellTextStyle = 0x86
-  CellTopGridColor = 0x88
-  CellTopGridLineWeight = 140
-  CellTopVisibility = 0x90
-  DataHorizontalBottomColor = 0x36
-  DataHorizontalBottomLineWeight = 0x54
-  DataHorizontalBottomVisibility = 0x72
-  DataHorizontalInsideColor = 0x35
-  DataHorizontalInsideLineWeight = 0x53
-  DataHorizontalInsideVisibility = 0x71
-  DataHorizontalTopColor = 0x34
-  DataHorizontalTopLineWeight = 0x52
-  DataHorizontalTopVisibility = 0x70
-  DataRowAlignment = 0x11
-  DataRowColor = 8
-  DataRowDataType = 0x1a
-  DataRowFillColor = 14
-  DataRowFillNone = 11
-  DataRowTextHeight = 0x17
-  DataRowTextStyle = 20
-  DataVerticalInsideColor = 0x38
-  DataVerticalInsideLineWeight = 0x56
-  DataVerticalInsideVisibility = 0x74
-  DataVerticalLeftColor = 0x37
-  DataVerticalLeftLineWeight = 0x55
-  DataVerticalLeftVisibility = 0x73
-  DataVerticalRightColor = 0x39
-  DataVerticalRightLineWeight = 0x57
-  DataVerticalRightVisibility = 0x75
-  FlowDirection = 3
-  HeaderHorizontalBottomColor = 0x30
-  HeaderHorizontalBottomLineWeight = 0x4e
-  HeaderHorizontalBottomVisibility = 0x6c
-  HeaderHorizontalInsideColor = 0x2f
-  HeaderHorizontalInsideLineWeight = 0x4d
-  HeaderHorizontalInsideVisibility = 0x6b
-  HeaderHorizontalTopColor = 0x2e
-  HeaderHorizontalTopLineWeight = 0x4c
-  HeaderHorizontalTopVisibility = 0x6a
-  HeaderRowAlignment = 0x10
-  HeaderRowColor = 7
-  HeaderRowDataType = 0x19
-  HeaderRowFillColor = 13
-  HeaderRowFillNone = 10
-  HeaderRowTextHeight = 0x16
-  HeaderRowTextStyle = 0x13
-  HeaderSuppressed = 2
-  HeaderVerticalInsideColor = 50
-  HeaderVerticalInsideLineWeight = 80
-  HeaderVerticalInsideVisibility = 110
-  HeaderVerticalLeftColor = 0x31
-  HeaderVerticalLeftLineWeight = 0x4f
-  HeaderVerticalLeftVisibility = 0x6d
-  HeaderVerticalRightColor = 0x33
-  HeaderVerticalRightLineWeight = 0x51
-  HeaderVerticalRightVisibility = 0x6f
-  HorizontalCellMargin = 4
-  TitleHorizontalBottomColor = 0x2a
-  TitleHorizontalBottomLineWeight = 0x48
-  TitleHorizontalBottomVisibility = 0x66
-  TitleHorizontalInsideColor = 0x29
-  TitleHorizontalInsideLineWeight = 0x47
-  TitleHorizontalInsideVisibility = 0x65
-  TitleHorizontalTopColor = 40
-  TitleHorizontalTopLineWeight = 70
-  TitleHorizontalTopVisibility = 100
-  TitleRowAlignment = 15
-  TitleRowColor = 6
-  TitleRowDataType = 0x18
-  TitleRowFillColor = 12
-  TitleRowFillNone = 9
-  TitleRowTextHeight = 0x15
-  TitleRowTextStyle = 0x12
-  TitleSuppressed = 1
-  TitleVerticalInsideColor = 0x2c
-  TitleVerticalInsideLineWeight = 0x4a
-  TitleVerticalInsideVisibility = 0x68
-  TitleVerticalLeftColor = 0x2b
-  TitleVerticalLeftLineWeight = 0x49
-  TitleVerticalLeftVisibility = 0x67
-  TitleVerticalRightColor = 0x2d
-  TitleVerticalRightLineWeight = 0x4b
-  TitleVerticalRightVisibility = 0x69
-  VerticalCellMargin = 5
+class TableStyleOverride():
+    CellAlignment = 130
+    CellBackgroundColor = 0x84
+    CellBackgroundFillNone = 0x83
+    CellBottomGridColor = 0x8a
+    CellBottomGridLineWeight = 0x8e
+    CellBottomVisibility = 0x92
+    CellContentColor = 0x85
+    CellDataType = 0x94
+    CellLeftGridColor = 0x8b
+    CellLeftGridLineWeight = 0x8f
+    CellLeftVisibility = 0x93
+    CellRightGridColor = 0x89
+    CellRightGridLineWeight = 0x8d
+    CellRightVisibility = 0x91
+    CellTextHeight = 0x87
+    CellTextStyle = 0x86
+    CellTopGridColor = 0x88
+    CellTopGridLineWeight = 140
+    CellTopVisibility = 0x90
+    DataHorizontalBottomColor = 0x36
+    DataHorizontalBottomLineWeight = 0x54
+    DataHorizontalBottomVisibility = 0x72
+    DataHorizontalInsideColor = 0x35
+    DataHorizontalInsideLineWeight = 0x53
+    DataHorizontalInsideVisibility = 0x71
+    DataHorizontalTopColor = 0x34
+    DataHorizontalTopLineWeight = 0x52
+    DataHorizontalTopVisibility = 0x70
+    DataRowAlignment = 0x11
+    DataRowColor = 8
+    DataRowDataType = 0x1a
+    DataRowFillColor = 14
+    DataRowFillNone = 11
+    DataRowTextHeight = 0x17
+    DataRowTextStyle = 20
+    DataVerticalInsideColor = 0x38
+    DataVerticalInsideLineWeight = 0x56
+    DataVerticalInsideVisibility = 0x74
+    DataVerticalLeftColor = 0x37
+    DataVerticalLeftLineWeight = 0x55
+    DataVerticalLeftVisibility = 0x73
+    DataVerticalRightColor = 0x39
+    DataVerticalRightLineWeight = 0x57
+    DataVerticalRightVisibility = 0x75
+    FlowDirection = 3
+    HeaderHorizontalBottomColor = 0x30
+    HeaderHorizontalBottomLineWeight = 0x4e
+    HeaderHorizontalBottomVisibility = 0x6c
+    HeaderHorizontalInsideColor = 0x2f
+    HeaderHorizontalInsideLineWeight = 0x4d
+    HeaderHorizontalInsideVisibility = 0x6b
+    HeaderHorizontalTopColor = 0x2e
+    HeaderHorizontalTopLineWeight = 0x4c
+    HeaderHorizontalTopVisibility = 0x6a
+    HeaderRowAlignment = 0x10
+    HeaderRowColor = 7
+    HeaderRowDataType = 0x19
+    HeaderRowFillColor = 13
+    HeaderRowFillNone = 10
+    HeaderRowTextHeight = 0x16
+    HeaderRowTextStyle = 0x13
+    HeaderSuppressed = 2
+    HeaderVerticalInsideColor = 50
+    HeaderVerticalInsideLineWeight = 80
+    HeaderVerticalInsideVisibility = 110
+    HeaderVerticalLeftColor = 0x31
+    HeaderVerticalLeftLineWeight = 0x4f
+    HeaderVerticalLeftVisibility = 0x6d
+    HeaderVerticalRightColor = 0x33
+    HeaderVerticalRightLineWeight = 0x51
+    HeaderVerticalRightVisibility = 0x6f
+    HorizontalCellMargin = 4
+    TitleHorizontalBottomColor = 0x2a
+    TitleHorizontalBottomLineWeight = 0x48
+    TitleHorizontalBottomVisibility = 0x66
+    TitleHorizontalInsideColor = 0x29
+    TitleHorizontalInsideLineWeight = 0x47
+    TitleHorizontalInsideVisibility = 0x65
+    TitleHorizontalTopColor = 40
+    TitleHorizontalTopLineWeight = 70
+    TitleHorizontalTopVisibility = 100
+    TitleRowAlignment = 15
+    TitleRowColor = 6
+    TitleRowDataType = 0x18
+    TitleRowFillColor = 12
+    TitleRowFillNone = 9
+    TitleRowTextHeight = 0x15
+    TitleRowTextStyle = 0x12
+    TitleSuppressed = 1
+    TitleVerticalInsideColor = 0x2c
+    TitleVerticalInsideLineWeight = 0x4a
+    TitleVerticalInsideVisibility = 0x68
+    TitleVerticalLeftColor = 0x2b
+    TitleVerticalLeftLineWeight = 0x49
+    TitleVerticalLeftVisibility = 0x67
+    TitleVerticalRightColor = 0x2d
+    TitleVerticalRightLineWeight = 0x4b
+    TitleVerticalRightVisibility = 0x69
+    VerticalCellMargin = 5
 
 class TableTemplate(TableContent):
     """
@@ -92564,46 +92751,53 @@ class TangentConstraint(GeometricalConstraint):
 
     pass
 
-  LeftAlignment
-  CenterAlignment
-  RightAlignment
+class TextAlignment():
+    LeftAlignment
+    CenterAlignment
+    RightAlignment
 
-  LeftAlignment
-  CenterAlignment
-  RightAlignment
+class TextAlignmentType():
+    LeftAlignment
+    CenterAlignment
+    RightAlignment
 
-  InsertAngle
-  HorizontalAngle
-  AlwaysRightReadingAngle
+class TextAngleType():
+    InsertAngle
+    HorizontalAngle
+    AlwaysRightReadingAngle
 
-  AttachmentHorizontal
-  AttachmentVertical
+class TextAttachmentDirection():
+    AttachmentHorizontal
+    AttachmentVertical
 
-  AttachmentTopOfTop
-  AttachmentMiddleOfTop
-  AttachmentMiddle
-  AttachmentMiddleOfBottom
-  AttachmentBottomOfBottom
-  AttachmentBottomLine
-  AttachmentBottomOfTopLine
-  AttachmentBottomOfTop
-  AttachmentAllLine
-  AttachmentCenter
-  AttachmentLinedCenter
+class TextAttachmentType():
+    AttachmentTopOfTop
+    AttachmentMiddleOfTop
+    AttachmentMiddle
+    AttachmentMiddleOfBottom
+    AttachmentBottomOfBottom
+    AttachmentBottomLine
+    AttachmentBottomOfTopLine
+    AttachmentBottomOfTop
+    AttachmentAllLine
+    AttachmentCenter
+    AttachmentLinedCenter
 
 class TextEditor(DisposableWrapper, ITextEditorSelectable):
     """
     
     """
-      ExitQuit
-      ExitSave
+    class ExitStatus():
+        ExitQuit
+        ExitSave
     
     
-      HalfFullForm = 4
-      IgnoreAccent = 8
-      MatchCase = 1
-      UseWildcards = 0x10
-      WholeWord = 2
+    class TextFindFlags():
+        HalfFullForm = 4
+        IgnoreAccent = 8
+        MatchCase = 1
+        UseWildcards = 0x10
+        WholeWord = 2
     
     
     def ClearSelection(self):
@@ -92817,28 +93011,31 @@ class TextEditorParagraph(DisposableWrapper, ITextEditorSelectable):
     """
     
     """
-      AlignmentDefault
-      AlignmentLeft
-      AlignmentCenter
-      AlignmentRight
-      AlignmentJustify
-      AlignmentDistribute
+    class AlignmentType():
+        AlignmentDefault
+        AlignmentLeft
+        AlignmentCenter
+        AlignmentRight
+        AlignmentJustify
+        AlignmentDistribute
     
     
-      LineSpacingDefault
-      LineSpacingExactly
-      LineSpacingAtLeast
-      LineSpacingMultiple
+    class LineSpacingStyle():
+        LineSpacingDefault
+        LineSpacingExactly
+        LineSpacingAtLeast
+        LineSpacingMultiple
     
     
-      Off
-      Bullet
-      Number
-      LetterLower
-      LetterUpper
-      NumberWide
-      LetterLowerWide
-      LetterUpperWide
+    class NumberingType():
+        Off
+        Bullet
+        Number
+        LetterLower
+        LetterUpper
+        NumberWide
+        LetterLowerWide
+        LetterUpperWide
     
     
     def AddTab(self):
@@ -92941,10 +93138,11 @@ class TextEditorParagraphTab(public struct TextEditorParagraphTab {
     """
     
     """
-      LeftTab
-      CenterTab
-      RightTab
-      DecimalTab
+    class ParagraphTabType():
+        LeftTab
+        CenterTab
+        RightTab
+        DecimalTab
     
     
     DecimalChar = None
@@ -93089,18 +93287,20 @@ class TextEditorSelectionbase(DisposableWrapper):
     """
     
     """
-      FlowBase
-      FlowCenter
-      FlowTop
+    class FlowAlign():
+        FlowBase
+        FlowCenter
+        FlowTop
     
     
-      UnicodeMTextFormat
-      MTextFormat
-      RichTextFormat
-      UnicodeDTextFormat
-      DTextFormat
-      UnicodeTextFormat
-      MultibyteTextFormat
+    class InsertTextType():
+        UnicodeMTextFormat
+        MTextFormat
+        RichTextFormat
+        UnicodeDTextFormat
+        DTextFormat
+        UnicodeTextFormat
+        MultibyteTextFormat
     
     
     def InputSpecialChar(self):
@@ -93212,10 +93412,11 @@ class TextEditorStack(public struct TextEditorStack {
     """
     
     """
-      HorizontalStack
-      DiagonalStack
-      ToleranceStack
-      DecimalStack
+    class StackType():
+        HorizontalStack
+        DiagonalStack
+        ToleranceStack
+        DecimalStack
     
     
     Bottom = None
@@ -93266,12 +93467,13 @@ class TextEditorWipeout(DisposableWrapper):
     
     pass
 
-  TextLeft
-  TextCenter
-  TextRight
-  TextAlign
-  TextMid
-  TextFit
+class TextHorizontalMode():
+    TextLeft
+    TextCenter
+    TextRight
+    TextAlign
+    TextMid
+    TextFit
 
 class TextStyleTable(SymbolTable, IEnumerable):
     """
@@ -93358,10 +93560,11 @@ class TextStyleTableRecord(SymbolTableRecord):
     
     pass
 
-  TextBase
-  TextBottom
-  TextVerticalMid
-  TextTop
+class TextVerticalMode():
+    TextBase
+    TextBottom
+    TextVerticalMid
+    TextTop
 
 class ThreePointAngleConstraint(AngularConstraint):
     """
@@ -94738,8 +94941,9 @@ class UnderlayLayerCollection(ICollection, IEnumerable):
     
     pass
 
-  Off
-  On
+class UnderlayLayerState():
+    Off
+    On
 
 class UnderlayReference(Entity):
     """
@@ -94847,36 +95051,38 @@ class UnderlayReference(Entity):
     
     pass
 
-  None
-  Millimeter
-  Centimeter
-  Meter
-  Kilometer
-  Inch
-  Foot
-  Yard
-  Mile
-  Microinches
-  Mils
-  Angstroms
-  Nanometers
-  Microns
-  Decimeters
-  Dekameters
-  Hectometers
-  GigaMeters
-  Astronomical
-  LightYears
-  Parsecs
+class Unit():
+    None
+    Millimeter
+    Centimeter
+    Meter
+    Kilometer
+    Inch
+    Foot
+    Yard
+    Mile
+    Microinches
+    Mils
+    Angstroms
+    Nanometers
+    Microns
+    Decimeters
+    Dekameters
+    Hectometers
+    GigaMeters
+    Astronomical
+    LightYears
+    Parsecs
 
-  Angle = 2
-  AngleNotTransformed = 0x10000
-  Area = 4
-  Currency = 0x10
-  Distance = 1
-  Percentage = 0x20
-  Unitless = 0
-  Volume = 8
+class UnitType():
+    Angle = 2
+    AngleNotTransformed = 0x10000
+    Area = 4
+    Currency = 0x10
+    Distance = 1
+    Percentage = 0x20
+    Unitless = 0
+    Volume = 8
 
 class UnitsConverter(TypeConverter):
     """
@@ -94944,31 +95150,32 @@ class UnitsConverter(TypeConverter):
     
     pass
 
-  Undefined
-  Inches
-  Feet
-  Miles
-  Millimeters
-  Centimeters
-  Meters
-  Kilometers
-  MicroInches
-  Mils
-  Yards
-  Angstroms
-  Nanometers
-  Microns
-  Decimeters
-  Dekameters
-  Hectometers
-  Gigameters
-  Astronomical
-  LightYears
-  Parsecs
-  USSurveyFeet
-  USSurveyInch
-  USSurveyYard
-  USSurveyMile
+class UnitsValue():
+    Undefined
+    Inches
+    Feet
+    Miles
+    Millimeters
+    Centimeters
+    Meters
+    Kilometers
+    MicroInches
+    Mils
+    Yards
+    Angstroms
+    Nanometers
+    Microns
+    Decimeters
+    Dekameters
+    Hectometers
+    Gigameters
+    Astronomical
+    LightYears
+    Parsecs
+    USSurveyFeet
+    USSurveyInch
+    USSurveyYard
+    USSurveyMile
 
 class UnmanagedPointCloudColorSchemeCollectionReactor(internal struct UnmanagedPointCloudColorSchemeCollectionReactor {
   private long <alignment member>;
@@ -94979,19 +95186,21 @@ class UnmanagedPointCloudColorSchemeCollectionReactor(internal struct UnmanagedP
 
     pass
 
-  DataToSource = 2
-  SourceToData = 1
+class UpdateDirection():
+    DataToSource = 2
+    SourceToData = 1
 
-  AllowSourceUpdate = 0x100000
-  ForceFullSourceUpdate = 0x200000
-  ForPreview = 0x1000000
-  IncludeXrefs = 0x2000000
-  None = 0
-  OverwriteContentModifiedAfterUpdate = 0x400000
-  OverwriteFormatModifiedAfterUpdate = 0x800000
-  SkipFormat = 0x20000
-  UpdateColumnWidth = 0x80000
-  UpdateRowHeight = 0x40000
+class UpdateOption():
+    AllowSourceUpdate = 0x100000
+    ForceFullSourceUpdate = 0x200000
+    ForPreview = 0x1000000
+    IncludeXrefs = 0x2000000
+    None = 0
+    OverwriteContentModifiedAfterUpdate = 0x400000
+    OverwriteFormatModifiedAfterUpdate = 0x800000
+    SkipFormat = 0x20000
+    UpdateColumnWidth = 0x80000
+    UpdateRowHeight = 0x40000
 
 class Vertex(Entity):
     """
@@ -95699,14 +95908,16 @@ class Vertex2d(Vertex):
     
     pass
 
-  SimpleVertex
-  SplineControlVertex
-  SplineFitVertex
-  CurveFitVertex
+class Vertex2dType():
+    SimpleVertex
+    SplineControlVertex
+    SplineFitVertex
+    CurveFitVertex
 
-  SimpleVertex
-  ControlVertex
-  FitVertex
+class Vertex3dType():
+    SimpleVertex
+    ControlVertex
+    FitVertex
 
 class VertexRef(SubentRef):
     """
@@ -96347,11 +96558,12 @@ class ViewRepBlockReference(BlockReference):
     
     pass
 
-  FromBase
-  WireframeVisibleEdges
-  WireframeHiddenEdges
-  ShadedVisibleEdges
-  ShadedHiddenEdges
+class ViewStyleType():
+    FromBase
+    WireframeVisibleEdges
+    WireframeHiddenEdges
+    ShadedVisibleEdges
+    ShadedHiddenEdges
 
 class ViewTable(SymbolTable):
     """
@@ -96951,8 +97163,9 @@ class ViewportTableRecord(AbstractViewTableRecord):
     
     pass
 
-  Visible
-  Invisible
+class Visibility():
+    Visible
+    Invisible
 
 class VisibilityOverrule(Overrule):
     """
@@ -97296,11 +97509,12 @@ class XrefGraphNode(GraphNode):
     
     pass
 
-  None
-  ResolvedMatch
-  ResolvedElsewhere
-  ResolvedWithUpdate
-  ResolvedUpdateAvailable
+class XrefNotificationStatus():
+    None
+    ResolvedMatch
+    ResolvedElsewhere
+    ResolvedWithUpdate
+    ResolvedUpdateAvailable
 
 class XrefObjectId(public struct XrefObjectId {
 }):
@@ -98385,15 +98599,16 @@ class XrefObjectId(public struct XrefObjectId {
     
     pass
 
-  XrefAttachOperation = 0
-  XrefBindOperation = 1
-  XrefDetachOperation = 2
-  XrefOverlayOperation = 3
-  XrefPathOperation = 4
-  XrefReloadOperation = 5
-  XrefResolveOperation = 6
-  XrefUnloadOperation = 7
-  XrefXBindOperation = 1
+class XrefOperation():
+    XrefAttachOperation = 0
+    XrefBindOperation = 1
+    XrefDetachOperation = 2
+    XrefOverlayOperation = 3
+    XrefPathOperation = 4
+    XrefReloadOperation = 5
+    XrefResolveOperation = 6
+    XrefUnloadOperation = 7
+    XrefXBindOperation = 1
 
 class XrefPreXrefLockFileEventArgs(EventArgs):
     """
@@ -98414,12 +98629,13 @@ class XrefRedirectedEventArgs(EventArgs):
     
     pass
 
-  NotAnXref
-  Resolved
-  Unloaded
-  Unreferenced
-  FileNotFound
-  Unresolved
+class XrefStatus():
+    NotAnXref
+    Resolved
+    Unloaded
+    Unreferenced
+    FileNotFound
+    Unresolved
 
 class XrefSubCommandEventArgs(EventArgs):
     """

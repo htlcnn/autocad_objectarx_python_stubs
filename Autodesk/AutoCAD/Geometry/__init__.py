@@ -8884,16 +8884,18 @@ class ClipBoundary2dData(public struct ClipBoundary2dData {
     
     pass
 
-  Invalid
-  AllSegmentsInside
-  SegmentsIntersect
-  AllSegmentsOutsideZeroWinds
-  AllSegmentsOutsideOddWinds
-  AllSegmentsOutsideEvenWinds
+class ClipCondition():
+    Invalid
+    AllSegmentsInside
+    SegmentsIntersect
+    AllSegmentsOutsideZeroWinds
+    AllSegmentsOutsideOddWinds
+    AllSegmentsOutsideEvenWinds
 
-  OK
-  InvalidClipBoundary
-  NotInitialized
+class ClipError():
+    OK
+    InvalidClipBoundary
+    NotInitialized
 
 class CompositeCurve2d(Curve2d):
     """
@@ -25218,18 +25220,19 @@ class Entity3d(DisposableWrapper, ICloneable):
     
     pass
 
-  OK
-  This
-  Arg1
-  Arg2
-  PerpendicularArg1Arg2
-  EqualArg1Arg2
-  EqualArg1Arg3
-  EqualArg2Arg3
-  LinearlyDependentArg1Arg2Arg3
-  Arg1TooBig
-  Arg1OnThis
-  Arg1InsideThis
+class ErrorCondition():
+    OK
+    This
+    Arg1
+    Arg2
+    PerpendicularArg1Arg2
+    EqualArg1Arg2
+    EqualArg1Arg3
+    EqualArg2Arg3
+    LinearlyDependentArg1Arg2Arg3
+    Arg1TooBig
+    Arg1OnThis
+    Arg1InsideThis
 
 class ExternalBoundedSurface(Surface):
     """
@@ -25474,8 +25477,9 @@ class ExternalCurve3d(Curve3d):
     
     pass
 
-  AcisEntity
-  ExternalEntityUndefined
+class ExternalEntityKind():
+    AcisEntity
+    ExternalEntityUndefined
 
 class ExternalSurface(Surface):
     """
@@ -27078,11 +27082,12 @@ class KnotCollection(DisposableWrapper, IList):
     
     pass
 
-  Chord = 0
-  CustomParameterization = 15
-  NotDefinedParameterization = &H10
-  SqrtChord = 1
-  Uniform = 2
+class KnotParameterization():
+    Chord = 0
+    CustomParameterization = 15
+    NotDefinedParameterization = 0x10
+    SqrtChord = 1
+    Uniform = 2
 
 class Line2d(LinearEntity2d):
     """
@@ -41685,9 +41690,10 @@ class OffsetCurve3d(Curve3d):
     
     pass
 
-  Fillet
-  Chamfer
-  Extend
+class OffsetCurveExtensionType():
+    Fillet
+    Chamfer
+    Extend
 
 class OffsetSurface(Surface):
     """
@@ -52696,10 +52702,11 @@ class SurfaceSurfaceIntersector(Entity3d):
     
     pass
 
-  Unknown
-  Out
-  In
-  Coincident
+class SurfaceSurfaceIntersectorConfiguration():
+    Unknown
+    Out
+    In
+    Coincident
 
 class SurfaceSurfaceIntersectorConfigurations(public struct SurfaceSurfaceIntersectorConfigurations {
 }):
@@ -52753,9 +52760,10 @@ class SurfaceSurfaceIntersectorConfigurations(public struct SurfaceSurfaceInters
     
     pass
 
-  Transverse
-  Tangent
-  AntiTangent
+class SurfaceSurfaceIntersectorType():
+    Transverse
+    Tangent
+    AntiTangent
 
 class Tolerance(abs((v1.dotProduct(v2))/(v1.length()*v2.length())) <= equalVector):
     """
