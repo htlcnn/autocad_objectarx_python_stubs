@@ -123,13 +123,24 @@ def parse_method(method):
 
 
 def parse_enum(enum):
+    name = enum['ttl'].split('Enum')[0].split('.')[-1].strip()
     soup = get_detail_page(enum['id'])
-    syntax = []   
+    syntax = []
+
+    def_line = 'class {}():'.format(name)
+    syntax.append(def_line)
+
     cs_block = soup.select('.codeblock')[-1]
 
     if cs_block:
-        syntax.append('\n'.join(line.strip(',') for line in cs_block.text.splitlines()[1:-1]))
-        
+        syntax.append(
+            indent(
+                '\n'.join(line.strip(',') for line in cs_block.text.splitlines()[1:-1])
+            )
+        )
+    else:
+        syntax.append(indent('pass'))
+
     return '\n'.join(syntax)
 
 
