@@ -1,5 +1,4 @@
 class QuickAccessStandardCommands():
-    Inherits uint = None
     All = 0x1f
     New = 1
     None = 0
@@ -91,7 +90,7 @@ class QuickAccessToolBarTraySource(object):
     """
     
     """
-    Source Field = None
+    Source = None
     
     pass
 
@@ -99,10 +98,10 @@ class StatusBarSource(object):
     """
     
     """
-    CustomizeMenuPlacement Field = None
+    CustomizeMenuPlacement = None
     
     
-    OverflowPopupPlacement Field = None
+    OverflowPopupPlacement = None
     
     pass
 

@@ -135,6 +135,8 @@ def parse_enum(enum):
     if vb_block:
         block = []
         for line in vb_block.text.splitlines()[1:-1]:
+            if 'Inherits' in line:
+                continue
             line = line.replace('&H', '0x').strip()
             if '=' in line:
                 block.append(line)
