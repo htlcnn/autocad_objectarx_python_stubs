@@ -1,46 +1,7 @@
-class HighlightItemInfo(public struct HighlightItemInfo {
-  public int ItemId;
-  public int Mode;
-}):
+class HighlightItemInfo(object):
     """
     
-    H
-    
-    i
-    
-    g
-    
-    h
-    
-    l
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    HighlightItemInfo()
     """
     ItemId Field = None
     
@@ -49,7 +10,7 @@ class HighlightItemInfo(public struct HighlightItemInfo {
     
     pass
 
-class IAcSeamlessHost(public interface IAcSeamlessHost):
+class IAcSeamlessHost(object):
     """
     
     """
@@ -62,7 +23,7 @@ class IAcSeamlessHost(public interface IAcSeamlessHost):
     
     pass
 
-class LocationChangingEventArgs(EventArgs):
+class LocationChangingEventArgs(object):
     """
     
     """
@@ -73,128 +34,18 @@ class LocationChangingEventArgs(EventArgs):
     
     pass
 
-class Palette(ContentControl, INotifyPropertyChanged, INotifyPropertyChanging):
+class Palette(object):
     """
     
-    P
+    Palette()()
     
-    a
     
-    l
+    Palette(string)()
     
-    e
     
-    t
+    Palette(string, Guid)()
     
-    t
     
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    G
-    
-    u
-    
-    i
-    
-    d
-    
-    )
-    
-    (
-    
-    )
     """
     Image = None
     
@@ -246,62 +97,10 @@ class Palette(ContentControl, INotifyPropertyChanged, INotifyPropertyChanging):
     
     pass
 
-class PaletteActivatedEventArgs(EventArgs):
+class PaletteActivatedEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    A
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    PaletteActivatedEventArgs()
     """
     ActivatedPalette Field = None
     
@@ -310,64 +109,10 @@ class PaletteActivatedEventArgs(EventArgs):
     
     pass
 
-class PaletteActivatingEventArgs(EventArgs):
+class PaletteActivatingEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    A
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    PaletteActivatingEventArgs()
     """
     PaletteToActivate Field = None
     
@@ -376,7 +121,7 @@ class PaletteActivatingEventArgs(EventArgs):
     
     pass
 
-class PaletteDockManager(public class PaletteDockManager):
+class PaletteDockManager(object):
     """
     
     """
@@ -405,7 +150,7 @@ class PaletteDockManager(public class PaletteDockManager):
     
     pass
 
-class PaletteService(public sealed class PaletteService):
+class PaletteService(object):
     """
     
     """
@@ -421,191 +166,21 @@ class PaletteService(public sealed class PaletteService):
     
     pass
 
-class PaletteSet(TabItem, IDisposable, INotifyPropertyChanged, INotifyPropertyChanging):
+class PaletteSet(object):
     """
     
-    P
+    PaletteSet()()
     
-    a
     
-    l
+    PaletteSet(Guid)()
     
-    e
     
-    t
+    PaletteSet(string)()
     
-    t
     
-    e
+    PaletteSet(string, Guid)()
     
-    S
     
-    e
-    
-    t
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    G
-    
-    u
-    
-    i
-    
-    d
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    G
-    
-    u
-    
-    i
-    
-    d
-    
-    )
-    
-    (
-    
-    )
     """
     ActivePaletteIndex = None
     
@@ -787,11 +362,11 @@ class PaletteSet(TabItem, IDisposable, INotifyPropertyChanged, INotifyPropertyCh
     pass
 
 class PaletteSetSelectorType():
-    None
-    ImageSelector
-    ComboBoxSelector
+    None = None
+    ImageSelector = None
+    ComboBoxSelector = None
 
-class PaletteSettings(INotifyPropertyChanged, INotifyPropertyChanging):
+class PaletteSettings(object):
     """
     
     """
@@ -815,7 +390,7 @@ class PaletteSettings(INotifyPropertyChanged, INotifyPropertyChanging):
     
     pass
 
-class PaletteTheme(ThemeBase):
+class PaletteTheme(object):
     """
     
     """
@@ -3025,7 +2600,7 @@ class PaletteTheme(ThemeBase):
     
     pass
 
-class PaletteThemeDefaults(public static class PaletteThemeDefaults):
+class PaletteThemeDefaults(object):
     """
     
     """
@@ -3042,54 +2617,10 @@ class PaletteThemeDefaults(public static class PaletteThemeDefaults):
     
     pass
 
-class SizeChangingEventArgs(LocationChangingEventArgs):
+class SizeChangingEventArgs(object):
     """
     
-    S
-    
-    i
-    
-    z
-    
-    e
-    
-    C
-    
-    h
-    
-    a
-    
-    n
-    
-    g
-    
-    i
-    
-    n
-    
-    g
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    SizeChangingEventArgs()
     """
     NewSize = None
     
@@ -3098,7 +2629,7 @@ class SizeChangingEventArgs(LocationChangingEventArgs):
     
     pass
 
-class Win32Palette(Palette):
+class Win32Palette(object):
     """
     
     """
@@ -3106,113 +2637,19 @@ class Win32Palette(Palette):
     
     pass
 
-class Win32PaletteSet(PaletteSet):
+class Win32PaletteSet(object):
     """
     
-    W
-    
-    i
-    
-    n
-    
-    3
-    
-    2
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    )
+    Win32PaletteSet()
     """
     HWND = None
     
     pass
 
-class WindowPositionChangedEventArgs(EventArgs):
+class WindowPositionChangedEventArgs(object):
     """
     
-    W
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-    P
-    
-    o
-    
-    s
-    
-    i
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    C
-    
-    h
-    
-    a
-    
-    n
-    
-    g
-    
-    e
-    
-    d
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    WindowPositionChangedEventArgs()
     """
     Moved = None
     

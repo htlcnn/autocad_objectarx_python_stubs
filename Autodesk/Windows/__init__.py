@@ -1,4 +1,4 @@
-class ActiveTaskDialog(IWin32Window):
+class ActiveTaskDialog(object):
     """
     
     """
@@ -266,7 +266,7 @@ class ActiveTaskDialog(IWin32Window):
     
     pass
 
-class ApplicationMenu(INotifyPropertyChanged):
+class ApplicationMenu(object):
     """
     
     """
@@ -289,50 +289,10 @@ class ApplicationMenu(INotifyPropertyChanged):
     
     pass
 
-class ApplicationMenuItem(RibbonMenuItem):
+class ApplicationMenuItem(object):
     """
     
-    A
-    
-    p
-    
-    p
-    
-    l
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    )
+    ApplicationMenuItem()
     """
     BottomListView = None
     
@@ -362,14 +322,14 @@ class ApplicationMenuItem(RibbonMenuItem):
     
     pass
 
-class ApplicationMenuItemCollection(ObservableCollection<ApplicationMenuItem>):
+class ApplicationMenuItemCollection(object):
     """
     
     """
 
     pass
 
-class CollectionsExtensions(public static class CollectionsExtensions):
+class CollectionsExtensions(object):
     """
     
     """
@@ -392,7 +352,7 @@ class CollectionsExtensions(public static class CollectionsExtensions):
     
     pass
 
-class ComponentManager(public static class ComponentManager):
+class ComponentManager(object):
     """
     
     """
@@ -433,7 +393,7 @@ class ComponentManager(public static class ComponentManager):
     
     pass
 
-class DisplayDeviceInfo(public sealed class DisplayDeviceInfo):
+class DisplayDeviceInfo(object):
     """
     
     """
@@ -462,7 +422,7 @@ class DocumentGroupByItems():
     Size = 4
     Type = 8
 
-class DocumentItem(RibbonCommandItem):
+class DocumentItem(object):
     """
     
     """
@@ -476,7 +436,7 @@ class DocumentItem(RibbonCommandItem):
     
     pass
 
-class DocumentItemCollection(ObservableCollection<DocumentItem>):
+class DocumentItemCollection(object):
     """
     
     """
@@ -491,50 +451,10 @@ class DocumentItemToolTipAttributes():
     None = 0
     VersionInfo = 2
 
-class DoubleFuzzyComparer(DoubleFuzzyComparer<double>):
+class DoubleFuzzyComparer(object):
     """
     
-    D
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    F
-    
-    u
-    
-    z
-    
-    z
-    
-    y
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    a
-    
-    r
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    DoubleFuzzyComparer()
     """
     def ToDouble(self):
         """
@@ -545,10 +465,7 @@ class DoubleFuzzyComparer(DoubleFuzzyComparer<double>):
     
     pass
 
-class DpiValue(public struct DpiValue {
-  public static DpiValue Standard = > <Standard>k__BackingField;
-  public static DpiValue System = > DisplayDeviceInfo.Primary.Dpi;
-}):
+class DpiValue(object):
     """
     
     """
@@ -619,130 +536,15 @@ class DpiValue(public struct DpiValue {
     
     pass
 
-class DpiValue2D(public struct DpiValue2D {
-  public DpiValue X = > this.<X>k__BackingField;
-  public DpiValue Y = > this.<Y>k__BackingField;
-  public static DpiValue2D Standard = > <Standard>k__BackingField;
-  public static DpiValue2D System = > DisplayDeviceInfo.Primary.Dpi2D;
-}):
+class DpiValue2D(object):
     """
     
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    2
-    
-    D
-    
-    (
-    
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    )
-    
-    (
-    
-    )
+    DpiValue2D(DpiValue)()
     
     
+    DpiValue2D(DpiValue, DpiValue)()
     
     
-    
-    
-    
-    
-    
-    
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    2
-    
-    D
-    
-    (
-    
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    ,
-    
-     
-    
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    )
-    
-    (
-    
-    )
     """
     Standard Field = None
     
@@ -795,44 +597,10 @@ class DpiValue2D(public struct DpiValue2D {
     
     pass
 
-class DpiValueComparer(DoubleFuzzyComparer<DpiValue>):
+class DpiValueComparer(object):
     """
     
-    D
-    
-    p
-    
-    i
-    
-    V
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    a
-    
-    r
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    DpiValueComparer()
     """
     Default Field = None
     
@@ -863,12 +631,12 @@ class DpiValueComparer(DoubleFuzzyComparer<DpiValue>):
     pass
 
 class GalleryDisplayMode():
-    Window
-    ComboBox
-    LargeButton
-    StandardButton
+    Window = None
+    ComboBox = None
+    LargeButton = None
+    StandardButton = None
 
-class MenuContent(public class MenuContent):
+class MenuContent(object):
     """
     
     """
@@ -876,7 +644,7 @@ class MenuContent(public class MenuContent):
     
     pass
 
-class PreviewToolTip(RibbonToolTipBase):
+class PreviewToolTip(object):
     """
     
     """
@@ -887,7 +655,7 @@ class PreviewToolTip(RibbonToolTipBase):
     
     pass
 
-class ProgressBarSource(RibbonCommandItem):
+class ProgressBarSource(object):
     """
     
     """
@@ -895,12 +663,12 @@ class ProgressBarSource(RibbonCommandItem):
     pass
 
 class ProgressBarState():
-    None
-    Normal
-    Error
-    Paused
+    None = None
+    Normal = None
+    Error = None
+    Paused = None
 
-class PropertyValuePair(INotifyPropertyChanged):
+class PropertyValuePair(object):
     """
     
     """
@@ -911,14 +679,14 @@ class PropertyValuePair(INotifyPropertyChanged):
     
     pass
 
-class PropertyValuePairCollection(ObservableCollection<PropertyValuePair>):
+class PropertyValuePairCollection(object):
     """
     
     """
 
     pass
 
-class RibbonButton(RibbonCommandItem, IRibbonTextProperties):
+class RibbonButton(object):
     """
     
     """
@@ -936,14 +704,14 @@ class RibbonButton(RibbonCommandItem, IRibbonTextProperties):
     
     pass
 
-class RibbonChecklistButton(RibbonListButton):
+class RibbonChecklistButton(object):
     """
     
     """
 
     pass
 
-class RibbonCombo(RibbonList, IResizableWidget, IRibbonTextProperties):
+class RibbonCombo(object):
     """
     
     """
@@ -979,7 +747,7 @@ class RibbonCombo(RibbonList, IResizableWidget, IRibbonTextProperties):
     
     pass
 
-class RibbonCommandItem(RibbonItem):
+class RibbonCommandItem(object):
     """
     
     """
@@ -1000,14 +768,14 @@ class RibbonCommandItem(RibbonItem):
     
     pass
 
-class RibbonCommandItemCollection(ObservableCollection<RibbonCommandItem>):
+class RibbonCommandItemCollection(object):
     """
     
     """
 
     pass
 
-class RibbonControl(Control, INotifyPropertyChanged, ICommandTarget, IPersistentObjectSource):
+class RibbonControl(object):
     """
     
     """
@@ -1089,14 +857,14 @@ class RibbonControl(Control, INotifyPropertyChanged, ICommandTarget, IPersistent
     
     pass
 
-class RibbonForm(RibbonItem):
+class RibbonForm(object):
     """
     
     """
 
     pass
 
-class RibbonGallery(RibbonCombo):
+class RibbonGallery(object):
     """
     
     """
@@ -1114,7 +882,7 @@ class RibbonGallery(RibbonCombo):
     
     pass
 
-class RibbonHwnd(RibbonItem):
+class RibbonHwnd(object):
     """
     
     """
@@ -1122,10 +890,10 @@ class RibbonHwnd(RibbonItem):
     pass
 
 class RibbonImageSize():
-    Standard
-    Large
+    Standard = None
+    Large = None
 
-class RibbonItem(ICloneable, IRibbonContentUid, IRibbonAutomation, IRibbonHighlightable, INotifyPropertyChanged, IWeakEventListener):
+class RibbonItem(object):
     """
     
     """
@@ -1219,7 +987,7 @@ class RibbonItem(ICloneable, IRibbonContentUid, IRibbonAutomation, IRibbonHighli
     
     pass
 
-class RibbonItemCollection(RibbonObservableCollection<RibbonItem>, ICloneable):
+class RibbonItemCollection(object):
     """
     
     """
@@ -1242,21 +1010,21 @@ class RibbonItemCollection(RibbonObservableCollection<RibbonItem>, ICloneable):
     
     pass
 
-class RibbonItemControl(RibbonItemControlBase, IRibbonTextProperties):
+class RibbonItemControl(object):
     """
     
     """
 
     pass
 
-class RibbonItemControlBase(ContentControl):
+class RibbonItemControlBase(object):
     """
     
     """
 
     pass
 
-class RibbonItemEnumerator(IEnumerator, IDisposable):
+class RibbonItemEnumerator(object):
     """
     
     """
@@ -1280,7 +1048,7 @@ class RibbonItemEnumerator(IEnumerator, IDisposable):
     
     pass
 
-class RibbonItemEventArgs(EventArgs):
+class RibbonItemEventArgs(object):
     """
     
     """
@@ -1296,10 +1064,10 @@ class RibbonItemResizeStyles():
     ResizeWidth = 4
 
 class RibbonItemSize():
-    Standard
-    Large
+    Standard = None
+    Large = None
 
-class RibbonItemToolTipEventArgs(EventArgs):
+class RibbonItemToolTipEventArgs(object):
     """
     
     """
@@ -1310,7 +1078,7 @@ class RibbonItemToolTipEventArgs(EventArgs):
     
     pass
 
-class RibbonLabel(RibbonItem, IRibbonTextProperties):
+class RibbonLabel(object):
     """
     
     """
@@ -1318,7 +1086,7 @@ class RibbonLabel(RibbonItem, IRibbonTextProperties):
     
     pass
 
-class RibbonList(RibbonItem):
+class RibbonList(object):
     """
     
     """
@@ -1341,7 +1109,7 @@ class RibbonList(RibbonItem):
     
     pass
 
-class RibbonListButton(RibbonButton):
+class RibbonListButton(object):
     """
     
     """
@@ -1377,14 +1145,14 @@ class RibbonListButton(RibbonButton):
     
     pass
 
-class RibbonMenuButton(RibbonListButton):
+class RibbonMenuButton(object):
     """
     
     """
 
     pass
 
-class RibbonMenuItem(RibbonCommandItem):
+class RibbonMenuItem(object):
     """
     
     """
@@ -1399,7 +1167,7 @@ class RibbonMenuItem(RibbonCommandItem):
     
     pass
 
-class RibbonPanel(ICloneable, IRibbonContentUid, IRibbonAutomation, INotifyPropertyChanged):
+class RibbonPanel(object):
     """
     
     """
@@ -1435,7 +1203,7 @@ class RibbonPanel(ICloneable, IRibbonContentUid, IRibbonAutomation, INotifyPrope
     
     pass
 
-class RibbonPanelBreak(RibbonItem):
+class RibbonPanelBreak(object):
     """
     
     """
@@ -1443,14 +1211,14 @@ class RibbonPanelBreak(RibbonItem):
     
     pass
 
-class RibbonPanelCollection(RibbonObservableCollection<RibbonPanel>):
+class RibbonPanelCollection(object):
     """
     
     """
 
     pass
 
-class RibbonPanelSource(ICloneable, IRibbonContentUid, IRibbonAutomation, INotifyPropertyChanged):
+class RibbonPanelSource(object):
     """
     
     """
@@ -1504,7 +1272,7 @@ class RibbonPanelSource(ICloneable, IRibbonContentUid, IRibbonAutomation, INotif
     
     pass
 
-class RibbonPanelSourceCollection(RibbonObservableCollection<RibbonPanelSource>, ICloneable):
+class RibbonPanelSourceCollection(object):
     """
     
     """
@@ -1537,28 +1305,28 @@ class RibbonPanelSourceCollection(RibbonObservableCollection<RibbonPanelSource>,
     
     pass
 
-class RibbonPropertyChangedEventArgs(EventArgs):
+class RibbonPropertyChangedEventArgs(object):
     """
     
     """
 
     pass
 
-class RibbonPropertyChangingEventArgs(EventArgs):
+class RibbonPropertyChangingEventArgs(object):
     """
     
     """
 
     pass
 
-class RibbonRadioButtonGroup(RibbonListButton):
+class RibbonRadioButtonGroup(object):
     """
     
     """
 
     pass
 
-class RibbonRowBreak(RibbonItem):
+class RibbonRowBreak(object):
     """
     
     """
@@ -1566,7 +1334,7 @@ class RibbonRowBreak(RibbonItem):
     
     pass
 
-class RibbonRowPanel(RibbonItem):
+class RibbonRowPanel(object):
     """
     
     """
@@ -1584,7 +1352,7 @@ class RibbonRowPanel(RibbonItem):
     
     pass
 
-class RibbonSeparator(RibbonItem):
+class RibbonSeparator(object):
     """
     
     """
@@ -1607,7 +1375,7 @@ class RibbonSeparatorStyle():
     None = 0
     Spacer = 1
 
-class RibbonSpinner(RibbonItem, IResizableWidget):
+class RibbonSpinner(object):
     """
     
     """
@@ -1637,7 +1405,7 @@ class RibbonSpinner(RibbonItem, IResizableWidget):
     
     pass
 
-class RibbonSplitButton(RibbonListButton):
+class RibbonSplitButton(object):
     """
     
     """
@@ -1659,11 +1427,11 @@ class RibbonSplitButton(RibbonListButton):
     pass
 
 class RibbonSplitButtonListStyle():
-    Icon
-    List
-    Descriptive
+    Icon = None
+    List = None
+    Descriptive = None
 
-class RibbonTab(ICloneable, IRibbonContentUid, INotifyPropertyChanged, IRibbonHighlightable):
+class RibbonTab(object):
     """
     
     """
@@ -1740,14 +1508,14 @@ class RibbonTab(ICloneable, IRibbonContentUid, INotifyPropertyChanged, IRibbonHi
     
     pass
 
-class RibbonTabCollection(RibbonObservableCollection<RibbonTab>):
+class RibbonTabCollection(object):
     """
     
     """
 
     pass
 
-class RibbonTextBox(RibbonItem, IResizableWidget, IRibbonTextProperties):
+class RibbonTextBox(object):
     """
     
     """
@@ -1790,18 +1558,18 @@ class RibbonTextBox(RibbonItem, IResizableWidget, IRibbonTextProperties):
     pass
 
 class RibbonTextBoxImageLocation():
-    Left
-    InsideLeft
-    InsideRight
+    Left = None
+    InsideLeft = None
+    InsideRight = None
 
-class RibbonToggleButton(RibbonButton):
+class RibbonToggleButton(object):
     """
     
     """
 
     pass
 
-class RibbonToolTip(RibbonToolTipBase):
+class RibbonToolTip(object):
     """
     
     """
@@ -1824,7 +1592,7 @@ class RibbonToolTip(RibbonToolTipBase):
     
     pass
 
-class RibbonToolTipBase(INotifyPropertyChanged):
+class RibbonToolTipBase(object):
     """
     
     """
@@ -1850,7 +1618,7 @@ class RibbonToolTipBase(INotifyPropertyChanged):
     
     pass
 
-class TaskDialog(public class TaskDialog):
+class TaskDialog(object):
     """
     
     """
@@ -1986,8 +1754,7 @@ class TaskDialog(public class TaskDialog):
     
     pass
 
-class TaskDialogButton(public struct TaskDialogButton {
-}):
+class TaskDialogButton(object):
     """
     
     """
@@ -1998,7 +1765,7 @@ class TaskDialogButton(public struct TaskDialogButton {
     
     pass
 
-class TaskDialogButtonCollection(Collection<TaskDialogButton>):
+class TaskDialogButtonCollection(object):
     """
     
     """
@@ -2012,7 +1779,7 @@ def TaskDialogCallback(self):
     """
     pass
 
-class TaskDialogCallbackArgs(public class TaskDialogCallbackArgs):
+class TaskDialogCallbackArgs(object):
     """
     
     """
@@ -2052,26 +1819,26 @@ class TaskDialogIcon():
     Warning = 0xffff
 
 class TaskDialogNotification():
-    Created
-    Navigated
-    ButtonClicked
-    HyperlinkClicked
-    Timer
-    Destroyed
-    RadioButtonClicked
-    DialogConstructed
-    VerificationClicked
-    Help
-    ExpandoButtonClicked
-    ExtraCheckBoxClicked
+    Created = None
+    Navigated = None
+    ButtonClicked = None
+    HyperlinkClicked = None
+    Timer = None
+    Destroyed = None
+    RadioButtonClicked = None
+    DialogConstructed = None
+    VerificationClicked = None
+    Help = None
+    ExpandoButtonClicked = None
+    ExtraCheckBoxClicked = None
 
 class TaskDialogResult():
-    None
-    Ok
-    Cancel
-    Abort
-    Retry
-    Ignore
-    Yes
-    No
-    Close
+    None = None
+    Ok = None
+    Cancel = None
+    Abort = None
+    Retry = None
+    Ignore = None
+    Yes = None
+    No = None
+    Close = None

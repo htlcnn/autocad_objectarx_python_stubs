@@ -1,31 +1,7 @@
-class Application(public abstract class Application):
+class Application(object):
     """
     
-    A
-    
-    p
-    
-    p
-    
-    l
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    Application()
     """
     Idle Field = None
     

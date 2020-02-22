@@ -1,5 +1,5 @@
 class QuickAccessStandardCommands():
-    Inherits uint
+    Inherits uint = None
     All = 0x1f
     New = 1
     None = 0
@@ -8,7 +8,7 @@ class QuickAccessStandardCommands():
     Save = 4
     Undo = 8
 
-class QuickAccessToolBarSource(ToolBarSource, IPersistentObjectSource):
+class QuickAccessToolBarSource(object):
     """
     
     """
@@ -87,7 +87,7 @@ class QuickAccessToolBarSource(ToolBarSource, IPersistentObjectSource):
     
     pass
 
-class QuickAccessToolBarTraySource(ToolBarTraySource):
+class QuickAccessToolBarTraySource(object):
     """
     
     """
@@ -95,7 +95,7 @@ class QuickAccessToolBarTraySource(ToolBarTraySource):
     
     pass
 
-class StatusBarSource(ToolBarSource):
+class StatusBarSource(object):
     """
     
     """
@@ -106,14 +106,14 @@ class StatusBarSource(ToolBarSource):
     
     pass
 
-class StatusBarTraySource(ToolBarTraySource):
+class StatusBarTraySource(object):
     """
     
     """
 
     pass
 
-class ToolBarSource(ICloneable, IToolBarCustomization, INotifyPropertyChanged):
+class ToolBarSource(object):
     """
     
     """

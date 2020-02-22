@@ -88,7 +88,7 @@ def parse_method(method):
                     'name': p_name.text,
                     'description': p_desc.text
                 })
-            parameter_lines = '\n'.join('{}: {}'.format(p['name'], p['description']) for p in parameters)
+            parameter_lines = '\n'.join(['{}: {}'.format(p['name'], p['description']) for p in parameters])
             overload_docstring.append(indent(parameter_lines))
             docstring.append('\n'.join(overload_docstring))
     else:
@@ -110,7 +110,7 @@ def parse_method(method):
                 'name': p_name.text,
                 'description': p_desc.text
             })
-        parameter_lines = '\n'.join('{}: {}'.format(p['name'], p['description']) for p in parameters)
+        parameter_lines = '\n'.join(['{}: {}'.format(p['name'], p['description']) for p in parameters])
         docstring.append(indent(parameter_lines))
 
     docstring.append('"""')
@@ -136,7 +136,10 @@ def parse_enum(enum):
         block = []
         for line in vb_block.text.splitlines()[1:-1]:
             line = line.replace('&H', '0x').strip()
-            block.append(line)
+            if '=' in line:
+                block.append(line)
+            else:
+                block.append('{} = None'.format(line))
 
         syntax.append(
             indent(
@@ -151,9 +154,11 @@ def parse_enum(enum):
 
 def get_class_parent(cls):
     soup = get_detail_page(cls['id'])
-    cs = soup.select('.codeblock')[-1]
-    if cs.text and cs.text.split(':')[-1]:
-        return cs.text.split(':')[-1].strip('; ')
+    vb = soup.select('.codeblock')[0]
+    if vb.text:
+        if 'Inherits' in vb.text.splitlines()[-1]:
+            parent = vb.text.splitlines()[-1].split()[-1].strip()
+            return parent
     return 'object'
 
 
@@ -178,7 +183,7 @@ def get_constructor_docstring(constructor):
                 syntax.append(name)
                 syntax.append(
                     indent(
-                        '\n'.join('{} : {}'.format(p['name'], p['description']) for p in parameters)
+                        '\n'.join(['{} : {}'.format(p['name'], p['description']) for p in parameters])
                     )
                 )
             else:
@@ -201,7 +206,7 @@ def get_constructor_docstring(constructor):
             syntax.append(name)
             syntax.append(
                 indent(
-                    '\n'.join('{} : {}'.format(p['name'], p['description']) for p in parameters)
+                    '\n'.join(['{} : {}'.format(p['name'], p['description']) for p in parameters])
                 )
             )
         else:
@@ -231,7 +236,7 @@ def get_class_docstring(cls):
     docstring.append('"""')
     docstring.append(description)
     if constructor_docstring:
-        docstring.append('\n\n'.join(constructor_docstring).strip())
+        docstring.append(constructor_docstring)
     docstring.append('"""')
     
     return '\n'.join(docstring)

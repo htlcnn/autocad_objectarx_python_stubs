@@ -1,45 +1,14 @@
-class CertificationData(public sealed class CertificationData):
+class CertificationData(object):
     """
     
     """
 
     pass
 
-class ClientViewInfo(public struct ClientViewInfo {
-}):
+class ClientViewInfo(object):
     """
     
-    C
-    
-    l
-    
-    i
-    
-    e
-    
-    n
-    
-    t
-    
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    ClientViewInfo()
     """
     AcadWindowId = None
     
@@ -51,38 +20,10 @@ class ClientViewInfo(public struct ClientViewInfo {
     
     pass
 
-class Configuration(DisposableWrapper):
+class Configuration(object):
     """
     
-    C
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    Configuration()
     """
     def Configure(self):
         """
@@ -361,52 +302,36 @@ class Configuration(DisposableWrapper):
     pass
 
 class DefaultLightingType():
-    OneLight
-    TwoLights
+    OneLight = None
+    TwoLights = None
 
 class DegradationChannel():
-    ViewportDraw
-    LineAntialias
-    Lighting
-    TransparencyQuality
-    ShadowsFull
-    Transparency
-    DiscardBackfaces
-    ShadowsGround
-    EdgeStyles
-    FacetEdges
-    FastSilhouette
-    Textures
-    Materials
-    LightingQuality
-    Backgrounds
-    IntersectEdges
-    Faceted
-    Wireframe
-    DegradationChannels
+    ViewportDraw = None
+    LineAntialias = None
+    Lighting = None
+    TransparencyQuality = None
+    ShadowsFull = None
+    Transparency = None
+    DiscardBackfaces = None
+    ShadowsGround = None
+    EdgeStyles = None
+    FacetEdges = None
+    FastSilhouette = None
+    Textures = None
+    Materials = None
+    LightingQuality = None
+    Backgrounds = None
+    IntersectEdges = None
+    Faceted = None
+    Wireframe = None
+    DegradationChannels = None
 
-class Device(DisposableWrapper):
+class Device(object):
     """
     
-    D
+    Device()()
     
-    e
     
-    v
-    
-    i
-    
-    c
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def Add(self):
         """
@@ -534,857 +459,20 @@ class Device(DisposableWrapper):
     
     pass
 
-class DriverInfo(public struct DriverInfo {
-}):
+class DriverInfo(object):
     """
     
-    D
+    DriverInfo([MarshalAs(UnmanagedType.U1)] bool, string, string)
+        [MarshalAs(UnmanagedType.U1)] bool hardwareAccelerated : Input sets whether this driver supports hardware acceleration
+        string path : Input full path to the driver file
+        string driver : Input name of the driver file
     
-    r
     
-    i
+    DriverInfo(string, string)
+        string path : Input full path to the driver file
+        string driver : Input name of the driver file
     
-    v
     
-    e
-    
-    r
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    h
-    
-    a
-    
-    r
-    
-    d
-    
-    w
-    
-    a
-    
-    r
-    
-    e
-    
-    A
-    
-    c
-    
-    c
-    
-    e
-    
-    l
-    
-    e
-    
-    r
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    e
-    
-    t
-    
-    s
-    
-     
-    
-    w
-    
-    h
-    
-    e
-    
-    t
-    
-    h
-    
-    e
-    
-    r
-    
-     
-    
-    t
-    
-    h
-    
-    i
-    
-    s
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    s
-    
-    u
-    
-    p
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    s
-    
-     
-    
-    h
-    
-    a
-    
-    r
-    
-    d
-    
-    w
-    
-    a
-    
-    r
-    
-    e
-    
-     
-    
-    a
-    
-    c
-    
-    c
-    
-    e
-    
-    l
-    
-    e
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    f
-    
-    i
-    
-    l
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    f
-    
-    i
-    
-    l
-    
-    e
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    D
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    f
-    
-    i
-    
-    l
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    d
-    
-    r
-    
-    i
-    
-    v
-    
-    e
-    
-    r
-    
-     
-    
-    f
-    
-    i
-    
-    l
-    
-    e
     """
     Driver = None
     
@@ -1397,15 +485,15 @@ class DriverInfo(public struct DriverInfo {
     pass
 
 class EffectListType():
-    kEL_Current
-    kEL_RegistryHardware
-    kEL_RegistrySoftware
-    kEL_File
-    kEL_HardwareBasic
-    kEL_HardwareMedium
-    kEL_HardwareAdvanced
+    kEL_Current = None
+    kEL_RegistryHardware = None
+    kEL_RegistrySoftware = None
+    kEL_File = None
+    kEL_HardwareBasic = None
+    kEL_HardwareMedium = None
+    kEL_HardwareAdvanced = None
 
-class EffectStatus(public class EffectStatus):
+class EffectStatus(object):
     """
     
     """
@@ -1429,105 +517,19 @@ class EffectStatus(public class EffectStatus):
     pass
 
 class ErrorStatus():
-    Success
-    OutOfRange
-    InvalidInput
+    Success = None
+    OutOfRange = None
+    InvalidInput = None
 
-class GraphicsKernel(DisposableWrapper):
+class GraphicsKernel(object):
     """
     
-    G
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    s
-    
-    K
-    
-    e
-    
-    r
-    
-    n
-    
-    e
-    
-    l
-    
-    (
-    
-    )
-    
-    (
-    
-    )
+    GraphicsKernel()()
     
     
+    GraphicsKernel(IntPtr)()
     
     
-    
-    
-    
-    
-    
-    
-    G
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    s
-    
-    K
-    
-    e
-    
-    r
-    
-    n
-    
-    e
-    
-    l
-    
-    (
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-    )
-    
-    (
-    
-    )
     """
     def DeleteUnmanagedObject(self):
         """
@@ -1547,24 +549,24 @@ class GraphicsKernel(DisposableWrapper):
     pass
 
 class Handedness():
-    Left
-    Right
+    Left = None
+    Right = None
 
 class HighlightStyle():
-    HighlightDashed
+    HighlightDashed = None
 
 class InvalidationHint():
-    InvalidateNone
-    InvalidateIsolines
-    InvalidateViewportCache
-    InvalidateAll
-    InvalidateAllStatic
-    InvalidateFacets
-    InvalidateFills
-    InvalidateLinetypes
-    InvalidateMaterials
+    InvalidateNone = None
+    InvalidateIsolines = None
+    InvalidateViewportCache = None
+    InvalidateAll = None
+    InvalidateAllStatic = None
+    InvalidateFacets = None
+    InvalidateFills = None
+    InvalidateLinetypes = None
+    InvalidateMaterials = None
 
-class KernelDescriptor(DisposableWrapper):
+class KernelDescriptor(object):
     """
     
     """
@@ -1666,7 +668,7 @@ class LineWeight():
     kLnWtByLayer = -1
     kLnWtByLwDefault = -3
 
-class Manager(DisposableWrapper):
+class Manager(object):
     """
     
     """
@@ -1897,233 +899,11 @@ class Manager(DisposableWrapper):
     
     pass
 
-class Model(DisposableWrapper):
+class Model(object):
     """
     
-    M
-    
-    o
-    
-    d
-    
-    e
-    
-    l
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    G
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    s
-    
-    S
-    
-    y
-    
-    s
-    
-    t
-    
-    e
-    
-    m
-    
-    .
-    
-    R
-    
-    e
-    
-    n
-    
-    d
-    
-    e
-    
-    r
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    n
-    
-    d
-    
-    e
-    
-    r
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    r
-    
-    e
-    
-    n
-    
-    d
-    
-    e
-    
-    r
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    a
-    
-    s
-    
-    s
-    
-    o
-    
-    c
-    
-    i
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    w
-    
-    i
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    h
-    
-    i
-    
-    s
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    e
-    
-    l
+    Model
+        Autodesk.AutoCAD.GraphicsSystem.RenderType renderType : Input render type to associate with this model
     """
     def AddSceneGraphRoot(self):
         """
@@ -2296,7 +1076,7 @@ class Model(DisposableWrapper):
     
     pass
 
-class Node(DisposableWrapper):
+class Node(object):
     """
     
     """
@@ -2305,258 +1085,37 @@ class Node(DisposableWrapper):
     pass
 
 class Projection():
-    Parallel
-    Perspective
+    Parallel = None
+    Perspective = None
 
 class Quality():
-    LowQuality
-    MediumQuality
-    HighQuality
+    LowQuality = None
+    MediumQuality = None
+    HighQuality = None
 
 class RenderType():
-    Main
-    Sprite
-    Direct
-    Highlight
-    HighlightSelection
-    DirectTopmost
-    Contrast
-    Count
+    Main = None
+    Sprite = None
+    Direct = None
+    Highlight = None
+    HighlightSelection = None
+    DirectTopmost = None
+    Contrast = None
+    Count = None
 
 class RendererType():
-    Default
-    Software
-    SoftwareNewViewsOnly
-    FullRender
-    SelectionRender
+    Default = None
+    Software = None
+    SoftwareNewViewsOnly = None
+    FullRender = None
+    SelectionRender = None
 
-class StereoParameters(public struct StereoParameters {
-}):
+class StereoParameters(object):
     """
     
-    S
-    
-    t
-    
-    e
-    
-    r
-    
-    e
-    
-    o
-    
-    P
-    
-    a
-    
-    r
-    
-    a
-    
-    m
-    
-    e
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    m
-    
-    a
-    
-    g
-    
-    n
-    
-    i
-    
-    t
-    
-    u
-    
-    d
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    g
-    
-    n
-    
-    i
-    
-    t
-    
-    u
-    
-    d
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    v
-    
-    i
-    
-    e
-    
-    w
-    
-     
-    
-    s
-    
-    e
-    
-    p
-    
-    a
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    p
-    
-    a
-    
-    r
-    
-    a
-    
-    l
-    
-    l
-    
-    a
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    r
-    
-    a
-    
-    l
-    
-    l
-    
-    a
-    
-    x
+    StereoParameters
+        double magnitude : Input magnitude of view separation
+        double parallax : Input parallax
     """
     Magnitude = None
     
@@ -2565,24 +1124,12 @@ class StereoParameters(public struct StereoParameters {
     
     pass
 
-class View(DisposableWrapper):
+class View(object):
     """
     
-    V
+    View()()
     
-    i
     
-    e
-    
-    w
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def Add(self):
         """
@@ -3077,87 +1624,19 @@ class View(DisposableWrapper):
     
     pass
 
-class ViewEventArgs(EventArgs):
+class ViewEventArgs(object):
     """
     
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    ViewEventArgs()
     """
     View = None
     
     pass
 
-class ViewUpdateEventArgs(EventArgs):
+class ViewUpdateEventArgs(object):
     """
     
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    U
-    
-    p
-    
-    d
-    
-    a
-    
-    t
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    ViewUpdateEventArgs()
     """
     View = None
     
@@ -3169,241 +1648,12 @@ class ViewUpdateEventArgs(EventArgs):
 class ViewUpdateFlags():
     CameraChanged = 1
 
-class ViewportBorderProperties(public struct ViewportBorderProperties {
-}):
+class ViewportBorderProperties(object):
     """
     
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    B
-    
-    o
-    
-    r
-    
-    d
-    
-    e
-    
-    r
-    
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    i
-    
-    e
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    S
-    
-    y
-    
-    s
-    
-    t
-    
-    e
-    
-    m
-    
-    .
-    
-    D
-    
-    r
-    
-    a
-    
-    w
-    
-    i
-    
-    n
-    
-    g
-    
-    .
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    e
-    
-    f
-    
-    a
-    
-    u
-    
-    l
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    w
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    e
-    
-    f
-    
-    a
-    
-    u
-    
-    l
-    
-    t
-    
-     
-    
-    w
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
+    ViewportBorderProperties
+        System.Drawing.Color color : Input default color
+        int weight : Input default weight
     """
     Color = None
     

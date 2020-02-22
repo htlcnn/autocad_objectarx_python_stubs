@@ -1,4 +1,4 @@
-class AcInfoCenterConn(IExtensionApplication):
+class AcInfoCenterConn(object):
     """
     
     """
@@ -83,7 +83,7 @@ class AcInfoCenterConn(IExtensionApplication):
     
     pass
 
-class ClicUiHandler(ICommand):
+class ClicUiHandler(object):
     """
     
     """
@@ -107,7 +107,7 @@ class ClicUiHandler(ICommand):
     
     pass
 
-class InfoCenterBalloonHelper(public class InfoCenterBalloonHelper):
+class InfoCenterBalloonHelper(object):
     """
     
     """
@@ -120,46 +120,10 @@ class InfoCenterBalloonHelper(public class InfoCenterBalloonHelper):
     
     pass
 
-class InfoCenterManager(IDisposable):
+class InfoCenterManager(object):
     """
     
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    C
-    
-    e
-    
-    n
-    
-    t
-    
-    e
-    
-    r
-    
-    M
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    InfoCenterManager()
     """
     Toolbar Field = None
     
@@ -176,7 +140,7 @@ class InfoCenterManager(IDisposable):
     
     pass
 
-class SignInHandler(ICommand):
+class SignInHandler(object):
     """
     
     """

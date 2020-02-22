@@ -1,164 +1,8 @@
-class BoundaryLoop(BrepEntity):
+class BoundaryLoop(object):
     """
     
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    L
-    
-    o
-    
-    o
-    
-    p
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    l
-    
-    o
-    
-    o
-    
-    p
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    BoundaryLoop
+        FullSubentityPath fullPath : Input path to construct loop from
     """
     def GetEdgesStartingFrom(self):
         """
@@ -183,289 +27,17 @@ class BoundaryLoop(BrepEntity):
     
     pass
 
-class Brep(BrepEntity):
+class Brep(object):
     """
     
-    B
+    Brep(Entity)
+        Entity entity : Input entity
     
-    r
     
-    e
+    Brep(FullSubentityPath)
+        FullSubentityPath fullPath : Input path to construct brep from
     
-    p
     
-    (
-    
-    E
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    E
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    B
-    
-    r
-    
-    e
-    
-    p
-    
-    (
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    b
-    
-    r
-    
-    e
-    
-    p
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
     """
     def GetComplexsStartingFrom(self):
         """
@@ -516,7 +88,7 @@ class Brep(BrepEntity):
     
     pass
 
-class BrepComplexCollection(IEnumerable<Complex>):
+class BrepComplexCollection(object):
     """
     
     """
@@ -529,7 +101,7 @@ class BrepComplexCollection(IEnumerable<Complex>):
     
     pass
 
-class BrepComplexEnumerator(EnumeratorBase, IEnumerator<Complex>):
+class BrepComplexEnumerator(object):
     """
     
     """
@@ -537,7 +109,7 @@ class BrepComplexEnumerator(EnumeratorBase, IEnumerator<Complex>):
     
     pass
 
-class BrepEdgeCollection(IEnumerable<Edge>):
+class BrepEdgeCollection(object):
     """
     
     """
@@ -550,7 +122,7 @@ class BrepEdgeCollection(IEnumerable<Edge>):
     
     pass
 
-class BrepEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
+class BrepEdgeEnumerator(object):
     """
     
     """
@@ -558,7 +130,7 @@ class BrepEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
     
     pass
 
-class BrepEntity(RXObject):
+class BrepEntity(object):
     """
     
     """
@@ -719,7 +291,7 @@ class BrepEntity(RXObject):
     
     pass
 
-class BrepFaceCollection(IEnumerable<Face>):
+class BrepFaceCollection(object):
     """
     
     """
@@ -732,7 +304,7 @@ class BrepFaceCollection(IEnumerable<Face>):
     
     pass
 
-class BrepFaceEnumerator(EnumeratorBase, IEnumerator<Face>):
+class BrepFaceEnumerator(object):
     """
     
     """
@@ -740,7 +312,7 @@ class BrepFaceEnumerator(EnumeratorBase, IEnumerator<Face>):
     
     pass
 
-class BrepShellCollection(IEnumerable<Shell>):
+class BrepShellCollection(object):
     """
     
     """
@@ -753,7 +325,7 @@ class BrepShellCollection(IEnumerable<Shell>):
     
     pass
 
-class BrepShellEnumerator(EnumeratorBase, IEnumerator<Shell>):
+class BrepShellEnumerator(object):
     """
     
     """
@@ -761,7 +333,7 @@ class BrepShellEnumerator(EnumeratorBase, IEnumerator<Shell>):
     
     pass
 
-class BrepVertexCollection(IEnumerable<Vertex>):
+class BrepVertexCollection(object):
     """
     
     """
@@ -774,7 +346,7 @@ class BrepVertexCollection(IEnumerable<Vertex>):
     
     pass
 
-class BrepVertexEnumerator(EnumeratorBase, IEnumerator<Vertex>):
+class BrepVertexEnumerator(object):
     """
     
     """
@@ -782,167 +354,11 @@ class BrepVertexEnumerator(EnumeratorBase, IEnumerator<Vertex>):
     
     pass
 
-class Complex(BrepEntity):
+class Complex(object):
     """
     
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    l
-    
-    e
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    a
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    l
-    
-    e
-    
-    x
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    Complex
+        FullSubentityPath fullPath : Input path to construct a complex from
     """
     def GetShellsStartingFrom(self):
         """
@@ -958,7 +374,7 @@ class Complex(BrepEntity):
     
     pass
 
-class ComplexShellCollection(IEnumerable<Shell>):
+class ComplexShellCollection(object):
     """
     
     """
@@ -971,7 +387,7 @@ class ComplexShellCollection(IEnumerable<Shell>):
     
     pass
 
-class ComplexShellEnumerator(EnumeratorBase, IEnumerator<Shell>):
+class ComplexShellEnumerator(object):
     """
     
     """
@@ -979,157 +395,11 @@ class ComplexShellEnumerator(EnumeratorBase, IEnumerator<Shell>):
     
     pass
 
-class Edge(BrepEntity):
+class Edge(object):
     """
     
-    E
-    
-    d
-    
-    g
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    a
-    
-    n
-    
-     
-    
-    e
-    
-    d
-    
-    g
-    
-    e
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    Edge
+        FullSubentityPath fullPath : Input path to construct an edge from
     """
     def GetCurveAsNurb(self):
         """
@@ -1176,7 +446,7 @@ class Edge(BrepEntity):
     
     pass
 
-class EdgeLoopCollection(IEnumerable<BoundaryLoop>):
+class EdgeLoopCollection(object):
     """
     
     """
@@ -1189,7 +459,7 @@ class EdgeLoopCollection(IEnumerable<BoundaryLoop>):
     
     pass
 
-class EdgeLoopEnumerator(EnumeratorBase, IEnumerator<BoundaryLoop>):
+class EdgeLoopEnumerator(object):
     """
     
     """
@@ -1197,14 +467,14 @@ class EdgeLoopEnumerator(EnumeratorBase, IEnumerator<BoundaryLoop>):
     
     pass
 
-class Element(MeshEntity):
+class Element(object):
     """
     
     """
 
     pass
 
-class Element2d(Element):
+class Element2d(object):
     """
     
     """
@@ -1225,7 +495,7 @@ class Element2d(Element):
     
     pass
 
-class Element2dNodeCollection(IEnumerable<Node>):
+class Element2dNodeCollection(object):
     """
     
     """
@@ -1238,7 +508,7 @@ class Element2dNodeCollection(IEnumerable<Node>):
     
     pass
 
-class Element2dNodeEnumerator(EnumeratorBase, IEnumerator<Node>):
+class Element2dNodeEnumerator(object):
     """
     
     """
@@ -1247,12 +517,12 @@ class Element2dNodeEnumerator(EnumeratorBase, IEnumerator<Node>):
     pass
 
 class Element2dShape():
-    Default
-    AllPolygons
-    AllQuadrilaterals
-    AllTriangles
+    Default = None
+    AllPolygons = None
+    AllQuadrilaterals = None
+    AllTriangles = None
 
-class EnumeratorBase(RXObject, IEnumerator):
+class EnumeratorBase(object):
     """
     
     """
@@ -1305,721 +575,21 @@ class ErrorStatus():
     WrongObjectType = 0x22
     WrongSubentityType = 230
 
-class Exception(System.Exception, ISerializable):
+class Exception(object):
     """
     
-    E
+    Exception()()
     
-    x
     
-    c
+    Exception(Autodesk.AutoCAD.BoundaryRepresentation.ErrorStatus)
+        Autodesk.AutoCAD.BoundaryRepresentation.ErrorStatus es : Input error status
     
-    e
     
-    p
+    Exception(Autodesk.AutoCAD.BoundaryRepresentation.ErrorStatus, string)
+        Autodesk.AutoCAD.BoundaryRepresentation.ErrorStatus es : Input error status
+        string message : Input error message
     
-    t
     
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    E
-    
-    x
-    
-    c
-    
-    e
-    
-    p
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    R
-    
-    e
-    
-    p
-    
-    r
-    
-    e
-    
-    s
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    .
-    
-    E
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    R
-    
-    e
-    
-    p
-    
-    r
-    
-    e
-    
-    s
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    .
-    
-    E
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    e
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    E
-    
-    x
-    
-    c
-    
-    e
-    
-    p
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    R
-    
-    e
-    
-    p
-    
-    r
-    
-    e
-    
-    s
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    .
-    
-    E
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    R
-    
-    e
-    
-    p
-    
-    r
-    
-    e
-    
-    s
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    .
-    
-    E
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    e
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    m
-    
-    e
-    
-    s
-    
-    s
-    
-    a
-    
-    g
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    r
-    
-    r
-    
-    o
-    
-    r
-    
-     
-    
-    m
-    
-    e
-    
-    s
-    
-    s
-    
-    a
-    
-    g
-    
-    e
     """
     def GetObjectData(self):
         """
@@ -2038,155 +608,11 @@ class Exception(System.Exception, ISerializable):
     
     pass
 
-class Face(BrepEntity):
+class Face(object):
     """
     
-    F
-    
-    a
-    
-    c
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    a
-    
-     
-    
-    f
-    
-    a
-    
-    c
-    
-    e
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    Face
+        FullSubentityPath fullPath : Input path to construct a face from
     """
     def GetArea(self):
         """
@@ -2257,7 +683,7 @@ class Face(BrepEntity):
     
     pass
 
-class FaceLoopCollection(IEnumerable<BoundaryLoop>):
+class FaceLoopCollection(object):
     """
     
     """
@@ -2270,7 +696,7 @@ class FaceLoopCollection(IEnumerable<BoundaryLoop>):
     
     pass
 
-class FaceLoopEnumerator(EnumeratorBase, IEnumerator<BoundaryLoop>):
+class FaceLoopEnumerator(object):
     """
     
     """
@@ -2278,7 +704,7 @@ class FaceLoopEnumerator(EnumeratorBase, IEnumerator<BoundaryLoop>):
     
     pass
 
-class Hit(RXObject):
+class Hit(object):
     """
     
     """
@@ -2322,7 +748,7 @@ class Hit(RXObject):
     
     pass
 
-class LoopEdgeCollection(IEnumerable<Edge>):
+class LoopEdgeCollection(object):
     """
     
     """
@@ -2335,7 +761,7 @@ class LoopEdgeCollection(IEnumerable<Edge>):
     
     pass
 
-class LoopEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
+class LoopEdgeEnumerator(object):
     """
     
     """
@@ -2344,12 +770,12 @@ class LoopEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
     pass
 
 class LoopType():
-    LoopUnclassified
-    LoopExterior
-    LoopInterior
-    LoopWinding
+    LoopUnclassified = None
+    LoopExterior = None
+    LoopInterior = None
+    LoopWinding = None
 
-class LoopVertexCollection(IEnumerable<Vertex>):
+class LoopVertexCollection(object):
     """
     
     """
@@ -2362,7 +788,7 @@ class LoopVertexCollection(IEnumerable<Vertex>):
     
     pass
 
-class LoopVertexEnumerator(EnumeratorBase, IEnumerator<Vertex>):
+class LoopVertexEnumerator(object):
     """
     
     """
@@ -2370,8 +796,7 @@ class LoopVertexEnumerator(EnumeratorBase, IEnumerator<Vertex>):
     
     pass
 
-class MassProperties(public struct MassProperties {
-}):
+class MassProperties(object):
     """
     
     """
@@ -2397,128 +822,18 @@ class MassProperties(public struct MassProperties {
     
     pass
 
-class Mesh(MeshEntity):
+class Mesh(object):
     """
     
     """
 
     pass
 
-class Mesh2d(Mesh):
+class Mesh2d(object):
     """
     
-    M
-    
-    e
-    
-    s
-    
-    h
-    
-    2
-    
-    d
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    e
-    
-    s
-    
-    h
-    
-    2
-    
-    d
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-     
-    
-    m
-    
-    e
-    
-    s
-    
-    h
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    a
-    
-     
-    
-    m
-    
-    e
-    
-    s
-    
-    h
-    
-     
-    
-    f
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
+    Mesh2d
+        Mesh2dFilter meshFilter : Input a mesh filter
     """
     def GetElement2dsStartingFrom(self):
         """
@@ -2534,7 +849,7 @@ class Mesh2d(Mesh):
     
     pass
 
-class Mesh2dControl(MeshControl):
+class Mesh2dControl(object):
     """
     
     """
@@ -2545,7 +860,7 @@ class Mesh2dControl(MeshControl):
     
     pass
 
-class Mesh2dElement2dCollection(IEnumerable<Element2d>):
+class Mesh2dElement2dCollection(object):
     """
     
     """
@@ -2558,7 +873,7 @@ class Mesh2dElement2dCollection(IEnumerable<Element2d>):
     
     pass
 
-class Mesh2dElement2dEnumerator(EnumeratorBase, IEnumerator<Element2d>):
+class Mesh2dElement2dEnumerator(object):
     """
     
     """
@@ -2566,7 +881,7 @@ class Mesh2dElement2dEnumerator(EnumeratorBase, IEnumerator<Element2d>):
     
     pass
 
-class Mesh2dFilter(DisposableWrapper):
+class Mesh2dFilter(object):
     """
     
     """
@@ -2584,7 +899,7 @@ class Mesh2dFilter(DisposableWrapper):
     
     pass
 
-class MeshControl(RXObject):
+class MeshControl(object):
     """
     
     """
@@ -2619,7 +934,7 @@ class MeshControl(RXObject):
     
     pass
 
-class MeshEntity(RXObject):
+class MeshEntity(object):
     """
     
     """
@@ -2654,7 +969,7 @@ class MeshEntity(RXObject):
     
     pass
 
-class Node(MeshEntity):
+class Node(object):
     """
     
     """
@@ -2663,163 +978,15 @@ class Node(MeshEntity):
     pass
 
 class PointContainment():
-    Inside
-    Outside
-    OnBoundary
+    Inside = None
+    Outside = None
+    OnBoundary = None
 
-class Shell(BrepEntity):
+class Shell(object):
     """
     
-    S
-    
-    h
-    
-    e
-    
-    l
-    
-    l
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    a
-    
-     
-    
-    s
-    
-    h
-    
-    e
-    
-    l
-    
-    l
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    Shell
+        FullSubentityPath fullPath : Input path to construct a shell from
     """
     Complex = None
     
@@ -2831,7 +998,7 @@ class Shell(BrepEntity):
     
     pass
 
-class ShellFaceCollection(IEnumerable<Face>):
+class ShellFaceCollection(object):
     """
     
     """
@@ -2844,7 +1011,7 @@ class ShellFaceCollection(IEnumerable<Face>):
     
     pass
 
-class ShellFaceEnumerator(EnumeratorBase, IEnumerator<Face>):
+class ShellFaceEnumerator(object):
     """
     
     """
@@ -2853,171 +1020,19 @@ class ShellFaceEnumerator(EnumeratorBase, IEnumerator<Face>):
     pass
 
 class ShellType():
-    ShellUnclassified
-    ShellExterior
-    ShellInterior
+    ShellUnclassified = None
+    ShellExterior = None
+    ShellInterior = None
 
 class ValidationLevel():
-    FullValidation
-    NoValidation
+    FullValidation = None
+    NoValidation = None
 
-class Vertex(BrepEntity):
+class Vertex(object):
     """
     
-    V
-    
-    e
-    
-    r
-    
-    t
-    
-    e
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    F
-    
-    u
-    
-    l
-    
-    l
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    P
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    t
-    
-    h
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    s
-    
-    t
-    
-    r
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    a
-    
-     
-    
-    v
-    
-    e
-    
-    r
-    
-    t
-    
-    e
-    
-    x
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    m
+    Vertex
+        FullSubentityPath fullPath : Input path to construct a vertex from
     """
     def GetEdgesStartingFrom(self):
         """
@@ -3049,7 +1064,7 @@ class Vertex(BrepEntity):
     
     pass
 
-class VertexEdgeCollection(IEnumerable<Edge>):
+class VertexEdgeCollection(object):
     """
     
     """
@@ -3062,7 +1077,7 @@ class VertexEdgeCollection(IEnumerable<Edge>):
     
     pass
 
-class VertexEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
+class VertexEdgeEnumerator(object):
     """
     
     """
@@ -3070,7 +1085,7 @@ class VertexEdgeEnumerator(EnumeratorBase, IEnumerator<Edge>):
     
     pass
 
-class VertexLoopCollection(IEnumerable<BoundaryLoop>):
+class VertexLoopCollection(object):
     """
     
     """
@@ -3083,7 +1098,7 @@ class VertexLoopCollection(IEnumerable<BoundaryLoop>):
     
     pass
 
-class VertexLoopEnumerator(EnumeratorBase, IEnumerator<BoundaryLoop>):
+class VertexLoopEnumerator(object):
     """
     
     """

@@ -1,12 +1,12 @@
 class ArcType():
-    ArcSimple
-    ArcSector
-    ArcChord
+    ArcSimple = None
+    ArcSector = None
+    ArcChord = None
 
 class AttenuationType():
-    None
-    InverseLinear
-    InverseSquare
+    None = None
+    InverseLinear = None
+    InverseSquare = None
 
 class AutoTransform():
     InheritAutoTransform = 0
@@ -24,36 +24,10 @@ class ChannelFlags():
     UseRefraction = 0x20
     UseSpecular = 2
 
-class ClipBoundary(DisposableWrapper):
+class ClipBoundary(object):
     """
     
-    C
-    
-    l
-    
-    i
-    
-    p
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    y
-    
-    (
-    
-    )
+    ClipBoundary()
     """
     def GetAptPoints(self):
         """
@@ -101,337 +75,18 @@ class ClipBoundary(DisposableWrapper):
     
     pass
 
-class ColorRGB(public struct ColorRGB {
-}):
+class ColorRGB(object):
     """
     
-    C
+    ColorRGB()()
     
-    o
     
-    l
+    ColorRGB(double, double, double)
+        double red : The red component.
+        double green : The green component.
+        double blue : The blue component.
     
-    o
     
-    r
-    
-    R
-    
-    G
-    
-    B
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    R
-    
-    G
-    
-    B
-    
-    (
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    T
-    
-    h
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    T
-    
-    h
-    
-    e
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    T
-    
-    h
-    
-    e
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    .
     """
     Blue = None
     
@@ -443,846 +98,25 @@ class ColorRGB(public struct ColorRGB {
     
     pass
 
-class ColorRGBA(public struct ColorRGBA {
-}):
+class ColorRGBA(object):
     """
     
-    C
+    ColorRGBA()()
     
-    o
     
-    l
+    ColorRGBA(double, double, double)
+        double red : Input color red component
+        double green : Input color green component
+        double blue : Input color blue component
     
-    o
     
-    r
+    ColorRGBA(double, double, double, double)
+        double red : Input color red component
+        double green : Input color green component
+        double blue : Input color blue component
+        double alpha : Input alpha-shading component
     
-    R
     
-    G
-    
-    B
-    
-    A
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    R
-    
-    G
-    
-    B
-    
-    A
-    
-    (
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    R
-    
-    G
-    
-    B
-    
-    A
-    
-    (
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    a
-    
-    l
-    
-    p
-    
-    h
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    a
-    
-    l
-    
-    p
-    
-    h
-    
-    a
-    
-    -
-    
-    s
-    
-    h
-    
-    a
-    
-    d
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
     """
     Alpha = None
     
@@ -1297,7 +131,7 @@ class ColorRGBA(public struct ColorRGBA {
     
     pass
 
-class CommonDraw(RXObject):
+class CommonDraw(object):
     """
     
     """
@@ -1336,30 +170,12 @@ class CommonDraw(RXObject):
     
     pass
 
-class Context(RXObject):
+class Context(object):
     """
     
-    C
+    Context()()
     
-    o
     
-    n
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def DisableFastMoveDrag(self):
         """
@@ -1397,48 +213,12 @@ class Context(RXObject):
     
     pass
 
-class ContextualColors(RXObject):
+class ContextualColors(object):
     """
     
-    C
+    ContextualColors()()
     
-    o
     
-    n
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    a
-    
-    l
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    s
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def FlagsSet(self):
         """
@@ -1486,58 +266,20 @@ class ContextualColors(RXObject):
     pass
 
 class DefaultLightingType():
-    OneDistantLight
-    TwoDistantLights
+    OneDistantLight = None
+    TwoDistantLights = None
 
 class DeviationType():
-    MaxDevForCircle
-    MaxDevForCurve
-    MaxDevForBoundary
-    MaxDevForIsoline
-    MaxDevForFacet
+    MaxDevForCircle = None
+    MaxDevForCurve = None
+    MaxDevForBoundary = None
+    MaxDevForIsoline = None
+    MaxDevForFacet = None
 
-class DistantLightTraits(StandardLightTraits):
+class DistantLightTraits(object):
     """
     
-    D
-    
-    i
-    
-    s
-    
-    t
-    
-    a
-    
-    n
-    
-    t
-    
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    DistantLightTraits()
     """
     IsSunlight = None
     
@@ -1562,7 +304,7 @@ class DrawFlags():
     DrawNoLineWeight = 0x20
     None = 0
 
-class Drawable(RXObject):
+class Drawable(object):
     """
     
     """
@@ -1640,7 +382,7 @@ class DrawableAttributes():
     ViewDependentViewportDraw = 0x800
     ViewIndependentViewportDraw = 8
 
-class DrawableOverrule(Overrule):
+class DrawableOverrule(object):
     """
     
     """
@@ -1723,43 +465,13 @@ class DrawableOverrule(Overrule):
     
     pass
 
-class DrawableTraits(SubEntityTraits):
+class DrawableTraits(object):
     """
     
-    D
-    
-    r
-    
-    a
-    
-    w
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    DrawableTraits()
     """
     class HighlightProperty():
-        VertexRolloverHighlightSize
+        VertexRolloverHighlightSize = None
     
     
     def AddLight(self):
@@ -1823,21 +535,21 @@ class DrawableTraits(SubEntityTraits):
     pass
 
 class DrawableType():
-    Geometry
-    DistantLight
-    PointLight
-    SpotLight
-    AmbientLight
-    SolidBackground
-    GradientBackground
-    ImageBackground
-    GroundPlaneBackground
-    Viewport
-    WebLight
-    SkyBackground
-    ImageBasedLightingBackground
+    Geometry = None
+    DistantLight = None
+    PointLight = None
+    SpotLight = None
+    AmbientLight = None
+    SolidBackground = None
+    GradientBackground = None
+    ImageBackground = None
+    GroundPlaneBackground = None
+    Viewport = None
+    WebLight = None
+    SkyBackground = None
+    ImageBasedLightingBackground = None
 
-class EdgeData(public class EdgeData):
+class EdgeData(object):
     """
     
     """
@@ -1951,18 +663,18 @@ class EdgeData(public class EdgeData):
     pass
 
 class ExtendedLightShape():
-    Linear
-    Rectangle
-    Disk
-    Cylinder
-    Sphere
+    Linear = None
+    Rectangle = None
+    Disk = None
+    Cylinder = None
+    Sphere = None
 
 class ExteriorDaylightMode():
-    DaylightOff
-    DaylightOn
-    DaylightAuto
+    DaylightOff = None
+    DaylightOn = None
+    DaylightAuto = None
 
-class FaceData(public sealed class FaceData):
+class FaceData(object):
     """
     
     """
@@ -2129,20 +841,10 @@ class FaceData(public sealed class FaceData):
     
     pass
 
-class Fill(RXObject):
+class Fill(object):
     """
     
-    F
-    
-    i
-    
-    l
-    
-    l
-    
-    (
-    
-    )
+    Fill()
     """
 
     pass
@@ -2152,715 +854,20 @@ class FillType():
     FillNever = 2
 
 class FinalGatherMode():
-    FinalGatherNone
-    FinalGatherCast
-    FinalGatherReceive
-    FinalGatherCastAndReceive
+    FinalGatherNone = None
+    FinalGatherCast = None
+    FinalGatherReceive = None
+    FinalGatherCastAndReceive = None
 
-class FontDescriptor(public struct FontDescriptor {
-}):
+class FontDescriptor(object):
     """
     
-    F
-    
-    o
-    
-    n
-    
-    t
-    
-    D
-    
-    e
-    
-    s
-    
-    c
-    
-    r
-    
-    i
-    
-    p
-    
-    t
-    
-    o
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-    F
-    
-    a
-    
-    c
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    f
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    b
-    
-    o
-    
-    l
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    r
-    
-    u
-    
-    e
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    a
-    
-     
-    
-    b
-    
-    o
-    
-    l
-    
-    d
-    
-     
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    i
-    
-    t
-    
-    a
-    
-    l
-    
-    i
-    
-    c
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    r
-    
-    u
-    
-    e
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    a
-    
-    n
-    
-     
-    
-    i
-    
-    t
-    
-    a
-    
-    l
-    
-    i
-    
-    c
-    
-     
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    h
-    
-    a
-    
-    r
-    
-    a
-    
-    c
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    c
-    
-    h
-    
-    a
-    
-    r
-    
-    a
-    
-    c
-    
-    t
-    
-    e
-    
-    r
-    
-     
-    
-    s
-    
-    e
-    
-    t
-    
-     
-    
-    b
-    
-    e
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    u
-    
-    s
-    
-    e
-    
-    d
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    p
-    
-    i
-    
-    t
-    
-    c
-    
-    h
-    
-    A
-    
-    n
-    
-    d
-    
-    F
-    
-    a
-    
-    m
-    
-    i
-    
-    l
-    
-    y
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    p
-    
-    i
-    
-    t
-    
-    c
-    
-    h
-    
-     
-    
-    a
-    
-    n
-    
-    d
-    
-     
-    
-    f
-    
-    a
-    
-    m
-    
-    i
-    
-    l
-    
-    y
-    
-     
-    
-    b
-    
-    e
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    u
-    
-    s
-    
-    e
-    
-    d
+    FontDescriptor
+        string typeFace : Input the font name
+        [MarshalAs(UnmanagedType.U1)] bool bold : Input true for a bold text
+        [MarshalAs(UnmanagedType.U1)] bool italic : Input true for an italic text
+        int characters : Input indicating the character set being used
+        int pitchAndFamily : Input indicating the pitch and family being used
     """
     def Equals(self):
         """
@@ -2908,759 +915,14 @@ class FontDescriptor(public struct FontDescriptor {
     
     pass
 
-class FrontAndBackClipping(public struct FrontAndBackClipping {
-}):
+class FrontAndBackClipping(object):
     """
     
-    F
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-    A
-    
-    n
-    
-    d
-    
-    B
-    
-    a
-    
-    c
-    
-    k
-    
-    C
-    
-    l
-    
-    i
-    
-    p
-    
-    p
-    
-    i
-    
-    n
-    
-    g
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-    F
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    B
-    
-    o
-    
-    o
-    
-    l
-    
-    e
-    
-    a
-    
-    n
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    i
-    
-    f
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-     
-    
-    p
-    
-    l
-    
-    a
-    
-    n
-    
-    e
-    
-     
-    
-    i
-    
-    s
-    
-     
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-    B
-    
-    a
-    
-    c
-    
-    k
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    B
-    
-    o
-    
-    o
-    
-    l
-    
-    e
-    
-    a
-    
-    n
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    i
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    i
-    
-    f
-    
-     
-    
-    b
-    
-    a
-    
-    c
-    
-    k
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-     
-    
-    p
-    
-    l
-    
-    a
-    
-    n
-    
-    e
-    
-     
-    
-    i
-    
-    s
-    
-     
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    y
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    o
-    
-    r
-    
-    d
-    
-    i
-    
-    n
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    Z
-    
-     
-    
-    v
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-    p
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    l
-    
-    a
-    
-    n
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    b
-    
-    a
-    
-    c
-    
-    k
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    y
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    o
-    
-    r
-    
-    d
-    
-    i
-    
-    n
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    Z
-    
-     
-    
-    v
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    f
-    
-    r
-    
-    o
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    l
-    
-    i
-    
-    p
-    
-    p
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    l
-    
-    a
-    
-    n
-    
-    e
+    FrontAndBackClipping
+        [MarshalAs(UnmanagedType.U1)] bool clipFront : Input Boolean indicating if front clip plane is active
+        [MarshalAs(UnmanagedType.U1)] bool clipBack : Input Boolean indicating if back clip plane is active
+        double front : Input eye coordinate Z value of front clipping plane
+        double back : Input eye coordinate Z value of front clipping plane
     """
     def Equals(self):
         """
@@ -3710,7 +972,7 @@ class FrontAndBackClipping(public struct FrontAndBackClipping {
     
     pass
 
-class GdiDrawObject(RXObject):
+class GdiDrawObject(object):
     """
     
     """
@@ -3734,40 +996,10 @@ class GdiDrawObject(RXObject):
     
     pass
 
-class GenericTexture(ProceduralTexture, ICloneable):
+class GenericTexture(object):
     """
     
-    G
-    
-    e
-    
-    n
-    
-    e
-    
-    r
-    
-    i
-    
-    c
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    GenericTexture()
     """
     def Clone(self):
         """
@@ -3817,7 +1049,7 @@ class GenericTexture(ProceduralTexture, ICloneable):
     
     pass
 
-class Geometry(RXObject):
+class Geometry(object):
     """
     
     """
@@ -4315,31 +1547,17 @@ class Geometry(RXObject):
     pass
 
 class GlobalIlluminationMode():
-    GlobalIlluminationNone
-    GlobalIlluminationCast
-    GlobalIlluminationReceive
-    GlobalIlluminationCastAndReceive
+    GlobalIlluminationNone = None
+    GlobalIlluminationCast = None
+    GlobalIlluminationReceive = None
+    GlobalIlluminationCastAndReceive = None
 
-class Glyph(Drawable):
+class Glyph(object):
     """
     
-    G
+    Glyph()()
     
-    l
     
-    y
-    
-    p
-    
-    h
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def SetLocation(self):
         """
@@ -4358,7 +1576,7 @@ class Glyph(Drawable):
     
     pass
 
-class GradientBackgroundTraits(NonEntityTraits):
+class GradientBackgroundTraits(object):
     """
     
     """
@@ -4381,36 +1599,10 @@ class GradientBackgroundTraits(NonEntityTraits):
     
     pass
 
-class GradientFill(Fill):
+class GradientFill(object):
     """
     
-    G
-    
-    r
-    
-    a
-    
-    d
-    
-    i
-    
-    e
-    
-    n
-    
-    t
-    
-    F
-    
-    i
-    
-    l
-    
-    l
-    
-    (
-    
-    )
+    GradientFill()
     """
     GradientAngle = None
     
@@ -4429,17 +1621,17 @@ class GradientFill(Fill):
     pass
 
 class GradientType():
-    Linear
-    Cylinder
-    InvCylinder
-    Spherical
-    Hemispherical
-    Curved
-    InvSpherical
-    InvHemispherical
-    InvCurved
+    Linear = None
+    Cylinder = None
+    InvCylinder = None
+    Spherical = None
+    Hemispherical = None
+    Curved = None
+    InvSpherical = None
+    InvHemispherical = None
+    InvCurved = None
 
-class GroundPlaneBackgroundTraits(NonEntityTraits):
+class GroundPlaneBackgroundTraits(object):
     """
     
     """
@@ -4462,91 +1654,19 @@ class GroundPlaneBackgroundTraits(NonEntityTraits):
     
     pass
 
-class HatchPattern(Fill):
+class HatchPattern(object):
     """
     
-    H
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-    P
-    
-    a
-    
-    t
-    
-    t
-    
-    e
-    
-    r
-    
-    n
-    
-    (
-    
-    )
+    HatchPattern()
     """
     PatternLines = None
     
     pass
 
-class HatchPatternDefinition(DisposableWrapper):
+class HatchPatternDefinition(object):
     """
     
-    H
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-    P
-    
-    a
-    
-    t
-    
-    t
-    
-    e
-    
-    r
-    
-    n
-    
-    D
-    
-    e
-    
-    f
-    
-    i
-    
-    n
-    
-    i
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    HatchPatternDefinition()
     """
     def DeleteUnmanagedObject(self):
         """
@@ -4576,14 +1696,14 @@ class HatchPatternDefinition(DisposableWrapper):
     pass
 
 class HighlightStyle():
-    None
-    Custom
-    DashedAndThicken
-    Dim
-    ThickDim
-    Glow
+    None = None
+    Custom = None
+    DashedAndThicken = None
+    Dim = None
+    ThickDim = None
+    Glow = None
 
-class IBLBackgroundTraits(NonEntityTraits):
+class IBLBackgroundTraits(object):
     """
     
     """
@@ -4604,389 +1724,21 @@ class IBLBackgroundTraits(NonEntityTraits):
     pass
 
 class IlluminationModel():
-    BlinnShader
-    MetalShader
+    BlinnShader = None
+    MetalShader = None
 
-class ImageBGRA32(DisposableWrapper):
+class ImageBGRA32(object):
     """
     
-    I
+    ImageBGRA32()()
     
-    m
     
-    a
+    ImageBGRA32(uint, uint, IntPtr)
+        uint width : Input the image's width
+        uint height : Input the image's height
+        IntPtr imageData : Input the image's buffer data
     
-    g
     
-    e
-    
-    B
-    
-    G
-    
-    R
-    
-    A
-    
-    3
-    
-    2
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    B
-    
-    G
-    
-    R
-    
-    A
-    
-    3
-    
-    2
-    
-    (
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-    ,
-    
-     
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-    ,
-    
-     
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    w
-    
-    i
-    
-    d
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    '
-    
-    s
-    
-     
-    
-    w
-    
-    i
-    
-    d
-    
-    t
-    
-    h
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    h
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    '
-    
-    s
-    
-     
-    
-    h
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    D
-    
-    a
-    
-    t
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    '
-    
-    s
-    
-     
-    
-    b
-    
-    u
-    
-    f
-    
-    f
-    
-    e
-    
-    r
-    
-     
-    
-    d
-    
-    a
-    
-    t
-    
-    a
     """
     Height = None
     
@@ -4998,7 +1750,7 @@ class ImageBGRA32(DisposableWrapper):
     
     pass
 
-class ImageBackgroundTraits(NonEntityTraits):
+class ImageBackgroundTraits(object):
     """
     
     """
@@ -5027,44 +1779,10 @@ class ImageBackgroundTraits(NonEntityTraits):
     
     pass
 
-class ImageFileTexture(ImageTexture, ICloneable):
+class ImageFileTexture(object):
     """
     
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    F
-    
-    i
-    
-    l
-    
-    e
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    ImageFileTexture()
     """
     def Clone(self):
         """
@@ -5097,93 +1815,33 @@ class ImageFileTexture(ImageTexture, ICloneable):
     pass
 
 class ImageOrg():
-    Bitonal
-    Palette
-    Gray
-    RGBA
-    BGRA
-    ARGB
-    ABGR
-    BGR
-    RGB
+    Bitonal = None
+    Palette = None
+    Gray = None
+    RGBA = None
+    BGRA = None
+    ARGB = None
+    ABGR = None
+    BGR = None
+    RGB = None
 
 class ImageSource():
-    FromDwg
-    FromOleObject
-    FromRender
+    FromDwg = None
+    FromOleObject = None
+    FromRender = None
 
-class ImageTexture(MaterialTexture):
+class ImageTexture(object):
     """
     
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    ImageTexture()
     """
 
     pass
 
-class LightAttenuation(RXObject):
+class LightAttenuation(object):
     """
     
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    A
-    
-    t
-    
-    t
-    
-    e
-    
-    n
-    
-    u
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    LightAttenuation()
     """
     def Equals(self):
         """
@@ -5229,108 +1887,68 @@ class LightAttenuation(RXObject):
     
     pass
 
-class LightTraits(NonEntityTraits):
+class LightTraits(object):
     """
     
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    LightTraits()
     """
     On = None
     
     pass
 
 class Linetype():
-    Solid
-    Dashed
-    Dotted
-    DashDot
-    ShortDash
-    MediumDash
-    LongDash
-    ShortDashX2
-    MediumDashX2
-    LongDashX2
-    MediumLongDash
-    MediumDashShortDashShortDash
-    LongDashShortDash
-    LongDashDotDot
-    LongDashDot
-    MediumDashDotShortDashDot
-    SparseDot
-    ISODash
-    ISODashSpace
-    ISOLongDashDot
-    ISOLongDashDoubleDot
-    ISOLongDashTripleDot
-    ISODot
-    ISOLongDashShortDash
-    ISOLongDashDoubleShortDash
-    ISODashDot
-    ISODoubleDashDot
-    ISODashDoubleDot
-    ISODoubleDashDoubleDot
-    ISODashTripleDot
-    ISODoubleDashTripleDot
-    LineTypeNone
-    Solid6PixelsBlank6Pixels
+    Solid = None
+    Dashed = None
+    Dotted = None
+    DashDot = None
+    ShortDash = None
+    MediumDash = None
+    LongDash = None
+    ShortDashX2 = None
+    MediumDashX2 = None
+    LongDashX2 = None
+    MediumLongDash = None
+    MediumDashShortDashShortDash = None
+    LongDashShortDash = None
+    LongDashDotDot = None
+    LongDashDot = None
+    MediumDashDotShortDashDot = None
+    SparseDot = None
+    ISODash = None
+    ISODashSpace = None
+    ISOLongDashDot = None
+    ISOLongDashDoubleDot = None
+    ISOLongDashTripleDot = None
+    ISODot = None
+    ISOLongDashShortDash = None
+    ISOLongDashDoubleShortDash = None
+    ISODashDot = None
+    ISODoubleDashDot = None
+    ISODashDoubleDot = None
+    ISODoubleDashDoubleDot = None
+    ISODashTripleDot = None
+    ISODoubleDashTripleDot = None
+    LineTypeNone = None
+    Solid6PixelsBlank6Pixels = None
 
 class LuminanceMode():
-    SelfIllumination
-    Luminance
+    SelfIllumination = None
+    Luminance = None
 
 class MapChannel():
-    AllChannels
-    MapChannels
+    AllChannels = None
+    MapChannels = None
 
 class MapFilter():
-    Default
-    None
+    Default = None
+    None = None
 
-class Mapper(RXObject):
+class Mapper(object):
     """
     
-    M
+    Mapper()()
     
-    a
     
-    p
-    
-    p
-    
-    e
-    
-    r
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def Equals(self):
         """
@@ -5366,38 +1984,10 @@ class Mapper(RXObject):
     
     pass
 
-class MarbleTexture(ProceduralTexture, ICloneable):
+class MarbleTexture(object):
     """
     
-    M
-    
-    a
-    
-    r
-    
-    b
-    
-    l
-    
-    e
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    MarbleTexture()
     """
     def Clone(self):
         """
@@ -5448,42 +2038,12 @@ class MarbleTexture(ProceduralTexture, ICloneable):
     
     pass
 
-class MaterialColor(RXObject):
+class MaterialColor(object):
     """
     
-    M
+    MaterialColor()()
     
-    a
     
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def Equals(self):
         """
@@ -5513,235 +2073,12 @@ class MaterialColor(RXObject):
     
     pass
 
-class MaterialDiffuseComponent(public struct MaterialDiffuseComponent {
-}):
+class MaterialDiffuseComponent(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    D
-    
-    i
-    
-    f
-    
-    f
-    
-    u
-    
-    s
-    
-    e
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
+    MaterialDiffuseComponent
+        MaterialColor color : Input material color
+        MaterialMap map : Input material map
     """
     def Equals(self):
         """
@@ -5780,38 +2117,12 @@ class MaterialDiffuseComponent(public struct MaterialDiffuseComponent {
     
     pass
 
-class MaterialMap(RXObject):
+class MaterialMap(object):
     """
     
-    M
+    MaterialMap()()
     
-    a
     
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def Equals(self):
         """
@@ -5850,396 +2161,13 @@ class MaterialMap(RXObject):
     
     pass
 
-class MaterialNormalMapComponent(public struct MaterialNormalMapComponent {
-}):
+class MaterialNormalMapComponent(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    N
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    G
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    s
-    
-    I
-    
-    n
-    
-    t
-    
-    e
-    
-    r
-    
-    f
-    
-    a
-    
-    c
-    
-    e
-    
-    .
-    
-    N
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-    M
-    
-    e
-    
-    t
-    
-    h
-    
-    o
-    
-    d
-    
-     
-    
-    m
-    
-    e
-    
-    t
-    
-    h
-    
-    o
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    e
-    
-    t
-    
-    h
-    
-    o
-    
-    d
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    e
-    
-    n
-    
-    g
-    
-    t
-    
-    h
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    e
-    
-    n
-    
-    g
-    
-    t
-    
-    h
+    MaterialNormalMapComponent
+        MaterialMap map : Input material map
+        Autodesk.AutoCAD.GraphicsInterface.NormalMapMethod method : Input normal map method
+        double strength : Input strength
     """
     def Equals(self):
         """
@@ -6281,239 +2209,12 @@ class MaterialNormalMapComponent(public struct MaterialNormalMapComponent {
     
     pass
 
-class MaterialOpacityComponent(public struct MaterialOpacityComponent {
-}):
+class MaterialOpacityComponent(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    O
-    
-    p
-    
-    a
-    
-    c
-    
-    i
-    
-    t
-    
-    y
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    p
-    
-    e
-    
-    r
-    
-    c
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    g
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    o
-    
-    p
-    
-    a
-    
-    c
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    p
-    
-    e
-    
-    r
-    
-    c
-    
-    e
-    
-    n
-    
-    t
-    
-    a
-    
-    g
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
+    MaterialOpacityComponent
+        double percentage : Input opacity percentage
+        MaterialMap map : Input material map
     """
     def Equals(self):
         """
@@ -6552,237 +2253,12 @@ class MaterialOpacityComponent(public struct MaterialOpacityComponent {
     
     pass
 
-class MaterialRefractionComponent(public struct MaterialRefractionComponent {
-}):
+class MaterialRefractionComponent(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    R
-    
-    e
-    
-    f
-    
-    r
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    r
-    
-    e
-    
-    f
-    
-    r
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
+    MaterialRefractionComponent
+        double index : Input index of refraction
+        MaterialMap map : Input material map
     """
     def Equals(self):
         """
@@ -6821,312 +2297,13 @@ class MaterialRefractionComponent(public struct MaterialRefractionComponent {
     
     pass
 
-class MaterialSpecularComponent(public struct MaterialSpecularComponent {
-}):
+class MaterialSpecularComponent(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    u
-    
-    l
-    
-    a
-    
-    r
-    
-    C
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    M
-    
-    a
-    
-    p
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-     
-    
-    m
-    
-    a
-    
-    p
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    g
-    
-    l
-    
-    o
-    
-    s
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    g
-    
-    l
-    
-    o
-    
-    s
-    
-    s
-    
-     
-    
-    v
-    
-    a
-    
-    l
-    
-    u
-    
-    e
+    MaterialSpecularComponent
+        MaterialColor color : Input material color
+        MaterialMap map : Input material map
+        double gloss : Input gloss value
     """
     def Equals(self):
         """
@@ -7168,47 +2345,15 @@ class MaterialSpecularComponent(public struct MaterialSpecularComponent {
     
     pass
 
-class MaterialTexture(RXObject):
+class MaterialTexture(object):
     """
     
-    M
-    
-    a
-    
-    t
-    
-    e
-    
-    r
-    
-    i
-    
-    a
-    
-    l
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    MaterialTexture()
     """
 
     pass
 
-class MaterialTraits(NonEntityTraits):
+class MaterialTraits(object):
     """
     
     """
@@ -7283,14 +2428,14 @@ class MaterialTraits(NonEntityTraits):
     pass
 
 class Method():
-    Inherit
-    Override
+    Inherit = None
+    Override = None
 
 class Mode():
-    Realistic
-    Advanced
+    Realistic = None
+    Advanced = None
 
-class NonEntityTraits(DrawableTraits):
+class NonEntityTraits(object):
     """
     
     """
@@ -7399,84 +2544,22 @@ class NonEntityTraits(DrawableTraits):
     pass
 
 class NormalMapMethod():
-    TangentSpaceNormalMap
+    TangentSpaceNormalMap = None
 
 class OrientationBehavior():
-    World
-    Screen
-    ZAxis
+    World = None
+    Screen = None
+    ZAxis = None
 
 class OrientationType():
     Clockwise = 1
     CounterClockwise = -1
     NoOrientation = 0
 
-class PhotographicExposureParameters(ToneOperatorParameters):
+class PhotographicExposureParameters(object):
     """
     
-    P
-    
-    h
-    
-    o
-    
-    t
-    
-    o
-    
-    g
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    E
-    
-    x
-    
-    p
-    
-    o
-    
-    s
-    
-    u
-    
-    r
-    
-    e
-    
-    P
-    
-    a
-    
-    r
-    
-    a
-    
-    m
-    
-    e
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-    (
-    
-    )
+    PhotographicExposureParameters()
     """
     def CopyFrom(self):
         """
@@ -7512,612 +2595,23 @@ class PhotographicExposureParameters(ToneOperatorParameters):
     
     pass
 
-class PixelBGRA32(public struct PixelBGRA32 {
-}):
+class PixelBGRA32(object):
     """
     
-    P
+    PixelBGRA32()()
     
-    i
     
-    x
+    PixelBGRA32(uint)
+        uint bgra : Input color of component
     
-    e
     
-    l
+    PixelBGRA32(byte, byte, byte, byte)
+        byte blue : Input color blue component
+        byte green : Input color green component
+        byte red : Input color red component
+        byte alpha : Input color alpha-shading component
     
-    B
     
-    G
-    
-    R
-    
-    A
-    
-    3
-    
-    2
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    i
-    
-    x
-    
-    e
-    
-    l
-    
-    B
-    
-    G
-    
-    R
-    
-    A
-    
-    3
-    
-    2
-    
-    (
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    u
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    b
-    
-    g
-    
-    r
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    i
-    
-    x
-    
-    e
-    
-    l
-    
-    B
-    
-    G
-    
-    R
-    
-    A
-    
-    3
-    
-    2
-    
-    (
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-    ,
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-    ,
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-    ,
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    b
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    g
-    
-    r
-    
-    e
-    
-    e
-    
-    n
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    b
-    
-    y
-    
-    t
-    
-    e
-    
-     
-    
-    a
-    
-    l
-    
-    p
-    
-    h
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    a
-    
-    l
-    
-    p
-    
-    h
-    
-    a
-    
-    -
-    
-    s
-    
-    h
-    
-    a
-    
-    d
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    c
-    
-    o
-    
-    m
-    
-    p
-    
-    o
-    
-    n
-    
-    e
-    
-    n
-    
-    t
     """
     def init(self):
         """
@@ -8140,44 +2634,10 @@ class PixelBGRA32(public struct PixelBGRA32 {
     
     pass
 
-class PointLightTraits(StandardLightTraits):
+class PointLightTraits(object):
     """
     
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    PointLightTraits()
     """
     Attenuation = None
     
@@ -8198,438 +2658,18 @@ class PointLightTraits(StandardLightTraits):
     
     pass
 
-class Polyline(DisposableWrapper):
+class Polyline(object):
     """
     
-    P
+    Polyline()()
     
-    o
     
-    l
+    Polyline(Point3dCollection, Vector3d, IntPtr)
+        Point3dCollection pPoints : A list of points
+        Vector3d normal : Input normal.
+        IntPtr pBaseSubEntMarker : Subentity marker for first segment.
     
-    y
     
-    l
-    
-    i
-    
-    n
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    o
-    
-    l
-    
-    y
-    
-    l
-    
-    i
-    
-    n
-    
-    e
-    
-    (
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    3
-    
-    d
-    
-    C
-    
-    o
-    
-    l
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    ,
-    
-     
-    
-    V
-    
-    e
-    
-    c
-    
-    t
-    
-    o
-    
-    r
-    
-    3
-    
-    d
-    
-    ,
-    
-     
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    3
-    
-    d
-    
-    C
-    
-    o
-    
-    l
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    p
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    A
-    
-     
-    
-    l
-    
-    i
-    
-    s
-    
-    t
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    p
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    V
-    
-    e
-    
-    c
-    
-    t
-    
-    o
-    
-    r
-    
-    3
-    
-    d
-    
-     
-    
-    n
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    l
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    l
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-     
-    
-    p
-    
-    B
-    
-    a
-    
-    s
-    
-    e
-    
-    S
-    
-    u
-    
-    b
-    
-    E
-    
-    n
-    
-    t
-    
-    M
-    
-    a
-    
-    r
-    
-    k
-    
-    e
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    u
-    
-    b
-    
-    e
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    m
-    
-    a
-    
-    r
-    
-    k
-    
-    e
-    
-    r
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    f
-    
-    i
-    
-    r
-    
-    s
-    
-    t
-    
-     
-    
-    s
-    
-    e
-    
-    g
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-    .
     """
     BaseSubEntMarker = None
     
@@ -8641,48 +2681,10 @@ class Polyline(DisposableWrapper):
     
     pass
 
-class PolylineCollection(DisposableWrapper):
+class PolylineCollection(object):
     """
     
-    P
-    
-    o
-    
-    l
-    
-    y
-    
-    l
-    
-    i
-    
-    n
-    
-    e
-    
-    C
-    
-    o
-    
-    l
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    PolylineCollection()
     """
     def Add(self):
         """
@@ -8717,85 +2719,49 @@ class PolylineCollection(DisposableWrapper):
     pass
 
 class PositionBehavior():
-    World
-    Viewport
-    Screen
-    ScreenLocalOrigin
-    WorldWithScreenOffset
+    World = None
+    Viewport = None
+    Screen = None
+    ScreenLocalOrigin = None
+    WorldWithScreenOffset = None
 
-class ProceduralTexture(MaterialTexture):
+class ProceduralTexture(object):
     """
     
-    P
-    
-    r
-    
-    o
-    
-    c
-    
-    e
-    
-    d
-    
-    u
-    
-    r
-    
-    a
-    
-    l
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    ProceduralTexture()
     """
 
     pass
 
 class ProceduralTextureType():
-    Wood
-    Marble
-    Generic
+    Wood = None
+    Marble = None
+    Generic = None
 
 class Projection():
-    InheritProjection
-    Planar
-    Box
-    Cylinder
-    Sphere
+    InheritProjection = None
+    Planar = None
+    Box = None
+    Cylinder = None
+    Sphere = None
 
 class RapidRTFilterType():
-    Box
-    Triangle
-    Gaussian
-    Lanczos
-    Mitchell
+    Box = None
+    Triangle = None
+    Gaussian = None
+    Lanczos = None
+    Mitchell = None
 
 class RapidRTLightingMode():
-    Simplified
-    Basic
-    Advanced
+    Simplified = None
+    Basic = None
+    Advanced = None
 
 class RapidRTQuitCondition():
-    ERenderLevel
-    ERenderTime
+    ERenderLevel = None
+    ERenderTime = None
 
-class RapidRTRenderSettingsTraits(NonEntityTraits):
+class RapidRTRenderSettingsTraits(object):
     """
     
     """
@@ -8830,7 +2796,7 @@ class RegenType():
     ShadedDisplay = 4
     StandardDisplay = 2
 
-class RenderEnvironmentTraits(NonEntityTraits):
+class RenderEnvironmentTraits(object):
     """
     
     """
@@ -8859,7 +2825,7 @@ class RenderEnvironmentTraits(NonEntityTraits):
     
     pass
 
-class RenderSettingsTraits(NonEntityTraits):
+class RenderSettingsTraits(object):
     """
     
     """
@@ -8883,60 +2849,26 @@ class RenderSettingsTraits(NonEntityTraits):
     pass
 
 class ScaleBehavior():
-    World
-    Viewport
-    Screen
-    ViewportLocalOrigin
-    ScreenLocalOrigin
+    World = None
+    Viewport = None
+    Screen = None
+    ViewportLocalOrigin = None
+    ScreenLocalOrigin = None
 
 class SelectionFlags():
-    None
-    SelectionIgnore
+    None = None
+    SelectionIgnore = None
 
 class ShadowFlags():
-    ShadowsCastAndReceive
-    ShadowsDoesNotCast
-    ShadowsDoesNotReceive
-    ShadowsIgnore
+    ShadowsCastAndReceive = None
+    ShadowsDoesNotCast = None
+    ShadowsDoesNotReceive = None
+    ShadowsIgnore = None
 
-class ShadowParameters(RXObject):
+class ShadowParameters(object):
     """
     
-    S
-    
-    h
-    
-    a
-    
-    d
-    
-    o
-    
-    w
-    
-    P
-    
-    a
-    
-    r
-    
-    a
-    
-    m
-    
-    e
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-    (
-    
-    )
+    ShadowParameters()
     """
     def Equals(self):
         """
@@ -8988,11 +2920,11 @@ class ShadowParameters(RXObject):
     pass
 
 class ShadowType():
-    RayTraced
-    Maps
-    Sampled
+    RayTraced = None
+    Maps = None
+    Sampled = None
 
-class SkyBackgroundTraits(NonEntityTraits):
+class SkyBackgroundTraits(object):
     """
     
     """
@@ -9000,38 +2932,10 @@ class SkyBackgroundTraits(NonEntityTraits):
     
     pass
 
-class SkyParameters(RXObject):
+class SkyParameters(object):
     """
     
-    S
-    
-    k
-    
-    y
-    
-    P
-    
-    a
-    
-    r
-    
-    a
-    
-    m
-    
-    e
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-    (
-    
-    )
+    SkyParameters()
     """
     def Equals(self):
         """
@@ -9100,7 +3004,7 @@ class SkyParameters(RXObject):
     
     pass
 
-class SolidBackgroundTraits(NonEntityTraits):
+class SolidBackgroundTraits(object):
     """
     
     """
@@ -9109,46 +3013,14 @@ class SolidBackgroundTraits(NonEntityTraits):
     pass
 
 class Source():
-    Scene
-    File
-    Procedural
+    Scene = None
+    File = None
+    Procedural = None
 
-class SpotLightTraits(StandardLightTraits):
+class SpotLightTraits(object):
     """
     
-    S
-    
-    p
-    
-    o
-    
-    t
-    
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    SpotLightTraits()
     """
     def SetHotspotAndFalloff(self):
         """
@@ -9185,50 +3057,10 @@ class SpotLightTraits(StandardLightTraits):
     
     pass
 
-class StandardLightTraits(LightTraits):
+class StandardLightTraits(object):
     """
     
-    S
-    
-    t
-    
-    a
-    
-    n
-    
-    d
-    
-    a
-    
-    r
-    
-    d
-    
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    StandardLightTraits()
     """
     Intensity = None
     
@@ -9240,42 +3072,10 @@ class StandardLightTraits(LightTraits):
     
     pass
 
-class SubEntityTraits(RXObject):
+class SubEntityTraits(object):
     """
     
-    S
-    
-    u
-    
-    b
-    
-    E
-    
-    n
-    
-    t
-    
-    i
-    
-    t
-    
-    y
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    SubEntityTraits()
     """
     def SetSelectionMarker(self):
         """
@@ -9342,555 +3142,15 @@ class SubEntityTraits(RXObject):
     
     pass
 
-class TextStyle(RXObject):
+class TextStyle(object):
     """
     
-    T
+    TextStyle()()
     
-    e
     
-    x
+    TextStyle(string, string, double, double, double, double, [MarshalAs(UnmanagedType.U1)] bool, [MarshalAs(UnmanagedType.U1)] bool, [MarshalAs(UnmanagedType.U1)] bool, [MarshalAs(UnmanagedType.U1)] bool, [MarshalAs(UnmanagedType.U1)] bool, [MarshalAs(Unman()
     
-    t
     
-    S
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    S
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-    ,
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    (
-    
-    )
     """
     def ExtentsBox(self):
         """
@@ -10001,62 +3261,16 @@ class TextStyle(RXObject):
     pass
 
 class Tiling():
-    InheritTiling
-    Tile
-    Crop
-    Clamp
-    Mirror
+    InheritTiling = None
+    Tile = None
+    Crop = None
+    Clamp = None
+    Mirror = None
 
-class ToneOperatorParameters(RXObject):
+class ToneOperatorParameters(object):
     """
     
-    T
-    
-    o
-    
-    n
-    
-    e
-    
-    O
-    
-    p
-    
-    e
-    
-    r
-    
-    a
-    
-    t
-    
-    o
-    
-    r
-    
-    P
-    
-    a
-    
-    r
-    
-    a
-    
-    m
-    
-    e
-    
-    t
-    
-    e
-    
-    r
-    
-    s
-    
-    (
-    
-    )
+    ToneOperatorParameters()
     """
     def CopyFrom(self):
         """
@@ -10113,15 +3327,15 @@ class ToneOperatorParameters(RXObject):
     pass
 
 class TransientDrawingMode():
-    Main
-    Sprite
-    DirectShortTerm
-    Highlight
-    DirectTopmost
-    Contrast
-    Count
+    Main = None
+    Sprite = None
+    DirectShortTerm = None
+    Highlight = None
+    DirectTopmost = None
+    Contrast = None
+    Count = None
 
-class TransientManager(DisposableWrapper):
+class TransientManager(object):
     """
     
     """
@@ -10246,15 +3460,15 @@ class TransientManager(DisposableWrapper):
     pass
 
 class TransparencyMode():
-    TransparencyOff
-    Transparency1Bit
-    Transparency8Bit
+    TransparencyOff = None
+    Transparency1Bit = None
+    Transparency8Bit = None
 
 class VSDisplayShadowType():
-    None
-    GroundPlane
-    Full
-    FullAndGround
+    None = None
+    GroundPlane = None
+    Full = None
+    FullAndGround = None
 
 class VSDisplayStyles():
     BackgroundsFlag = 1
@@ -10282,9 +3496,9 @@ class VSEdgeLinePattern():
     SparseDot = 11
 
 class VSEdgeModel():
-    NoEdges
-    Isolines
-    FacetEdges
+    NoEdges = None
+    Isolines = None
+    FacetEdges = None
 
 class VSEdgeModifiers():
     AlwaysOnTopFlag = 0x40
@@ -10304,40 +3518,40 @@ class VSEdgeStyles():
     VisibleFlag = 1
 
 class VSFaceColorMode():
-    None
-    ObjectColor
-    BackgroundColor
-    Mono
-    Tint
-    Desaturate
+    None = None
+    ObjectColor = None
+    BackgroundColor = None
+    Mono = None
+    Tint = None
+    Desaturate = None
 
 class VSFaceLightingModel():
-    Invisible
-    Constant
-    Phong
-    Gooch
+    Invisible = None
+    Constant = None
+    Phong = None
+    Gooch = None
 
 class VSFaceLightingQuality():
-    NoLighting
-    PerFaceLighting
-    PerVertexLighting
-    PerPixelLighting
+    NoLighting = None
+    PerFaceLighting = None
+    PerVertexLighting = None
+    PerPixelLighting = None
 
 class VSFaceModifiers():
-    None
-    FaceOpacityFlag
-    SpecularFlag
+    None = None
+    FaceOpacityFlag = None
+    SpecularFlag = None
 
 class VariantType():
-    Undefined
-    Boolean
-    Int
-    Double
-    Color
-    String
-    Table
+    Undefined = None
+    Boolean = None
+    Int = None
+    Double = None
+    Color = None
+    String = None
+    Table = None
 
-class VertexData(public sealed class VertexData):
+class VertexData(object):
     """
     
     """
@@ -10404,32 +3618,12 @@ class VertexData(public sealed class VertexData):
     
     pass
 
-class Viewport(RXObject):
+class Viewport(object):
     """
     
-    V
+    Viewport()()
     
-    i
     
-    e
-    
-    w
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def DoInversePerspective(self):
         """
@@ -10517,40 +3711,12 @@ class Viewport(RXObject):
     
     pass
 
-class ViewportDraw(CommonDraw):
+class ViewportDraw(object):
     """
     
-    V
+    ViewportDraw()()
     
-    i
     
-    e
-    
-    w
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    D
-    
-    r
-    
-    a
-    
-    w
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def IsValidId(self):
         """
@@ -10575,48 +3741,12 @@ class ViewportDraw(CommonDraw):
     
     pass
 
-class ViewportGeometry(Autodesk.AutoCAD.GraphicsInterface.Geometry):
+class ViewportGeometry(object):
     """
     
-    V
+    ViewportGeometry()()
     
-    i
     
-    e
-    
-    w
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    G
-    
-    e
-    
-    o
-    
-    m
-    
-    e
-    
-    t
-    
-    r
-    
-    y
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def DeviceContextPolygon(self):
         """
@@ -10714,40 +3844,10 @@ class ViewportGeometry(Autodesk.AutoCAD.GraphicsInterface.Geometry):
     
     pass
 
-class ViewportTraits(DrawableTraits):
+class ViewportTraits(object):
     """
     
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    p
-    
-    o
-    
-    r
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    ViewportTraits()
     """
     AmbientLightColor = None
     
@@ -10777,247 +3877,13 @@ class ViewportTraits(DrawableTraits):
     
     pass
 
-class VisualStyle(RXObject):
+class VisualStyle(object):
     """
     
-    V
+    VisualStyle()
+        Autodesk.AutoCAD.GraphicsInterface.VisualStyleType type : Input the type of visual style to configure
     
-    i
     
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-    S
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-    (
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    G
-    
-    r
-    
-    a
-    
-    p
-    
-    h
-    
-    i
-    
-    c
-    
-    s
-    
-    I
-    
-    n
-    
-    t
-    
-    e
-    
-    r
-    
-    f
-    
-    a
-    
-    c
-    
-    e
-    
-    .
-    
-    V
-    
-    i
-    
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-    S
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    v
-    
-    i
-    
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-     
-    
-    s
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    e
     """
     def GetPropertyType(self):
         """
@@ -11230,7 +4096,7 @@ class VisualStyleProperty():
     UseDrawOrder = 0x1c
     ViewportTransparency = 0x1d
 
-class VisualStyleTraits(DrawableTraits):
+class VisualStyleTraits(object):
     """
     
     """
@@ -11274,40 +4140,10 @@ class WebFileType():
     TypeB = 2
     TypeC = 1
 
-class WebLightTraits(PointLightTraits):
+class WebLightTraits(object):
     """
     
-    W
-    
-    e
-    
-    b
-    
-    L
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    T
-    
-    r
-    
-    a
-    
-    i
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    WebLightTraits()
     """
     WebFile = None
     
@@ -11329,39 +4165,15 @@ class WebLightTraits(PointLightTraits):
     pass
 
 class WebSymmetry():
-    NoSymmetry
-    SingleSymmetry
-    DoubleSymmetry
-    AxialSymmetry
+    NoSymmetry = None
+    SingleSymmetry = None
+    DoubleSymmetry = None
+    AxialSymmetry = None
 
-class WoodTexture(ProceduralTexture, ICloneable):
+class WoodTexture(object):
     """
     
-    W
-    
-    o
-    
-    o
-    
-    d
-    
-    T
-    
-    e
-    
-    x
-    
-    t
-    
-    u
-    
-    r
-    
-    e
-    
-    (
-    
-    )
+    WoodTexture()
     """
     def Clone(self):
         """
@@ -11415,42 +4227,12 @@ class WoodTexture(ProceduralTexture, ICloneable):
     
     pass
 
-class WorldGeometry(Autodesk.AutoCAD.GraphicsInterface.Geometry):
+class WorldGeometry(object):
     """
     
-    W
+    WorldGeometry()()
     
-    o
     
-    r
-    
-    l
-    
-    d
-    
-    G
-    
-    e
-    
-    o
-    
-    m
-    
-    e
-    
-    t
-    
-    r
-    
-    y
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def SetExtents(self):
         """

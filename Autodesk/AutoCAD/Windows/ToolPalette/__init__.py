@@ -3,66 +3,22 @@ class AccessRight():
     ReadOnlyFile = 4
     ReadWrite = 2
 
-class Catalog(Category):
+class Catalog(object):
     """
     
-    C
+    Catalog()()
     
-    a
     
-    t
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
 
     pass
 
-class CatalogItem(DisposableWrapper):
+class CatalogItem(object):
     """
     
-    C
+    CatalogItem()()
     
-    a
     
-    t
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def AddChild(self):
         """
@@ -541,7 +497,7 @@ class CatalogItem(DisposableWrapper):
     
     pass
 
-class CatalogItemCollection(ICollection, IEnumerable):
+class CatalogItemCollection(object):
     """
     
     """
@@ -613,7 +569,7 @@ class CatalogItemType():
     ItemTool = 1
     ItemUnknown = 0
 
-class CatalogSet(DisposableWrapper):
+class CatalogSet(object):
     """
     
     """
@@ -664,32 +620,12 @@ class CatalogTypeFlags():
     ShapeCatalog = 4
     StockToolCatalog = 2
 
-class Category(CatalogItem):
+class Category(object):
     """
     
-    C
+    Category()()
     
-    a
     
-    t
-    
-    e
-    
-    g
-    
-    o
-    
-    r
-    
-    y
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
 
     pass
@@ -703,40 +639,10 @@ class ContextMenuMode():
     ContextMenuPaletteTool = 0
     ContextNone = -1
 
-class CustomToolBase(IDisposable, IAcadTool, IAcadStockTool, Autodesk.AutoCAD.Windows.ToolPalette.IDropTarget, IAcPiPropertyUnspecified, IAcPiPropertyDisplay, Autodesk.AutoCAD.Windows.ToolPalette.IOPMPropertyExtension, IAcadToolContextMenu, Autodesk.AutoCAD.Windows.ToolPalette.IPerPropertyBrowsing, IOPMPropertyDialog, IAcadToolFlyoutShape):
+class CustomToolBase(object):
     """
     
-    C
-    
-    u
-    
-    s
-    
-    t
-    
-    o
-    
-    m
-    
-    T
-    
-    o
-    
-    o
-    
-    l
-    
-    B
-    
-    a
-    
-    s
-    
-    e
-    
-    (
-    
-    )
+    CustomToolBase()
     """
     def BeginEdit(self):
         """
@@ -1469,160 +1375,14 @@ class DrawImageOption():
     Shadow = 8
 
 class ExecutionContext():
-    LeftButtonClicked
-    DroppedInDrawing
+    LeftButtonClicked = None
+    DroppedInDrawing = None
 
-class FlyoutEntryAttribute(Attribute):
+class FlyoutEntryAttribute(object):
     """
     
-    F
-    
-    l
-    
-    y
-    
-    o
-    
-    u
-    
-    t
-    
-    E
-    
-    n
-    
-    t
-    
-    r
-    
-    y
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    o
-    
-    p
-    
-    t
-    
-    (
-    
-    I
-    
-    s
-    
-    L
-    
-    o
-    
-    n
-    
-    g
-    
-    )
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-    I
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-     
-    
-    I
-    
-    D
+    FlyoutEntryAttribute
+        int modopt(IsLong) dispatchId : Input dispatch ID
     """
     DispId = None
     
@@ -1649,7 +1409,7 @@ def GetNextChild(self):
     """
     pass
 
-class IAcPiCategorizeProperties(public interface IAcPiCategorizeProperties):
+class IAcPiCategorizeProperties(object):
     """
     
     """
@@ -1748,7 +1508,7 @@ class IAcPiCategorizeProperties(public interface IAcPiCategorizeProperties):
     
     pass
 
-class IAcPiPropertyDisplay(public interface IAcPiPropertyDisplay):
+class IAcPiPropertyDisplay(object):
     """
     
     """
@@ -1824,7 +1584,7 @@ class IAcPiPropertyDisplay(public interface IAcPiPropertyDisplay):
     
     pass
 
-class IAcPiPropertyUnspecified(public interface IAcPiPropertyUnspecified):
+class IAcPiPropertyUnspecified(object):
     """
     
     """
@@ -1852,7 +1612,7 @@ class IAcPiPropertyUnspecified(public interface IAcPiPropertyUnspecified):
     
     pass
 
-class IAcadStockTool(public interface IAcadStockTool):
+class IAcadStockTool(object):
     """
     
     """
@@ -1865,7 +1625,7 @@ class IAcadStockTool(public interface IAcadStockTool):
     
     pass
 
-class IAcadTool(public interface IAcadTool):
+class IAcadTool(object):
     """
     
     """
@@ -2157,7 +1917,7 @@ class IAcadTool(public interface IAcadTool):
     
     pass
 
-class IAcadToolContextMenu(public interface IAcadToolContextMenu):
+class IAcadToolContextMenu(object):
     """
     
     """
@@ -2210,7 +1970,7 @@ class IAcadToolContextMenu(public interface IAcadToolContextMenu):
     
     pass
 
-class IAcadToolDragSource(public interface IAcadToolDragSource):
+class IAcadToolDragSource(object):
     """
     
     """
@@ -2310,7 +2070,7 @@ class IAcadToolDragSource(public interface IAcadToolDragSource):
     
     pass
 
-class IAcadToolDropTarget(public interface IAcadToolDropTarget):
+class IAcadToolDropTarget(object):
     """
     
     """
@@ -2399,7 +2159,7 @@ class IAcadToolDropTarget(public interface IAcadToolDropTarget):
     
     pass
 
-class IAcadToolFlyoutShape(public interface IAcadToolFlyoutShape):
+class IAcadToolFlyoutShape(object):
     """
     
     """
@@ -2414,7 +2174,7 @@ class IAcadToolFlyoutShape(public interface IAcadToolFlyoutShape):
     
     pass
 
-class IAcadToolProperties(public interface IAcadToolProperties):
+class IAcadToolProperties(object):
     """
     
     """
@@ -2552,7 +2312,7 @@ class IAcadToolProperties(public interface IAcadToolProperties):
     
     pass
 
-class IDropTarget(public interface IDropTarget):
+class IDropTarget(object):
     """
     
     """
@@ -2619,7 +2379,7 @@ class IDropTarget(public interface IDropTarget):
     
     pass
 
-class IOPMPropertyDialog(public interface IOPMPropertyDialog):
+class IOPMPropertyDialog(object):
     """
     
     """
@@ -2637,7 +2397,7 @@ class IOPMPropertyDialog(public interface IOPMPropertyDialog):
     
     pass
 
-class IOPMPropertyExtension(public interface IOPMPropertyExtension):
+class IOPMPropertyExtension(object):
     """
     
     """
@@ -2681,7 +2441,7 @@ class IOPMPropertyExtension(public interface IOPMPropertyExtension):
     
     pass
 
-class IPerPropertyBrowsing(public interface IPerPropertyBrowsing):
+class IPerPropertyBrowsing(object):
     """
     
     """
@@ -2744,26 +2504,12 @@ class IPerPropertyBrowsing(public interface IPerPropertyBrowsing):
     
     pass
 
-class Image(DisposableWrapper):
+class Image(object):
     """
     
-    I
+    Image()()
     
-    m
     
-    a
-    
-    g
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def ConvertTo(self):
         """
@@ -2865,34 +2611,12 @@ class Image(DisposableWrapper):
     
     pass
 
-class ImageInfo(public sealed class ImageInfo):
+class ImageInfo(object):
     """
     
-    I
+    ImageInfo()()
     
-    m
     
-    a
-    
-    g
-    
-    e
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     ResourceFile = None
     
@@ -2904,7 +2628,7 @@ class ImageInfo(public sealed class ImageInfo):
     
     pass
 
-class ImageList(DisposableWrapper):
+class ImageList(object):
     """
     
     """
@@ -3027,9 +2751,9 @@ class ImageList(DisposableWrapper):
     pass
 
 class ImageOptionFlags():
-    None
-    RenderBitmapOpaque
-    UserOverride
+    None = None
+    RenderBitmapOpaque = None
+    UserOverride = None
 
 class ImageType():
     Bitmap = 1
@@ -3054,1234 +2778,45 @@ class LoadFlags():
     LoadImages = 2
     LoadLinks = 1
 
-class POINTL(public struct POINTL {
-}):
+class POINTL(object):
     """
     
     """
 
     pass
 
-class Package(CatalogItem):
+class Package(object):
     """
     
-    P
+    Package()()
     
-    a
     
-    c
-    
-    k
-    
-    a
-    
-    g
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
 
     pass
 
-class Palette(Package):
+class Palette(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    (
-    
-    )
+    Palette()
     """
 
     pass
 
-class PerPropertyBrowsingEntryAttribute(Attribute):
+class PerPropertyBrowsingEntryAttribute(object):
     """
     
-    P
-    
-    e
-    
-    r
-    
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    B
-    
-    r
-    
-    o
-    
-    w
-    
-    s
-    
-    i
-    
-    n
-    
-    g
-    
-    E
-    
-    n
-    
-    t
-    
-    r
-    
-    y
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    o
-    
-    p
-    
-    t
-    
-    (
-    
-    I
-    
-    s
-    
-    L
-    
-    o
-    
-    n
-    
-    g
-    
-    )
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-    I
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    a
-    
-    t
-    
-    c
-    
-    h
-    
-     
-    
-    I
-    
-    D
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    a
-    
-    m
-    
-    I
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    a
-    
-    m
-    
-     
-    
-    I
-    
-    D
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    l
-    
-    e
-    
-    f
-    
-    t
-    
-    I
-    
-    c
-    
-    o
-    
-    n
-    
-    R
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    l
-    
-    e
-    
-    f
-    
-    t
-    
-     
-    
-    i
-    
-    c
-    
-    o
-    
-    n
-    
-     
-    
-    r
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    l
-    
-    e
-    
-    f
-    
-    t
-    
-    I
-    
-    c
-    
-    o
-    
-    n
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    l
-    
-    e
-    
-    f
-    
-    t
-    
-     
-    
-    i
-    
-    c
-    
-    o
-    
-    n
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    e
-    
-    l
-    
-    l
-    
-    i
-    
-    p
-    
-    s
-    
-    i
-    
-    s
-    
-    B
-    
-    m
-    
-    p
-    
-    R
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    l
-    
-    l
-    
-    i
-    
-    p
-    
-    s
-    
-    i
-    
-    s
-    
-     
-    
-    B
-    
-    M
-    
-    P
-    
-     
-    
-    r
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    e
-    
-    l
-    
-    l
-    
-    i
-    
-    p
-    
-    s
-    
-    i
-    
-    s
-    
-    B
-    
-    m
-    
-    p
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    l
-    
-    l
-    
-    i
-    
-    p
-    
-    s
-    
-    i
-    
-    s
-    
-     
-    
-    B
-    
-    M
-    
-    P
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    o
-    
-    p
-    
-    t
-    
-    (
-    
-    I
-    
-    s
-    
-    L
-    
-    o
-    
-    n
-    
-    g
-    
-    )
-    
-     
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    i
-    
-    f
-    
-     
-    
-    i
-    
-    n
-    
-     
-    
-    f
-    
-    u
-    
-    l
-    
-    l
-    
-     
-    
-    v
-    
-    i
-    
-    e
-    
-    w
-    
-     
-    
-    o
-    
-    r
-    
-     
-    
-    n
-    
-    o
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    o
-    
-    p
-    
-    t
-    
-    (
-    
-    I
-    
-    s
-    
-    L
-    
-    o
-    
-    n
-    
-    g
-    
-    )
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-    e
-    
-    g
-    
-    r
-    
-    a
-    
-    l
-    
-    H
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-    e
-    
-    g
-    
-    r
-    
-    a
-    
-    l
-    
-     
-    
-    h
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    m
-    
-    o
-    
-    d
-    
-    o
-    
-    p
-    
-    t
-    
-    (
-    
-    I
-    
-    s
-    
-    L
-    
-    o
-    
-    n
-    
-    g
-    
-    )
-    
-     
-    
-    w
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    w
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
+    PerPropertyBrowsingEntryAttribute
+        int modopt(IsLong) dispatchId : Input dispatch ID
+        string programId : Input program ID
+        string leftIconResource : Input left icon resource
+        int leftIconType : Input left icon type
+        string ellipsisBmpResource : Input ellipsis BMP resource
+        int ellipsisBmpType : Input ellipsis BMP type
+        int modopt(IsLong) textColor : Input color of text
+        [MarshalAs(UnmanagedType.U1)] bool fullView : Input if in full view or not
+        int modopt(IsLong) integralHeight : Input integral height
+        int modopt(IsLong) weight : Input weight
     """
     EllipsisBmpResource = None
     
@@ -4312,11 +2847,11 @@ class RefreshFlags():
     RefreshStockTool = 8
 
 class ReturnStatus():
-    ContextMenuShow
-    ContextMenuHide
-    ExecutionCanceled
-    ExecutionCancelRejected
-    ContextMenuUpdatePalette
+    ContextMenuShow = None
+    ContextMenuHide = None
+    ExecutionCanceled = None
+    ExecutionCancelRejected = None
+    ContextMenuUpdatePalette = None
 
 class SaveFlags():
     SaveAnsi = 0x20
@@ -4326,109 +2861,11 @@ class SaveFlags():
     SaveLinksAsLinks = 1
     SaveOverlayImages = 0x10
 
-class Scheme(DisposableWrapper):
+class Scheme(object):
     """
     
-    S
-    
-    c
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    s
-    
-    c
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    .
+    Scheme
+        string name : Input name of the scheme.
     """
     def Find(self):
         """
@@ -4499,7 +2936,7 @@ class Scheme(DisposableWrapper):
     
     pass
 
-class SchemeCollection(ICollection, IEnumerable):
+class SchemeCollection(object):
     """
     
     """
@@ -4562,30 +2999,10 @@ class SchemeCollection(ICollection, IEnumerable):
     
     pass
 
-class StockTool(CatalogItem):
+class StockTool(object):
     """
     
-    S
-    
-    t
-    
-    o
-    
-    c
-    
-    k
-    
-    T
-    
-    o
-    
-    o
-    
-    l
-    
-    (
-    
-    )
+    StockTool()
     """
     def CreateAcadStockTool(self):
         """
@@ -4628,567 +3045,19 @@ class StockTool(CatalogItem):
     
     pass
 
-class TargetProductInfo(public sealed class TargetProductInfo):
+class TargetProductInfo(object):
     """
     
-    T
+    TargetProductInfo()()
     
-    a
     
-    r
+    TargetProductInfo(string, string, Version, Version)
+        string productName : Input product name
+        string localeId : Input localized ID
+        Version minimumVersion : Input minimum version number
+        Version maximumVersion : Input maximum version number
     
-    g
     
-    e
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    d
-    
-    u
-    
-    c
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    T
-    
-    a
-    
-    r
-    
-    g
-    
-    e
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    d
-    
-    u
-    
-    c
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-    ,
-    
-     
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    d
-    
-    u
-    
-    c
-    
-    t
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    d
-    
-    u
-    
-    c
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    l
-    
-    o
-    
-    c
-    
-    a
-    
-    l
-    
-    e
-    
-    I
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    l
-    
-    o
-    
-    c
-    
-    a
-    
-    l
-    
-    i
-    
-    z
-    
-    e
-    
-    d
-    
-     
-    
-    I
-    
-    D
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    m
-    
-    i
-    
-    n
-    
-    i
-    
-    m
-    
-    u
-    
-    m
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    i
-    
-    n
-    
-    i
-    
-    m
-    
-    u
-    
-    m
-    
-     
-    
-    v
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    n
-    
-    u
-    
-    m
-    
-    b
-    
-    e
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    m
-    
-    a
-    
-    x
-    
-    i
-    
-    m
-    
-    u
-    
-    m
-    
-    V
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    a
-    
-    x
-    
-    i
-    
-    m
-    
-    u
-    
-    m
-    
-     
-    
-    v
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    n
-    
-    u
-    
-    m
-    
-    b
-    
-    e
-    
-    r
     """
     LocaleId = None
     
@@ -5203,24 +3072,12 @@ class TargetProductInfo(public sealed class TargetProductInfo):
     
     pass
 
-class Tool(CatalogItem):
+class Tool(object):
     """
     
-    T
+    Tool()()
     
-    o
     
-    o
-    
-    l
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def CreateAcadTool(self):
         """
@@ -5297,210 +3154,12 @@ class Tool(CatalogItem):
     
     pass
 
-class ToolAttribute(Attribute):
+class ToolAttribute(object):
     """
     
-    T
-    
-    o
-    
-    o
-    
-    l
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-     
-    
-    l
-    
-    o
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
+    ToolAttribute
+        string toolName : Input tool name
+        string toolImage : Input tool image location
     """
     ToolImage = None
     
@@ -5515,48 +3174,10 @@ class ToolEditFlags():
     EditMultiple = 4
     EditNone = 2
 
-class ToolPaletteManager(DisposableWrapper):
+class ToolPaletteManager(object):
     """
     
-    T
-    
-    o
-    
-    o
-    
-    l
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    M
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    ToolPaletteManager()
     """
     def GetShapePackage(self):
         """

@@ -1,4 +1,4 @@
-class UniqueString(DisposableWrapper):
+class UniqueString(object):
     """
     
     """

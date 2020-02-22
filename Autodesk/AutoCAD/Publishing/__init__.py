@@ -1,4 +1,4 @@
-class AboutToBeginBackgroundPublishingEventArgs(EventArgs):
+class AboutToBeginBackgroundPublishingEventArgs(object):
     """
     
     """
@@ -32,7 +32,7 @@ class AboutToBeginBackgroundPublishingEventArgs(EventArgs):
     
     pass
 
-class AboutToBeginPublishingEventArgs(EventArgs):
+class AboutToBeginPublishingEventArgs(object):
     """
     
     """
@@ -69,7 +69,7 @@ class AboutToBeginPublishingEventArgs(EventArgs):
     
     pass
 
-class BeginAggregationEventArgs(EventArgs):
+class BeginAggregationEventArgs(object):
     """
     
     """
@@ -103,7 +103,7 @@ class BeginAggregationEventArgs(EventArgs):
     
     pass
 
-class BeginPublishingSheetEventArgs(EventArgs):
+class BeginPublishingSheetEventArgs(object):
     """
     
     """
@@ -117,62 +117,12 @@ class BeginPublishingSheetEventArgs(EventArgs):
     
     pass
 
-class Dwf3dNavigationTreeNode(RXObject):
+class Dwf3dNavigationTreeNode(object):
     """
     
-    D
+    Dwf3dNavigationTreeNode()()
     
-    w
     
-    f
-    
-    3
-    
-    d
-    
-    N
-    
-    a
-    
-    v
-    
-    i
-    
-    g
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    T
-    
-    r
-    
-    e
-    
-    e
-    
-    N
-    
-    o
-    
-    d
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def GetKeys(self):
         """
@@ -205,7 +155,7 @@ class Dwf3dNavigationTreeNode(RXObject):
     
     pass
 
-class Dwf3dNavigationTreeNodeCollection(public sealed class Dwf3dNavigationTreeNodeCollection):
+class Dwf3dNavigationTreeNodeCollection(object):
     """
     
     """
@@ -233,30 +183,12 @@ class Dwf3dNavigationTreeNodeCollection(public sealed class Dwf3dNavigationTreeN
     
     pass
 
-class DwfNode(public sealed class DwfNode):
+class DwfNode(object):
     """
     
-    D
+    DwfNode()()
     
-    w
     
-    f
-    
-    N
-    
-    o
-    
-    d
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     NodeId = None
     
@@ -265,44 +197,12 @@ class DwfNode(public sealed class DwfNode):
     
     pass
 
-class EPlotAttribute(public sealed class EPlotAttribute):
+class EPlotAttribute(object):
     """
     
-    E
+    EPlotAttribute()()
     
-    P
     
-    l
-    
-    o
-    
-    t
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     Name = None
     
@@ -317,7 +217,7 @@ class EPlotAttribute(public sealed class EPlotAttribute):
     
     pass
 
-class EPlotAttributeCollection(ICollection, IEnumerable):
+class EPlotAttributeCollection(object):
     """
     
     """
@@ -370,42 +270,12 @@ class EPlotAttributeCollection(ICollection, IEnumerable):
     
     pass
 
-class EPlotProperty(public sealed class EPlotProperty):
+class EPlotProperty(object):
     """
     
-    E
+    EPlotProperty()()
     
-    P
     
-    l
-    
-    o
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def AddEplotAttribute(self):
         """
@@ -455,48 +325,12 @@ class EPlotProperty(public sealed class EPlotProperty):
     
     pass
 
-class EPlotPropertyBag(public sealed class EPlotPropertyBag):
+class EPlotPropertyBag(object):
     """
     
-    E
+    EPlotPropertyBag()()
     
-    P
     
-    l
-    
-    o
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    B
-    
-    a
-    
-    g
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     Id = None
     
@@ -514,7 +348,7 @@ class EPlotPropertyBag(public sealed class EPlotPropertyBag):
     
     pass
 
-class EPlotPropertyCollection(ICollection, IEnumerable):
+class EPlotPropertyCollection(object):
     """
     
     """
@@ -567,42 +401,12 @@ class EPlotPropertyCollection(ICollection, IEnumerable):
     
     pass
 
-class EPlotResource(public sealed class EPlotResource):
+class EPlotResource(object):
     """
     
-    E
+    EPlotResource()()
     
-    P
     
-    l
-    
-    o
-    
-    t
-    
-    R
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     Mime = None
     
@@ -614,8 +418,7 @@ class EPlotResource(public sealed class EPlotResource):
     
     pass
 
-class OptionsDialogResult(public struct OptionsDialogResult {
-}):
+class OptionsDialogResult(object):
     """
     
     """
@@ -629,7 +432,7 @@ class OptionsDialogResult(public struct OptionsDialogResult {
     
     pass
 
-class PublishEntityEventArgs(EventArgs):
+class PublishEntityEventArgs(object):
     """
     
     """
@@ -793,7 +596,7 @@ class PublishEntityEventArgs(EventArgs):
     
     pass
 
-class PublishEventArgs(EventArgs):
+class PublishEventArgs(object):
     """
     
     """
@@ -810,7 +613,7 @@ class PublishEventArgs(EventArgs):
     
     pass
 
-class PublishSheetEventArgs(EventArgs):
+class PublishSheetEventArgs(object):
     """
     
     """
@@ -994,7 +797,7 @@ class PublishSheetEventArgs(EventArgs):
     
     pass
 
-class PublishUIEventArgs(EventArgs):
+class PublishUIEventArgs(object):
     """
     
     """
@@ -1031,7 +834,7 @@ class PublishUIEventArgs(EventArgs):
     
     pass
 
-class Publisher(MarshalByRefObject):
+class Publisher(object):
     """
     
     """

@@ -8,60 +8,12 @@ class AppPlotStatus():
     PlottingMessage = -2
     ViewPlotLog = 1
 
-class BeginDocumentEventArgs(EventArgs):
+class BeginDocumentEventArgs(object):
     """
     
-    B
+    BeginDocumentEventArgs()()
     
-    e
     
-    g
-    
-    i
-    
-    n
-    
-    D
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     DocumentName = None
     
@@ -76,52 +28,12 @@ class BeginDocumentEventArgs(EventArgs):
     
     pass
 
-class BeginPageEventArgs(EventArgs):
+class BeginPageEventArgs(object):
     """
     
-    B
+    BeginPageEventArgs()()
     
-    e
     
-    g
-    
-    i
-    
-    n
-    
-    P
-    
-    a
-    
-    g
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     LastPage = None
     
@@ -133,362 +45,14 @@ class BeginPageEventArgs(EventArgs):
     
     pass
 
-class BeginPlotEventArgs(EventArgs):
+class BeginPlotEventArgs(object):
     """
     
-    B
+    BeginPlotEventArgs()
+        Autodesk.AutoCAD.PlottingServices.PlotProgress progress : Input plot progress
+        Autodesk.AutoCAD.PlottingServices.PlotType plotType : Input plot type
     
-    e
     
-    g
-    
-    i
-    
-    n
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-    S
-    
-    e
-    
-    r
-    
-    v
-    
-    i
-    
-    c
-    
-    e
-    
-    s
-    
-    .
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    e
-    
-    s
-    
-    s
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    e
-    
-    s
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    l
-    
-    o
-    
-    t
-    
-     
-    
-    p
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    e
-    
-    s
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    d
-    
-    e
-    
-    s
-    
-    k
-    
-    .
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
-    
-    .
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    t
-    
-    i
-    
-    n
-    
-    g
-    
-    S
-    
-    e
-    
-    r
-    
-    v
-    
-    i
-    
-    c
-    
-    e
-    
-    s
-    
-    .
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    p
-    
-    l
-    
-    o
-    
-    t
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    l
-    
-    o
-    
-    t
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
     """
     PlotProgress = None
     
@@ -520,26 +84,10 @@ class DeviceType():
     SystemPrinter = 0
     Uninitialized = -1
 
-class DsdData(RXObject):
+class DsdData(object):
     """
     
-    D
-    
-    s
-    
-    d
-    
-    D
-    
-    a
-    
-    t
-    
-    a
-    
-    (
-    
-    )
+    DsdData()
     """
     def Copy(self):
         """
@@ -659,28 +207,10 @@ class DsdData(RXObject):
     
     pass
 
-class DsdEntry(RXObject):
+class DsdEntry(object):
     """
     
-    D
-    
-    s
-    
-    d
-    
-    E
-    
-    n
-    
-    t
-    
-    r
-    
-    y
-    
-    (
-    
-    )
+    DsdEntry()
     """
     def Copy(self):
         """
@@ -709,48 +239,10 @@ class DsdEntry(RXObject):
     
     pass
 
-class DsdEntryCollection(DisposableWrapper, ICollection):
+class DsdEntryCollection(object):
     """
     
-    D
-    
-    s
-    
-    d
-    
-    E
-    
-    n
-    
-    t
-    
-    r
-    
-    y
-    
-    C
-    
-    o
-    
-    l
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    (
-    
-    )
+    DsdEntryCollection()
     """
     def Add(self):
         """
@@ -818,7 +310,7 @@ class DsdEntryCollection(DisposableWrapper, ICollection):
     
     pass
 
-class Dwf3dOptions(public class Dwf3dOptions):
+class Dwf3dOptions(object):
     """
     
     """
@@ -829,467 +321,37 @@ class Dwf3dOptions(public class Dwf3dOptions):
     
     pass
 
-class EndDocumentEventArgs(EventArgs):
+class EndDocumentEventArgs(object):
     """
     
-    E
-    
-    n
-    
-    d
-    
-    D
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    C
-    
-    a
-    
-    n
-    
-    c
-    
-    e
-    
-    l
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
+    EndDocumentEventArgs
+        PlotCancelStatus status : Input status of document
     """
     Status = None
     
     pass
 
-class EndPageEventArgs(EventArgs):
+class EndPageEventArgs(object):
     """
     
-    E
-    
-    n
-    
-    d
-    
-    P
-    
-    a
-    
-    g
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    S
-    
-    h
-    
-    e
-    
-    e
-    
-    t
-    
-    C
-    
-    a
-    
-    n
-    
-    c
-    
-    e
-    
-    l
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
+    EndPageEventArgs
+        SheetCancelStatus status : Input status of document
     """
     Status = None
     
     pass
 
-class EndPlotEventArgs(EventArgs):
+class EndPlotEventArgs(object):
     """
     
-    E
-    
-    n
-    
-    d
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    C
-    
-    a
-    
-    n
-    
-    c
-    
-    e
-    
-    l
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
+    EndPlotEventArgs
+        PlotCancelStatus status : Input status of document
     """
     Status = None
     
     pass
 
-class HostAppServices(public sealed class HostAppServices):
+class HostAppServices(object):
     """
     
     """
@@ -1316,398 +378,13 @@ class MatchingPolicy():
     MatchEnabledCustom = 3
     MatchEnabledTemporaryCustom = 4
 
-class MediaBounds(public struct MediaBounds {
-}):
+class MediaBounds(object):
     """
     
-    M
-    
-    e
-    
-    d
-    
-    i
-    
-    a
-    
-    B
-    
-    o
-    
-    u
-    
-    n
-    
-    d
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    2
-    
-    d
-    
-     
-    
-    p
-    
-    a
-    
-    g
-    
-    e
-    
-    S
-    
-    i
-    
-    z
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    s
-    
-    i
-    
-    z
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    p
-    
-    a
-    
-    g
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    2
-    
-    d
-    
-     
-    
-    l
-    
-    o
-    
-    w
-    
-    e
-    
-    r
-    
-    L
-    
-    e
-    
-    f
-    
-    t
-    
-    P
-    
-    r
-    
-    i
-    
-    n
-    
-    t
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-    A
-    
-    r
-    
-    e
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    l
-    
-    o
-    
-    w
-    
-    e
-    
-    r
-    
-     
-    
-    l
-    
-    e
-    
-    f
-    
-    t
-    
-     
-    
-    p
-    
-    r
-    
-    i
-    
-    n
-    
-    t
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    a
-    
-    r
-    
-    e
-    
-    a
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    o
-    
-    i
-    
-    n
-    
-    t
-    
-    2
-    
-    d
-    
-     
-    
-    u
-    
-    p
-    
-    p
-    
-    e
-    
-    r
-    
-    R
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    P
-    
-    r
-    
-    i
-    
-    n
-    
-    t
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-    A
-    
-    r
-    
-    e
-    
-    a
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    u
-    
-    p
-    
-    p
-    
-    e
-    
-    r
-    
-     
-    
-    r
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-     
-    
-    p
-    
-    r
-    
-    i
-    
-    n
-    
-    t
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    a
-    
-    r
-    
-    e
-    
-    a
+    MediaBounds
+        Point2d pageSize : Input size of page
+        Point2d lowerLeftPrintableArea : Input lower left printable area
+        Point2d upperRightPrintableArea : Input upper right printable area
     """
     def Equals(self):
         """
@@ -1794,11 +471,11 @@ class MergeStatus():
     ShowPlotStyles = 0x100
 
 class PlotCancelStatus():
-    Continue
-    CanceledByCaller
-    CanceledByCancelAllButton
+    Continue = None
+    CanceledByCaller = None
+    CanceledByCancelAllButton = None
 
-class PlotConfig(RXObject):
+class PlotConfig(object):
     """
     
     """
@@ -1877,40 +554,10 @@ class PlotConfig(RXObject):
     
     pass
 
-class PlotConfigInfo(RXObject):
+class PlotConfigInfo(object):
     """
     
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    C
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    PlotConfigInfo()
     """
     def Clone(self):
         """
@@ -1930,7 +577,7 @@ class PlotConfigInfo(RXObject):
     
     pass
 
-class PlotConfigInfoCollection(DisposableWrapper, ICollection, IEnumerable):
+class PlotConfigInfoCollection(object):
     """
     
     """
@@ -1959,7 +606,7 @@ class PlotConfigInfoCollection(DisposableWrapper, ICollection, IEnumerable):
     
     pass
 
-class PlotConfigManager(public sealed class PlotConfigManager):
+class PlotConfigManager(object):
     """
     
     """
@@ -1986,7 +633,7 @@ class PlotConfigManager(public sealed class PlotConfigManager):
     
     pass
 
-class PlotEngine(None (initial) -> plot -> document -> page -> graphics):
+class PlotEngine(object):
     """
     
     """
@@ -2109,7 +756,7 @@ class PlotEngine(None (initial) -> plot -> document -> page -> graphics):
     
     pass
 
-class PlotFactory(public sealed class PlotFactory):
+class PlotFactory(object):
     """
     
     """
@@ -2135,28 +782,10 @@ class PlotFactory(public sealed class PlotFactory):
     
     pass
 
-class PlotInfo(RXObject):
+class PlotInfo(object):
     """
     
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    PlotInfo()
     """
     def IsCompatibleDocument(self):
         """
@@ -2187,46 +816,10 @@ class PlotInfo(RXObject):
     
     pass
 
-class PlotInfoValidator(RXObject):
+class PlotInfoValidator(object):
     """
     
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    V
-    
-    a
-    
-    l
-    
-    i
-    
-    d
-    
-    a
-    
-    t
-    
-    o
-    
-    r
-    
-    (
-    
-    )
+    PlotInfoValidator()
     """
     def Validate(self):
         """
@@ -2263,7 +856,7 @@ class PlotInfoValidator(RXObject):
     
     pass
 
-class PlotLogger(DisposableWrapper):
+class PlotLogger(object):
     """
     
     """
@@ -2383,53 +976,27 @@ class PlotLogger(DisposableWrapper):
     pass
 
 class PlotMessageIndex():
-    DialogTitle
-    SheetName
-    SheetNameToolTip
-    Status
-    SheetProgressCaption
-    SheetSetProgressCaption
-    MessageCanceling
-    MessageCancelingCurrent
-    CancelSheetButtonMessage
-    CancelJobButtonMessage
-    MessageCount
+    DialogTitle = None
+    SheetName = None
+    SheetNameToolTip = None
+    Status = None
+    SheetProgressCaption = None
+    SheetSetProgressCaption = None
+    MessageCanceling = None
+    MessageCancelingCurrent = None
+    CancelSheetButtonMessage = None
+    CancelJobButtonMessage = None
+    MessageCount = None
 
-class PlotPageInfo(RXObject):
+class PlotPageInfo(object):
     """
     
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    P
-    
-    a
-    
-    g
-    
-    e
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    PlotPageInfo()
     """
 
     pass
 
-class PlotProgress(DisposableWrapper):
+class PlotProgress(object):
     """
     
     """
@@ -2478,523 +1045,13 @@ class PlotProgress(DisposableWrapper):
     
     pass
 
-class PlotProgressDialog(PlotProgress):
+class PlotProgressDialog(object):
     """
     
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    P
-    
-    r
-    
-    o
-    
-    g
-    
-    r
-    
-    e
-    
-    s
-    
-    s
-    
-    D
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    i
-    
-    s
-    
-    P
-    
-    r
-    
-    e
-    
-    v
-    
-    i
-    
-    e
-    
-    w
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    r
-    
-    u
-    
-    e
-    
-     
-    
-    i
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-     
-    
-    i
-    
-    s
-    
-     
-    
-    a
-    
-     
-    
-    p
-    
-    r
-    
-    e
-    
-    v
-    
-    i
-    
-    e
-    
-    w
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    s
-    
-    h
-    
-    e
-    
-    e
-    
-    t
-    
-    C
-    
-    o
-    
-    u
-    
-    n
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    s
-    
-    h
-    
-    e
-    
-    e
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    u
-    
-    n
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    [
-    
-    M
-    
-    a
-    
-    r
-    
-    s
-    
-    h
-    
-    a
-    
-    l
-    
-    A
-    
-    s
-    
-    (
-    
-    U
-    
-    n
-    
-    m
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    d
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    .
-    
-    U
-    
-    1
-    
-    )
-    
-    ]
-    
-     
-    
-    b
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    s
-    
-    h
-    
-    o
-    
-    w
-    
-    C
-    
-    a
-    
-    n
-    
-    c
-    
-    e
-    
-    l
-    
-    S
-    
-    h
-    
-    e
-    
-    e
-    
-    t
-    
-    B
-    
-    u
-    
-    t
-    
-    t
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    r
-    
-    u
-    
-    e
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    s
-    
-    h
-    
-    o
-    
-    w
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    c
-    
-    a
-    
-    n
-    
-    c
-    
-    e
-    
-    l
-    
-     
-    
-    s
-    
-    h
-    
-    e
-    
-    e
-    
-    t
-    
-     
-    
-    b
-    
-    u
-    
-    t
-    
-    t
-    
-    o
-    
-    n
+    PlotProgressDialog
+        [MarshalAs(UnmanagedType.U1)] bool isPreview : Input true if the dialog is a preview
+        int sheetCount : Input the sheet count
+        [MarshalAs(UnmanagedType.U1)] bool showCancelSheetButton : Input true to show the cancel sheet button
     """
     def Destroy(self):
         """
@@ -3040,7 +1097,7 @@ class PlotProgressDialog(PlotProgress):
     
     pass
 
-class PlotReactorManager(public sealed class PlotReactorManager):
+class PlotReactorManager(object):
     """
     
     """
@@ -3048,63 +1105,25 @@ class PlotReactorManager(public sealed class PlotReactorManager):
     pass
 
 class PlotToFileCapability():
-    NoPlotToFile
-    PlotToFileAllowed
-    MustPlotToFile
+    NoPlotToFile = None
+    PlotToFileAllowed = None
+    MustPlotToFile = None
 
-class PreviewEndPlotInfo(DisposableWrapper):
+class PreviewEndPlotInfo(object):
     """
     
-    P
-    
-    r
-    
-    e
-    
-    v
-    
-    i
-    
-    e
-    
-    w
-    
-    E
-    
-    n
-    
-    d
-    
-    P
-    
-    l
-    
-    o
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    PreviewEndPlotInfo()
     """
     Status = None
     
     pass
 
 class PreviewEndPlotStatus():
-    Normal
-    Plot
-    Cancel
-    Next
-    Previous
+    Normal = None
+    Plot = None
+    Cancel = None
+    Next = None
+    Previous = None
 
 class PreviewEngineFlags():
     NextSheet = 2
@@ -3112,40 +1131,40 @@ class PreviewEngineFlags():
     PreviousSheet = 4
 
 class ProcessPlotState():
-    NotPlotting
-    ForegroundPlotting
-    BackgroundPlotting
+    NotPlotting = None
+    ForegroundPlotting = None
+    BackgroundPlotting = None
 
 class RefreshCode():
-    All
-    RefreshDevicesList
-    RefreshStyleList
-    RefreshSystemDevicesList
-    RefreshPC3DevicesList
+    All = None
+    RefreshDevicesList = None
+    RefreshStyleList = None
+    RefreshSystemDevicesList = None
+    RefreshPC3DevicesList = None
 
 class SheetCancelStatus():
-    Continue
-    CanceledByCancelButton
-    CanceledByCancelAllButton
-    CanceledByCaller
+    Continue = None
+    CanceledByCancelButton = None
+    CanceledByCancelAllButton = None
+    CanceledByCaller = None
 
 class SheetType():
-    SingleDwf
-    MultiDwf
-    OriginalDevice
-    SingleDwfx
-    MultiDwfx
-    SinglePdf
-    MultiPdf
+    SingleDwf = None
+    MultiDwf = None
+    OriginalDevice = None
+    SingleDwfx = None
+    MultiDwfx = None
+    SinglePdf = None
+    MultiPdf = None
 
 class StdConfiguration():
-    NoneDevice
-    DefaultWindowsSysPrinter
-    Dwf6ePlot
-    DwfEplotOptForPlotting
-    DwfEplotOptForViewing
-    PublishToWebDwf
-    PublishToWebJpg
-    PublishToWebPng
-    DWFxePlot
-    PublishToWebDWFx
+    NoneDevice = None
+    DefaultWindowsSysPrinter = None
+    Dwf6ePlot = None
+    DwfEplotOptForPlotting = None
+    DwfEplotOptForViewing = None
+    PublishToWebDwf = None
+    PublishToWebJpg = None
+    PublishToWebPng = None
+    DWFxePlot = None
+    PublishToWebDWFx = None

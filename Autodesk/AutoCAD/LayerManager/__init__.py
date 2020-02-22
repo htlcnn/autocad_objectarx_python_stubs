@@ -1,4 +1,4 @@
-class AndExpression(public sealed class AndExpression):
+class AndExpression(object):
     """
     
     """
@@ -11,7 +11,7 @@ class AndExpression(public sealed class AndExpression):
     
     pass
 
-class LayerCollection(ICollection):
+class LayerCollection(object):
     """
     
     """
@@ -78,39 +78,15 @@ class LayerCollection(ICollection):
     
     pass
 
-class LayerFilter(RXObject):
+class LayerFilter(object):
     """
     
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    LayerFilter()
     """
     class DialogResult():
-        OK
-        Cancel
-        UseDefault
+        OK = None
+        Cancel = None
+        UseDefault = None
     
     
     def CompareTo(self):
@@ -191,7 +167,7 @@ class LayerFilter(RXObject):
     
     pass
 
-class LayerFilterCollection(ICollection):
+class LayerFilterCollection(object):
     """
     
     """
@@ -258,260 +234,13 @@ class LayerFilterCollection(ICollection):
     
     pass
 
-class LayerFilterDisplayImages(public struct LayerFilterDisplayImages {
-}):
+class LayerFilterDisplayImages(object):
     """
     
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-    D
-    
-    i
-    
-    s
-    
-    p
-    
-    l
-    
-    a
-    
-    y
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    I
-    
-    n
-    
-    t
-    
-    P
-    
-    t
-    
-    r
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    L
-    
-    i
-    
-    s
-    
-    t
-    
-    H
-    
-    a
-    
-    n
-    
-    d
-    
-    l
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    i
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    I
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    s
-    
-    e
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    e
-    
-    d
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    I
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-    .
+    LayerFilterDisplayImages
+        IntPtr imageListHandle : Input.
+        int imageIndex : Input.
+        int selectedImageIndex : Input.
     """
     ImageIndex = None
     
@@ -523,215 +252,12 @@ class LayerFilterDisplayImages(public struct LayerFilterDisplayImages {
     
     pass
 
-class LayerFilterTree(public struct LayerFilterTree {
-}):
+class LayerFilterTree(object):
     """
     
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-    T
-    
-    r
-    
-    e
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-     
-    
-    r
-    
-    o
-    
-    o
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    r
-    
-    o
-    
-    o
-    
-    t
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    r
-    
-    e
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    F
-    
-    i
-    
-    l
-    
-    t
-    
-    e
-    
-    r
-    
-     
-    
-    c
-    
-    u
-    
-    r
-    
-    r
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    u
-    
-    r
-    
-    r
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    n
-    
-    o
-    
-    d
-    
-    e
+    LayerFilterTree
+        LayerFilter root : Input root of tree
+        LayerFilter current : Input current node
     """
     Current = None
     
@@ -740,38 +266,16 @@ class LayerFilterTree(public struct LayerFilterTree {
     
     pass
 
-class LayerGroup(LayerFilter):
+class LayerGroup(object):
     """
     
-    L
-    
-    a
-    
-    y
-    
-    e
-    
-    r
-    
-    G
-    
-    r
-    
-    o
-    
-    u
-    
-    p
-    
-    (
-    
-    )
+    LayerGroup()
     """
     LayerIds = None
     
     pass
 
-class RelationalExpression(public sealed class RelationalExpression):
+class RelationalExpression(object):
     """
     
     """

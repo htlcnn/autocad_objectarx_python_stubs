@@ -1,39 +1,7 @@
-class ArrayDataSource(DependencyObject):
+class ArrayDataSource(object):
     """
     
-    A
-    
-    r
-    
-    r
-    
-    a
-    
-    y
-    
-    D
-    
-    a
-    
-    t
-    
-    a
-    
-    S
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    (
-    
-    )
+    ArrayDataSource()
     """
     CurrentArray = None
     
@@ -45,7 +13,7 @@ class ArrayDataSource(DependencyObject):
     
     pass
 
-class BlockImageCache(GalleryImageCache):
+class BlockImageCache(object):
     """
     
     """
@@ -60,7 +28,7 @@ class BlockImageCache(GalleryImageCache):
     
     pass
 
-class BothTrueSystemVariablesToIsEnableConverter(IMultiValueConverter):
+class BothTrueSystemVariablesToIsEnableConverter(object):
     """
     
     """
@@ -81,7 +49,7 @@ class BothTrueSystemVariablesToIsEnableConverter(IMultiValueConverter):
     
     pass
 
-class CachedImageConverter(IValueConverter):
+class CachedImageConverter(object):
     """
     
     """
@@ -105,7 +73,7 @@ class CachedImageConverter(IValueConverter):
     
     pass
 
-class CachedImageMultiToSingleConverter(IMultiValueConverter):
+class CachedImageMultiToSingleConverter(object):
     """
     
     """
@@ -129,7 +97,7 @@ class CachedImageMultiToSingleConverter(IMultiValueConverter):
     
     pass
 
-class ColorThemeConverter(IValueConverter):
+class ColorThemeConverter(object):
     """
     
     """
@@ -150,7 +118,7 @@ class ColorThemeConverter(IValueConverter):
     
     pass
 
-class DimStyleImageProvider(GalleryNonCacheableImage):
+class DimStyleImageProvider(object):
     """
     
     """
@@ -163,7 +131,7 @@ class DimStyleImageProvider(GalleryNonCacheableImage):
     
     pass
 
-class DynamicLargeIconConverter(IMultiValueConverter):
+class DynamicLargeIconConverter(object):
     """
     
     """
@@ -200,7 +168,7 @@ class DynamicLargeIconConverter(IMultiValueConverter):
     
     pass
 
-class ExtensionMethod(public static class ExtensionMethod):
+class ExtensionMethod(object):
     """
     
     """
@@ -215,7 +183,7 @@ class ExtensionMethod(public static class ExtensionMethod):
     
     pass
 
-class FocusableDoubleToStringConverter(IValueConverter):
+class FocusableDoubleToStringConverter(object):
     """
     
     """
@@ -236,46 +204,10 @@ class FocusableDoubleToStringConverter(IValueConverter):
     
     pass
 
-class GalleryImageCache(DependencyObject, IImageCache):
+class GalleryImageCache(object):
     """
     
-    G
-    
-    a
-    
-    l
-    
-    l
-    
-    e
-    
-    r
-    
-    y
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    C
-    
-    a
-    
-    c
-    
-    h
-    
-    e
-    
-    (
-    
-    )
+    GalleryImageCache()
     """
     BackgroundColor = None
     
@@ -322,46 +254,10 @@ class GalleryImageCache(DependencyObject, IImageCache):
     
     pass
 
-class GalleryNamedImage(DependencyObject, INamedImageProvider):
+class GalleryNamedImage(object):
     """
     
-    G
-    
-    a
-    
-    l
-    
-    l
-    
-    e
-    
-    r
-    
-    y
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-    d
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    (
-    
-    )
+    GalleryNamedImage()
     """
     BackgroundColor = None
     
@@ -398,60 +294,10 @@ class GalleryNamedImage(DependencyObject, INamedImageProvider):
     
     pass
 
-class GalleryNonCacheableImage(DependencyObject, IImageCache):
+class GalleryNonCacheableImage(object):
     """
     
-    G
-    
-    a
-    
-    l
-    
-    l
-    
-    e
-    
-    r
-    
-    y
-    
-    N
-    
-    o
-    
-    n
-    
-    C
-    
-    a
-    
-    c
-    
-    h
-    
-    e
-    
-    a
-    
-    b
-    
-    l
-    
-    e
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    (
-    
-    )
+    GalleryNonCacheableImage()
     """
     BackgroundColor = None
     
@@ -488,7 +334,7 @@ class GalleryNonCacheableImage(DependencyObject, IImageCache):
     
     pass
 
-class GeomapRibbonDataBoundDropDown(RibbonDataBoundDropDown):
+class GeomapRibbonDataBoundDropDown(object):
     """
     
     """
@@ -501,7 +347,7 @@ class GeomapRibbonDataBoundDropDown(RibbonDataBoundDropDown):
     
     pass
 
-class GetCompareToggleStateIcon(IValueConverter):
+class GetCompareToggleStateIcon(object):
     """
     
     """
@@ -522,7 +368,7 @@ class GetCompareToggleStateIcon(IValueConverter):
     
     pass
 
-class GetFileName(IValueConverter):
+class GetFileName(object):
     """
     
     """
@@ -543,7 +389,7 @@ class GetFileName(IValueConverter):
     
     pass
 
-class GetFileNameWithExt(IValueConverter):
+class GetFileNameWithExt(object):
     """
     
     """
@@ -564,7 +410,7 @@ class GetFileNameWithExt(IValueConverter):
     
     pass
 
-class GetFolderPath(IValueConverter):
+class GetFolderPath(object):
     """
     
     """
@@ -585,7 +431,7 @@ class GetFolderPath(IValueConverter):
     
     pass
 
-class GetLastEditedBy(IValueConverter):
+class GetLastEditedBy(object):
     """
     
     """
@@ -606,7 +452,7 @@ class GetLastEditedBy(IValueConverter):
     
     pass
 
-class GetLastedSavedTime(IValueConverter):
+class GetLastedSavedTime(object):
     """
     
     """
@@ -627,7 +473,7 @@ class GetLastedSavedTime(IValueConverter):
     
     pass
 
-class GetTrimmedFileName(IValueConverter):
+class GetTrimmedFileName(object):
     """
     
     """
@@ -648,56 +494,16 @@ class GetTrimmedFileName(IValueConverter):
     
     pass
 
-class HighlightVisibility(INotifyPropertyChanged):
+class HighlightVisibility(object):
     """
     
-    H
-    
-    i
-    
-    g
-    
-    h
-    
-    l
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    V
-    
-    i
-    
-    s
-    
-    i
-    
-    b
-    
-    i
-    
-    l
-    
-    i
-    
-    t
-    
-    y
-    
-    (
-    
-    )
+    HighlightVisibility()
     """
     HighlightsAvaliable = None
     
     pass
 
-class IImageCache(public interface IImageCache):
+class IImageCache(object):
     """
     
     """
@@ -710,7 +516,7 @@ class IImageCache(public interface IImageCache):
     
     pass
 
-class InactiveTextColorConverter(IValueConverter):
+class InactiveTextColorConverter(object):
     """
     
     """
@@ -731,7 +537,7 @@ class InactiveTextColorConverter(IValueConverter):
     
     pass
 
-class KeepSelectionConverter(IValueConverter):
+class KeepSelectionConverter(object):
     """
     
     """
@@ -752,7 +558,7 @@ class KeepSelectionConverter(IValueConverter):
     
     pass
 
-class MLeaderStyleImageProvider(GalleryNonCacheableImage):
+class MLeaderStyleImageProvider(object):
     """
     
     """
@@ -765,7 +571,7 @@ class MLeaderStyleImageProvider(GalleryNonCacheableImage):
     
     pass
 
-class NegateIsDependentConverter(IValueConverter):
+class NegateIsDependentConverter(object):
     """
     
     """
@@ -786,7 +592,7 @@ class NegateIsDependentConverter(IValueConverter):
     
     pass
 
-class NullToVariesConverter(IValueConverter):
+class NullToVariesConverter(object):
     """
     
     """
@@ -807,7 +613,7 @@ class NullToVariesConverter(IValueConverter):
     
     pass
 
-class NullToVisibilityConverter(IValueConverter):
+class NullToVisibilityConverter(object):
     """
     
     """
@@ -828,7 +634,7 @@ class NullToVisibilityConverter(IValueConverter):
     
     pass
 
-class RGBColorToColorStringConverter(IValueConverter):
+class RGBColorToColorStringConverter(object):
     """
     
     """
@@ -849,7 +655,7 @@ class RGBColorToColorStringConverter(IValueConverter):
     
     pass
 
-class ReadOnlyPropertyBridge(DependencyObject, INotifyPropertyChanged):
+class ReadOnlyPropertyBridge(object):
     """
     
     """
@@ -872,61 +678,15 @@ class ReadOnlyPropertyBridge(DependencyObject, INotifyPropertyChanged):
     
     pass
 
-class Ribbon2DViewStyleCombo(RibbonCombo):
+class Ribbon2DViewStyleCombo(object):
     """
     
-    R
-    
-    i
-    
-    b
-    
-    b
-    
-    o
-    
-    n
-    
-    2
-    
-    D
-    
-    V
-    
-    i
-    
-    e
-    
-    w
-    
-    S
-    
-    t
-    
-    y
-    
-    l
-    
-    e
-    
-    C
-    
-    o
-    
-    m
-    
-    b
-    
-    o
-    
-    (
-    
-    )
+    Ribbon2DViewStyleCombo()
     """
 
     pass
 
-class RibbonCommandButton(RibbonToggleButton, ICommand):
+class RibbonCommandButton(object):
     """
     
     """
@@ -963,7 +723,7 @@ class RibbonCommandButton(RibbonToggleButton, ICommand):
     
     pass
 
-class RibbonPaletteSet(PaletteSet, IRibbonControlHostWindow):
+class RibbonPaletteSet(object):
     """
     
     """
@@ -1039,7 +799,7 @@ class RibbonPaletteSet(PaletteSet, IRibbonControlHostWindow):
     
     pass
 
-class RibbonServices(public static class RibbonServices):
+class RibbonServices(object):
     """
     
     """
@@ -1055,7 +815,7 @@ class RibbonServices(public static class RibbonServices):
     
     pass
 
-class RibbonUtilContent(public static class RibbonUtilContent):
+class RibbonUtilContent(object):
     """
     
     """
@@ -1111,52 +871,16 @@ class RibbonUtilContent(public static class RibbonUtilContent):
     
     pass
 
-class ShowNewHighlights(INotifyPropertyChanged):
+class ShowNewHighlights(object):
     """
     
-    S
-    
-    h
-    
-    o
-    
-    w
-    
-    N
-    
-    e
-    
-    w
-    
-    H
-    
-    i
-    
-    g
-    
-    h
-    
-    l
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    s
-    
-    (
-    
-    )
+    ShowNewHighlights()
     """
     HighlightsVisible = None
     
     pass
 
-class SystemVariableToIsCheckedConverter(IValueConverter):
+class SystemVariableToIsCheckedConverter(object):
     """
     
     """
@@ -1177,7 +901,7 @@ class SystemVariableToIsCheckedConverter(IValueConverter):
     
     pass
 
-class TableCellStyleImageProvider(GalleryNamedImage):
+class TableCellStyleImageProvider(object):
     """
     
     """
@@ -1190,7 +914,7 @@ class TableCellStyleImageProvider(GalleryNamedImage):
     
     pass
 
-class TableStyleImageProvider(GalleryNonCacheableImage):
+class TableStyleImageProvider(object):
     """
     
     """
@@ -1203,7 +927,7 @@ class TableStyleImageProvider(GalleryNonCacheableImage):
     
     pass
 
-class UpdateArrayConverter(IValueConverter):
+class UpdateArrayConverter(object):
     """
     
     """
@@ -1224,7 +948,7 @@ class UpdateArrayConverter(IValueConverter):
     
     pass
 
-class VDiffCHGIDXToStringConverter(IValueConverter):
+class VDiffCHGIDXToStringConverter(object):
     """
     
     """
@@ -1245,7 +969,7 @@ class VDiffCHGIDXToStringConverter(IValueConverter):
     
     pass
 
-class VetoDetViewSelectionConverter(IValueConverter):
+class VetoDetViewSelectionConverter(object):
     """
     
     """
@@ -1266,7 +990,7 @@ class VetoDetViewSelectionConverter(IValueConverter):
     
     pass
 
-class VetoSecViewSelectionConverter(IValueConverter):
+class VetoSecViewSelectionConverter(object):
     """
     
     """
@@ -1287,7 +1011,7 @@ class VetoSecViewSelectionConverter(IValueConverter):
     
     pass
 
-class ViewImageCache(GalleryImageCache):
+class ViewImageCache(object):
     """
     
     """

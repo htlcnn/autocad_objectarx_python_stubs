@@ -1,32 +1,14 @@
-class ColorDictionary(Dictionary<string, Color>):
+class ColorDictionary(object):
     """
     
     """
 
     pass
 
-class FontInfo(Freezable):
+class FontInfo(object):
     """
     
-    F
-    
-    o
-    
-    n
-    
-    t
-    
-    I
-    
-    n
-    
-    f
-    
-    o
-    
-    (
-    
-    )
+    FontInfo()
     """
     FontFamily = None
     
@@ -133,985 +115,33 @@ class FontInfo(Freezable):
     
     pass
 
-class HSBColor(public class HSBColor):
+class HSBColor(object):
     """
     
-    H
+    HSBColor()()
     
-    S
     
-    B
+    HSBColor(Color)
+        Color color : Specify the Color object that is used to create new object.
     
-    C
     
-    o
+    HSBColor(double, double, double, double)
+        double hue : Specify the hue for HSB color.
+        double saturation : Specify the saturation for HSB color.
+        double brightness : Specify the brightness for HSB color.
+        double opacity : Specify the opacity for HSB color.
     
-    l
     
-    o
+    HSBColor(string)
+        string hsbString : Specify the string of HSB color. String format: "0,0,32"
     
-    r
     
-    (
-    
-    )
-    
-    (
-    
-    )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    H
-    
-    S
-    
-    B
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    (
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-     
-    
-    o
-    
-    b
-    
-    j
-    
-    e
-    
-    c
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    a
-    
-    t
-    
-     
-    
-    i
-    
-    s
-    
-     
-    
-    u
-    
-    s
-    
-    e
-    
-    d
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    r
-    
-    e
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    n
-    
-    e
-    
-    w
-    
-     
-    
-    o
-    
-    b
-    
-    j
-    
-    e
-    
-    c
-    
-    t
-    
-    .
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    H
-    
-    S
-    
-    B
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    (
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    ,
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    h
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    h
-    
-    u
-    
-    e
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    H
-    
-    S
-    
-    B
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    s
-    
-    a
-    
-    t
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    s
-    
-    a
-    
-    t
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    H
-    
-    S
-    
-    B
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    b
-    
-    r
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    n
-    
-    e
-    
-    s
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    b
-    
-    r
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    n
-    
-    e
-    
-    s
-    
-    s
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    H
-    
-    S
-    
-    B
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    .
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    o
-    
-    p
-    
-    a
-    
-    c
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    o
-    
-    p
-    
-    a
-    
-    c
-    
-    i
-    
-    t
-    
-    y
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    H
-    
-    S
-    
-    B
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    .
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    H
-    
-    S
-    
-    B
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    h
-    
-    s
-    
-    b
-    
-    S
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    :
-    
-     
-    
-    S
-    
-    p
-    
-    e
-    
-    c
-    
-    i
-    
-    f
-    
-    y
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    H
-    
-    S
-    
-    B
-    
-     
-    
-    c
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    .
-    
-     
-    
-    S
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-    m
-    
-    a
-    
-    t
-    
-    :
-    
-     
-    
-    "
-    
-    0
-    
-    ,
-    
-    0
-    
-    ,
-    
-    3
-    
-    2
-    
-    "
     """
     class OperationType():
-        None
-        Add
-        Subtract
-        Multiply
+        None = None
+        Add = None
+        Subtract = None
+        Multiply = None
     
     
     def FromColor(self):
@@ -1179,14 +209,14 @@ class HSBColor(public class HSBColor):
     
     pass
 
-class HSBColorDictionary(Dictionary<string, HSBColor>):
+class HSBColorDictionary(object):
     """
     
     """
 
     pass
 
-class HSBColorUtil(public class HSBColorUtil):
+class HSBColorUtil(object):
     """
     
     """
@@ -1199,7 +229,7 @@ class HSBColorUtil(public class HSBColorUtil):
     
     pass
 
-class HSBColors(List<HSBColor>):
+class HSBColors(object):
     """
     
     """
@@ -1207,14 +237,14 @@ class HSBColors(List<HSBColor>):
     
     pass
 
-class HSBColorsDictionary(Dictionary<string, HSBColors>):
+class HSBColorsDictionary(object):
     """
     
     """
 
     pass
 
-class ImageSources(INotifyPropertyChanged, INotifyPropertyChanging):
+class ImageSources(object):
     """
     
     """
@@ -1225,121 +255,15 @@ class ImageSources(INotifyPropertyChanged, INotifyPropertyChanging):
     
     pass
 
-class InPlaceEditorTheme(ThemeBase):
+class InPlaceEditorTheme(object):
     """
     
-    I
-    
-    n
-    
-    P
-    
-    l
-    
-    a
-    
-    c
-    
-    e
-    
-    E
-    
-    d
-    
-    i
-    
-    t
-    
-    o
-    
-    r
-    
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
+    InPlaceEditorTheme()()
     
     
+    InPlaceEditorTheme(HSBColor)()
     
     
-    
-    
-    
-    
-    
-    
-    I
-    
-    n
-    
-    P
-    
-    l
-    
-    a
-    
-    c
-    
-    e
-    
-    E
-    
-    d
-    
-    i
-    
-    t
-    
-    o
-    
-    r
-    
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    (
-    
-    H
-    
-    S
-    
-    B
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    )
-    
-    (
-    
-    )
     """
     CompositeHardShadowColor = None
     
@@ -1430,7 +354,7 @@ class InPlaceEditorTheme(ThemeBase):
     
     pass
 
-class InPlaceEditorThemeDefaults(public static class InPlaceEditorThemeDefaults):
+class InPlaceEditorThemeDefaults(object):
     """
     
     """
@@ -1447,30 +371,10 @@ class InPlaceEditorThemeDefaults(public static class InPlaceEditorThemeDefaults)
     
     pass
 
-class ThemeBase(Freezable):
+class ThemeBase(object):
     """
     
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    B
-    
-    a
-    
-    s
-    
-    e
-    
-    (
-    
-    )
+    ThemeBase()
     """
     def CloneBrush(self):
         """
@@ -1523,50 +427,10 @@ class ThemeBase(Freezable):
     
     pass
 
-class ThemeColorGenerator(public class ThemeColorGenerator):
+class ThemeColorGenerator(object):
     """
     
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    G
-    
-    e
-    
-    n
-    
-    e
-    
-    r
-    
-    a
-    
-    t
-    
-    o
-    
-    r
-    
-    (
-    
-    )
+    ThemeColorGenerator()
     """
     def GenerateColor(self):
         """
@@ -1594,7 +458,7 @@ class ThemeColorGenerator(public class ThemeColorGenerator):
     
     pass
 
-class ThemeManager(DependencyObject):
+class ThemeManager(object):
     """
     
     """
@@ -1644,40 +508,10 @@ class ThemeManager(DependencyObject):
     
     pass
 
-class ThemeResources(public class ThemeResources):
+class ThemeResources(object):
     """
     
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    R
-    
-    e
-    
-    s
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    s
-    
-    (
-    
-    )
+    ThemeResources()
     """
     def GetObject(self):
         """
@@ -1696,85 +530,19 @@ class ThemeResources(public class ThemeResources):
     
     pass
 
-class ThemedImageSource(ThemedImageUri):
+class ThemedImageSource(object):
     """
     
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    d
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    S
-    
-    o
-    
-    u
-    
-    r
-    
-    c
-    
-    e
-    
-    (
-    
-    )
+    ThemedImageSource()
     """
     this Field = None
     
     pass
 
-class ThemedImageUri(public class ThemedImageUri):
+class ThemedImageUri(object):
     """
     
-    T
-    
-    h
-    
-    e
-    
-    m
-    
-    e
-    
-    d
-    
-    I
-    
-    m
-    
-    a
-    
-    g
-    
-    e
-    
-    U
-    
-    r
-    
-    i
-    
-    (
-    
-    )
+    ThemedImageUri()
     """
 
     pass

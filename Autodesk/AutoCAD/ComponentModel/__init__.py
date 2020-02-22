@@ -1,4 +1,4 @@
-class IPropertyProvider(public interface IPropertyProvider):
+class IPropertyProvider(object):
     """
     
     """
@@ -13,7 +13,7 @@ class IPropertyProvider(public interface IPropertyProvider):
     
     pass
 
-class ITypeDescriptor(ITypeDescriptor td = TypeManager.Instance[typeof(Circle)]):
+class ITypeDescriptor(object):
     """
     
     """
@@ -82,364 +82,18 @@ class ITypeDescriptor(ITypeDescriptor td = TypeManager.Instance[typeof(Circle)])
     
     pass
 
-class PropertyDescriptorBase(PropertyDescriptor):
+class PropertyDescriptorBase(object):
     """
     
-    P
+    PropertyDescriptorBase(string)
+        string name : Input name
     
-    r
     
-    o
+    PropertyDescriptorBase(string, Attribute[])
+        string name : Input name
+        Attribute[] att : Input an attribute
     
-    p
     
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    D
-    
-    e
-    
-    s
-    
-    c
-    
-    r
-    
-    i
-    
-    p
-    
-    t
-    
-    o
-    
-    r
-    
-    B
-    
-    a
-    
-    s
-    
-    e
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    D
-    
-    e
-    
-    s
-    
-    c
-    
-    r
-    
-    i
-    
-    p
-    
-    t
-    
-    o
-    
-    r
-    
-    B
-    
-    a
-    
-    s
-    
-    e
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    [
-    
-    ]
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    [
-    
-    ]
-    
-     
-    
-    a
-    
-    t
-    
-    t
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    a
-    
-    n
-    
-     
-    
-    a
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
     """
     def CanResetValue(self):
         """
@@ -484,145 +138,17 @@ class PropertyDescriptorBase(PropertyDescriptor):
     
     pass
 
-class PropertyProviderAttribute(Attribute):
+class PropertyProviderAttribute(object):
     """
     
-    P
-    
-    r
-    
-    o
-    
-    p
-    
-    e
-    
-    r
-    
-    t
-    
-    y
-    
-    P
-    
-    r
-    
-    o
-    
-    v
-    
-    i
-    
-    d
-    
-    e
-    
-    r
-    
-    A
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    a
-    
-    t
-    
-    t
-    
-    r
-    
-    i
-    
-    b
-    
-    u
-    
-    t
-    
-    e
+    PropertyProviderAttribute
+        Type type : Input type of attribute
     """
      = None
     
     pass
 
-class TypeDescriptionProvider([TypeDescriptionProviderAttribute(typeof(TypeDescriptionProvider))] class MyClass { ...):
+class TypeDescriptionProvider(object):
     """
     
     """
@@ -640,119 +166,11 @@ class TypeDescriptionProvider([TypeDescriptionProviderAttribute(typeof(TypeDescr
     
     pass
 
-class TypeDescriptor(ITypeDescriptor td = TypeManager.Instance[typeof(Circle)]):
+class TypeDescriptor(object):
     """
     
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    D
-    
-    e
-    
-    s
-    
-    c
-    
-    r
-    
-    i
-    
-    p
-    
-    t
-    
-    o
-    
-    r
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    y
-    
-    p
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    e
-    
-    s
-    
-    c
-    
-    r
-    
-    i
-    
-    p
-    
-    t
-    
-    o
-    
-    r
+    TypeDescriptor
+        Type type : Input type of descriptor
     """
     def AddPerInstancePropertyProvider(self):
         """
@@ -819,34 +237,10 @@ class TypeDescriptor(ITypeDescriptor td = TypeManager.Instance[typeof(Circle)]):
     
     pass
 
-class TypeManager(public class TypeManager):
+class TypeManager(object):
     """
     
-    T
-    
-    y
-    
-    p
-    
-    e
-    
-    M
-    
-    a
-    
-    n
-    
-    a
-    
-    g
-    
-    e
-    
-    r
-    
-    (
-    
-    )
+    TypeManager()
     """
     Instance = None
     

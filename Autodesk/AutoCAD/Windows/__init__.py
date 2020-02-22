@@ -1,4 +1,4 @@
-class AutomationDataGridView(DataGridView, IRawElementProviderFragmentRoot, IRawElementProviderFragment, System.Windows.Automation.Provider.IRawElementProviderSimple, ISelectionProvider, IScrollProvider, System.Windows.Automation.Provider.ITableProvider, System.Windows.Automation.Provider.IGridProvider):
+class AutomationDataGridView(object):
     """
     
     """
@@ -14,7 +14,7 @@ class AutomationDataGridView(DataGridView, IRawElementProviderFragmentRoot, IRaw
     
     pass
 
-class ColorComboBox(Control):
+class ColorComboBox(object):
     """
     
     """
@@ -123,7 +123,7 @@ class ColorComboBox(Control):
     
     pass
 
-class ColorDialog(public sealed class ColorDialog):
+class ColorDialog(object):
     """
     
     """
@@ -158,30 +158,10 @@ class ColorDialog(public sealed class ColorDialog):
     
     pass
 
-class ColorItem(public sealed class ColorItem):
+class ColorItem(object):
     """
     
-    C
-    
-    o
-    
-    l
-    
-    o
-    
-    r
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    )
+    ColorItem()
     """
     ByBlock Field = None
     
@@ -263,14 +243,14 @@ class ColorItem(public sealed class ColorItem):
     
     pass
 
-class ColorItemCollection(ObservableCollection<ColorItem>):
+class ColorItemCollection(object):
     """
     
     """
 
     pass
 
-class ColorItemConverter(TypeConverter):
+class ColorItemConverter(object):
     """
     
     """
@@ -307,7 +287,7 @@ class ColorItemConverter(TypeConverter):
     
     pass
 
-class ColorListBox(ListBox):
+class ColorListBox(object):
     """
     
     """
@@ -320,7 +300,7 @@ class ColorListBox(ListBox):
     
     pass
 
-class ColorListBoxItem(ListBoxItem):
+class ColorListBoxItem(object):
     """
     
     """
@@ -333,7 +313,7 @@ class ColorListBoxItem(ListBoxItem):
     
     pass
 
-class ContextMenuExtension(Menu, IDisposable):
+class ContextMenuExtension(object):
     """
     
     """
@@ -342,31 +322,31 @@ class ContextMenuExtension(Menu, IDisposable):
     pass
 
 class DefaultPane():
-    ModeMacro
-    CursorCoordinates
-    Snap
-    Grid
-    Ortho
-    Polar
-    ObjectTrack
-    LineWeight
-    PaperModel
-    Paper
-    Model
-    ObjectSnap
-    Float
-    Table
-    Spacer
-    ViewportMaximizePrevious
-    ViewportMaximize
-    ViewportMaximizeNext
-    DynamicInput
-    DynamicUcs
-    LayoutModelIcons
-    ModelIcon
-    LayoutIcon
-    LayoutMoreIcon
-    All
+    ModeMacro = None
+    CursorCoordinates = None
+    Snap = None
+    Grid = None
+    Ortho = None
+    Polar = None
+    ObjectTrack = None
+    LineWeight = None
+    PaperModel = None
+    Paper = None
+    Model = None
+    ObjectSnap = None
+    Float = None
+    Table = None
+    Spacer = None
+    ViewportMaximizePrevious = None
+    ViewportMaximize = None
+    ViewportMaximizeNext = None
+    DynamicInput = None
+    DynamicUcs = None
+    LayoutModelIcons = None
+    ModelIcon = None
+    LayoutIcon = None
+    LayoutMoreIcon = None
+    All = None
 
 class Direction():
     Bottom = 4
@@ -379,9 +359,7 @@ class Direction():
     TopLeft = 3
     TopRight = 9
 
-class DocWindowReactor(internal struct DocWindowReactor {
-  private long <alignment member>;
-}):
+class DocWindowReactor(object):
     """
     
     """
@@ -395,40 +373,10 @@ class DockSides():
     Right = 0x4000
     Top = 0x2000
 
-class DocumentWindow(Window):
+class DocumentWindow(object):
     """
     
-    D
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-    W
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-    (
-    
-    )
+    DocumentWindow()
     """
     def Activate(self):
         """
@@ -480,7 +428,7 @@ class DocumentWindow(Window):
     
     pass
 
-class DrawingDocumentWindow(DocumentWindow):
+class DrawingDocumentWindow(object):
     """
     
     """
@@ -488,32 +436,10 @@ class DrawingDocumentWindow(DocumentWindow):
     
     pass
 
-class DropTarget(public abstract class DropTarget):
+class DropTarget(object):
     """
     
-    D
-    
-    r
-    
-    o
-    
-    p
-    
-    T
-    
-    a
-    
-    r
-    
-    g
-    
-    e
-    
-    t
-    
-    (
-    
-    )
+    DropTarget()
     """
     def OnDragEnter(self):
         """
@@ -555,12 +481,12 @@ class DropTarget(public abstract class DropTarget):
     pass
 
 class IconType():
-    None
-    Information
-    Critical
-    Warning
+    None = None
+    Information = None
+    Critical = None
+    Warning = None
 
-class InfoCenter(public class InfoCenter):
+class InfoCenter(object):
     """
     
     """
@@ -611,7 +537,7 @@ class InfoCenter(public class InfoCenter):
     
     pass
 
-class LineWeightDialog(public sealed class LineWeightDialog):
+class LineWeightDialog(object):
     """
     
     """
@@ -630,7 +556,7 @@ class LineWeightDialog(public sealed class LineWeightDialog):
     
     pass
 
-class LinetypeDialog(public sealed class LinetypeDialog):
+class LinetypeDialog(object):
     """
     
     """
@@ -649,7 +575,7 @@ class LinetypeDialog(public sealed class LinetypeDialog):
     
     pass
 
-class LocationChangingEventArgs(EventArgs):
+class LocationChangingEventArgs(object):
     """
     
     """
@@ -660,383 +586,27 @@ class LocationChangingEventArgs(EventArgs):
     
     pass
 
-class Menu(public abstract class Menu):
+class Menu(object):
     """
     
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    (
-    
-    )
+    Menu()
     """
     MenuItems = None
     
     pass
 
-class MenuItem(Menu, IMenuItem):
+class MenuItem(object):
     """
     
-    M
+    MenuItem(string)
+        string value : Input new item
     
-    e
     
-    n
+    MenuItem(string, System.Drawing.Icon)
+        string value : Input new item name
+        System.Drawing.Icon icon : Input new icon
     
-    u
     
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    v
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    e
-    
-    w
-    
-     
-    
-    i
-    
-    t
-    
-    e
-    
-    m
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    S
-    
-    y
-    
-    s
-    
-    t
-    
-    e
-    
-    m
-    
-    .
-    
-    D
-    
-    r
-    
-    a
-    
-    w
-    
-    i
-    
-    n
-    
-    g
-    
-    .
-    
-    I
-    
-    c
-    
-    o
-    
-    n
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    v
-    
-    a
-    
-    l
-    
-    u
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    e
-    
-    w
-    
-     
-    
-    i
-    
-    t
-    
-    e
-    
-    m
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    S
-    
-    y
-    
-    s
-    
-    t
-    
-    e
-    
-    m
-    
-    .
-    
-    D
-    
-    r
-    
-    a
-    
-    w
-    
-    i
-    
-    n
-    
-    g
-    
-    .
-    
-    I
-    
-    c
-    
-    o
-    
-    n
-    
-     
-    
-    i
-    
-    c
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    e
-    
-    w
-    
-     
-    
-    i
-    
-    c
-    
-    o
-    
-    n
     """
     Checked = None
     
@@ -1054,145 +624,11 @@ class MenuItem(Menu, IMenuItem):
     
     pass
 
-class MenuItemCollection(IList, IEnumerable<IMenuItem>):
+class MenuItemCollection(object):
     """
     
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    C
-    
-    o
-    
-    l
-    
-    l
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-     
-    
-    o
-    
-    w
-    
-    n
-    
-    e
-    
-    r
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    p
-    
-    a
-    
-    r
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    t
-    
-    h
-    
-    i
-    
-    s
-    
-     
-    
-    o
-    
-    b
-    
-    j
-    
-    e
-    
-    c
-    
-    t
+    MenuItemCollection
+        Menu owner : Input the parent for this object
     """
     def Add(self):
         """
@@ -1296,507 +732,15 @@ class MenuItemCollection(IList, IEnumerable<IMenuItem>):
     
     pass
 
-class OpenFileDialog(public sealed class OpenFileDialog):
+class OpenFileDialog(object):
     """
     
-    O
-    
-    p
-    
-    e
-    
-    n
-    
-    F
-    
-    i
-    
-    l
-    
-    e
-    
-    D
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    i
-    
-    t
-    
-    l
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    i
-    
-    t
-    
-    l
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-     
-    
-    b
-    
-    o
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    e
-    
-    f
-    
-    a
-    
-    u
-    
-    l
-    
-    t
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    b
-    
-    o
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    e
-    
-    x
-    
-    t
-    
-    e
-    
-    n
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    x
-    
-    t
-    
-    e
-    
-    n
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    b
-    
-    o
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-     
-    
-    b
-    
-    o
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    O
-    
-    p
-    
-    e
-    
-    n
-    
-    F
-    
-    i
-    
-    l
-    
-    e
-    
-    D
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    F
-    
-    l
-    
-    a
-    
-    g
-    
-    s
-    
-     
-    
-    f
-    
-    l
-    
-    a
-    
-    g
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    f
-    
-    l
-    
-    a
-    
-    g
-    
-    s
+    OpenFileDialog
+        string title : Input title of dialog box
+        string defaultName : Input name of box
+        string extension : Input extension of box
+        string dialogName : Input dialog box
+        OpenFileDialogFlags flags : Input configuration flags
     """
     class OpenFileDialogFlags():
         AllowAnyExtension = 4
@@ -1831,7 +775,7 @@ class OpenFileDialog(public sealed class OpenFileDialog):
     
     pass
 
-class Palette(public sealed class Palette):
+class Palette(object):
     """
     
     """
@@ -1842,324 +786,12 @@ class Palette(public sealed class Palette):
     
     pass
 
-class PaletteActivatedEventArgs(EventArgs):
+class PaletteActivatedEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    A
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    l
-    
-    a
-    
-    y
-    
-     
-    
-    w
-    
-    h
-    
-    e
-    
-    n
-    
-     
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    d
-    
-    e
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    l
-    
-    a
-    
-    y
-    
-     
-    
-    w
-    
-    h
-    
-    e
-    
-    n
-    
-     
-    
-    d
-    
-    e
-    
-    a
-    
-    c
-    
-    t
-    
-    i
-    
-    v
-    
-    a
-    
-    t
-    
-    e
-    
-    d
+    PaletteActivatedEventArgs
+        Palette activated : Input palette to display when activated
+        Palette deactivated : Input palette to display when deactivated
     """
     Activated = None
     
@@ -2168,702 +800,14 @@ class PaletteActivatedEventArgs(EventArgs):
     
     pass
 
-class PaletteAddContextMenuEventArgs(EventArgs):
+class PaletteAddContextMenuEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    A
-    
-    d
-    
-    d
-    
-    C
-    
-    o
-    
-    n
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    L
-    
-    i
-    
-    s
-    
-    t
-    
-    <
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    >
-    
-     
-    
-    m
-    
-    e
-    
-    n
-    
-    u
-    
-    i
-    
-    t
-    
-    e
-    
-    m
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    e
-    
-    n
-    
-    u
-    
-     
-    
-    i
-    
-    t
-    
-    e
-    
-    m
-    
-    s
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    a
-    
-    d
-    
-    d
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    L
-    
-    i
-    
-    s
-    
-    t
-    
-    <
-    
-    i
-    
-    n
-    
-    t
-    
-    >
-    
-     
-    
-    r
-    
-    e
-    
-    m
-    
-    o
-    
-    v
-    
-    e
-    
-    M
-    
-    e
-    
-    n
-    
-    u
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    m
-    
-    e
-    
-    n
-    
-    u
-    
-     
-    
-    i
-    
-    t
-    
-    e
-    
-    m
-    
-    s
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    r
-    
-    e
-    
-    m
-    
-    o
-    
-    v
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    n
-    
-    H
-    
-    i
-    
-    t
-    
-    F
-    
-    l
-    
-    a
-    
-    g
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    l
-    
-    o
-    
-    c
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    w
-    
-    i
-    
-    t
-    
-    h
-    
-    i
-    
-    n
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    s
-    
-    e
-    
-    t
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    e
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    t
-    
-    h
-    
-    a
-    
-    t
-    
-     
-    
-    t
-    
-    r
-    
-    i
-    
-    g
-    
-    g
-    
-    e
-    
-    r
-    
-    e
-    
-    d
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-     
-    
-    m
-    
-    e
-    
-    n
-    
-    u
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    n
-    
-    R
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    C
-    
-    l
-    
-    k
-    
-    T
-    
-    a
-    
-    b
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    t
-    
-    a
-    
-    b
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    h
-    
-    e
-    
-     
-    
-    t
-    
-    a
-    
-    b
-    
-     
-    
-    f
-    
-    o
-    
-    r
-    
-     
-    
-    w
-    
-    h
-    
-    i
-    
-    c
-    
-    h
-    
-     
-    
-    t
-    
-    h
-    
-    i
-    
-    s
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    t
-    
-    e
-    
-    x
-    
-    t
-    
-     
-    
-    m
-    
-    e
-    
-    n
-    
-    u
-    
-     
-    
-    i
-    
-    s
-    
-     
-    
-    b
-    
-    e
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    i
-    
-    s
-    
-    p
-    
-    l
-    
-    a
-    
-    y
-    
-    e
-    
-    d
+    PaletteAddContextMenuEventArgs
+        List<MenuItem> menuitems : Input menu items to add
+        List<int> removeMenuItems : Input menu items to remove
+        int nHitFlag : Input location within the palette set of the event that triggered the context menu
+        int nRightClkTab : Input palette tab of the tab for which this context menu is being displayed
     """
     HitFlag = None
     
@@ -2878,637 +822,37 @@ class PaletteAddContextMenuEventArgs(EventArgs):
     
     pass
 
-class PaletteEnterSizeMoveEventArgs(EventArgs):
+class PaletteEnterSizeMoveEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    E
-    
-    n
-    
-    t
-    
-    e
-    
-    r
-    
-    S
-    
-    i
-    
-    z
-    
-    e
-    
-    M
-    
-    o
-    
-    v
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    PaletteEnterSizeMoveEventArgs()
     """
     EnterSizeMove = None
     
     pass
 
-class PalettePersistEventArgs(EventArgs):
+class PalettePersistEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    P
-    
-    e
-    
-    r
-    
-    s
-    
-    i
-    
-    s
-    
-    t
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    I
-    
-    C
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    S
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    S
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    s
-    
-    e
-    
-    c
-    
-    t
-    
-    i
-    
-    o
-    
-    n
+    PalettePersistEventArgs
+        IConfigurationSection configurationSection : Input configuration section
     """
     ConfigurationSection = None
     
     pass
 
-class PaletteSet(Autodesk.AutoCAD.Windows.Window, ICollection):
+class PaletteSet(object):
     """
     
-    P
+    PaletteSet(string)
+        string name : Input name of palette set
     
-    a
     
-    l
+    PaletteSet(string, Guid)
+        string name : Input name of palette set
+        Guid toolID : Input ID of tool GUID
     
-    e
     
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    s
-    
-    e
-    
-    t
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    (
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-    ,
-    
-     
-    
-    G
-    
-    u
-    
-    i
-    
-    d
-    
-    )
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    p
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-     
-    
-    s
-    
-    e
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    G
-    
-    u
-    
-    i
-    
-    d
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-    I
-    
-    D
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    I
-    
-    D
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    t
-    
-    o
-    
-    o
-    
-    l
-    
-     
-    
-    G
-    
-    U
-    
-    I
-    
-    D
     """
     def Activate(self):
         """
@@ -3696,7 +1040,7 @@ class PaletteSet(Autodesk.AutoCAD.Windows.Window, ICollection):
     
     pass
 
-class PaletteSetDockSite(public sealed class PaletteSetDockSite):
+class PaletteSetDockSite(object):
     """
     
     """
@@ -3733,381 +1077,21 @@ class PaletteSetDockSite(public sealed class PaletteSetDockSite):
     
     pass
 
-class PaletteSetFocusedEventArgs(EventArgs):
+class PaletteSetFocusedEventArgs(object):
     """
     
     """
 
     pass
 
-class PaletteSetSizeEventArgs(EventArgs):
+class PaletteSetSizeEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    S
-    
-    i
-    
-    z
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    i
-    
-    x
-    
-    e
-    
-    l
-    
-     
-    
-    w
-    
-    i
-    
-    d
-    
-    t
-    
-    h
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    i
-    
-    n
-    
-    t
-    
-     
-    
-    c
-    
-    y
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    p
-    
-    i
-    
-    x
-    
-    e
-    
-    l
-    
-     
-    
-    h
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    d
-    
-    x
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    e
-    
-    v
-    
-    i
-    
-    c
-    
-    e
-    
-    -
-    
-    i
-    
-    n
-    
-    d
-    
-    e
-    
-    p
-    
-    e
-    
-    n
-    
-    d
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    w
-    
-    i
-    
-    d
-    
-    t
-    
-    h
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    d
-    
-    o
-    
-    u
-    
-    b
-    
-    l
-    
-    e
-    
-     
-    
-    d
-    
-    y
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    e
-    
-    v
-    
-    i
-    
-    c
-    
-    e
-    
-    -
-    
-    i
-    
-    n
-    
-    d
-    
-    e
-    
-    p
-    
-    e
-    
-    n
-    
-    d
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    h
-    
-    e
-    
-    i
-    
-    g
-    
-    h
-    
-    t
+    PaletteSetSizeEventArgs
+        int cx : Input pixel width
+        int cy : Input pixel height
+        double dx : Input device-independent width
+        double dy : Input device-independent height
     """
     DeviceIndependentHeight = None
     
@@ -4122,161 +1106,11 @@ class PaletteSetSizeEventArgs(EventArgs):
     
     pass
 
-class PaletteSetStateEventArgs(EventArgs):
+class PaletteSetStateEventArgs(object):
     """
     
-    P
-    
-    a
-    
-    l
-    
-    e
-    
-    t
-    
-    t
-    
-    e
-    
-    S
-    
-    e
-    
-    t
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    S
-    
-    t
-    
-    a
-    
-    t
-    
-    e
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    I
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    i
-    
-    n
-    
-    d
-    
-    e
-    
-    x
-    
-     
-    
-    s
-    
-    t
-    
-    a
-    
-    t
-    
-    e
+    PaletteSetStateEventArgs
+        StateEventIndex state : Input event index state
     """
     NewState = None
     
@@ -4298,27 +1132,15 @@ class PaletteSetStyles():
     UsePaletteNameAsTitleForSingle = 0x80
 
 class PaletteSetTitleBarLocation():
-    Left
-    Right
+    Left = None
+    Right = None
 
-class Pane(StatusBarItem):
+class Pane(object):
     """
     
-    P
+    Pane()()
     
-    a
     
-    n
-    
-    e
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     MaximumWidth = None
     
@@ -4333,7 +1155,7 @@ class Pane(StatusBarItem):
     
     pass
 
-class PaneCollection(IList):
+class PaneCollection(object):
     """
     
     """
@@ -4447,7 +1269,7 @@ class PaneStyles():
     PopUp = 0x20
     Stretch = 4
 
-class PlotStyleDialog(public sealed class PlotStyleDialog):
+class PlotStyleDialog(object):
     """
     
     """
@@ -4466,501 +1288,15 @@ class PlotStyleDialog(public sealed class PlotStyleDialog):
     
     pass
 
-class SaveFileDialog(public sealed class SaveFileDialog):
+class SaveFileDialog(object):
     """
     
-    S
-    
-    a
-    
-    v
-    
-    e
-    
-    F
-    
-    i
-    
-    l
-    
-    e
-    
-    D
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    t
-    
-    i
-    
-    t
-    
-    l
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    t
-    
-    i
-    
-    t
-    
-    l
-    
-    e
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-     
-    
-    b
-    
-    o
-    
-    x
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    e
-    
-    f
-    
-    a
-    
-    u
-    
-    l
-    
-    t
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    e
-    
-    x
-    
-    t
-    
-    e
-    
-    n
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    e
-    
-    x
-    
-    t
-    
-    e
-    
-    n
-    
-    s
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    s
-    
-    t
-    
-    r
-    
-    i
-    
-    n
-    
-    g
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    N
-    
-    a
-    
-    m
-    
-    e
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    d
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-     
-    
-    n
-    
-    a
-    
-    m
-    
-    e
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    S
-    
-    a
-    
-    v
-    
-    e
-    
-    F
-    
-    i
-    
-    l
-    
-    e
-    
-    D
-    
-    i
-    
-    a
-    
-    l
-    
-    o
-    
-    g
-    
-    F
-    
-    l
-    
-    a
-    
-    g
-    
-    s
-    
-     
-    
-    f
-    
-    l
-    
-    a
-    
-    g
-    
-    s
-    
-     
-    
-    :
-    
-     
-    
-    I
-    
-    n
-    
-    p
-    
-    u
-    
-    t
-    
-     
-    
-    c
-    
-    o
-    
-    n
-    
-    f
-    
-    i
-    
-    g
-    
-    u
-    
-    r
-    
-    a
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-     
-    
-    f
-    
-    l
-    
-    a
-    
-    g
-    
-    s
+    SaveFileDialog
+        string title : Input title of dialog box
+        string defaultName : Input name
+        string extension : Input extension of dialog
+        string dialogName : Input dialog name
+        SaveFileDialogFlags flags : Input configuration flags
     """
     class SaveFileDialogFlags():
         AllowAnyExtension = 4
@@ -4985,54 +1321,10 @@ class SaveFileDialog(public sealed class SaveFileDialog):
     
     pass
 
-class SizeChangingEventArgs(LocationChangingEventArgs):
+class SizeChangingEventArgs(object):
     """
     
-    S
-    
-    i
-    
-    z
-    
-    e
-    
-    C
-    
-    h
-    
-    a
-    
-    n
-    
-    g
-    
-    i
-    
-    n
-    
-    g
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    SizeChangingEventArgs()
     """
     NewSize = None
     
@@ -5046,7 +1338,7 @@ class StateEventIndex():
     Show = 1
     ThemeChange = 4
 
-class StatusBar(public sealed class StatusBar):
+class StatusBar(object):
     """
     
     """
@@ -5096,42 +1388,12 @@ class StatusBar(public sealed class StatusBar):
     
     pass
 
-class StatusBarItem(DisposableWrapper):
+class StatusBarItem(object):
     """
     
-    S
+    StatusBarItem()()
     
-    t
     
-    a
-    
-    t
-    
-    u
-    
-    s
-    
-    B
-    
-    a
-    
-    r
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def DisplayContextMenu(self):
         """
@@ -5179,7 +1441,7 @@ class StatusBarItem(DisposableWrapper):
     
     pass
 
-class StatusBarMouseDownEventArgs(EventArgs):
+class StatusBarMouseDownEventArgs(object):
     """
     
     """
@@ -5196,7 +1458,7 @@ class StatusBarMouseDownEventArgs(EventArgs):
     
     pass
 
-class ToggleAblePopup(Popup):
+class ToggleAblePopup(object):
     """
     
     """
@@ -5247,32 +1509,12 @@ class ToggleAblePopup(Popup):
     
     pass
 
-class TrayItem(StatusBarItem):
+class TrayItem(object):
     """
     
-    T
+    TrayItem()()
     
-    r
     
-    a
-    
-    y
-    
-    I
-    
-    t
-    
-    e
-    
-    m
-    
-    (
-    
-    )
-    
-    (
-    
-    )
     """
     def CloseBubbleWindows(self):
         """
@@ -5293,7 +1535,7 @@ class TrayItem(StatusBarItem):
     
     pass
 
-class TrayItemBubbleWindow(DisposableWrapper):
+class TrayItemBubbleWindow(object):
     """
     
     """
@@ -5317,15 +1559,15 @@ class TrayItemBubbleWindow(DisposableWrapper):
     pass
 
 class TrayItemBubbleWindowCloseReason():
-    FailedToCreate
-    NoIcons
-    NoNotifications
-    ClosedByUser
-    TimedOut
-    HyperlinkClicked
-    DocumentDeactivated
+    FailedToCreate = None
+    NoIcons = None
+    NoNotifications = None
+    ClosedByUser = None
+    TimedOut = None
+    HyperlinkClicked = None
+    DocumentDeactivated = None
 
-class TrayItemBubbleWindowClosedEventArgs(EventArgs):
+class TrayItemBubbleWindowClosedEventArgs(object):
     """
     
     """
@@ -5333,7 +1575,7 @@ class TrayItemBubbleWindowClosedEventArgs(EventArgs):
     
     pass
 
-class TrayItemCollection(IList):
+class TrayItemCollection(object):
     """
     
     """
@@ -5439,7 +1681,7 @@ class TrayItemCollection(IList):
     
     pass
 
-class Visuals(public sealed class Visuals):
+class Visuals(object):
     """
     
     """
@@ -5453,247 +1695,11 @@ class Visuals(public sealed class Visuals):
     
     pass
 
-class WPFDocumentWindow(DocumentWindow):
+class WPFDocumentWindow(object):
     """
     
-    W
-    
-    P
-    
-    F
-    
-    D
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-    W
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-    
-    
-    
-     
-    
-     
-    
-     
-    
-     
-    
-    V
-    
-    i
-    
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-     
-    
-    w
-    
-    p
-    
-    f
-    
-    V
-    
-    i
-    
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-     
-    
-    :
-    
-     
-    
-    W
-    
-    P
-    
-    F
-    
-     
-    
-    v
-    
-    i
-    
-    s
-    
-    u
-    
-    a
-    
-    l
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    b
-    
-    e
-    
-     
-    
-    u
-    
-    s
-    
-    e
-    
-    d
-    
-     
-    
-    t
-    
-    o
-    
-     
-    
-    c
-    
-    r
-    
-    e
-    
-    a
-    
-    t
-    
-    e
-    
-     
-    
-    W
-    
-    P
-    
-    F
-    
-     
-    
-    d
-    
-    o
-    
-    c
-    
-    u
-    
-    m
-    
-    e
-    
-    n
-    
-    t
-    
-     
-    
-    w
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-     
-    
-    a
-    
-    s
-    
-     
-    
-    a
-    
-     
-    
-    s
-    
-    u
-    
-    b
-    
-    -
-    
-    w
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-     
-    
-    o
-    
-    f
-    
-     
-    
-    A
-    
-    u
-    
-    t
-    
-    o
-    
-    C
-    
-    A
-    
-    D
+    WPFDocumentWindow
+        Visual wpfVisual : WPF visual to be used to create WPF document window as a sub-window of AutoCAD
     """
     def SetDocument(self):
         """
@@ -5706,24 +1712,10 @@ class WPFDocumentWindow(DocumentWindow):
     
     pass
 
-class Window(DisposableWrapper, IWin32Window):
+class Window(object):
     """
     
-    W
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-    (
-    
-    )
+    Window()
     """
     def Close(self):
         """
@@ -5779,7 +1771,7 @@ class Window(DisposableWrapper, IWin32Window):
     
     pass
 
-class WindowExtension(public static class WindowExtension):
+class WindowExtension(object):
     """
     
     """
@@ -5832,72 +1824,10 @@ class WindowExtension(public static class WindowExtension):
     
     pass
 
-class WindowPositionChangedEventArgs(EventArgs):
+class WindowPositionChangedEventArgs(object):
     """
     
-    W
-    
-    i
-    
-    n
-    
-    d
-    
-    o
-    
-    w
-    
-    P
-    
-    o
-    
-    s
-    
-    i
-    
-    t
-    
-    i
-    
-    o
-    
-    n
-    
-    C
-    
-    h
-    
-    a
-    
-    n
-    
-    g
-    
-    e
-    
-    d
-    
-    E
-    
-    v
-    
-    e
-    
-    n
-    
-    t
-    
-    A
-    
-    r
-    
-    g
-    
-    s
-    
-    (
-    
-    )
+    WindowPositionChangedEventArgs()
     """
     Moved = None
     
