@@ -5756,7 +5756,7 @@ class BlockReference(object):
     BlockUnit = None
     
     
-    DynamicBlockReference = None
+    DynamicBlockReferencePropertyCollection = None
     
     
     DynamicBlockTableRecord = None
@@ -7363,10 +7363,10 @@ class DBDictionaryEntry(object):
         string key : Original key
         ObjectId value : Original object ID value
     """
-    m_key Field = None
+    m_key = None
     
     
-    m_value Field = None
+    m_value = None
     
     
     def ToString(self):
@@ -11029,7 +11029,7 @@ class DatabaseSummaryInfoBuilder(object):
     CustomProperties = None
     
     
-    Custom = None
+    CustomPropertyTable = None
     
     
     HyperlinkBase = None
@@ -13519,10 +13519,10 @@ class DynamicBlockReferenceProperty(object):
     Description = None
     
     
-     = None
+    PropertyName = None
     
     
-     = None
+    PropertyTypeCode = None
     
     
     ReadOnly = None

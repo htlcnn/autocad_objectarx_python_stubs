@@ -230,7 +230,7 @@ class ButtonGroup(object):
     
     
     """
-    ButtonItems Field = None
+    ButtonItems = None
     
     
     Aliases = None
@@ -723,28 +723,28 @@ class CustomizationSection(object):
     
     
     """
-    EXTENSION_BAK Field = None
+    EXTENSION_BAK = None
     
     
-    EXTENSION_OPC Field = None
+    EXTENSION_OPC = None
     
     
-    EXTENSION_BACKUP Field = None
+    EXTENSION_BACKUP = None
     
     
-    EXTENSION_COMPILED Field = None
+    EXTENSION_COMPILED = None
     
     
-    EXTENSION_RESOURCE Field = None
+    EXTENSION_RESOURCE = None
     
     
-    EXTENSION_SOURCE Field = None
+    EXTENSION_SOURCE = None
     
     
-    EXTENSION_TEMPLATE Field = None
+    EXTENSION_TEMPLATE = None
     
     
-    EXTENSION_XML Field = None
+    EXTENSION_XML = None
     
     
     def AddPartialMenu(self):
@@ -2219,7 +2219,7 @@ class ObjectPropertyCategory(object):
         pass
     
     
-     = None
+    PropertyList = None
     
     
     state = None
@@ -3230,7 +3230,7 @@ class RibbonCommandButton(object):
     RibbonCommandButton
         CustomizationElement parent : Sets the Parent
     """
-    ImageUpdated Field = None
+    ImageUpdated = None
     
     
     def CopyFrom(self):
@@ -5660,7 +5660,7 @@ class WSRibbonTabSourceReference(object):
     WSRibbonTabSourceReference
         WSRibbonRoot parent : Input the parent WSRibbonRoot.
     """
-    TabId Field = None
+    TabId = None
     
     
     def CopyFrom(self):
@@ -6062,13 +6062,13 @@ class WorkspacePopMenu(object):
     
     
     """
-    Display Field = None
+    Display = None
     
     
-    MenuGroup Field = None
+    MenuGroup = None
     
     
-    PopMenuID Field = None
+    PopMenuID = None
     
     
     Parent = None

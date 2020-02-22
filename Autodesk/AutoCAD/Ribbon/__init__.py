@@ -3,7 +3,7 @@ class ArrayDataSource(object):
     
     ArrayDataSource()
     """
-    CurrentArray = None
+    CurrentArrayProperty = None
     
     
     CloseCommand = None
@@ -209,10 +209,10 @@ class GalleryImageCache(object):
     
     GalleryImageCache()
     """
-    BackgroundColor = None
+    BackgroundColorProperty = None
     
     
-    ItemsSource = None
+    ItemsSourceProperty = None
     
     
     def CreateImage(self):
@@ -259,10 +259,10 @@ class GalleryNamedImage(object):
     
     GalleryNamedImage()
     """
-    BackgroundColor = None
+    BackgroundColorProperty = None
     
     
-    ItemsSource = None
+    ItemsSourceProperty = None
     
     
     def CreateImage(self):
@@ -299,10 +299,10 @@ class GalleryNonCacheableImage(object):
     
     GalleryNonCacheableImage()
     """
-    BackgroundColor = None
+    BackgroundColorProperty = None
     
     
-    ItemsSource = None
+    ItemsSourceProperty = None
     
     
     def CreateImage(self):
@@ -659,13 +659,13 @@ class ReadOnlyPropertyBridge(object):
     """
     
     """
-    Source = None
+    SourceProperty = None
     
     
-    SourceValue = None
+    SourceValueProperty = None
     
     
-     = None
+    PropertyName = None
     
     
     Source = None
@@ -727,10 +727,10 @@ class RibbonPaletteSet(object):
     """
     
     """
-    KeepFocus Field = None
+    KeepFocus = None
     
     
-    RibbonControl Field = None
+    RibbonControl = None
     
     
     def HideFileTabControl(self):
@@ -803,7 +803,7 @@ class RibbonServices(object):
     """
     
     """
-    RibbonPaletteSet Field = None
+    RibbonPaletteSet = None
     
     
     def CreateRibbonPaletteSet(self):
@@ -819,28 +819,28 @@ class RibbonUtilContent(object):
     """
     
     """
-    AutodeskHardwareCertification Field = None
+    AutodeskHardwareCertification = None
     
     
-    AutodeskSubscriptionCenter Field = None
+    AutodeskSubscriptionCenter = None
     
     
-    IsHighlightsAvaliable Field = None
+    IsHighlightsAvaliable = None
     
     
-    IsOnlineDwgSyncAvailable Field = None
+    IsOnlineDwgSyncAvailable = None
     
     
-    ProductOnAutoCADBlog Field = None
+    ProductOnAutoCADBlog = None
     
     
-    ProductOnFacebook Field = None
+    ProductOnFacebook = None
     
     
-    ProductOnTwitter Field = None
+    ProductOnTwitter = None
     
     
-    ProductOnYouTube Field = None
+    ProductOnYouTube = None
     
     
     AboutProductName = None

@@ -87,7 +87,7 @@ class ClicUiHandler(object):
     """
     
     """
-    Instance Field = None
+    Instance = None
     
     
     def CanExecute(self):
@@ -125,7 +125,7 @@ class InfoCenterManager(object):
     
     InfoCenterManager()
     """
-    Toolbar Field = None
+    Toolbar = None
     
     
     def Dispose(self):

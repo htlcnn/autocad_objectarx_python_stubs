@@ -2,7 +2,7 @@ class ActiveTaskDialog(object):
     """
     
     """
-    Handle Field = None
+    Handle = None
     
     
     def ClickButton(self):
@@ -270,10 +270,10 @@ class ApplicationMenu(object):
     """
     
     """
-    DocumentGroupByItems = None
+    DocumentGroupByItemsPropertyName = None
     
     
-    IsOpen = None
+    IsOpenPropertyName = None
     
     
     DocumentGroupByItems = None
@@ -386,10 +386,10 @@ class ComponentManager(object):
     UseOriginalImageSize = None
     
     
-    FontSettings Field = None
+    FontSettings = None
     
     
-    IsDialogLauncherButtonWide = None
+    IsDialogLauncherButtonWidePropertyName = None
     
     pass
 
@@ -397,7 +397,7 @@ class DisplayDeviceInfo(object):
     """
     
     """
-    Primary Field = None
+    Primary = None
     
     
     Dpi = None
@@ -469,10 +469,10 @@ class DpiValue(object):
     """
     
     """
-    Standard Field = None
+    Standard = None
     
     
-    System Field = None
+    System = None
     
     
     def FromPercent(self):
@@ -546,16 +546,16 @@ class DpiValue2D(object):
     
     
     """
-    Standard Field = None
+    Standard = None
     
     
-    System Field = None
+    System = None
     
     
-    X Field = None
+    X = None
     
     
-    Y Field = None
+    Y = None
     
     
     def IsValid(self):
@@ -602,7 +602,7 @@ class DpiValueComparer(object):
     
     DpiValueComparer()
     """
-    Default Field = None
+    Default = None
     
     
     def IsStandard(self):
@@ -672,7 +672,7 @@ class PropertyValuePair(object):
     """
     
     """
-     = None
+    Property = None
     
     
     Value = None
@@ -715,13 +715,13 @@ class RibbonCombo(object):
     """
     
     """
-    IsVirtualizing = None
+    IsVirtualizingPropertyName = None
     
     
-    MenuItems Field = None
+    MenuItems = None
     
     
-    Orientation Field = None
+    Orientation = None
     
     
     def CopyFrom(self):
@@ -897,10 +897,10 @@ class RibbonItem(object):
     """
     
     """
-    Highlight = None
+    HighlightPropertyName = None
     
     
-    IsInitialized Field = None
+    IsInitialized = None
     
     
     def Clone(self):
@@ -1082,7 +1082,7 @@ class RibbonLabel(object):
     """
     
     """
-    Orientation Field = None
+    Orientation = None
     
     pass
 
@@ -1090,7 +1090,7 @@ class RibbonList(object):
     """
     
     """
-    Items Field = None
+    Items = None
     
     
     Current = None
@@ -1113,10 +1113,10 @@ class RibbonListButton(object):
     """
     
     """
-    HighlightDropDown = None
+    HighlightDropDownPropertyName = None
     
     
-    Items Field = None
+    Items = None
     
     
     def CopyFrom(self):
@@ -1207,7 +1207,7 @@ class RibbonPanelBreak(object):
     """
     
     """
-    SupportedSubPanel Field = None
+    SupportedSubPanel = None
     
     pass
 
@@ -1330,7 +1330,7 @@ class RibbonRowBreak(object):
     """
     
     """
-    SupportedSubPanel Field = None
+    SupportedSubPanel = None
     
     pass
 

@@ -78,7 +78,7 @@ class ITypeDescriptor(object):
         pass
     
     
-    HasPerInstance = None
+    HasPerInstancePropertyProviders = None
     
     pass
 
@@ -134,7 +134,7 @@ class PropertyDescriptorBase(object):
     IsReadOnly = None
     
     
-     = None
+    PropertyType = None
     
     pass
 
@@ -144,7 +144,7 @@ class PropertyProviderAttribute(object):
     PropertyProviderAttribute
         Type type : Input type of attribute
     """
-     = None
+    PropertyProviderType = None
     
     pass
 
@@ -233,7 +233,7 @@ class TypeDescriptor(object):
         pass
     
     
-    HasPerInstance = None
+    HasPerInstancePropertyProviders = None
     
     pass
 

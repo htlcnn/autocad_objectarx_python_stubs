@@ -1036,22 +1036,22 @@ class ExtractOption(object):
     """
     
     """
-    ExtractType Field = None
+    ExtractType = None
     
     
-    FillGap Field = None
+    FillGap = None
     
     
-    MiniumSegmentLength Field = None
+    MiniumSegmentLength = None
     
     
-    ProcessPoints Field = None
+    ProcessPoints = None
     
     
-    SnapAngle Field = None
+    SnapAngle = None
     
     
-    UseLineSegmentOnly Field = None
+    UseLineSegmentOnly = None
     
     pass
 
@@ -1548,10 +1548,10 @@ class PointCloudExtractResult(object):
     """
     
     """
-    Curves Field = None
+    Curves = None
     
     
-    transform Field = None
+    transform = None
     
     pass
 

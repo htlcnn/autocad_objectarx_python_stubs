@@ -211,7 +211,7 @@ class Editor(object):
     """
     
     """
-    PauseToken Field = None
+    PauseToken = None
     
     
     def DoPrompt(self):

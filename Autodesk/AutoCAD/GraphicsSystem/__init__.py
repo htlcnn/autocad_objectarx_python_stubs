@@ -570,16 +570,16 @@ class KernelDescriptor(object):
     """
     
     """
-    Drawing2D Field = None
+    Drawing2D = None
     
     
-    Drawing3D Field = None
+    Drawing3D = None
     
     
-    RapidRTRendering3D Field = None
+    RapidRTRendering3D = None
     
     
-    Selection3D Field = None
+    Selection3D = None
     
     
     def addRequirement(self):

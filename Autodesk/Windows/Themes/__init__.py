@@ -10,16 +10,16 @@ class FontInfo(object):
     
     FontInfo()
     """
-    FontFamily = None
+    FontFamilyProperty = None
     
     
-    FontSize = None
+    FontSizeProperty = None
     
     
-    FontStyle = None
+    FontStyleProperty = None
     
     
-    FontWeight = None
+    FontWeightProperty = None
     
     
     def CreateInstanceCore(self):
@@ -248,10 +248,10 @@ class ImageSources(object):
     """
     
     """
-    Images Field = None
+    Images = None
     
     
-    Uris Field = None
+    Uris = None
     
     pass
 
@@ -265,40 +265,40 @@ class InPlaceEditorTheme(object):
     
     
     """
-    CompositeHardShadowColor = None
+    CompositeHardShadowColorProperty = None
     
     
-    CompositeSoftShadowColor = None
+    CompositeSoftShadowColorProperty = None
     
     
-    CornerResizeColor = None
+    CornerResizeColorProperty = None
     
     
-    CornerResizeShadowColor = None
+    CornerResizeShadowColorProperty = None
     
     
-    FillColor = None
+    FillColorProperty = None
     
     
-    GlyphColor = None
+    GlyphColorProperty = None
     
     
-    GlyphShadowColor = None
+    GlyphShadowColorProperty = None
     
     
-    IsDark = None
+    IsDarkProperty = None
     
     
-    OutlineColor = None
+    OutlineColorProperty = None
     
     
-    OverallColor = None
+    OverallColorProperty = None
     
     
-    OverallTextColor = None
+    OverallTextColorProperty = None
     
     
-    ShadowLineColor = None
+    ShadowLineColorProperty = None
     
     
     def CreateInstanceCore(self):
@@ -358,16 +358,16 @@ class InPlaceEditorThemeDefaults(object):
     """
     
     """
-    DarkOverallColor Field = None
+    DarkOverallColor = None
     
     
-    DarkTextColor Field = None
+    DarkTextColor = None
     
     
-    LightOverallColor Field = None
+    LightOverallColor = None
     
     
-    LightTextColor Field = None
+    LightTextColor = None
     
     pass
 
@@ -462,19 +462,19 @@ class ThemeManager(object):
     """
     
     """
-    ImageSources Field = None
+    ImageSources = None
     
     
-    InPlaceEditorSettings Field = None
+    InPlaceEditorSettings = None
     
     
-    Instance Field = None
+    Instance = None
     
     
-    OverridePaletteTheme = None
+    OverridePaletteThemeProperty = None
     
     
-    PaletteSettings Field = None
+    PaletteSettings = None
     
     
     def GetOverridePaletteTheme(self):
@@ -535,7 +535,7 @@ class ThemedImageSource(object):
     
     ThemedImageSource()
     """
-    this Field = None
+    this = None
     
     pass
 

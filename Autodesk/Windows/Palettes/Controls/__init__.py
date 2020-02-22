@@ -10,10 +10,10 @@ class ThemedImage(object):
     
     
     """
-    DarkSource = None
+    DarkSourceProperty = None
     
     
-    LightSource = None
+    LightSourceProperty = None
     
     
     DarkSource = None

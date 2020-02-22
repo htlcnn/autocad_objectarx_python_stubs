@@ -3,7 +3,7 @@ class Application(object):
     
     Application()
     """
-    Idle Field = None
+    Idle = None
     
     
     def AddModelessWindow(self):

@@ -2,7 +2,7 @@ class AutomationDataGridView(object):
     """
     
     """
-    WM_GETOBJECT Field = None
+    WM_GETOBJECT = None
     
     
     def WndProc(self):
@@ -18,52 +18,52 @@ class ColorComboBox(object):
     """
     
     """
-    CurrentColor = None
+    CurrentColorProperty = None
     
     
-    Highlight = None
+    HighlightProperty = None
     
     
-    IndexColors = None
+    IndexColorsProperty = None
     
     
-    MaxRecentColorCount = None
+    MaxRecentColorCountProperty = None
     
     
-    MoreColorsCommand Field = None
+    MoreColorsCommand = None
     
     
-    PreviewSafeColor = None
+    PreviewSafeColorProperty = None
     
     
-    RecentColors = None
+    RecentColorsProperty = None
     
     
-    SelectionBoxItemTemplate = None
+    SelectionBoxItemTemplateProperty = None
     
     
-    SpecialColors = None
+    SpecialColorsProperty = None
     
     
-    SupportsByBlock = None
+    SupportsByBlockProperty = None
     
     
-    SupportsByEntity = None
+    SupportsByEntityProperty = None
     
     
-    SupportsByLayer = None
+    SupportsByLayerProperty = None
     
     
-    SupportsMoreColors = None
+    SupportsMoreColorsProperty = None
     
     
-    SupportsNone = None
+    SupportsNoneProperty = None
     
     
-    SupportsUseCurrent = None
+    SupportsUseCurrentProperty = None
     
     
-    TrueColors = None
+    TrueColorsProperty = None
     
     
     def OnApplyTemplate(self):
@@ -163,28 +163,28 @@ class ColorItem(object):
     
     ColorItem()
     """
-    ByBlock Field = None
+    ByBlock = None
     
     
-    ByLayer Field = None
+    ByLayer = None
     
     
-    IsByBlock Field = None
+    IsByBlock = None
     
     
-    IsByLayer Field = None
+    IsByLayer = None
     
     
-    IsNone Field = None
+    IsNone = None
     
     
-    IsUseCurrent Field = None
+    IsUseCurrent = None
     
     
-    None Field = None
+    None = None
     
     
-    UseCurrent Field = None
+    UseCurrent = None
     
     
     def Equals(self):
@@ -1462,7 +1462,7 @@ class ToggleAblePopup(object):
     """
     
     """
-    KeyboardFocusableElement = None
+    KeyboardFocusableElementProperty = None
     
     
     def OnOpened(self):

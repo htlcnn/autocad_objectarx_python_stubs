@@ -43,7 +43,7 @@ def get_child(parent, children_data_type=''):
         
 def parse_property(prop):
     syntax = '{} = None'
-    name = prop['ttl'].split('Property')[0].strip()
+    name = prop['ttl'].rstrip('Property').rstrip('Field').strip()
     return syntax.format(name)
 
 

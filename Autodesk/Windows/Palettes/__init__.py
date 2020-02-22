@@ -3,10 +3,10 @@ class HighlightItemInfo(object):
     
     HighlightItemInfo()
     """
-    ItemId Field = None
+    ItemId = None
     
     
-    Mode Field = None
+    Mode = None
     
     pass
 
@@ -47,13 +47,13 @@ class Palette(object):
     
     
     """
-    Image = None
+    ImageProperty = None
     
     
-    PaletteSet = None
+    PaletteSetProperty = None
     
     
-    Title = None
+    TitleProperty = None
     
     
     def NotifyPropertyChanged(self):
@@ -102,10 +102,10 @@ class PaletteActivatedEventArgs(object):
     
     PaletteActivatedEventArgs()
     """
-    ActivatedPalette Field = None
+    ActivatedPalette = None
     
     
-    DeactivatedPalette Field = None
+    DeactivatedPalette = None
     
     pass
 
@@ -114,10 +114,10 @@ class PaletteActivatingEventArgs(object):
     
     PaletteActivatingEventArgs()
     """
-    PaletteToActivate Field = None
+    PaletteToActivate = None
     
     
-    PaletteToDeactivate Field = None
+    PaletteToDeactivate = None
     
     pass
 
@@ -182,19 +182,19 @@ class PaletteSet(object):
     
     
     """
-    ActivePaletteIndex = None
+    ActivePaletteIndexProperty = None
     
     
-    Image = None
+    ImageProperty = None
     
     
-    PaletteCount Field = None
+    PaletteCount = None
     
     
-    SelectorType = None
+    SelectorTypeProperty = None
     
     
-    Title = None
+    TitleProperty = None
     
     
     def ActivatePalette(self):
@@ -1387,16 +1387,16 @@ class PaletteTheme(object):
     PaletteTreeOrListBackgroundColor = None
     
     
-     = None
+    PropertyInspectorCategoryBackgroundColor = None
     
     
-     = None
+    PropertyInspectorItemBorderColor = None
     
     
-     = None
+    PropertyInspectorSubCategoryBackgroundColor = None
     
     
-     = None
+    PropertyInspectorTextLabelColor = None
     
     
     PushButtonActiveBackgroundBottomColor = None
