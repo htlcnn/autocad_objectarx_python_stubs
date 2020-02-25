@@ -265,8 +265,6 @@ class AnnotationType():
     NoAnnotation = None
 
 class AnnotativeStates():
-    True = None
-    False = None
     NotApplicable = None
 
 class ApplicationLoadReasons():
@@ -6117,7 +6115,6 @@ class CellAlignment():
     TopRight = 3
 
 class CellClass():
-    None = None
     Label = None
     Data = None
 
@@ -6145,7 +6142,6 @@ class CellMargins():
     Top = 1
 
 class CellOption():
-    None = None
     InheritCellFormat = None
 
 class CellProperties():
@@ -6289,7 +6285,6 @@ class ColinearConstraint(object):
     pass
 
 class CollisionType():
-    None = None
     Solid = None
 
 class ColumnType():
@@ -8918,7 +8913,6 @@ class DataLinkManager(object):
     pass
 
 class DataLinkOption():
-    None = None
     Anonymous = None
     PersistCache = None
 
@@ -12150,7 +12144,6 @@ class Dimension(object):
 class DimensionCenterMarkType():
     Mark = None
     Line = None
-    None = None
 
 class DimensionStyleOverrule(object):
     """
@@ -13842,7 +13835,6 @@ class Ellipse(object):
     pass
 
 class EndCap():
-    None = None
     Round = None
     Angle = None
     Square = None
@@ -24622,8 +24614,6 @@ class PCAdsName(object):
     pass
 
 class PaperOrientationStates():
-    True = None
-    False = None
     NotApplicable = None
 
 class ParallelConstraint(object):
@@ -35115,7 +35105,6 @@ class TableHitTestInfo(object):
     pass
 
 class TableHitTestType():
-    None = None
     Cell = None
 
 class TableStyle(object):
@@ -37170,7 +37159,6 @@ class UnderlayReference(object):
     pass
 
 class Unit():
-    None = None
     Millimeter = None
     Centimeter = None
     Meter = None
@@ -38248,7 +38236,6 @@ class XrefGraphNode(object):
     pass
 
 class XrefNotificationStatus():
-    None = None
     ResolvedMatch = None
     ResolvedElsewhere = None
     ResolvedWithUpdate = None

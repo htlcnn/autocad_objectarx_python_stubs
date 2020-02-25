@@ -138,7 +138,6 @@ class HSBColor(object):
     
     """
     class OperationType():
-        None = None
         Add = None
         Subtract = None
         Multiply = None

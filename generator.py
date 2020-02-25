@@ -1,4 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import keyword
 import os
 from pathlib import Path
 import time
@@ -24,7 +25,7 @@ def get_detail_page(api_id):
             break
         except requests.exceptions.ConnectionError:
             time.sleep(1)
-        
+
     soup = BeautifulSoup(r.text)
     return soup
 
@@ -40,23 +41,25 @@ def get_child(parent, children_data_type=''):
         if children_data_type in member['ttl']:
             return member
 
-        
+
 def parse_property(prop):
     syntax = '{} = None'
     name = prop['ttl'].rstrip('Property').rstrip('Field').strip()
+    if name in keyword.kwlist:
+        return ''
     return syntax.format(name)
 
 
 def parse_method(method):
     bypass = ['@']
-    
+
     syntax = []
 
     method_name = method['ttl'].split()[0].split('.')[-1].strip()
     for c in bypass:
         if c in method_name:
             return ''
-    
+
     def_line = 'def {}(self):'.format(method_name)
     syntax.append(def_line)
 
@@ -114,7 +117,7 @@ def parse_method(method):
         docstring.append(indent(parameter_lines))
 
     docstring.append('"""')
-    
+
     syntax.append(indent('\n'.join(docstring)))
 
     syntax.append(indent('pass'))
@@ -141,6 +144,8 @@ def parse_enum(enum):
             if '=' in line:
                 block.append(line)
             else:
+                if any(kw == line for kw in keyword.kwlist):
+                    continue
                 block.append('{} = None'.format(line))
 
         syntax.append(
@@ -215,11 +220,11 @@ def get_constructor_docstring(constructor):
             syntax.append('{}()'.format(name))
 
     return '\n'.join(syntax)
-    
-    
+
+
 def get_class_docstring(cls):
     soup = get_detail_page(cls['id'])
-    
+
     # Description
     description = soup.select_one('#mainBody>p')
     if description:
@@ -232,7 +237,7 @@ def get_class_docstring(cls):
         constructor_docstring = get_constructor_docstring(constructor)
     else:
         constructor_docstring = ''
-        
+
     ### build docstring
     docstring = []
     docstring.append('"""')
@@ -240,14 +245,14 @@ def get_class_docstring(cls):
     if constructor_docstring:
         docstring.append(constructor_docstring)
     docstring.append('"""')
-    
+
     return '\n'.join(docstring)
 
 
 def parse_class(cls):
     syntax = []
-    
-    # def_line    
+
+    # def_line
     name = cls['ttl'].split()[0].split('.')[-1].strip()
     if '<' in name:
         name = name.split('<')[0]
@@ -256,16 +261,16 @@ def parse_class(cls):
     parent = get_class_parent(cls)
     def_line = 'class {}({}):'.format(name, parent)
     syntax.append(def_line)
-    
+
     # docstring
     docstring = get_class_docstring(cls)
     syntax.append(indent(docstring))
-    
+
     # children
     syntax.append(
         indent(parse_children(cls))
     )
-            
+
     syntax.append(indent('pass'))
 
     return '\n'.join(syntax)
@@ -286,10 +291,10 @@ def parse_children(parent):
                 parse_child(child)
             )
             syntax.append('\n')
-            
+
     return '\n'.join(syntax)
 
-            
+
 def parse_child(child):
     parser_map = {
         'Class': parse_class,
@@ -301,10 +306,10 @@ def parse_child(child):
         'Field': parse_property,
         'Property': parse_property
     }
-    
+
     name = child['ttl'].split()[-1]
     parser = parser_map[name]
-    
+
     return parser(child)
 
 
@@ -339,7 +344,7 @@ def main():
 
         with open(os.path.join(folder_path, '__init__.py'), 'w') as f:
             f.write('\n\n'.join(r['content'] for r in results))
-            
-            
+
+
 if __name__ == '__main__':
     main()

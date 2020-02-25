@@ -3189,7 +3189,6 @@ class QuickAccessToolbarOrientation():
     Below = 1
 
 class RibbonAutoHideMode():
-    None = None
     HidePanelBar = None
     HidePanel = None
     TruncatePanelBar = None
@@ -5451,7 +5450,6 @@ class ToolbarVisible():
     show = 1
 
 class UpdateType():
-    None = None
     New = None
     Modified = None
 

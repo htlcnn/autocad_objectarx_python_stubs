@@ -362,7 +362,6 @@ class PaletteSet(object):
     pass
 
 class PaletteSetSelectorType():
-    None = None
     ImageSelector = None
     ComboBoxSelector = None
 

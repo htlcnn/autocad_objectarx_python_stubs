@@ -663,7 +663,6 @@ class ProgressBarSource(object):
     pass
 
 class ProgressBarState():
-    None = None
     Normal = None
     Error = None
     Paused = None
@@ -1833,7 +1832,6 @@ class TaskDialogNotification():
     ExtraCheckBoxClicked = None
 
 class TaskDialogResult():
-    None = None
     Ok = None
     Cancel = None
     Abort = None

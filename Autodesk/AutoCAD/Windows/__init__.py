@@ -181,7 +181,7 @@ class ColorItem(object):
     IsUseCurrent = None
     
     
-    None = None
+    
     
     
     UseCurrent = None
@@ -481,7 +481,6 @@ class DropTarget(object):
     pass
 
 class IconType():
-    None = None
     Information = None
     Critical = None
     Warning = None

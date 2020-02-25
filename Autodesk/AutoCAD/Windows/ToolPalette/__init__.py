@@ -2751,7 +2751,6 @@ class ImageList(object):
     pass
 
 class ImageOptionFlags():
-    None = None
     RenderBitmapOpaque = None
     UserOverride = None
 

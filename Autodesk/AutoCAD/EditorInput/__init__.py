@@ -197,7 +197,6 @@ class CursorType():
 
 class DragCursor():
     Normal = None
-    None = None
     Selection = None
 
 class DrawJig(object):

@@ -4,7 +4,6 @@ class ArcType():
     ArcChord = None
 
 class AttenuationType():
-    None = None
     InverseLinear = None
     InverseSquare = None
 
@@ -1696,7 +1695,6 @@ class HatchPatternDefinition(object):
     pass
 
 class HighlightStyle():
-    None = None
     Custom = None
     DashedAndThicken = None
     Dim = None
@@ -1941,7 +1939,6 @@ class MapChannel():
 
 class MapFilter():
     Default = None
-    None = None
 
 class Mapper(object):
     """
@@ -2856,7 +2853,6 @@ class ScaleBehavior():
     ScreenLocalOrigin = None
 
 class SelectionFlags():
-    None = None
     SelectionIgnore = None
 
 class ShadowFlags():
@@ -3465,7 +3461,6 @@ class TransparencyMode():
     Transparency8Bit = None
 
 class VSDisplayShadowType():
-    None = None
     GroundPlane = None
     Full = None
     FullAndGround = None
@@ -3518,7 +3513,6 @@ class VSEdgeStyles():
     VisibleFlag = 1
 
 class VSFaceColorMode():
-    None = None
     ObjectColor = None
     BackgroundColor = None
     Mono = None
@@ -3538,7 +3532,6 @@ class VSFaceLightingQuality():
     PerPixelLighting = None
 
 class VSFaceModifiers():
-    None = None
     FaceOpacityFlag = None
     SpecularFlag = None
 
